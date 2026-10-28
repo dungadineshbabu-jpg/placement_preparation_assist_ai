@@ -11,6 +11,7 @@ import logging
 import hashlib
 import datetime as dt
 import re
+import tempfile
 
 # Groq import removed
 from database import db, User, ResumeAnalysis, InterviewQuestion, AnswerEvaluation, WeakArea, Roadmap, UserProgress, ResumeData
@@ -31,17 +32,23 @@ from voice_evaluator_ml import evaluate_with_ml
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# ========== FLASK APP ==========
-app = Flask(__name__)
-# GROQ_API_KEY removed
+# ========== FLASK APP INIT WITH ABSOLUTE PATHS (FIXES RENDER TEMPLATE NOT FOUND) ==========
+basedir = os.path.abspath(os.path.dirname(__file__))
+app = Flask(__name__, 
+            template_folder=os.path.join(basedir, 'templates'),
+            static_folder=os.path.join(basedir, 'static'))
+
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', os.urandom(24))
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///placement_assistant.db'
+
+# ========== VERCEL/RENDER COMPATIBLE DATABASE PATH ==========
+# Uses /tmp so the database can be written to on read-only cloud servers
+db_path = os.path.join(tempfile.gettempdir(), 'placement_assistant.db')
+app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{db_path}'
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['UPLOAD_FOLDER'] = 'uploads'
+app.config['UPLOAD_FOLDER'] = os.path.join(tempfile.gettempdir(), 'uploads')
 app.config['MAX_CONTENT_LENGTH'] = 5 * 1024 * 1024
 ALLOWED_EXTENSIONS = {'pdf', 'txt'}
-
-# GROQ AI SETUP removed
 
 # ========== LOCAL EVALUATOR (No API Key Needed) ==========
 def local_evaluate_answer(user_answer, question_text=""):
