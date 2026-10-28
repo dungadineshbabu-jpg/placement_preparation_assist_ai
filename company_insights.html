@@ -1,0 +1,77 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="card shadow">
+            <div class="card-header" style="background: linear-gradient(135deg, #1e293b, #0f172a); color: white;">
+                <h4 class="mb-0"><i class="fas fa-building"></i> Company Insights: {{ insight.company_name }}</h4>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="info-card text-center p-3 mb-3">
+                            <i class="fas fa-chart-line fa-3x text-info mb-2"></i>
+                            <h5>Hiring Pattern</h5>
+                            <p>{{ insight.hiring_pattern }}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-card text-center p-3 mb-3">
+                            <i class="fas fa-code fa-3x text-success mb-2"></i>
+                            <h5>Previous Questions</h5>
+                            <p>{{ insight.previous_questions }}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-card text-center p-3 mb-3">
+                            <i class="fas fa-money-bill-wave fa-3x text-warning mb-2"></i>
+                            <h5>Salary Range</h5>
+                            <p>{{ insight.salary_range }}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-card text-center p-3 mb-3">
+                            <i class="fas fa-tachometer-alt fa-3x text-danger mb-2"></i>
+                            <h5>Difficulty Level</h5>
+                            <p><span class="badge bg-danger fs-6">{{ insight.difficulty }}</span></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <hr>
+                
+                <div class="text-center mt-3">
+                    <h5><i class="fas fa-lightbulb"></i> Preparation Tips for {{ insight.company_name }}</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-success"></i> Research company culture and values</li>
+                        <li><i class="fas fa-check-circle text-success"></i> Practice previous year questions</li>
+                        <li><i class="fas fa-check-circle text-success"></i> Focus on technical and HR rounds</li>
+                        <li><i class="fas fa-check-circle text-success"></i> Prepare STAR method answers</li>
+                    </ul>
+                </div>
+                
+                <div class="mt-4 text-center">
+                    <a href="{{ url_for('preparation') }}" class="btn btn-primary">
+                        <i class="fas fa-chalkboard-teacher"></i> Start Preparation
+                    </a>
+                    <a href="{{ url_for('company_dashboard') }}" class="btn btn-outline-primary">
+                        <i class="fas fa-chart-bar"></i> View All Companies
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .info-card {
+        background: rgba(30, 41, 59, 0.5);
+        border-radius: 15px;
+        transition: transform 0.3s ease;
+    }
+    .info-card:hover {
+        transform: translateY(-5px);
+        background: rgba(30, 41, 59, 0.8);
+    }
+</style>
+{% endblock %}

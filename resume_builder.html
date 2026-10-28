@@ -1,0 +1,686 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card shadow">
+                <div class="card-header" style="background: linear-gradient(135deg, #0891b2, #06b6d4); color: white;">
+                    <h3 class="mb-0"><i class="fas fa-edit"></i> Professional Resume Builder</h3>
+                    <small>Create ATS-friendly resumes tailored for specific companies and roles</small>
+                </div>
+                <div class="card-body">
+                    <!-- Company & Role Selection -->
+                    <div class="row mb-4">
+                        <div class="col-md-4">
+                            <label class="form-label"><i class="fas fa-building"></i> Target Company</label>
+                            <select id="targetCompany" class="form-select" onchange="updateCompanyTips()">
+                                <option value="TCS">TCS</option>
+                                <option value="Infosys">Infosys</option>
+                                <option value="Wipro">Wipro</option>
+                                <option value="Accenture">Accenture</option>
+                                <option value="Cognizant">Cognizant</option>
+                                <option value="Google">Google</option>
+                                <option value="Amazon">Amazon</option>
+                                <option value="Microsoft">Microsoft</option>
+                                <option value="Meta">Meta</option>
+                                <option value="Adobe">Adobe</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label"><i class="fas fa-briefcase"></i> Job Role</label>
+                            <select id="jobRole" class="form-select" onchange="updateRoleTips()">
+                                <option value="Software Engineer">Software Engineer</option>
+                                <option value="Data Analyst">Data Analyst</option>
+                                <option value="Web Developer">Web Developer</option>
+                                <option value="Python Developer">Python Developer</option>
+                                <option value="ML Engineer">ML Engineer</option>
+                                <option value="DevOps Engineer">DevOps Engineer</option>
+                                <option value="Frontend Developer">Frontend Developer</option>
+                                <option value="Backend Developer">Backend Developer</option>
+                                <option value="Full Stack Developer">Full Stack Developer</option>
+                                <option value="Data Scientist">Data Scientist</option>
+                                <option value="Cloud Engineer">Cloud Engineer</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label"><i class="fas fa-magic"></i> Resume Tips</label>
+                            <div id="companyTips" class="alert alert-info" style="font-size: 0.85rem;">
+                                Select company to see tips
+                            </div>
+                        </div>
+                    </div>
+
+                    <form id="resumeForm">
+                        <!-- Progress Steps -->
+                        <div class="row mb-4">
+                            <div class="col-md-12">
+                                <div class="d-flex justify-content-between">
+                                    <div class="step active" data-step="1">1. Personal Info</div>
+                                    <div class="step" data-step="2">2. Professional Summary</div>
+                                    <div class="step" data-step="3">3. Skills</div>
+                                    <div class="step" data-step="4">4. Projects</div>
+                                    <div class="step" data-step="5">5. Education & Experience</div>
+                                    <div class="step" data-step="6">6. Preview & Download</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 1: Personal Information -->
+                        <div id="step1" class="form-step">
+                            <h4 class="mb-3"><i class="fas fa-user-circle"></i> Personal Information</h4>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Full Name *</label>
+                                    <input type="text" class="form-control" id="full_name" value="{{ full_name or current_user.name }}" placeholder="Dunga Dinesh Babu">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Professional Title</label>
+                                    <input type="text" class="form-control" id="professional_title" placeholder="e.g., Software Engineer, Data Analyst">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Email *</label>
+                                    <input type="email" class="form-control" id="email" value="{{ email or current_user.email }}" placeholder="your.email@example.com">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Phone *</label>
+                                    <input type="tel" class="form-control" id="phone" value="{{ phone }}" placeholder="+91 XXXXXXXXXX">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">LinkedIn Profile</label>
+                                    <input type="text" class="form-control" id="linkedin" placeholder="https://linkedin.com/in/yourprofile">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">GitHub Profile</label>
+                                    <input type="text" class="form-control" id="github" placeholder="https://github.com/yourusername">
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <label class="form-label">Address</label>
+                                    <input type="text" class="form-control" id="address" value="{{ address }}" placeholder="City, State, Country">
+                                </div>
+                            </div>
+                            <div class="text-end mt-3">
+                                <button type="button" class="btn btn-primary next-step">Next →</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Professional Summary -->
+                        <div id="step2" class="form-step" style="display: none;">
+                            <h4 class="mb-3"><i class="fas fa-align-left"></i> Professional Summary</h4>
+                            <div class="mb-3">
+                                <label class="form-label">Write a compelling professional summary</label>
+                                <textarea class="form-control" id="summary" rows="6" placeholder="Write a compelling professional summary...">{{ summary }}</textarea>
+                                <div class="mt-2">
+                                    <small class="text-muted">💡 Tips:</small>
+                                    <ul class="small text-muted">
+                                        <li>Highlight your key skills and experience</li>
+                                        <li>Mention your career goals and what you bring to the role</li>
+                                        <li>Keep it concise (3-5 sentences)</li>
+                                        <li>Use keywords from the job description</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <button type="button" class="btn btn-outline-primary btn-sm" onclick="generateSummary()">
+                                        <i class="fas fa-magic"></i> Generate AI Summary
+                                    </button>
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <button type="button" class="btn btn-secondary prev-step">← Previous</button>
+                                    <button type="button" class="btn btn-primary next-step">Next →</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Skills -->
+                        <div id="step3" class="form-step" style="display: none;">
+                            <h4 class="mb-3"><i class="fas fa-code"></i> Technical Skills</h4>
+                            <p class="text-muted">Add skills relevant to your target role and company</p>
+                            
+                            <div id="skills-container">
+                                {% for skill in skills_list %}
+                                <div class="input-group mb-2">
+                                    <input type="text" class="form-control skill-input" value="{{ skill }}" placeholder="e.g., Python, Java, SQL">
+                                    <button type="button" class="btn btn-danger remove-skill">🗑️</button>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <button type="button" id="add-skill" class="btn btn-sm btn-outline-primary">+ Add Skill</button>
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <button type="button" class="btn btn-outline-success btn-sm" onclick="suggestSkills()">
+                                        <i class="fas fa-lightbulb"></i> Suggest Skills
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div id="suggestedSkills" class="mt-2" style="display: none;">
+                                <div class="alert alert-info">
+                                    <strong>Suggested Skills for {{ company or 'your role' }}:</strong>
+                                    <div id="skillSuggestions" class="mt-2"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between mt-3">
+                                <button type="button" class="btn btn-secondary prev-step">← Previous</button>
+                                <button type="button" class="btn btn-primary next-step">Next →</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Projects -->
+                        <div id="step4" class="form-step" style="display: none;">
+                            <h4 class="mb-3"><i class="fas fa-project-diagram"></i> Projects</h4>
+                            <p class="text-muted">Add your best projects relevant to the job role</p>
+                            
+                            <div id="projects-container">
+                                {% for proj in projects_list %}
+                                <div class="card mb-3 bg-dark">
+                                    <div class="card-body">
+                                        <div class="mb-2">
+                                            <input type="text" class="form-control proj-title" placeholder="Project Title" value="{{ proj.title }}">
+                                        </div>
+                                        <div class="mb-2">
+                                            <input type="text" class="form-control proj-tech" placeholder="Technologies Used" value="{{ proj.technologies|default('') }}">
+                                        </div>
+                                        <div class="mb-2">
+                                            <textarea class="form-control proj-desc" rows="3" placeholder="Project Description - Describe what you built, your role, and key achievements">{{ proj.description }}</textarea>
+                                        </div>
+                                        <button type="button" class="btn btn-danger btn-sm remove-project">Remove Project</button>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <button type="button" id="add-project" class="btn btn-sm btn-outline-primary">+ Add Project</button>
+                            
+                            <div class="d-flex justify-content-between mt-3">
+                                <button type="button" class="btn btn-secondary prev-step">← Previous</button>
+                                <button type="button" class="btn btn-primary next-step">Next →</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 5: Education & Experience -->
+                        <div id="step5" class="form-step" style="display: none;">
+                            <h4 class="mb-3"><i class="fas fa-graduation-cap"></i> Education</h4>
+                            <div id="education-container">
+                                {% for edu in education_list %}
+                                <div class="card mb-3 bg-dark">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6 mb-2">
+                                                <input type="text" class="form-control edu-degree" placeholder="Degree" value="{{ edu.degree }}">
+                                            </div>
+                                            <div class="col-md-6 mb-2">
+                                                <input type="text" class="form-control edu-institution" placeholder="Institution" value="{{ edu.institution }}">
+                                            </div>
+                                            <div class="col-md-6 mb-2">
+                                                <input type="text" class="form-control edu-year" placeholder="Year" value="{{ edu.year }}">
+                                            </div>
+                                            <div class="col-md-6 mb-2">
+                                                <input type="text" class="form-control edu-cgpa" placeholder="CGPA/Percentage" value="{{ edu.cgpa|default('') }}">
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn btn-danger btn-sm remove-edu">Remove</button>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <button type="button" id="add-edu" class="btn btn-sm btn-outline-primary">+ Add Education</button>
+                            
+                            <h4 class="mb-3 mt-4"><i class="fas fa-briefcase"></i> Experience</h4>
+                            <div id="experience-container">
+                                {% for exp in experience_list %}
+                                <div class="card mb-3 bg-dark">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6 mb-2">
+                                                <input type="text" class="form-control exp-title" placeholder="Job Title" value="{{ exp.title }}">
+                                            </div>
+                                            <div class="col-md-6 mb-2">
+                                                <input type="text" class="form-control exp-company" placeholder="Company" value="{{ exp.company }}">
+                                            </div>
+                                            <div class="col-md-6 mb-2">
+                                                <input type="text" class="form-control exp-duration" placeholder="Duration" value="{{ exp.duration }}">
+                                            </div>
+                                            <div class="col-md-12 mb-2">
+                                                <textarea class="form-control exp-desc" rows="2" placeholder="Key responsibilities and achievements">{{ exp.description }}</textarea>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn btn-danger btn-sm remove-exp">Remove</button>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <button type="button" id="add-exp" class="btn btn-sm btn-outline-primary">+ Add Experience</button>
+                            
+                            <div class="d-flex justify-content-between mt-3">
+                                <button type="button" class="btn btn-secondary prev-step">← Previous</button>
+                                <button type="button" class="btn btn-primary next-step">Next →</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 6: Preview & Download -->
+                        <div id="step6" class="form-step" style="display: none;">
+                            <h4 class="mb-3"><i class="fas fa-palette"></i> Choose Resume Template</h4>
+                            <div class="row mb-4">
+                                <div class="col-md-4">
+                                    <div class="card template-card {% if template_choice == 'professional' %}selected{% endif %}" data-template="professional">
+                                        <div class="card-body text-center">
+                                            <i class="fas fa-briefcase fa-3x text-primary mb-2"></i>
+                                            <h5>Professional</h5>
+                                            <p class="small">Clean, traditional layout ideal for corporate roles</p>
+                                            <span class="badge bg-info">Corporate</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card template-card {% if template_choice == 'modern' %}selected{% endif %}" data-template="modern">
+                                        <div class="card-body text-center">
+                                            <i class="fas fa-code fa-3x text-success mb-2"></i>
+                                            <h5>Modern Tech</h5>
+                                            <p class="small">Sidebar layout, perfect for IT and startup roles</p>
+                                            <span class="badge bg-success">Tech</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card template-card {% if template_choice == 'minimal' %}selected{% endif %}" data-template="minimal">
+                                        <div class="card-body text-center">
+                                            <i class="fas fa-pen-fancy fa-3x text-warning mb-2"></i>
+                                            <h5>Minimal</h5>
+                                            <p class="small">Simple, elegant design focusing on content</p>
+                                            <span class="badge bg-warning text-dark">Elegant</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" id="template_choice" value="{{ template_choice or 'professional' }}">
+                            
+                            <div class="alert alert-success mt-3">
+                                <i class="fas fa-check-circle"></i> <strong>Company-Specific Resume:</strong> Your resume will be optimized for 
+                                <span id="selectedCompanyDisplay">TCS</span> with relevant keywords and skills.
+                            </div>
+                            
+                            <div class="d-flex justify-content-between mt-3">
+                                <button type="button" class="btn btn-secondary prev-step">← Previous</button>
+                                <button type="button" id="saveResumeBtn" class="btn btn-success btn-lg">
+                                    <i class="fas fa-save"></i> Save & Preview Resume
+                                </button>
+                                <button type="button" id="downloadResumeBtn" class="btn btn-info btn-lg" onclick="downloadResume()">
+                                    <i class="fas fa-download"></i> Download PDF
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .step {
+        flex: 1;
+        text-align: center;
+        padding: 10px;
+        background: #2d3748;
+        color: #a0aec0;
+        border-radius: 8px;
+        margin: 0 5px;
+        font-weight: 500;
+        font-size: 0.8rem;
+    }
+    .step.active {
+        background: linear-gradient(135deg, #0891b2, #06b6d4);
+        color: white;
+    }
+    .template-card {
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+    }
+    .template-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    .template-card.selected {
+        border-color: #0891b2;
+        background: rgba(8, 145, 178, 0.1);
+    }
+    .form-step {
+        animation: fadeIn 0.3s ease;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateX(20px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+    @media (max-width: 768px) {
+        .step { font-size: 0.6rem; padding: 5px; }
+    }
+</style>
+
+<script>
+    // Company-specific tips and keywords
+    const companyData = {
+        'TCS': {
+            keywords: ['Java', 'SQL', 'Communication', 'Teamwork', 'Problem Solving', 'Agile', 'HTML', 'CSS', 'JavaScript', 'Spring Boot'],
+            tips: ['Highlight teamwork and communication skills', 'Show problem-solving abilities', 'Include academic projects', 'Focus on core Java and SQL']
+        },
+        'Infosys': {
+            keywords: ['Python', 'Java', 'SQL', 'System Design', 'Agile', 'Scrum', 'Microservices', 'REST API', 'Django', 'Flask'],
+            tips: ['Focus on scalable solutions', 'Highlight system design skills', 'Show learning agility', 'Include full-stack projects']
+        },
+        'Google': {
+            keywords: ['Data Structures', 'Algorithms', 'System Design', 'Python', 'Java', 'Go', 'Scalability', 'Performance', 'Machine Learning'],
+            tips: ['Focus on algorithms and data structures', 'Show scalability in projects', 'Highlight impact metrics', 'Include technical blogs']
+        },
+        'Amazon': {
+            keywords: ['AWS', 'Scalability', 'Customer Focus', 'Ownership', 'Java', 'Python', 'Distributed Systems', 'Frugality', 'Cloud'],
+            tips: ['Show customer obsession', 'Highlight ownership in projects', 'Include cloud experience', 'Focus on scalability']
+        },
+        'Microsoft': {
+            keywords: ['Azure', 'C#', '.NET', 'Cloud', 'Innovation', 'Growth Mindset', 'Python', 'TypeScript', 'React', 'SQL Server'],
+            tips: ['Show growth mindset', 'Highlight innovation', 'Include cloud experience', 'Focus on problem solving']
+        },
+        'Meta': {
+            keywords: ['React', 'PHP', 'Python', 'Social Media', 'Scale', 'Distributed Systems', 'JavaScript', 'GraphQL', 'Android', 'iOS'],
+            tips: ['Show impact at scale', 'Highlight speed of delivery', 'Include mobile experience', 'Focus on user-centric design']
+        },
+        'Wipro': {
+            keywords: ['C++', 'Java', 'SQL', 'Communication', 'Leadership', 'Project Management', 'Oracle', 'MySQL'],
+            tips: ['Highlight leadership skills', 'Show project management experience', 'Include team achievements']
+        },
+        'Accenture': {
+            keywords: ['Cloud', 'AWS', 'Azure', 'AI', 'ML', 'Digital', 'Innovation', 'Consulting', 'Python'],
+            tips: ['Show digital mindset', 'Highlight innovation', 'Include cloud experience', 'Focus on consulting skills']
+        }
+    };
+
+    const roleSkills = {
+        'Software Engineer': ['Python', 'Java', 'SQL', 'Data Structures', 'Algorithms', 'System Design', 'OOP', 'Git'],
+        'Data Analyst': ['Python', 'SQL', 'Excel', 'Tableau', 'Statistics', 'Power BI', 'Pandas', 'NumPy'],
+        'Web Developer': ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'MongoDB', 'Express', 'Bootstrap'],
+        'Python Developer': ['Python', 'Django', 'Flask', 'SQL', 'REST API', 'Docker', 'Git', 'AWS'],
+        'ML Engineer': ['Python', 'Machine Learning', 'Deep Learning', 'TensorFlow', 'SQL', 'Statistics', 'PyTorch'],
+        'Frontend Developer': ['React', 'JavaScript', 'HTML', 'CSS', 'TypeScript', 'Redux', 'Tailwind CSS'],
+        'Backend Developer': ['Python', 'Java', 'Node.js', 'SQL', 'MongoDB', 'Docker', 'REST API', 'AWS'],
+        'Full Stack Developer': ['React', 'Node.js', 'Python', 'SQL', 'MongoDB', 'Docker', 'AWS', 'JavaScript'],
+        'DevOps Engineer': ['Docker', 'Kubernetes', 'AWS', 'Linux', 'Jenkins', 'Python', 'Git', 'Ansible'],
+        'Data Scientist': ['Python', 'Machine Learning', 'Statistics', 'SQL', 'TensorFlow', 'Data Visualization', 'Tableau']
+    };
+
+    // Step navigation
+    let currentStep = 1;
+    const steps = document.querySelectorAll('.step');
+    const forms = document.querySelectorAll('.form-step');
+    
+    function showStep(step) {
+        forms.forEach((form, index) => {
+            form.style.display = (index + 1 === step) ? 'block' : 'none';
+        });
+        steps.forEach((stepEl, index) => {
+            if (index + 1 === step) {
+                stepEl.classList.add('active');
+            } else {
+                stepEl.classList.remove('active');
+            }
+        });
+        currentStep = step;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    
+    document.querySelectorAll('.next-step').forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (currentStep < 6) showStep(currentStep + 1);
+        });
+    });
+    
+    document.querySelectorAll('.prev-step').forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (currentStep > 1) showStep(currentStep - 1);
+        });
+    });
+    
+    // Template selection
+    document.querySelectorAll('.template-card').forEach(card => {
+        card.addEventListener('click', () => {
+            document.querySelectorAll('.template-card').forEach(c => c.classList.remove('selected'));
+            card.classList.add('selected');
+            document.getElementById('template_choice').value = card.dataset.template;
+        });
+    });
+
+    // Company tips update
+    function updateCompanyTips() {
+        const company = document.getElementById('targetCompany').value;
+        const data = companyData[company];
+        const tipsDiv = document.getElementById('companyTips');
+        if (data) {
+            tipsDiv.innerHTML = `<strong>Tips for ${company}:</strong><br> ${data.tips.join('<br> • ')}`;
+        } else {
+            tipsDiv.innerHTML = 'Select a company to see specific tips';
+        }
+        document.getElementById('selectedCompanyDisplay').textContent = company;
+    }
+
+    function updateRoleTips() {
+        const role = document.getElementById('jobRole').value;
+        const skills = roleSkills[role] || ['Technical Skills', 'Problem Solving', 'Communication'];
+        const tipDiv = document.getElementById('companyTips');
+        if (role !== 'Other') {
+            const existing = tipDiv.innerHTML;
+            tipDiv.innerHTML = existing + `<br><strong>Key skills for ${role}:</strong><br> ${skills.join(' • ')}`;
+        }
+    }
+
+    // Generate AI Summary
+    function generateSummary() {
+        const company = document.getElementById('targetCompany').value;
+        const role = document.getElementById('jobRole').value;
+        const name = document.getElementById('full_name').value || 'Professional';
+        const summary = document.getElementById('summary');
+        
+        const templates = {
+            'Software Engineer': `Passionate Software Engineer with strong foundation in programming and problem-solving. Experienced in developing scalable applications using modern technologies. Seeking to leverage technical expertise at ${company} to build innovative solutions.`,
+            'Data Analyst': `Analytical Data Analyst with expertise in data visualization and statistical analysis. Proficient in Python, SQL, and Tableau. Committed to deriving actionable insights to drive business decisions at ${company}.`,
+            'Web Developer': `Creative Web Developer with experience in building responsive, user-friendly web applications. Skilled in React, Node.js, and modern JavaScript frameworks. Eager to contribute to ${company}'s digital transformation initiatives.`,
+            'ML Engineer': `Results-driven ML Engineer with experience in developing and deploying machine learning models. Strong background in Python, TensorFlow, and data processing. Passionate about solving complex problems at ${company}.`,
+            'DevOps Engineer': `Automation-focused DevOps Engineer with expertise in cloud infrastructure, CI/CD pipelines, and containerization. Experienced in AWS, Docker, and Kubernetes. Dedicated to optimizing deployment processes at ${company}.`
+        };
+        
+        const summaryText = templates[role] || `Dedicated ${role} with strong technical skills and problem-solving abilities. Experienced in building and delivering high-quality solutions. Seeking to contribute to ${company}'s success with innovative approaches and collaborative mindset.`;
+        
+        summary.value = summaryText;
+        document.getElementById('companyTips').innerHTML = `✅ AI-generated summary for ${role} at ${company}`;
+    }
+
+    // Suggest Skills
+    function suggestSkills() {
+        const role = document.getElementById('jobRole').value;
+        const skills = roleSkills[role] || ['Python', 'SQL', 'Communication', 'Problem Solving', 'Teamwork'];
+        const container = document.getElementById('suggestedSkills');
+        const suggestionsDiv = document.getElementById('skillSuggestions');
+        
+        container.style.display = 'block';
+        suggestionsDiv.innerHTML = skills.map(s => 
+            `<span class="badge bg-info m-1" style="cursor:pointer;" onclick="addSkill('${s}')">${s} +</span>`
+        ).join('');
+    }
+
+    function addSkill(skill) {
+        const container = document.getElementById('skills-container');
+        const div = document.createElement('div');
+        div.className = 'input-group mb-2';
+        div.innerHTML = `
+            <input type="text" class="form-control skill-input" value="${skill}" placeholder="e.g., Python">
+            <button type="button" class="btn btn-danger remove-skill">🗑️</button>
+        `;
+        container.appendChild(div);
+        div.querySelector('.remove-skill').addEventListener('click', () => div.remove());
+    }
+
+    // Add/Remove Skills
+    document.getElementById('add-skill').addEventListener('click', () => {
+        const div = document.createElement('div');
+        div.className = 'input-group mb-2';
+        div.innerHTML = '<input type="text" class="form-control skill-input" placeholder="e.g., Python"><button type="button" class="btn btn-danger remove-skill">🗑️</button>';
+        document.getElementById('skills-container').appendChild(div);
+        div.querySelector('.remove-skill').addEventListener('click', () => div.remove());
+    });
+    
+    document.querySelectorAll('.remove-skill').forEach(btn => {
+        btn.addEventListener('click', function() { this.parentElement.remove(); });
+    });
+    
+    // Add/Remove Projects
+    document.getElementById('add-project').addEventListener('click', () => {
+        const div = document.createElement('div');
+        div.className = 'card mb-3 bg-dark';
+        div.innerHTML = `
+            <div class="card-body">
+                <div class="mb-2"><input type="text" class="form-control proj-title" placeholder="Project Title"></div>
+                <div class="mb-2"><input type="text" class="form-control proj-tech" placeholder="Technologies Used"></div>
+                <div class="mb-2"><textarea class="form-control proj-desc" rows="3" placeholder="Project Description"></textarea></div>
+                <button type="button" class="btn btn-danger btn-sm remove-project">Remove Project</button>
+            </div>
+        `;
+        document.getElementById('projects-container').appendChild(div);
+        div.querySelector('.remove-project').addEventListener('click', () => div.remove());
+    });
+    
+    document.querySelectorAll('.remove-project').forEach(btn => {
+        btn.addEventListener('click', function() { this.closest('.card').remove(); });
+    });
+    
+    // Add/Remove Education
+    document.getElementById('add-edu').addEventListener('click', () => {
+        const div = document.createElement('div');
+        div.className = 'card mb-3 bg-dark';
+        div.innerHTML = `
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 mb-2"><input type="text" class="form-control edu-degree" placeholder="Degree"></div>
+                    <div class="col-md-6 mb-2"><input type="text" class="form-control edu-institution" placeholder="Institution"></div>
+                    <div class="col-md-6 mb-2"><input type="text" class="form-control edu-year" placeholder="Year"></div>
+                    <div class="col-md-6 mb-2"><input type="text" class="form-control edu-cgpa" placeholder="CGPA"></div>
+                </div>
+                <button type="button" class="btn btn-danger btn-sm remove-edu">Remove</button>
+            </div>
+        `;
+        document.getElementById('education-container').appendChild(div);
+        div.querySelector('.remove-edu').addEventListener('click', () => div.remove());
+    });
+    
+    document.querySelectorAll('.remove-edu').forEach(btn => {
+        btn.addEventListener('click', function() { this.closest('.card').remove(); });
+    });
+    
+    // Add/Remove Experience
+    document.getElementById('add-exp').addEventListener('click', () => {
+        const div = document.createElement('div');
+        div.className = 'card mb-3 bg-dark';
+        div.innerHTML = `
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 mb-2"><input type="text" class="form-control exp-title" placeholder="Job Title"></div>
+                    <div class="col-md-6 mb-2"><input type="text" class="form-control exp-company" placeholder="Company"></div>
+                    <div class="col-md-6 mb-2"><input type="text" class="form-control exp-duration" placeholder="Duration"></div>
+                    <div class="col-md-12 mb-2"><textarea class="form-control exp-desc" rows="2" placeholder="Description"></textarea></div>
+                </div>
+                <button type="button" class="btn btn-danger btn-sm remove-exp">Remove</button>
+            </div>
+        `;
+        document.getElementById('experience-container').appendChild(div);
+        div.querySelector('.remove-exp').addEventListener('click', () => div.remove());
+    });
+    
+    document.querySelectorAll('.remove-exp').forEach(btn => {
+        btn.addEventListener('click', function() { this.closest('.card').remove(); });
+    });
+    
+    // Save Resume Data
+    document.getElementById('saveResumeBtn').addEventListener('click', () => {
+        saveResumeData();
+    });
+
+    function saveResumeData() {
+        const skills = [...document.querySelectorAll('.skill-input')].map(i => i.value.trim()).filter(v => v);
+        const projects = [...document.querySelectorAll('#projects-container .card')].map(c => ({
+            title: c.querySelector('.proj-title')?.value || '',
+            technologies: c.querySelector('.proj-tech')?.value || '',
+            description: c.querySelector('.proj-desc')?.value || ''
+        })).filter(p => p.title || p.description);
+        
+        const education = [...document.querySelectorAll('#education-container .card')].map(c => ({
+            degree: c.querySelector('.edu-degree')?.value || '',
+            institution: c.querySelector('.edu-institution')?.value || '',
+            year: c.querySelector('.edu-year')?.value || '',
+            cgpa: c.querySelector('.edu-cgpa')?.value || ''
+        })).filter(e => e.degree || e.institution);
+        
+        const experience = [...document.querySelectorAll('#experience-container .card')].map(c => ({
+            title: c.querySelector('.exp-title')?.value || '',
+            company: c.querySelector('.exp-company')?.value || '',
+            duration: c.querySelector('.exp-duration')?.value || '',
+            description: c.querySelector('.exp-desc')?.value || ''
+        })).filter(ex => ex.title || ex.company);
+        
+        const data = {
+            full_name: document.getElementById('full_name').value,
+            professional_title: document.getElementById('professional_title').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            linkedin: document.getElementById('linkedin').value,
+            github: document.getElementById('github').value,
+            address: document.getElementById('address').value,
+            summary: document.getElementById('summary').value,
+            target_company: document.getElementById('targetCompany').value,
+            job_role: document.getElementById('jobRole').value,
+            skills: skills,
+            projects: projects,
+            education: education,
+            experience: experience,
+            template_choice: document.getElementById('template_choice').value
+        };
+        
+        fetch('/save_resume_data', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        }).then(r => r.json()).then(d => {
+            if (d.status === 'success') {
+                window.location.href = '/preview_resume';
+            } else {
+                alert('Error saving resume. Please try again.');
+            }
+        }).catch(() => alert('Network error. Please try again.'));
+    }
+
+    function downloadResume() {
+        // First save, then open preview for download
+        saveResumeData();
+        setTimeout(() => {
+            window.open('/preview_resume', '_blank');
+        }, 1000);
+    }
+
+    // Initialize company tips
+    updateCompanyTips();
+
+    // Keyboard shortcut: Ctrl+Enter to save
+    document.addEventListener('keydown', function(e) {
+        if (e.ctrlKey && e.key === 'Enter') {
+            if (currentStep === 6) {
+                document.getElementById('saveResumeBtn').click();
+            } else {
+                document.querySelector('.next-step')?.click();
+            }
+        }
+    });
+</script>
+{% endblock %}

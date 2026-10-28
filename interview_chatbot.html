@@ -1,0 +1,156 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">💬 Interview Chatbot</h4>
+                    <small>{{ company }} | {{ role }} | {{ total_questions }} questions</small>
+                </div>
+                <div class="card-body">
+                    <div id="chatMessages" class="border rounded p-3 mb-3" style="height: 400px; overflow-y: auto; background: #1e293b;">
+                        <div class="text-center text-muted mt-5" id="initialMessage">Click "Start Interview" to begin.</div>
+                    </div>
+                    
+                    <div id="inputArea" style="display: none;">
+                        <div class="input-group">
+                            <input type="text" id="userAnswer" class="form-control" placeholder="Type your answer..." autocomplete="off">
+                            <button id="sendBtn" class="btn btn-primary">Send</button>
+                        </div>
+                    </div>
+                    
+                    <div id="controlArea" class="text-center mt-3">
+                        <button id="startBtn" class="btn btn-success btn-lg px-5">Start Interview</button>
+                        <button id="resetBtn" class="btn btn-secondary btn-lg">Reset</button>
+                    </div>
+                    
+                    <div id="completeArea" class="text-center mt-3" style="display: none;">
+                        <div class="alert alert-success">
+                            <i class="fas fa-trophy fa-2x"></i>
+                            <h4>Interview Complete!</h4>
+                            <p>Great job finishing all questions.</p>
+                            <a href="{{ url_for('dashboard') }}" class="btn btn-primary">Back to Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let interviewActive = false;
+
+    function addMessage(sender, text, type='question') {
+        const chat = document.getElementById('chatMessages');
+        const div = document.createElement('div');
+        div.className = `mb-2 ${sender==='You'?'text-end':'text-start'}`;
+        
+        let bg = 'bg-secondary text-white';
+        if (sender === 'You') bg = 'bg-primary text-white';
+        if (type === 'feedback') bg = 'bg-warning text-dark';
+        if (type === 'error') bg = 'bg-danger text-white';
+        
+        div.innerHTML = `<div class="d-inline-block p-2 rounded ${bg}" style="max-width:80%"><strong>${sender}:</strong> ${text}</div>`;
+        chat.appendChild(div);
+        chat.scrollTop = chat.scrollHeight;
+    }
+
+    function addFeedback(score, feedback, improved) {
+        const chat = document.getElementById('chatMessages');
+        const div = document.createElement('div');
+        div.className = 'mb-2 text-start';
+        div.innerHTML = `<div class="d-inline-block p-3 rounded bg-info text-dark" style="max-width:90%">
+            <strong>🤖 Evaluation:</strong><br>
+            📊 Score: ${score}/10<br>
+            💬 Feedback: ${feedback}<br>
+            💡 Improved: ${improved}
+        </div>`;
+        chat.appendChild(div);
+        chat.scrollTop = chat.scrollHeight;
+    }
+
+    function loadNextQuestion() {
+        fetch('/chatbot_get_question')
+            .then(r => r.json())
+            .then(data => {
+                if (data.finished) {
+                    finishInterview();
+                    return;
+                }
+                addMessage('Bot', `Question ${data.index} of ${data.total} (${data.type}):<br>${data.question}`);
+                document.getElementById('userAnswer').value = '';
+                document.getElementById('userAnswer').focus();
+            })
+            .catch(err => {
+                console.error(err);
+                addMessage('System', 'Error loading next question.', 'error');
+            });
+    }
+
+    function finishInterview() {
+        document.getElementById('inputArea').style.display = 'none';
+        document.getElementById('controlArea').style.display = 'none';
+        document.getElementById('completeArea').style.display = 'block';
+        addMessage('Bot', "🎉 Congratulations! Interview complete.", 'feedback');
+        interviewActive = false;
+    }
+
+    function submitAnswer() {
+        if (!interviewActive) return;
+        const ans = document.getElementById('userAnswer').value.trim();
+        if (!ans) return;
+
+        addMessage('You', ans);
+        document.getElementById('userAnswer').value = '';
+        document.getElementById('sendBtn').disabled = true;
+
+        fetch('/chatbot_submit_answer', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({answer: ans})
+        })
+        .then(r => r.json())
+        .then(data => {
+            addFeedback(data.score, data.feedback, data.improved_answer);
+            if (data.finished) {
+                finishInterview();
+            } else {
+                loadNextQuestion();
+            }
+            document.getElementById('sendBtn').disabled = false;
+        })
+        .catch(err => {
+            console.error(err);
+            addMessage('System', 'Error evaluating answer.', 'error');
+            document.getElementById('sendBtn').disabled = false;
+        });
+    }
+
+    document.getElementById('startBtn').addEventListener('click', () => {
+        fetch('/chatbot_reset', { method: 'POST' })
+            .then(() => {
+                document.getElementById('chatMessages').innerHTML = '';
+                document.getElementById('inputArea').style.display = 'block';
+                document.getElementById('controlArea').style.display = 'none';
+                document.getElementById('completeArea').style.display = 'none';
+                
+                interviewActive = true;
+                addMessage('Bot', "Interview started! Let's begin.");
+                loadNextQuestion();
+            });
+    });
+
+    document.getElementById('resetBtn').addEventListener('click', () => {
+        if (confirm('Reset interview?')) {
+            window.location.reload();
+        }
+    });
+
+    document.getElementById('sendBtn').addEventListener('click', submitAnswer);
+    document.getElementById('userAnswer').addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') submitAnswer();
+    });
+</script>
+{% endblock %}

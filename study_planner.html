@@ -1,0 +1,17 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<h3>📅 Smart Study Planner</h3>
+<div class="row">
+    {% for plan in plans %}
+    <div class="col-md-4 mb-3">
+        <div class="card">
+            <div class="card-header">{{ plan.plan_date }}</div>
+            <div class="card-body">
+                <ul>{% for task in plan.tasks|from_json %}<li>{{ task }}</li>{% endfor %}</ul>
+                <form method="POST" action="/complete_task"><input type="hidden" name="plan_id" value="{{ plan.id }}"><button class="btn btn-sm btn-success">Mark Completed</button></form>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

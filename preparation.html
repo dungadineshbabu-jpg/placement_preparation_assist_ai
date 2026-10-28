@@ -1,0 +1,246 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <!-- Target Info -->
+        <div class="card shadow mb-4">
+            <div class="card-header bg-primary text-white">
+                <h4>🎯 Your Personalized Preparation</h4>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-info">
+                    <strong>Target:</strong> {{ analysis.target_company }} | <strong>Role:</strong> {{ analysis.job_role }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <!-- Left Column -->
+    <div class="col-md-6">
+        <!-- Resume Analysis -->
+        <div class="card shadow mb-4">
+            <div class="card-header bg-success text-white">
+                <h5>📄 Resume Analysis</h5>
+            </div>
+            <div class="card-body">
+                <h6>✅ Strengths:</h6>
+                <ul>
+                    {% for s in strengths %}
+                        <li>{{ s }}</li>
+                    {% else %}
+                        <li>None identified</li>
+                    {% endfor %}
+                </ul>
+                <h6>⚠️ Missing Skills for {{ analysis.target_company }}:</h6>
+                <ul>
+                    {% for m in missing_skills %}
+                        <li>{{ m }}</li>
+                    {% else %}
+                        <li>Good match!</li>
+                    {% endfor %}
+                </ul>
+                <button id="resumeSuggestionsBtn" class="btn btn-outline-primary btn-sm">Get Resume Tips</button>
+                <div id="resumeSuggestions" class="mt-3"></div>
+            </div>
+        </div>
+
+        <!-- Weak Areas -->
+        <div class="card shadow mb-4">
+            <div class="card-header bg-warning text-dark">
+                <h5>🎯 Weak Areas Detected</h5>
+            </div>
+            <div class="card-body">
+                <ul id="weakAreasList">
+                    {% for w in weak_areas %}
+                        <li>{{ w.topic }}</li>
+                    {% else %}
+                        <li>None yet. Answer questions to identify them.</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <!-- ===== ROADMAP WITH QUIZ INSIDE ===== -->
+        <div class="card shadow mb-4">
+            <div class="card-header" style="background: linear-gradient(135deg, #84cc16, #65a30d); color: white;">
+                <h5><i class="fas fa-road"></i> Personalized Roadmap</h5>
+            </div>
+            <div class="card-body">
+                <button id="getRoadmapBtn" class="btn btn-primary w-100">Generate 4-Week Study Plan</button>
+                <div id="roadmapContent" class="mt-3"></div>
+                
+                <!-- Quiz Section (appears after roadmap is generated) -->
+                <div id="quizSection" style="display: none;" class="mt-4">
+                    <hr>
+                    <div class="card" style="background: rgba(99, 102, 241, 0.15); border: 1px solid #6366f1;">
+                        <div class="card-header" style="background: linear-gradient(135deg, #6366f1, #8b5cf6); color: white;">
+                            <h5><i class="fas fa-question-circle"></i> Daily Job Role Quiz</h5>
+                            <small>Test your knowledge with 10 fresh questions for {{ analysis.job_role }}</small>
+                        </div>
+                        <div class="card-body text-center">
+                            <p>Questions rotate daily based on your target role.</p>
+                            
+                            <!-- CHANGED: Now points to the new job_quiz route -->
+                            <a id="quizStartBtn" href="{{ url_for('job_quiz') }}" class="btn btn-primary btn-lg">
+                                <i class="fas fa-play"></i> Start Today's Quiz
+                            </a>
+                            
+                            <div id="quizStatus" class="mt-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Column: Interview Questions -->
+    <div class="col-md-6">
+        <div class="card shadow mb-4">
+            <div class="card-header bg-danger text-white">
+                <h5>❓ Interview Questions ({{ questions|length }})</h5>
+            </div>
+            <div class="card-body" style="max-height: 600px; overflow-y: auto;">
+                {% for q in questions %}
+                    <div class="border rounded p-3 mb-3">
+                        <div class="badge bg-secondary mb-2">{{ q.question_type|upper }}</div>
+                        <p class="fw-bold">{{ loop.index }}. {{ q.question_text }}</p>
+                        <textarea class="form-control mb-2" id="answer-{{ q.id }}" rows="3" placeholder="Your answer..."></textarea>
+                        <button class="btn btn-sm btn-success evaluate-btn" data-qid="{{ q.id }}">Evaluate</button>
+                        <div id="result-{{ q.id }}" class="mt-2"></div>
+                        {% for ans in answers %}
+                            {% if ans.question_id == q.id %}
+                                <div class="alert alert-info mt-2">
+                                    <strong>Previous Score:</strong> {{ ans.score }}/10<br>
+                                    <strong>Feedback:</strong> {{ ans.feedback }}
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Daily Motivation -->
+<div class="row">
+    <div class="col-md-12">
+        <div class="card shadow">
+            <div class="card-header bg-secondary text-white">
+                <h5>💪 Daily Motivation</h5>
+            </div>
+            <div class="card-body text-center">
+                <button id="getMotivationBtn" class="btn btn-outline-secondary">Get Motivation Tip</button>
+                <p id="tipText" class="mt-2"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Pass the dynamic day number from Flask to JS
+    const CURRENT_DAY = {{ stats.current_day }};
+
+    // Evaluate buttons
+    document.querySelectorAll('.evaluate-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            let qid = this.dataset.qid;
+            let ans = document.getElementById(`answer-${qid}`).value;
+            let resDiv = document.getElementById(`result-${qid}`);
+            if (!ans.trim()) {
+                resDiv.innerHTML = '<div class="alert alert-warning">Please write your answer!</div>';
+                return;
+            }
+            resDiv.innerHTML = '<div class="spinner-border spinner-border-sm"></div> Evaluating...';
+            fetch('/evaluate_answer', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ question_id: qid, answer: ans })
+            })
+            .then(r => r.json())
+            .then(data => {
+                if (data.error) {
+                    resDiv.innerHTML = `<div class="alert alert-danger">${data.error}</div>`;
+                } else {
+                    resDiv.innerHTML = `
+                        <div class="alert alert-success">
+                            <strong>Score: ${data.score}/10</strong><br>
+                            <strong>Clarity: ${data.clarity_score}/10 | Confidence: ${data.confidence_score}/10</strong><br>
+                            <strong>Feedback:</strong> ${data.feedback}<br>
+                            <strong>💡 Improved Answer:</strong> ${data.improved_answer}
+                        </div>
+                    `;
+                }
+            })
+            .catch(() => resDiv.innerHTML = '<div class="alert alert-danger">Error evaluating.</div>');
+        });
+    });
+
+    // Roadmap
+    document.getElementById('getRoadmapBtn')?.addEventListener('click', function() {
+        let div = document.getElementById('roadmapContent');
+        div.innerHTML = '<div class="spinner-border"></div> Generating...';
+        fetch('/get_roadmap')
+            .then(r => r.json())
+            .then(data => {
+                let html = '<div class="accordion">';
+                let w = 1;
+                let weekFocus = {};
+                for (let [week, plan] of Object.entries(data.roadmap)) {
+                    weekFocus[week] = plan.focus;
+                    html += `
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button ${w > 1 ? 'collapsed' : ''}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${w}">
+                                    ${week.toUpperCase()}: ${plan.focus}
+                                </button>
+                            </h2>
+                            <div id="collapse${w}" class="accordion-collapse collapse ${w === 1 ? 'show' : ''}">
+                                <div class="accordion-body">
+                                    <ul>
+                                        ${plan.daily_plan.map(d => `<li>${d}</li>`).join('')}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    w++;
+                }
+                html += '</div><hr><h6>📚 Platforms:</h6><ul>' + data.platforms.map(p => `<li>${p}</li>`).join('') + '</ul>';
+                div.innerHTML = html;
+
+                // Show quiz section with the first week's focus
+                document.getElementById('quizSection').style.display = 'block';
+                let firstWeek = Object.keys(data.roadmap)[0] || 'week1';
+                let focus = weekFocus[firstWeek] || 'Core Concepts';
+                
+                // Note: The link remains to the job_quiz route, but we dynamically update the status text
+                document.getElementById('quizStatus').innerHTML = `<span class="text-muted">📌 Today's focus: <strong>${focus}</strong></span>`;
+            })
+            .catch(() => div.innerHTML = '<div class="alert alert-danger">Error generating roadmap.</div>');
+    });
+
+    // Resume Suggestions
+    document.getElementById('resumeSuggestionsBtn')?.addEventListener('click', function() {
+        fetch('/resume_suggestions')
+            .then(r => r.json())
+            .then(data => {
+                if (data.suggestions) {
+                    let html = '<div class="alert alert-info"><ul>' + data.suggestions.map(s => `<li>${s}</li>`).join('') + '</ul></div>';
+                    document.getElementById('resumeSuggestions').innerHTML = html;
+                }
+            });
+    });
+
+    // Motivation
+    document.getElementById('getMotivationBtn')?.addEventListener('click', function() {
+        fetch('/motivation_tip')
+            .then(r => r.json())
+            .then(data => {
+                document.getElementById('tipText').innerHTML = `<strong>✨ ${data.tip}</strong>`;
+            });
+    });
+</script>
+{% endblock %}

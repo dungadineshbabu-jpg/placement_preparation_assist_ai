@@ -1,0 +1,100 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2 class="mb-4"><i class="fas fa-chart-line"></i> Your Progress Dashboard</h2>
+    
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h5><i class="fas fa-chart-line"></i> Score Trend</h5>
+                </div>
+                <div class="card-body">
+                    <canvas id="scoreChart" height="250"></canvas>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-header bg-warning text-dark">
+                    <h5><i class="fas fa-exclamation-triangle"></i> Weak Areas</h5>
+                </div>
+                <div class="card-body">
+                    {% if weak_areas %}
+                    <ul class="list-group list-group-flush bg-transparent">
+                        {% for w in weak_areas %}
+                        <li class="list-group-item bg-transparent text-warning">
+                            <i class="fas fa-arrow-right me-2"></i> {{ w.topic }}
+                            <span class="badge bg-danger float-end">Severity: {{ w.severity }}/10</span>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% else %}
+                    <div class="text-center text-muted py-4">
+                        <i class="fas fa-check-circle fa-3x text-success mb-2"></i>
+                        <p>No weak areas detected! Great job!</p>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <div class="card shadow">
+                <div class="card-header bg-info text-white">
+                    <h5><i class="fas fa-lightbulb"></i> Recommendations</h5>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        {% if weak_areas %}
+                        <li>Focus on improving your weak areas listed above</li>
+                        <li>Take more mock interviews to build confidence</li>
+                        <li>Review the AI feedback after each answer</li>
+                        {% else %}
+                        <li>Keep practicing to maintain your performance</li>
+                        <li>Try the coding arena for additional practice</li>
+                        {% endif %}
+                        <li>Use the resume optimizer for ATS-friendly resume</li>
+                        <li>Check company insights for target company preparation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const scores = {{ scores|tojson }};
+    new Chart(document.getElementById('scoreChart'), {
+        type: 'line',
+        data: {
+            labels: scores.map((_, i) => i + 1),
+            datasets: [{
+                label: 'Answer Scores',
+                data: scores,
+                borderColor: '#3b82f6',
+                backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                tension: 0.4,
+                fill: true
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 10,
+                    title: { display: true, text: 'Score (0-10)' }
+                },
+                x: {
+                    title: { display: true, text: 'Question Number' }
+                }
+            }
+        }
+    });
+</script>
+{% endblock %}

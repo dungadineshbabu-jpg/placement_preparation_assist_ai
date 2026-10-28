@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Preparation Assistant - AI Powered Interview Training</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="{{ url_for('index') }}">
+            <i class="fas fa-graduation-cap"></i> Placement Prep AI
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                {% if current_user.is_authenticated %}
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('dashboard') }}"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('analysis') }}"><i class="fas fa-file-alt"></i> Resume</a></li>
+
+                    <!-- Interview Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="interviewDropdown" role="button" aria-expanded="false">
+                            <i class="fas fa-comments"></i> Interview
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ url_for('mock_interview') }}">📝 Text Mock</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('mock_interview_start') }}">🎤 Face-to-Face</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('interview_chatbot') }}">💬 AI Chatbot</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('voice_interview') }}">🎙️ Voice</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('avatar_interview') }}">👤 Avatar</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Analytics Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="analyticsDropdown" role="button" aria-expanded="false">
+                            <i class="fas fa-chart-line"></i> Analytics
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ url_for('analytics_dashboard') }}">📊 Dashboard</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('company_dashboard') }}">🏢 Company</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('readiness_meter') }}">📈 Readiness</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('leaderboard') }}">🏆 Leaderboard</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Advanced Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="advancedDropdown" role="button" aria-expanded="false">
+                            <i class="fas fa-rocket"></i> Advanced
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ url_for('job_recommendations') }}">💼 Jobs</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('career_predictor') }}">🎯 Career</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('ats_checker') }}">🤖 ATS Check</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('resume_optimizer_page') }}">✨ Optimizer</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('group_discussion') }}">💬 GD</a></li>
+
+                            <!-- ========== DAILY CODING CHALLENGE LINKS ========== -->
+                            <li><a class="dropdown-item" href="{{ url_for('daily_challenge') }}">📅 Daily Challenge</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('coding_leaderboard') }}">🏆 Coding Leaderboard</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('my_daily_submissions') }}">📜 My Submissions</a></li>
+
+                            <li><a class="dropdown-item" href="{{ url_for('placement_tracker') }}">📋 Tracker</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('linkedin_analyzer') }}">🔗 LinkedIn</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('certificates') }}">📜 Certificates</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('resume_builder') }}">📄 Resume Builder</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('mentor') }}"><i class="fas fa-chalkboard-user"></i> Mentor</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('code_practice') }}"><i class="fas fa-code"></i> Code</a></li>
+
+                    <!-- ========== COMPILER ========== -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('compiler') }}">
+                            <i class="fas fa-terminal"></i> Compiler
+                        </a>
+                    </li>
+
+                    <!-- ========== APTITUDE LINKS (ADDED DASHBOARD LINK) ========== -->
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('aptitude') }}"><i class="fas fa-brain"></i> Aptitude</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('aptitude_dashboard') }}"><i class="fas fa-chart-pie"></i> Aptitude Dashboard</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                {% else %}
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('login') }}"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('register') }}"><i class="fas fa-user-plus"></i> Register</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                    <i class="fas fa-{% if category == 'success' %}check-circle{% elif category == 'danger' %}exclamation-triangle{% elif category == 'warning' %}exclamation-circle{% else %}info-circle{% endif %} me-2"></i>
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+</div>
+
+<footer class="text-center text-muted py-4 mt-5 border-top border-secondary">
+    <div class="container">
+        <small><i class="fas fa-graduation-cap"></i> Placement Preparation Assistant | AI-Powered Interview Training | © 2025 All Rights Reserved</small>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Auto-dismiss flash alerts after 5 seconds
+        setTimeout(function() {
+            document.querySelectorAll('.alert:not(.alert-permanent)').forEach(function(alert) {
+                try { new bootstrap.Alert(alert).close(); } catch(e) {}
+            });
+        }, 5000);
+
+        // ===== MANUAL DROPDOWN TOGGLE =====
+        document.querySelectorAll('.navbar .dropdown-toggle').forEach(function (toggle) {
+            toggle.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                var parent = this.parentElement;
+                var menu = parent.querySelector('.dropdown-menu');
+                var isOpen = parent.classList.contains('show');
+
+                // Close all other dropdowns
+                document.querySelectorAll('.navbar .dropdown').forEach(function (d) {
+                    d.classList.remove('show');
+                    var m = d.querySelector('.dropdown-menu');
+                    if (m) m.classList.remove('show');
+                });
+
+                // If it was closed, open this one; otherwise leave closed
+                if (!isOpen) {
+                    parent.classList.add('show');
+                    menu.classList.add('show');
+                }
+            });
+        });
+
+        // Close dropdown when clicking anywhere else
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('.navbar .dropdown')) {
+                document.querySelectorAll('.navbar .dropdown').forEach(function (d) {
+                    d.classList.remove('show');
+                    var m = d.querySelector('.dropdown-menu');
+                    if (m) m.classList.remove('show');
+                });
+            }
+        });
+
+        // Prevent dropdown from closing when clicking inside it
+        document.querySelectorAll('.navbar .dropdown-menu').forEach(function (menu) {
+            menu.addEventListener('click', function (e) {
+                e.stopPropagation();
+            });
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white text-center">
+                <h4 class="mb-0"><i class="fas fa-users"></i> Mock Interview Simulator</h4>
+            </div>
+            <div class="card-body">
+                <div class="text-center mb-4">
+                    <i class="fas fa-chalkboard-teacher fa-4x text-primary mb-3"></i>
+                    <p class="lead">Practice with real interview questions and get AI evaluation</p>
+                </div>
+                
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle"></i> <strong>How it works:</strong>
+                    <ul class="mb-0 mt-2">
+                        <li>Answer interview questions one by one</li>
+                        <li>Get instant AI score and feedback (0-10)</li>
+                        <li>Receive improved version of your answer</li>
+                        <li>Track your progress and weak areas</li>
+                    </ul>
+                </div>
+                
+                <form method="POST">
+                    <div class="mb-3">
+                        <label class="form-label"><i class="fas fa-building"></i> Target Company</label>
+                        <input type="text" name="company" class="form-control" placeholder="e.g., Google, Amazon, TCS, Microsoft" required>
+                        <small class="text-muted">Questions will be tailored to this company</small>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label"><i class="fas fa-briefcase"></i> Job Role</label>
+                        <input type="text" name="role" class="form-control" placeholder="e.g., Software Engineer, Data Analyst" required>
+                        <small class="text-muted">Technical questions based on your role</small>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">
+                        <i class="fas fa-play"></i> Start Mock Interview
+                    </button>
+                </form>
+                
+                <hr>
+                
+                <div class="text-center">
+                    <small class="text-muted">
+                        <i class="fas fa-robot"></i> Powered by AI - Real-time evaluation and feedback
+                    </small>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card mt-3">
+            <div class="card-header bg-warning text-dark">
+                <h5><i class="fas fa-lightbulb"></i> Tips for Success</h5>
+            </div>
+            <div class="card-body">
+                <ul class="mb-0">
+                    <li>Be specific and provide examples</li>
+                    <li>Use the STAR method for HR questions</li>
+                    <li>Quantify your achievements with numbers</li>
+                    <li>Review feedback to improve your answers</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

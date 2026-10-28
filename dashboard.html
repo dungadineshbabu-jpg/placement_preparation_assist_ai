@@ -1,0 +1,48 @@
+﻿{% extends "base.html" %}
+{% block content %}
+
+<!-- Welcome + Upload Resume Form -->
+<div class="row">
+    <div class="col-md-12">
+        <div class="card shadow mb-4">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">
+                    <i class="fas fa-tachometer-alt"></i> Welcome, {{ user.name }}! 👋
+                </h4>
+            </div>
+            <div class="card-body">
+                <p>Upload your resume and enter your target company details to start your personalized preparation.</p>
+                <form action="{{ url_for('process_resume') }}" method="POST" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="resume" class="form-label">
+                            <i class="fas fa-file-upload"></i> Upload Resume (PDF or TXT)
+                        </label>
+                        <input type="file" class="form-control" id="resume" name="resume" accept=".pdf,.txt" required>
+                        <div class="form-text">Upload your latest resume for AI analysis</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="company" class="form-label">
+                                <i class="fas fa-building"></i> Target Company
+                            </label>
+                            <input type="text" class="form-control" id="company" name="company"
+                                   placeholder="e.g., TCS, Google, Amazon, Infosys" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="role" class="form-label">
+                                <i class="fas fa-briefcase"></i> Job Role
+                            </label>
+                            <input type="text" class="form-control" id="role" name="role"
+                                   placeholder="e.g., Software Engineer, Data Analyst" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-chart-line"></i> Analyze Resume & Start Preparation
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

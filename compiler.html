@@ -1,0 +1,195 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2><i class="fas fa-code"></i> Online Compiler</h2>
+        <div>
+            <label class="form-label me-2 mb-0 fw-bold">Language:</label>
+            <select id="languageSelect" class="form-select d-inline-block" style="width: 180px;">
+                <option value="python">Python 3</option>
+                <option value="c">C (GCC)</option>
+                <option value="cpp">C++ (G++)</option>
+                <option value="java">Java</option>
+                <option value="csharp">C#</option>
+                <option value="javascript">JavaScript (Node)</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Editor -->
+        <div class="col-md-7">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                    <span><i class="fas fa-pencil-alt"></i> Code Editor</span>
+                    <div>
+                        <button id="runBtn" class="btn btn-sm btn-success">
+                            <i class="fas fa-play"></i> Run
+                        </button>
+                        <button id="clearBtn" class="btn btn-sm btn-warning">
+                            <i class="fas fa-eraser"></i> Clear
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body p-0">
+                    <div id="editor" style="height: 500px; width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Output -->
+        <div class="col-md-5">
+            <div class="card shadow">
+                <div class="card-header bg-info text-white d-flex justify-content-between">
+                    <span><i class="fas fa-terminal"></i> Output</span>
+                    <span id="statusBadge" class="badge bg-secondary">Idle</span>
+                </div>
+                <div class="card-body p-0">
+                    <pre id="output" style="background: #0f172a; color: #a5f3fc; padding: 15px; height: 500px; overflow-y: auto; margin: 0; white-space: pre-wrap; font-family: Consolas, monospace;">Click "Run" to execute your code.</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Monaco Editor -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.44.0/min/vs/loader.min.js"></script>
+<script>
+    let editor;
+    let monacoLoaded = false;
+
+    // Starter code per language
+    const starterCode = {
+        python: `# Python 3 — write your code below
+def greet(name):
+    return f"Hello, {name}!"
+
+print(greet("World"))
+`,
+        c: `// C — write your code below
+#include <stdio.h>
+
+int main() {
+    printf("Hello, World!\\n");
+    return 0;
+}
+`,
+        cpp: `// C++ — write your code below
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Hello, World!" << endl;
+    return 0;
+}
+`,
+        java: `// Java — write your code below
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+`,
+        csharp: `// C# — write your code below
+using System;
+
+class Program {
+    static void Main() {
+        Console.WriteLine("Hello, World!");
+    }
+}
+`,
+        javascript: `// JavaScript (Node.js) — write your code below
+function greet(name) {
+    return \`Hello, \${name}!\`;
+}
+
+console.log(greet("World"));
+`
+    };
+
+    const languageMode = {
+        python: 'python',
+        c: 'c',
+        cpp: 'cpp',
+        java: 'java',
+        csharp: 'csharp',
+        javascript: 'javascript'
+    };
+
+    require.config({ paths: { vs: 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.44.0/min/vs' } });
+    require(['vs/editor/editor.main'], function () {
+        editor = monaco.editor.create(document.getElementById('editor'), {
+            value: starterCode.python,
+            language: 'python',
+            theme: 'vs-dark',
+            fontSize: 14,
+            minimap: { enabled: false },
+            automaticLayout: true,
+            scrollBeyondLastLine: false,
+        });
+        monacoLoaded = true;
+    });
+
+    document.getElementById('languageSelect').addEventListener('change', function () {
+        const lang = this.value;
+        if (editor && monacoLoaded) {
+            editor.setValue(starterCode[lang] || '');
+            monaco.editor.setModelLanguage(editor.getModel(), languageMode[lang] || 'plaintext');
+        }
+    });
+
+    document.getElementById('clearBtn').addEventListener('click', function () {
+        if (editor) editor.setValue('');
+    });
+
+    document.getElementById('runBtn').addEventListener('click', async function () {
+        const lang = document.getElementById('languageSelect').value;
+        const code = editor ? editor.getValue() : '';
+        const out = document.getElementById('output');
+        const badge = document.getElementById('statusBadge');
+
+        if (!code.trim()) {
+            out.textContent = '⚠️ Please write some code first.';
+            return;
+        }
+
+        this.disabled = true;
+        this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Running...';
+        out.textContent = '⏳ Compiling and running...';
+        badge.className = 'badge bg-warning';
+        badge.textContent = 'Running';
+
+        try {
+            const res = await fetch('/run_code', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ language: lang, code: code })
+            });
+            const data = await res.json();
+
+            if (data.error) {
+                out.textContent = '❌ Error:\n' + data.error;
+                badge.className = 'badge bg-danger';
+                badge.textContent = 'Error';
+            } else {
+                out.textContent = data.output || '(No output)';
+                if (data.exit_code === 0) {
+                    badge.className = 'badge bg-success';
+                    badge.textContent = 'Success';
+                } else {
+                    badge.className = 'badge bg-danger';
+                    badge.textContent = 'Runtime Error';
+                }
+            }
+        } catch (e) {
+            out.textContent = '❌ Network error: ' + e.message;
+            badge.className = 'badge bg-danger';
+            badge.textContent = 'Error';
+        }
+
+        this.disabled = false;
+        this.innerHTML = '<i class="fas fa-play"></i> Run';
+    });
+</script>
+{% endblock %}

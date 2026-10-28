@@ -1,0 +1,318 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+            <div class="card shadow">
+                <div class="card-header" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed); color: white;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="mb-0"><i class="fas fa-users"></i> Face-to-Face Mock Interview</h4>
+                        <div>
+                            <span class="badge bg-light text-dark me-2">{{ company }}</span>
+                            <span class="badge bg-light text-dark">{{ role }}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <!-- Progress Bar -->
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="text-muted">Progress</span>
+                            <span id="progressText" class="text-muted">0%</span>
+                        </div>
+                        <div class="progress" style="height: 10px;">
+                            <div id="progressBar" class="progress-bar" style="width: 0%; background: linear-gradient(135deg, #8b5cf6, #7c3aed);"></div>
+                        </div>
+                    </div>
+
+                    <!-- Timer -->
+                    <div class="text-center mb-3">
+                        <span class="badge bg-secondary">
+                            <i class="fas fa-clock"></i> <span id="timerMinutes">00</span>:<span id="timerSeconds">00</span>
+                        </span>
+                        <span class="badge bg-info ms-2" id="questionCounter">Question 1 of {{ total_questions }}</span>
+                    </div>
+
+                    <!-- ========== QUESTION DISPLAY ========== -->
+                    <div id="questionArea" class="mb-4">
+                        <div class="alert alert-info" style="min-height: 120px;">
+                            <h5 style="color:#fff; margin-bottom: 8px;">
+                                <i class="fas fa-question-circle"></i> Question <span id="qNum">1</span>
+                            </h5>
+                            <p id="questionText" style="color: #fff !important; font-size: 1.1rem; font-weight: 500; margin-bottom: 8px;">
+                                Loading question...
+                            </p>
+                            <small id="questionType" style="color: #cbd5e1;">Type: Technical</small>
+                        </div>
+                    </div>
+
+                    <!-- Answer Area -->
+                    <div id="answerArea">
+                        <div class="mb-3">
+                            <label class="form-label"><i class="fas fa-pencil-alt"></i> Your Answer</label>
+                            <textarea id="answerInput" class="form-control" rows="5" placeholder="Type your answer here..."></textarea>
+                            <div class="mt-1">
+                                <small class="text-muted" id="wordCount">Words: 0</small>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button id="submitBtn" class="btn btn-success" type="button">
+                                <i class="fas fa-paper-plane"></i> Submit Answer
+                            </button>
+                            <button id="skipBtn" class="btn btn-warning" type="button">
+                                <i class="fas fa-forward"></i> Skip
+                            </button>
+                            <button id="resetBtn" class="btn btn-danger" type="button">
+                                <i class="fas fa-redo"></i> Reset
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Feedback Area -->
+                    <div id="feedbackArea" style="display: none;" class="mt-4">
+                        <div class="card bg-dark">
+                            <div class="card-header bg-success text-white">
+                                <h5 class="mb-0"><i class="fas fa-check-circle"></i> Evaluation Result</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h6>Score: <span id="scoreDisplay" class="badge bg-success fs-5">0</span>/10</h6>
+                                        <p><strong>Feedback:</strong> <span id="feedbackDisplay"></span></p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6>Face-to-Face Metrics</h6>
+                                        <div class="mb-1">Communication: <span id="commScore">0</span>%
+                                            <div class="progress"><div id="commProgress" class="progress-bar bg-info" style="width: 0%"></div></div>
+                                        </div>
+                                        <div class="mb-1">Confidence: <span id="confScore">0</span>%
+                                            <div class="progress"><div id="confProgress" class="progress-bar bg-success" style="width: 0%"></div></div>
+                                        </div>
+                                        <div class="mb-1">Structure: <span id="structScore">0</span>%
+                                            <div class="progress"><div id="structProgress" class="progress-bar bg-warning" style="width: 0%"></div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <strong>Improved Answer:</strong>
+                                    <p id="improvedAnswer" class="border rounded p-2 bg-dark mt-1"></p>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button id="nextBtn" class="btn btn-primary" type="button">Next Question →</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tips -->
+            <div class="card mt-3">
+                <div class="card-header bg-warning text-dark">
+                    <h5 class="mb-0"><i class="fas fa-lightbulb"></i> Face-to-Face Interview Tips</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3"><i class="fas fa-eye text-primary"></i> Eye Contact<p class="small text-muted">Maintain 60-70% eye contact</p></div>
+                        <div class="col-md-3"><i class="fas fa-user-friends text-success"></i> Body Language<p class="small text-muted">Sit upright, lean slightly forward</p></div>
+                        <div class="col-md-3"><i class="fas fa-microphone text-warning"></i> Communication<p class="small text-muted">Speak clearly, use professional tone</p></div>
+                        <div class="col-md-3"><i class="fas fa-clock text-danger"></i> Time Management<p class="small text-muted">Keep answers 2-3 minutes</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let timerInterval = null;
+    let seconds = 0, minutes = 0;
+    let isAnswered = false;
+
+    // ========== SAFE HELPERS ==========
+    // Try both getElementById and querySelector as fallback
+    function el(id) {
+        let node = document.getElementById(id);
+        if (!node) node = document.querySelector('#' + id);
+        return node;
+    }
+
+    function startTimer() {
+        stopTimer();
+        seconds = 0; minutes = 0;
+        timerInterval = setInterval(() => {
+            seconds++;
+            if (seconds >= 60) { seconds = 0; minutes++; }
+            if (el('timerMinutes')) el('timerMinutes').textContent = String(minutes).padStart(2, '0');
+            if (el('timerSeconds')) el('timerSeconds').textContent = String(seconds).padStart(2, '0');
+        }, 1000);
+    }
+    function stopTimer() { if (timerInterval) { clearInterval(timerInterval); timerInterval = null; } }
+    function resetTimer() {
+        stopTimer(); seconds = 0; minutes = 0;
+        if (el('timerMinutes')) el('timerMinutes').textContent = '00';
+        if (el('timerSeconds')) el('timerSeconds').textContent = '00';
+    }
+
+    if (el('answerInput')) {
+        el('answerInput').addEventListener('input', function() {
+            const words = this.value.trim().split(/\s+/).filter(w => w.length > 0);
+            if (el('wordCount')) el('wordCount').textContent = `Words: ${words.length}`;
+        });
+    }
+
+    // ========== LOAD QUESTION ==========
+    function loadQuestion() {
+        fetch('/get_mock_question', { cache: 'no-store' })
+            .then(res => res.json())
+            .then(data => {
+                console.log('Question data:', data);
+                if (data.finished) {
+                    window.location.href = '/mock_interview_results';
+                    return;
+                }
+
+                // ✅ RE-FETCH THE QUESTION ELEMENT EVERY TIME (in case it was lost)
+                let questionEl = document.getElementById('questionText');
+                if (!questionEl) {
+                    console.warn('⚠️ questionText not found — re-creating it.');
+                    // Rebuild the question block if it was removed
+                    const qArea = document.getElementById('questionArea');
+                    if (qArea) {
+                        qArea.innerHTML = `
+                            <div class="alert alert-info" style="min-height: 120px;">
+                                <h5 style="color:#fff; margin-bottom: 8px;">
+                                    <i class="fas fa-question-circle"></i> Question <span id="qNum">1</span>
+                                </h5>
+                                <p id="questionText" style="color:#fff !important; font-size: 1.1rem; font-weight: 500; margin-bottom: 8px;"></p>
+                                <small id="questionType" style="color:#cbd5e1;">Type: Technical</small>
+                            </div>`;
+                    }
+                    questionEl = document.getElementById('questionText');
+                }
+
+                if (questionEl) {
+                    questionEl.textContent = data.question || 'No question available';
+                    console.log('✅ Set text to:', data.question);
+                } else {
+                    console.error('❌ Still cannot find questionText!');
+                }
+
+                if (el('questionType')) el('questionType').textContent = `Type: ${data.type || 'general'}`;
+                if (el('qNum')) el('qNum').textContent = data.question_number || '1';
+                if (el('questionCounter')) el('questionCounter').textContent = `Question ${data.question_number} of ${data.total_questions}`;
+                if (el('progressBar')) el('progressBar').style.width = data.progress + '%';
+                if (el('progressText')) el('progressText').textContent = data.progress + '%';
+
+                if (el('answerInput')) el('answerInput').value = '';
+                if (el('wordCount')) el('wordCount').textContent = 'Words: 0';
+                if (el('feedbackArea')) el('feedbackArea').style.display = 'none';
+                if (el('scoreDisplay')) el('scoreDisplay').textContent = '0'; // <-- ADDED THIS LINE
+                if (el('answerArea')) el('answerArea').style.display = 'block';
+                if (el('submitBtn')) el('submitBtn').disabled = false;
+                isAnswered = false;
+
+                resetTimer();
+                startTimer();
+                if (el('answerInput')) el('answerInput').focus();
+            })
+            .catch(err => console.error('Error loading question:', err));
+    }
+
+    // ========== SUBMIT ANSWER ==========
+    if (el('submitBtn')) {
+        el('submitBtn').addEventListener('click', function() {
+            if (isAnswered) return;
+            const answer = el('answerInput').value.trim();
+            if (!answer) { alert('Please write your answer before submitting.'); return; }
+
+            const timeTaken = (minutes * 60) + seconds;
+            el('submitBtn').disabled = true;
+            isAnswered = true;
+
+            if (el('feedbackArea')) el('feedbackArea').style.display = 'block';
+            if (el('feedbackDisplay')) el('feedbackDisplay').textContent = 'Evaluating your answer...';
+            stopTimer();
+
+            fetch('/submit_mock_answer', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({answer: answer, time_taken: timeTaken})
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (el('scoreDisplay')) {
+                    el('scoreDisplay').textContent = data.score;
+                    const badge = el('scoreDisplay');
+                    if (data.score >= 8) badge.className = 'badge bg-success fs-5';
+                    else if (data.score >= 5) badge.className = 'badge bg-warning fs-5';
+                    else badge.className = 'badge bg-danger fs-5';
+                }
+                if (el('feedbackDisplay')) el('feedbackDisplay').textContent = data.feedback;
+                if (el('improvedAnswer')) el('improvedAnswer').textContent = data.improved_answer;
+
+                if (data.face_to_face_score) {
+                    const f2f = data.face_to_face_score;
+                    if (el('commScore')) el('commScore').textContent = f2f.communication;
+                    if (el('commProgress')) el('commProgress').style.width = f2f.communication + '%';
+                    if (el('confScore')) el('confScore').textContent = f2f.confidence;
+                    if (el('confProgress')) el('confProgress').style.width = f2f.confidence + '%';
+                    if (el('structScore')) el('structScore').textContent = f2f.structure;
+                    if (el('structProgress')) el('structProgress').style.width = f2f.structure + '%';
+                }
+                if (data.progress !== undefined) {
+                    if (el('progressBar')) el('progressBar').style.width = data.progress + '%';
+                    if (el('progressText')) el('progressText').textContent = data.progress + '%';
+                }
+                if (el('nextBtn')) el('nextBtn').textContent = data.finished ? 'See Results →' : 'Next Question →';
+                if (el('answerArea')) el('answerArea').style.display = 'none';
+            })
+            .catch(() => {
+                if (el('feedbackDisplay')) el('feedbackDisplay').textContent = 'Error. Please try again.';
+                if (el('submitBtn')) el('submitBtn').disabled = false;
+            });
+        });
+    }
+
+    // ========== NEXT QUESTION ==========
+    if (el('nextBtn')) {
+        el('nextBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            loadQuestion();
+        });
+    }
+
+    // ========== SKIP ==========
+    if (el('skipBtn')) {
+        el('skipBtn').addEventListener('click', function() {
+            if (confirm('Skip this question?')) {
+                const answer = el('answerInput').value.trim() || "[Skipped]";
+                const timeTaken = (minutes * 60) + seconds;
+                fetch('/submit_mock_answer', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({answer: answer, time_taken: timeTaken})
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.finished) window.location.href = '/mock_interview_results';
+                    else loadQuestion();
+                });
+            }
+        });
+    }
+
+    // ========== RESET ==========
+    if (el('resetBtn')) {
+        el('resetBtn').addEventListener('click', function() {
+            if (confirm('Reset this mock interview?')) {
+                window.location.href = '/mock_interview_start?force=1';
+            }
+        });
+    }
+
+    // ========== INITIAL LOAD ==========
+    document.addEventListener('DOMContentLoaded', loadQuestion);
+</script>
+{% endblock %}

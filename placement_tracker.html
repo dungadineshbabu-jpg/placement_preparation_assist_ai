@@ -1,0 +1,237 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2 class="mb-4"><i class="fas fa-tasks"></i> Placement Tracker</h2>
+    <p class="text-muted">Track your job applications and interview status</p>
+
+    <!-- Stats Cards -->
+    <div class="row mb-4">
+        <div class="col-md-2 col-6">
+            <div class="card bg-primary text-white text-center">
+                <div class="card-body">
+                    <h3>{{ stats.total }}</h3>
+                    <small>Total</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 col-6">
+            <div class="card bg-secondary text-white text-center">
+                <div class="card-body">
+                    <h3>{{ stats.applied }}</h3>
+                    <small>Applied</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 col-6">
+            <div class="card bg-warning text-dark text-center">
+                <div class="card-body">
+                    <h3>{{ stats.interview }}</h3>
+                    <small>Interview</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 col-6">
+            <div class="card bg-success text-white text-center">
+                <div class="card-body">
+                    <h3>{{ stats.selected }}</h3>
+                    <small>Selected</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 col-6">
+            <div class="card bg-danger text-white text-center">
+                <div class="card-body">
+                    <h3>{{ stats.rejected }}</h3>
+                    <small>Rejected</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 col-6">
+            <button class="btn btn-primary w-100 h-100" data-bs-toggle="modal" data-bs-target="#addModal" style="border-radius: 12px; min-height: 80px;">
+                <i class="fas fa-plus-circle"></i> Add Application
+            </button>
+        </div>
+    </div>
+
+    <!-- Applications Table -->
+    <div class="card">
+        <div class="card-header bg-secondary text-white">
+            <h5><i class="fas fa-list"></i> Your Applications</h5>
+        </div>
+        <div class="card-body" style="background: #1e293b;">
+            {% if applications and applications|length > 0 %}
+            <div class="table-responsive">
+                <table class="table table-striped table-hover" style="color: #f1f5f9;">
+                    <thead style="background: #0f172a; color: #f8fafc;">
+                        <tr>
+                            <th>#</th>
+                            <th>Company</th>
+                            <th>Role</th>
+                            <th>Status</th>
+                            <th>Applied Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for app in applications %}
+                        <tr style="color: #e2e8f0;">
+                            <td>{{ loop.index }}</td>
+                            <td><strong>{{ app.company_name | default('N/A', true) }}</strong></td>
+                            <td>{{ app.job_role | default('N/A', true) }}</td>
+                            <td>
+                                <span class="badge bg-{% if app.status == 'Selected' %}success{% elif app.status == 'Rejected' %}danger{% elif app.status == 'Interview Scheduled' %}warning{% else %}secondary{% endif %}">
+                                    {{ app.status | default('Applied', true) }}
+                                </span>
+                            </td>
+                            <td>{{ app.application_date.strftime('%Y-%m-%d') if app.application_date else 'N/A' }}</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-primary update-status" 
+                                        data-id="{{ app.id }}" 
+                                        data-status="{{ app.status }}"
+                                        data-company="{{ app.company_name | default('this application', true) }}"
+                                        data-bs-toggle="modal" 
+                                        data-bs-target="#updateModal">
+                                    <i class="fas fa-edit"></i> Update
+                                </button>
+                                <button class="btn btn-sm btn-outline-danger delete-application" 
+                                        data-id="{{ app.id }}" 
+                                        data-company="{{ app.company_name | default('this application', true) }}">
+                                    <i class="fas fa-trash"></i> Delete
+                                </button>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% else %}
+            <div class="text-center py-4 text-muted">
+                <i class="fas fa-inbox fa-3x mb-3"></i>
+                <p>No applications yet. Click <strong>"Add Application"</strong> to start tracking.</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<!-- Add Application Modal -->
+<div class="modal fade" id="addModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content bg-dark">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title text-white"><i class="fas fa-plus-circle"></i> Add Application</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" style="filter: invert(1);"></button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="companyName" class="form-control mb-2" placeholder="Company Name" required>
+                <input type="text" id="jobRole" class="form-control mb-2" placeholder="Job Role" required>
+                <select id="appStatus" class="form-select">
+                    <option value="Applied">Applied</option>
+                    <option value="Interview Scheduled">Interview Scheduled</option>
+                    <option value="Selected">Selected</option>
+                    <option value="Rejected">Rejected</option>
+                </select>
+            </div>
+            <div class="modal-footer border-secondary">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button class="btn btn-primary" id="saveAppBtn">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Update Status Modal -->
+<div class="modal fade" id="updateModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content bg-dark">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title text-white"><i class="fas fa-edit"></i> Update Status</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" style="filter: invert(1);"></button>
+            </div>
+            <div class="modal-body">
+                <p class="text-white">Update status for <strong id="updateCompanyName" style="color: #a5b4fc;"></strong></p>
+                <select id="updateStatusSelect" class="form-select">
+                    <option value="Applied">Applied</option>
+                    <option value="Interview Scheduled">Interview Scheduled</option>
+                    <option value="Selected">Selected</option>
+                    <option value="Rejected">Rejected</option>
+                </select>
+                <input type="hidden" id="updateAppId">
+            </div>
+            <div class="modal-footer border-secondary">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button class="btn btn-primary" id="updateStatusBtn">Update</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Add Application
+    document.getElementById('saveAppBtn').addEventListener('click', async () => {
+        const company = document.getElementById('companyName').value.trim();
+        const role = document.getElementById('jobRole').value.trim();
+        const status = document.getElementById('appStatus').value;
+        if (!company || !role) {
+            alert('Please fill in all fields.');
+            return;
+        }
+        const response = await fetch('/add_application', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ company, role, status })
+        });
+        if (response.ok) {
+            location.reload();
+        } else {
+            alert('Error adding application.');
+        }
+    });
+
+    // Update Status - populate modal
+    document.querySelectorAll('.update-status').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const id = this.dataset.id;
+            const status = this.dataset.status;
+            const companyName = this.dataset.company || 'this application';
+            document.getElementById('updateAppId').value = id;
+            document.getElementById('updateStatusSelect').value = status;
+            document.getElementById('updateCompanyName').innerText = companyName;
+        });
+    });
+
+    // Update Status - submit
+    document.getElementById('updateStatusBtn').addEventListener('click', async () => {
+        const id = document.getElementById('updateAppId').value;
+        const status = document.getElementById('updateStatusSelect').value;
+        const response = await fetch(`/update_application/${id}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ status })
+        });
+        if (response.ok) {
+            location.reload();
+        } else {
+            alert('Error updating status.');
+        }
+    });
+
+    // Delete Application
+    document.querySelectorAll('.delete-application').forEach(btn => {
+        btn.addEventListener('click', async function() {
+            const id = this.dataset.id;
+            const company = this.dataset.company || 'this application';
+            if (confirm(`Are you sure you want to delete the application for "${company}"?`)) {
+                const response = await fetch(`/delete_application/${id}`, {
+                    method: 'DELETE'
+                });
+                if (response.ok) {
+                    location.reload();
+                } else {
+                    alert('Error deleting application.');
+                }
+            }
+        });
+    });
+</script>
+{% endblock %}

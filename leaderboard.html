@@ -1,0 +1,100 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-10 mx-auto">
+        <div class="card shadow">
+            <div class="card-header" style="background: linear-gradient(135deg, #eab308, #ca8a04); color: white;">
+                <h4 class="mb-0"><i class="fas fa-trophy"></i> Leaderboard</h4>
+            </div>
+            <div class="card-body">
+                <p class="text-muted mb-3">Top performers ranked by average interview score</p>
+                
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Rank</th>
+                                <th><i class="fas fa-user"></i> Name</th>
+                                <th><i class="fas fa-envelope"></i> Email</th>
+                                <th><i class="fas fa-chart-line"></i> Avg Score</th>
+                                <th><i class="fas fa-question-circle"></i> Questions Answered</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for user in users %}
+                            <tr class="{% if loop.index == 1 %}leaderboard-top-1{% elif loop.index == 2 %}leaderboard-top-2{% elif loop.index == 3 %}leaderboard-top-3{% endif %}">
+                                <td>
+                                    {% if loop.index == 1 %}
+                                        <i class="fas fa-crown text-warning"></i> {{ loop.index }}
+                                    {% elif loop.index == 2 %}
+                                        <i class="fas fa-medal text-secondary"></i> {{ loop.index }}
+                                    {% elif loop.index == 3 %}
+                                        <i class="fas fa-medal" style="color: #cd7f32;"></i> {{ loop.index }}
+                                    {% else %}
+                                        {{ loop.index }}
+                                    {% endif %}
+                                </td>
+                                <td><strong>{{ user.name }}</strong></td>
+                                <td>{{ user.email }}</td>
+                                <td>
+                                    <span class="badge {% if user.avg_score >= 8 %}bg-success{% elif user.avg_score >= 5 %}bg-warning{% else %}bg-danger{% endif %} fs-6">
+                                        {{ user.avg_score }}/10
+                                    </span>
+                                </td>
+                                <td>{{ user.total_answers }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                
+                {% if users|length == 0 %}
+                <div class="text-center py-5">
+                    <i class="fas fa-chart-line fa-4x text-muted mb-3"></i>
+                    <p>No data available yet. Complete some interviews to appear on the leaderboard!</p>
+                    <a href="{{ url_for('mock_interview') }}" class="btn btn-primary">Start Practicing</a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        
+        <div class="card mt-3">
+            <div class="card-header bg-info text-white">
+                <h5><i class="fas fa-chart-simple"></i> How to Climb the Leaderboard</h5>
+            </div>
+            <div class="card-body">
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <i class="fas fa-microphone-alt fa-2x text-primary mb-2"></i>
+                        <p>Complete more <strong>mock interviews</strong></p>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fas fa-star fa-2x text-warning mb-2"></i>
+                        <p>Improve your <strong>answer quality</strong></p>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fas fa-chart-line fa-2x text-success mb-2"></i>
+                        <p>Practice <strong>daily</strong> for better scores</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .leaderboard-top-1 {
+        background: linear-gradient(135deg, rgba(234, 179, 8, 0.2), rgba(202, 138, 4, 0.1));
+        border-left: 4px solid #eab308;
+        font-weight: bold;
+    }
+    .leaderboard-top-2 {
+        background: linear-gradient(135deg, rgba(148, 163, 184, 0.2), rgba(100, 116, 139, 0.1));
+        border-left: 4px solid #94a3b8;
+    }
+    .leaderboard-top-3 {
+        background: linear-gradient(135deg, rgba(217, 119, 6, 0.2), rgba(180, 83, 9, 0.1));
+        border-left: 4px solid #d97706;
+    }
+</style>
+{% endblock %}

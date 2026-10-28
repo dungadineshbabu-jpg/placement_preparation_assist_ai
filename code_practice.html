@@ -1,0 +1,259 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid">
+    <h2 class="mb-3"><i class="fas fa-code"></i> Code Practice</h2>
+    <p class="text-muted">Pick a problem, write your code, run it, and submit against hidden test cases.</p>
+
+    <div class="row">
+        <!-- LEFT: Problems List -->
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header" style="background: linear-gradient(135deg, #6366f1, #8b5cf6); color: white;">
+                    <h5 class="mb-0"><i class="fas fa-list"></i> Problems</h5>
+                </div>
+                <div class="card-body p-2" style="max-height: 600px; overflow-y: auto;">
+                    <div class="list-group" id="problemList">
+                        {% for p in problems %}
+                        <a href="#" class="list-group-item list-group-item-action problem-item {% if loop.first %}active{% endif %}"
+                           data-id="{{ p.id }}" data-index="{{ loop.index0 }}">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <strong>{{ p.title }}</strong><br>
+                                    <small class="text-muted">ID: #{{ p.id }}</small>
+                                </div>
+                                <span class="badge bg-{{ 'success' if p.difficulty == 'Easy' else ('warning' if p.difficulty == 'Medium' else 'danger') }}">{{ p.difficulty }}</span>
+                            </div>
+                        </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT: Problem + Editor + Output -->
+        <div class="col-md-9">
+            <div class="card mb-3">
+                <div class="card-header" id="problemHeader" style="background: linear-gradient(135deg, #10b981, #059669); color: white;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0" id="problemTitle">Two Sum</h5>
+                        <span class="badge bg-light text-dark" id="problemDifficulty">Easy</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h6><i class="fas fa-align-left"></i> Problem Statement</h6>
+                    <p id="problemStatement" class="border rounded p-2 bg-dark"></p>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6><i class="fas fa-arrow-right text-info"></i> Sample Input</h6>
+                            <pre id="sampleInput" class="bg-dark p-2 rounded text-light"></pre>
+                        </div>
+                        <div class="col-md-6">
+                            <h6><i class="fas fa-arrow-left text-success"></i> Sample Output</h6>
+                            <pre id="sampleOutput" class="bg-dark p-2 rounded text-light"></pre>
+                        </div>
+                    </div>
+
+                    <h6><i class="fas fa-exclamation-circle text-warning"></i> Constraints</h6>
+                    <p id="constraints" class="text-muted"></p>
+                </div>
+            </div>
+
+            <!-- Editor + Output -->
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between align-items-center"
+                             style="background: linear-gradient(135deg, #6366f1, #8b5cf6); color: white;">
+                            <span><i class="fas fa-pen"></i> Code Editor</span>
+                            <select id="languageSelect" class="form-select form-select-sm" style="width: 150px;">
+                                <option value="python">Python 3</option>
+                                <option value="c">C</option>
+                                <option value="cpp">C++</option>
+                                <option value="java">Java</option>
+                                <option value="javascript">JavaScript</option>
+                            </select>
+                        </div>
+                        <div class="card-body p-2">
+                            <textarea id="codeEditor" class="form-control font-monospace"
+                                      rows="14"
+                                      style="font-family: Consolas, Monaco, monospace; font-size: 14px;"># Write your code here
+</textarea>
+                        </div>
+                        <div class="card-footer d-flex gap-2">
+                            <button id="runBtn" class="btn btn-warning btn-sm">
+                                <i class="fas fa-play"></i> Run
+                            </button>
+                            <button id="submitBtn" class="btn btn-success btn-sm">
+                                <i class="fas fa-paper-plane"></i> Submit (Hidden Tests)
+                            </button>
+                            <button id="clearBtn" class="btn btn-secondary btn-sm">
+                                <i class="fas fa-eraser"></i> Clear
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between align-items-center"
+                             style="background: linear-gradient(135deg, #06b6d4, #0891b2); color: white;">
+                            <span><i class="fas fa-terminal"></i> Output</span>
+                            <span id="outputStatus" class="badge bg-light text-dark">Idle</span>
+                        </div>
+                        <div class="card-body p-2">
+                            <pre id="outputArea" style="background:#0f172a; color:#a5f3fc; padding:10px; border-radius:8px; min-height: 320px; max-height: 400px; overflow-y: auto;">Click "Run" to execute your code.</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit Results -->
+            <div id="submitResult" class="card mt-3" style="display:none;">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0"><i class="fas fa-check-circle"></i> Submission Result</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between">Passed Test Cases <span id="passedCount" class="badge bg-success">0</span></li>
+                        <li class="list-group-item d-flex justify-content-between">Failed Test Cases <span id="failedCount" class="badge bg-danger">0</span></li>
+                        <li class="list-group-item d-flex justify-content-between">Time Complexity <span id="timeComplexity" class="badge bg-info">-</span></li>
+                        <li class="list-group-item d-flex justify-content-between">Runtime <span id="runtime" class="badge bg-secondary">-</span></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+// ===== Problems data from backend =====
+const problems = {{ problems|tojson }};
+let currentProblem = problems[0];
+
+// ===== Language-specific starter templates =====
+const starters = {
+    python: "# Python 3 – write your code below\n",
+    c: "#include <stdio.h>\n\nint main() {\n    // your code\n    return 0;\n}\n",
+    cpp: "#include <iostream>\nusing namespace std;\n\nint main() {\n    // your code\n    return 0;\n}\n",
+    java: "public class Main {\n    public static void main(String[] args) {\n        // your code\n    }\n}\n",
+    javascript: "// JavaScript – write your code below\n"
+};
+
+// ===== Load problem into UI =====
+function loadProblem(p) {
+    currentProblem = p;
+    document.getElementById('problemTitle').textContent = p.title;
+    document.getElementById('problemDifficulty').textContent = p.difficulty;
+    document.getElementById('problemStatement').textContent = p.statement;
+    document.getElementById('sampleInput').textContent = p.sample_input;
+    document.getElementById('sampleOutput').textContent = p.sample_output;
+    document.getElementById('constraints').textContent = p.constraints;
+
+    const lang = document.getElementById('languageSelect').value;
+    document.getElementById('codeEditor').value = starters[lang] || "# Write your code here\n";
+    document.getElementById('outputArea').textContent = 'Click "Run" to execute your code.';
+    document.getElementById('outputStatus').textContent = 'Idle';
+    document.getElementById('outputStatus').className = 'badge bg-light text-dark';
+    document.getElementById('submitResult').style.display = 'none';
+}
+
+// ===== Problem list click =====
+document.querySelectorAll('.problem-item').forEach(item => {
+    item.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelectorAll('.problem-item').forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+        const idx = parseInt(item.dataset.index);
+        loadProblem(problems[idx]);
+    });
+});
+
+// ===== Language change =====
+document.getElementById('languageSelect').addEventListener('change', function () {
+    document.getElementById('codeEditor').value = starters[this.value] || "# Write your code here\n";
+});
+
+// ===== Clear =====
+document.getElementById('clearBtn').addEventListener('click', function () {
+    const lang = document.getElementById('languageSelect').value;
+    document.getElementById('codeEditor').value = starters[lang] || "";
+    document.getElementById('outputArea').textContent = 'Click "Run" to execute your code.';
+});
+
+// ===== Run Code (via /run_code) =====
+document.getElementById('runBtn').addEventListener('click', async function () {
+    const code = document.getElementById('codeEditor').value;
+    const language = document.getElementById('languageSelect').value;
+    const out = document.getElementById('outputArea');
+    const status = document.getElementById('outputStatus');
+
+    out.textContent = '⏳ Running...';
+    status.textContent = 'Running';
+    status.className = 'badge bg-warning text-dark';
+
+    try {
+        const res = await fetch('/run_code', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ language, code })
+        });
+        const data = await res.json();
+        if (data.error) {
+            out.textContent = '❌ ' + data.error;
+            status.textContent = 'Error';
+            status.className = 'badge bg-danger';
+        } else {
+            out.textContent = data.output || '(No output)';
+            status.textContent = data.exit_code === 0 ? 'Success' : 'Exited ' + data.exit_code;
+            status.className = data.exit_code === 0 ? 'badge bg-success' : 'badge bg-warning text-dark';
+        }
+    } catch (e) {
+        out.textContent = '❌ Network error: ' + e.message;
+        status.textContent = 'Error';
+        status.className = 'badge bg-danger';
+    }
+});
+
+// ===== Submit (Hidden test cases) =====
+document.getElementById('submitBtn').addEventListener('click', async function () {
+    const code = document.getElementById('codeEditor').value;
+    const language = document.getElementById('languageSelect').value;
+
+    document.getElementById('outputArea').textContent = '⏳ Submitting against hidden test cases...';
+    document.getElementById('outputStatus').textContent = 'Submitting';
+    document.getElementById('outputStatus').className = 'badge bg-info';
+
+    try {
+        const res = await fetch('/submit_code', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                problem_id: currentProblem.id,
+                answer: code,
+                language: language
+            })
+        });
+        const data = await res.json();
+
+        document.getElementById('submitResult').style.display = 'block';
+        document.getElementById('passedCount').textContent = data.passed || 0;
+        document.getElementById('failedCount').textContent = (data.total - data.passed) || 0;
+        document.getElementById('timeComplexity').textContent = data.time_complexity || '-';
+        document.getElementById('runtime').textContent = data.runtime || '-';
+
+        document.getElementById('outputArea').textContent =
+            `✅ Passed ${data.passed}/${data.total} test cases\n\nRuntime: ${data.runtime}\nTime Complexity: ${data.time_complexity}`;
+        document.getElementById('outputStatus').textContent = (data.passed === data.total) ? 'All Passed ✅' : 'Some Failed';
+        document.getElementById('outputStatus').className =
+            (data.passed === data.total) ? 'badge bg-success' : 'badge bg-danger';
+    } catch (e) {
+        document.getElementById('outputArea').textContent = '❌ Submit error: ' + e.message;
+    }
+});
+
+// ===== Load first problem on page load =====
+loadProblem(problems[0]);
+</script>
+{% endblock %}

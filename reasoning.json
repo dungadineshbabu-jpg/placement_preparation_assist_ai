@@ -1,0 +1,5002 @@
+[
+  {
+    "q": "If today is Monday, what day will it be after 47 days?",
+    "options": ["Thursday", "Saturday", "Monday", "Tuesday"],
+    "ans": "Saturday"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 3:00?",
+    "options": ["90°", "135°", "120°", "75°"],
+    "ans": "90°"
+  },
+  {
+    "q": "Find the missing number: 7, 8, 16, 17, ?",
+    "options": ["17", "32", "35", "34"],
+    "ans": "34"
+  },
+  {
+    "q": "Statements: Some students are athletes. All athletes are fit. Conclusion: Some students are fit.",
+    "options": ["Conclusion follows", "All students are fit", "No students are fit", "Conclusion does not follow"],
+    "ans": "Conclusion follows"
+  },
+  {
+    "q": "Find the next number: 28, 30, 34, 40, 48, ?",
+    "options": ["68", "58", "60", "56"],
+    "ans": "58"
+  },
+  {
+    "q": "Choose the odd one out: 9, 3, 5, 2.",
+    "options": ["9", "2", "3", "5"],
+    "ans": "9"
+  },
+  {
+    "q": "Farah, Bina, Deepa, Asha, Charu, Esha, Gita, Heena, Ira are seated in a row facing north. Who is sitting 1st from the left?",
+    "options": ["Bina", "Farah", "Gita", "Charu"],
+    "ans": "Farah"
+  },
+  {
+    "q": "Gita, Bina, Esha, Heena, Deepa, Farah, Ira, Charu, Asha are seated in a row facing north. Who is sitting 6th from the left?",
+    "options": ["Farah", "Gita", "Esha", "Heena"],
+    "ans": "Farah"
+  },
+  {
+    "q": "R is the sister of S. S is the father of T. How is R related to T?",
+    "options": ["Sister", "Paternal aunt", "Grandmother", "Mother"],
+    "ans": "Paternal aunt"
+  },
+  {
+    "q": "Bird is to Nest as Bee is to ____.",
+    "options": ["Road", "House", "Hive", "Tree"],
+    "ans": "Hive"
+  },
+  {
+    "q": "In a group of 31 people, Ravi ranks 9th from the top. What is his rank from the bottom?",
+    "options": ["23", "24", "22", "9"],
+    "ans": "23"
+  },
+  {
+    "q": "Find the missing number: 4, 5, 10, 11, ?",
+    "options": ["20", "22", "11", "23"],
+    "ans": "22"
+  },
+  {
+    "q": "Choose the most logical order: Seed, Fruit, Flower, Plant.",
+    "options": ["Seed → Flower → Plant → Fruit", "Seed → Plant → Fruit → Flower", "Seed → Plant → Flower → Fruit", "Flower → Seed → Plant → Fruit"],
+    "ans": "Seed → Plant → Flower → Fruit"
+  },
+  {
+    "q": "Find the missing number: 8, 9, 18, 19, ?",
+    "options": ["38", "39", "19", "36"],
+    "ans": "38"
+  },
+  {
+    "q": "Deepa, Heena, Bina, Farah, Ira, Charu are seated in a row facing north. Who is sitting 1st from the left?",
+    "options": ["Bina", "Deepa", "Farah", "Ira"],
+    "ans": "Deepa"
+  },
+  {
+    "q": "If each letter is moved 3 position(s) forward in the alphabet, how is BOX coded?",
+    "options": ["GTC", "DQZ", "FSB", "ERA"],
+    "ans": "ERA"
+  },
+  {
+    "q": "Choose the odd one out: Square, Blue, Circle, Triangle.",
+    "options": ["Circle", "Triangle", "Square", "Blue"],
+    "ans": "Blue"
+  },
+  {
+    "q": "If A > B, B > C, and C > D, which statement must be true?",
+    "options": ["B < D", "A = D", "D > A", "A > D"],
+    "ans": "A > D"
+  },
+  {
+    "q": "M is the father of N. N is the sister of O. How is M related to O?",
+    "options": ["Grandfather", "Uncle", "Father", "Brother"],
+    "ans": "Father"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 8:30?",
+    "options": ["75°", "105°", "120°", "60°"],
+    "ans": "75°"
+  },
+  {
+    "q": "If @ means +, # means −, and $ means ×, what is the value of 6 @ 4 $ 2?",
+    "options": ["14", "8", "20", "4"],
+    "ans": "14"
+  },
+  {
+    "q": "Find the next number: 23, 46, 92, 184, 368, ?",
+    "options": ["736", "746", "738", "368"],
+    "ans": "736"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 5:10?",
+    "options": ["95°", "125°", "140°", "80°"],
+    "ans": "95°"
+  },
+  {
+    "q": "Choose the odd one out: Copper, Plastic, Silver, Iron.",
+    "options": ["Silver", "Plastic", "Copper", "Iron"],
+    "ans": "Plastic"
+  },
+  {
+    "q": "Find the missing number: 11, 12, 24, 25, ?",
+    "options": ["25", "50", "48", "51"],
+    "ans": "50"
+  },
+  {
+    "q": "Charu, Esha, Farah, Asha, Gita, Deepa, Ira, Bina are seated in a row facing north. Who is sitting 3rd from the left?",
+    "options": ["Deepa", "Esha", "Gita", "Farah"],
+    "ans": "Farah"
+  },
+  {
+    "q": "A person walks South 9 m, then East 5 m, then West 7 m, then East 10 m. In which general direction is the person from the starting point?",
+    "options": ["South", "East", "North", "West"],
+    "ans": "South"
+  },
+  {
+    "q": "Choose the odd one out: Iron, Silver, Plastic, Copper.",
+    "options": ["Silver", "Plastic", "Copper", "Iron"],
+    "ans": "Plastic"
+  },
+  {
+    "q": "Statement: Use the company shuttle to reduce parking congestion. Assumption:",
+    "options": ["All employees own cars", "Some employees can use the shuttle", "Parking congestion cannot be reduced", "The shuttle is always empty"],
+    "ans": "Some employees can use the shuttle"
+  },
+  {
+    "q": "Find the next letter: C , D , F , I , M, ?",
+    "options": ["R", "Q", "U", "S"],
+    "ans": "R"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 6:20?",
+    "options": ["55°", "100°", "70°", "115°"],
+    "ans": "70°"
+  },
+  {
+    "q": "Statement: The road is closed for repairs until Friday. Conclusion I: Vehicles cannot use that road during the closure. Conclusion II: All nearby roads are also closed.",
+    "options": ["Only conclusion II follows", "Both conclusions follow", "Only conclusion I follows", "Neither conclusion follows"],
+    "ans": "Only conclusion I follows"
+  },
+  {
+    "q": "Find the next letter: G , J , M , P , S, ?",
+    "options": ["U", "W", "X", "V"],
+    "ans": "V"
+  },
+  {
+    "q": "Fish is to Water as Bird is to ____.",
+    "options": ["Road", "Air", "Tree", "House"],
+    "ans": "Air"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 46 days?",
+    "options": ["Sunday", "Tuesday", "Friday", "Thursday"],
+    "ans": "Friday"
+  },
+  {
+    "q": "P is the daughter of Q. Q is the son of R. How is P related to R?",
+    "options": ["Granddaughter", "Daughter", "Sister", "Aunt"],
+    "ans": "Granddaughter"
+  },
+  {
+    "q": "A is the brother of B. B is the mother of C. How is A related to C?",
+    "options": ["Grandfather", "Brother", "Father", "Maternal uncle"],
+    "ans": "Maternal uncle"
+  },
+  {
+    "q": "Esha, Gita, Deepa, Heena, Asha are seated in a row facing north. Who is sitting 4th from the left?",
+    "options": ["Esha", "Heena", "Gita", "Asha"],
+    "ans": "Heena"
+  },
+  {
+    "q": "A person walks East 4 m, then South 4 m, then West 6 m, then East 6 m, then North 2 m. In which general direction is the person from the starting point?",
+    "options": ["West", "South", "East", "North"],
+    "ans": "East"
+  },
+  {
+    "q": "Find the next letter: A , C , E , G , I, ?",
+    "options": ["K", "N", "J", "L"],
+    "ans": "K"
+  },
+  {
+    "q": "In a group of 28 people, Ravi ranks 8th from the top. What is his rank from the bottom?",
+    "options": ["20", "22", "21", "8"],
+    "ans": "21"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 12:10?",
+    "options": ["40°", "100°", "55°", "85°"],
+    "ans": "55°"
+  },
+  {
+    "q": "Statement: Install water filters in the office to improve drinking-water quality. Assumption:",
+    "options": ["Filters increase water pollution", "The office has no water supply", "The current drinking-water quality can be improved by filtration", "Employees never drink water"],
+    "ans": "The current drinking-water quality can be improved by filtration"
+  },
+  {
+    "q": "In a group of 56 people, Ravi ranks 41th from the top. What is his rank from the bottom?",
+    "options": ["41", "16", "17", "15"],
+    "ans": "16"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 5:40?",
+    "options": ["70°", "100°", "55°", "115°"],
+    "ans": "70°"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 27 days?",
+    "options": ["Tuesday", "Friday", "Saturday", "Sunday"],
+    "ans": "Sunday"
+  },
+  {
+    "q": "Choose the odd one out: Eagle, Sparrow, Shark, Parrot.",
+    "options": ["Sparrow", "Parrot", "Eagle", "Shark"],
+    "ans": "Shark"
+  },
+  {
+    "q": "Farah, Bina, Esha, Gita, Charu, Asha, Heena, Ira, Deepa are seated in a row facing north. Who is sitting 3rd from the left?",
+    "options": ["Gita", "Ira", "Esha", "Heena"],
+    "ans": "Esha"
+  },
+  {
+    "q": "A person walks South 6 m, then West 8 m, then South 6 m, then East 10 m, then West 7 m. In which general direction is the person from the starting point?",
+    "options": ["North", "East", "South", "West"],
+    "ans": "South"
+  },
+  {
+    "q": "Statement: The city has introduced additional buses on busy routes. Conclusion I: Bus capacity on those routes has increased. Conclusion II: Every resident now prefers buses.",
+    "options": ["Only conclusion I follows", "Both conclusions follow", "Neither conclusion follows", "Only conclusion II follows"],
+    "ans": "Only conclusion I follows"
+  },
+  {
+    "q": "Statement: The company will conduct training for all new employees. Conclusion I: New employees will receive training. Conclusion II: Existing employees will receive no training.",
+    "options": ["Only conclusion II follows", "Only conclusion I follows", "Both conclusions follow", "Neither conclusion follows"],
+    "ans": "Only conclusion I follows"
+  },
+  {
+    "q": "Find the next number: 9, 19, 29, 39, 49, ?",
+    "options": ["61", "69", "58", "59"],
+    "ans": "59"
+  },
+  {
+    "q": "Statements: No cats are dogs. All pugs are dogs. Conclusion: No pugs are cats.",
+    "options": ["Some cats are pugs", "Conclusion follows", "Conclusion does not follow", "All cats are pugs"],
+    "ans": "Conclusion follows"
+  },
+  {
+    "q": "Find the next number: 25, 50, 100, 200, 400, ?",
+    "options": ["802", "810", "800", "400"],
+    "ans": "800"
+  },
+  {
+    "q": "Find the next letter: A , B , D , G , K, ?",
+    "options": ["P", "O", "Q", "S"],
+    "ans": "P"
+  },
+  {
+    "q": "Find the missing number: 10, 11, 22, 23, ?",
+    "options": ["23", "44", "47", "46"],
+    "ans": "46"
+  },
+  {
+    "q": "Paw is to Cat as Hoof is to ____.",
+    "options": ["Tree", "Road", "House", "Horse"],
+    "ans": "Horse"
+  },
+  {
+    "q": "Choose the odd one out: Apple, Carrot, Mango, Banana.",
+    "options": ["Mango", "Apple", "Carrot", "Banana"],
+    "ans": "Carrot"
+  },
+  {
+    "q": "Find the next number: 3, 10, 17, 24, 31, ?",
+    "options": ["45", "37", "38", "40"],
+    "ans": "38"
+  },
+  {
+    "q": "Find the next number: 4, 6, 12, 22, 36, ?",
+    "options": ["54", "56", "Option 4", "49"],
+    "ans": "54"
+  },
+  {
+    "q": "Find the missing number: 5, 6, 12, 13, ?",
+    "options": ["13", "26", "24", "27"],
+    "ans": "26"
+  },
+  {
+    "q": "A person walks West 10 m, then West 9 m, then East 9 m, then East 8 m, then East 10 m. In which general direction is the person from the starting point?",
+    "options": ["West", "North", "South", "East"],
+    "ans": "East"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 37 days?",
+    "options": ["Thursday", "Wednesday", "Saturday", "Tuesday"],
+    "ans": "Wednesday"
+  },
+  {
+    "q": "Choose the most logical order: Packaging, Raw material, Distribution, Manufacturing.",
+    "options": ["Raw material → Manufacturing → Packaging → Distribution", "Raw material → Manufacturing → Distribution → Packaging", "Option 4", "Raw material → Distribution → Packaging → Manufacturing"],
+    "ans": "Raw material → Manufacturing → Packaging → Distribution"
+  },
+  {
+    "q": "Choose the odd one out: Shark, Parrot, Eagle, Sparrow.",
+    "options": ["Parrot", "Shark", "Eagle", "Sparrow"],
+    "ans": "Shark"
+  },
+  {
+    "q": "A person walks South 6 m, then South 10 m, then South 9 m, then North 10 m. In which general direction is the person from the starting point?",
+    "options": ["West", "South", "East", "North"],
+    "ans": "South"
+  },
+  {
+    "q": "Find the next letter: D , F , H , J , L, ?",
+    "options": ["M", "Q", "N", "O"],
+    "ans": "N"
+  },
+  {
+    "q": "A person walks East 5 m, then South 7 m, then West 8 m, then South 5 m, then East 3 m. In which general direction is the person from the starting point?",
+    "options": ["East", "North", "South", "West"],
+    "ans": "South"
+  },
+  {
+    "q": "If each letter is moved 2 position(s) forward in the alphabet, how is SUN coded?",
+    "options": ["TVO", "UWP", "WYR", "VXQ"],
+    "ans": "UWP"
+  },
+  {
+    "q": "In a group of 46 people, Ravi ranks 33th from the top. What is his rank from the bottom?",
+    "options": ["15", "14", "33", "13"],
+    "ans": "14"
+  },
+  {
+    "q": "A person walks West 10 m, then South 7 m, then North 8 m, then East 2 m, then North 4 m. In which general direction is the person from the starting point?",
+    "options": ["South", "North", "East", "West"],
+    "ans": "West"
+  },
+  {
+    "q": "Statements: All roses are flowers. All flowers are plants. Conclusion: All roses are plants.",
+    "options": ["No relationship can be determined", "Conclusion does not follow", "Only some roses are plants", "Conclusion follows"],
+    "ans": "Conclusion follows"
+  },
+  {
+    "q": "Choose the odd one out: Sunday, January, April, March.",
+    "options": ["January", "March", "April", "Sunday"],
+    "ans": "Sunday"
+  },
+  {
+    "q": "Find the next letter: L , N , P , R , T, ?",
+    "options": ["X", "V", "W", "U"],
+    "ans": "V"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 2:15?",
+    "options": ["52.5°", "7.5°", "67.5°", "22.5°"],
+    "ans": "22.5°"
+  },
+  {
+    "q": "Choose the most logical order: Interview, Selection, Application, Joining.",
+    "options": ["Application → Interview → Selection → Joining", "Interview → Joining → Application → Selection", "Selection → Application → Interview → Joining", "Interview → Application → Joining → Selection"],
+    "ans": "Application → Interview → Selection → Joining"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 49 days?",
+    "options": ["Monday", "Saturday", "Wednesday", "Sunday"],
+    "ans": "Monday"
+  },
+  {
+    "q": "Statements: Some books are novels. Some novels are poems. Conclusion: Some books are poems.",
+    "options": ["Conclusion follows", "Conclusion does not follow", "All books are poems", "No books are novels"],
+    "ans": "Conclusion does not follow"
+  },
+  {
+    "q": "Find the next number: 26, 52, 104, 208, 416, ?",
+    "options": ["832", "416", "842", "834"],
+    "ans": "832"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 7:00?",
+    "options": ["180°", "195°", "135°", "150°"],
+    "ans": "150°"
+  },
+  {
+    "q": "In a group of 56 people, Ravi ranks 47th from the top. What is his rank from the bottom?",
+    "options": ["10", "9", "11", "47"],
+    "ans": "10"
+  },
+  {
+    "q": "Charu, Asha, Farah, Ira, Heena are seated in a row facing north. Who is sitting 1st from the left?",
+    "options": ["Charu", "Ira", "Asha", "Farah"],
+    "ans": "Charu"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 41 days?",
+    "options": ["Tuesday", "Friday", "Sunday", "Thursday"],
+    "ans": "Sunday"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 2:10?",
+    "options": ["10°", "35°", "5°", "50°"],
+    "ans": "5°"
+  },
+  {
+    "q": "Find the next number: 23, 25, 29, 35, 43, ?",
+    "options": ["55", "63", "53", "51"],
+    "ans": "53"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 12:00?",
+    "options": ["45°", "0°", "15°", "30°"],
+    "ans": "0°"
+  },
+  {
+    "q": "Choose the odd one out: Metre, Second, Kilogram, Litre.",
+    "options": ["Metre", "Litre", "Kilogram", "Second"],
+    "ans": "Kilogram"
+  },
+  {
+    "q": "Statement: A library extended its opening hours during examinations. Conclusion I: Students have more time to use the library during exams. Conclusion II: All students will pass.",
+    "options": ["Both conclusions follow", "Only conclusion II follows", "Only conclusion I follows", "Neither conclusion follows"],
+    "ans": "Only conclusion I follows"
+  },
+  {
+    "q": "Choose the odd one out: Eagle, Shark, Parrot, Sparrow.",
+    "options": ["Eagle", "Shark", "Sparrow", "Parrot"],
+    "ans": "Shark"
+  },
+  {
+    "q": "A person walks West 7 m, then West 10 m, then South 4 m, then North 2 m, then North 5 m. In which general direction is the person from the starting point?",
+    "options": ["East", "West", "North", "South"],
+    "ans": "West"
+  },
+  {
+    "q": "Find the next number: 24, 48, 96, 192, 384, ?",
+    "options": ["384", "768", "770", "778"],
+    "ans": "768"
+  },
+  {
+    "q": "Find the next letter: J , L , N , P , R, ?",
+    "options": ["T", "S", "U", "W"],
+    "ans": "T"
+  },
+  {
+    "q": "Find the next number: 17, 19, 23, 29, 37, ?",
+    "options": ["57", "47", "49", "45"],
+    "ans": "47"
+  },
+  {
+    "q": "Choose the most logical order: Selection, Application, Interview, Joining.",
+    "options": ["Interview → Joining → Selection → Application", "Application → Interview → Selection → Joining", "Joining → Selection → Interview → Application", "Selection → Joining → Interview → Application"],
+    "ans": "Application → Interview → Selection → Joining"
+  },
+  {
+    "q": "A person walks East 2 m, then North 7 m, then North 8 m. In which general direction is the person from the starting point?",
+    "options": ["East", "South", "North", "West"],
+    "ans": "North"
+  },
+  {
+    "q": "In a group of 38 people, Ravi ranks 30th from the top. What is his rank from the bottom?",
+    "options": ["10", "30", "8", "9"],
+    "ans": "9"
+  },
+  {
+    "q": "Book is to Read as Food is to ____.",
+    "options": ["Eat", "House", "Tree", "Road"],
+    "ans": "Eat"
+  },
+  {
+    "q": "Choose the most logical order: Adolescent, Child, Infant, Adult.",
+    "options": ["Adolescent → Adult → Infant → Child", "Infant → Child → Adolescent → Adult", "Option 4", "Infant → Adult → Child → Adolescent"],
+    "ans": "Infant → Child → Adolescent → Adult"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 25 days?",
+    "options": ["Monday", "Thursday", "Tuesday", "Friday"],
+    "ans": "Friday"
+  },
+  {
+    "q": "Find the next letter: C , E , G , I , K, ?",
+    "options": ["P", "L", "N", "M"],
+    "ans": "M"
+  },
+  {
+    "q": "Find the missing number: 12, 13, 26, 27, ?",
+    "options": ["55", "27", "54", "52"],
+    "ans": "54"
+  },
+  {
+    "q": "Puppy is to Dog as Kitten is to ____.",
+    "options": ["Tree", "Cat", "Road", "House"],
+    "ans": "Cat"
+  },
+  {
+    "q": "Find the next number: 8, 18, 48, 98, 168, ?",
+    "options": ["253", "258", "260", "268"],
+    "ans": "258"
+  },
+  {
+    "q": "A person walks West 6 m, then West 9 m, then North 3 m. In which general direction is the person from the starting point?",
+    "options": ["East", "West", "South", "North"],
+    "ans": "West"
+  },
+  {
+    "q": "Find the next letter: D , E , G , J , N, ?",
+    "options": ["S", "V", "T", "R"],
+    "ans": "S"
+  },
+  {
+    "q": "A person walks East 7 m, then East 2 m, then East 2 m. In which general direction is the person from the starting point?",
+    "options": ["South", "North", "West", "East"],
+    "ans": "East"
+  },
+  {
+    "q": "If each letter is moved 3 position(s) forward in the alphabet, how is PEN coded?",
+    "options": ["RGP", "SHQ", "TIR", "UJS"],
+    "ans": "SHQ"
+  },
+  {
+    "q": "If each letter is moved 1 position(s) forward in the alphabet, how is CAT coded?",
+    "options": ["CAT", "ECV", "FDW", "DBU"],
+    "ans": "DBU"
+  },
+  {
+    "q": "In a group of 30 people, Ravi ranks 29th from the top. What is his rank from the bottom?",
+    "options": ["1", "3", "2", "29"],
+    "ans": "2"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 2 days?",
+    "options": ["Wednesday", "Monday", "Sunday", "Saturday"],
+    "ans": "Wednesday"
+  },
+  {
+    "q": "Choose the most logical order: Seed, Plant, Fruit, Flower.",
+    "options": ["Plant → Seed → Fruit → Flower", "Flower → Plant → Fruit → Seed", "Flower → Plant → Seed → Fruit", "Seed → Plant → Flower → Fruit"],
+    "ans": "Seed → Plant → Flower → Fruit"
+  },
+  {
+    "q": "Choose the odd one out: Cube, Square, Rectangle, Triangle.",
+    "options": ["Cube", "Rectangle", "Triangle", "Square"],
+    "ans": "Cube"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 9:15?",
+    "options": ["202.5°", "172.5°", "187.5°", "157.5°"],
+    "ans": "172.5°"
+  },
+  {
+    "q": "Choose the odd one out: Carrot, Banana, Apple, Mango.",
+    "options": ["Banana", "Mango", "Carrot", "Apple"],
+    "ans": "Carrot"
+  },
+  {
+    "q": "Find the next letter: T , U , W , Z , D, ?",
+    "options": ["J", "H", "I", "L"],
+    "ans": "I"
+  },
+  {
+    "q": "If each letter is moved 3 position(s) forward in the alphabet, how is RED coded?",
+    "options": ["TGF", "VIH", "UHG", "WJI"],
+    "ans": "UHG"
+  },
+  {
+    "q": "Choose the odd one out: Mango, Banana, Apple, Carrot.",
+    "options": ["Carrot", "Banana", "Mango", "Apple"],
+    "ans": "Carrot"
+  },
+  {
+    "q": "Find the missing number: 9, 10, 20, 21, ?",
+    "options": ["21", "43", "42", "40"],
+    "ans": "42"
+  },
+  {
+    "q": "Ira, Gita, Charu, Farah, Deepa, Heena, Asha, Esha, Bina are seated in a row facing north. Who is sitting 9th from the left?",
+    "options": ["Asha", "Deepa", "Bina", "Farah"],
+    "ans": "Bina"
+  },
+  {
+    "q": "Find the next number: 12, 22, 32, 42, 52, ?",
+    "options": ["64", "72", "61", "62"],
+    "ans": "62"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 3:45?",
+    "options": ["157.5°", "142.5°", "202.5°", "187.5°"],
+    "ans": "157.5°"
+  },
+  {
+    "q": "In a group of 44 people, Ravi ranks 39th from the top. What is his rank from the bottom?",
+    "options": ["39", "7", "6", "5"],
+    "ans": "6"
+  },
+  {
+    "q": "Choose the odd one out: Eagle, Sparrow, Parrot, Shark.",
+    "options": ["Shark", "Parrot", "Eagle", "Sparrow"],
+    "ans": "Shark"
+  },
+  {
+    "q": "K is the son of L. L is the daughter of M. How is K related to M?",
+    "options": ["Nephew", "Son", "Brother", "Grandson"],
+    "ans": "Grandson"
+  },
+  {
+    "q": "Doctor is to Hospital as Teacher is to ____.",
+    "options": ["School", "Road", "House", "Tree"],
+    "ans": "School"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 39 days?",
+    "options": ["Friday", "Tuesday", "Saturday", "Sunday"],
+    "ans": "Friday"
+  },
+  {
+    "q": "A person walks North 10 m, then South 7 m, then West 7 m, then West 7 m. In which general direction is the person from the starting point?",
+    "options": ["East", "West", "South", "North"],
+    "ans": "West"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 52 days?",
+    "options": ["Friday", "Thursday", "Wednesday", "Sunday"],
+    "ans": "Thursday"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 5 days?",
+    "options": ["Saturday", "Monday", "Thursday", "Friday"],
+    "ans": "Saturday"
+  },
+  {
+    "q": "Choose the most logical order: Seed, Plant, Flower, Fruit.",
+    "options": ["Flower → Fruit → Plant → Seed", "Seed → Plant → Flower → Fruit", "Flower → Seed → Plant → Fruit", "Fruit → Flower → Seed → Plant"],
+    "ans": "Seed → Plant → Flower → Fruit"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 16 days?",
+    "options": ["Thursday", "Saturday", "Monday", "Wednesday"],
+    "ans": "Wednesday"
+  },
+  {
+    "q": "Find the next number: 16, 25, 52, 97, 160, ?",
+    "options": ["241", "250", "236", "243"],
+    "ans": "241"
+  },
+  {
+    "q": "A person walks South 8 m, then North 3 m, then South 8 m. In which general direction is the person from the starting point?",
+    "options": ["West", "South", "East", "North"],
+    "ans": "South"
+  },
+  {
+    "q": "A person walks West 2 m, then North 6 m, then South 9 m, then West 2 m, then South 3 m. In which general direction is the person from the starting point?",
+    "options": ["South", "East", "North", "West"],
+    "ans": "South"
+  },
+  {
+    "q": "Farah, Heena, Ira, Deepa, Bina are seated in a row facing north. Who is sitting 1st from the left?",
+    "options": ["Bina", "Farah", "Ira", "Deepa"],
+    "ans": "Farah"
+  },
+  {
+    "q": "Find the next number: 5, 12, 19, 26, 33, ?",
+    "options": ["47", "42", "39", "40"],
+    "ans": "40"
+  },
+  {
+    "q": "Statement: Provide practice tests to help candidates prepare for recruitment exams. Assumption:",
+    "options": ["Practice can help candidates prepare", "Candidates do not need preparation", "Exams contain no questions", "All candidates will get hired"],
+    "ans": "Practice can help candidates prepare"
+  },
+  {
+    "q": "Choose the most logical order: Fruit, Flower, Plant, Seed.",
+    "options": ["Flower → Plant → Fruit → Seed", "Flower → Seed → Plant → Fruit", "Seed → Plant → Flower → Fruit", "Seed → Flower → Fruit → Plant"],
+    "ans": "Seed → Plant → Flower → Fruit"
+  },
+  {
+    "q": "If each letter is moved 1 position(s) forward in the alphabet, how is BAT coded?",
+    "options": ["EDW", "CBU", "BAT", "DCV"],
+    "ans": "CBU"
+  },
+  {
+    "q": "A person walks West 6 m, then West 7 m, then West 2 m. In which general direction is the person from the starting point?",
+    "options": ["South", "North", "West", "East"],
+    "ans": "West"
+  },
+  {
+    "q": "Choose the most logical order: Adult, Child, Adolescent, Infant.",
+    "options": ["Infant → Adolescent → Child → Adult", "Child → Adolescent → Adult → Infant", "Adult → Infant → Child → Adolescent", "Infant → Child → Adolescent → Adult"],
+    "ans": "Infant → Child → Adolescent → Adult"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 11:15?",
+    "options": ["97.5°", "142.5°", "157.5°", "112.5°"],
+    "ans": "112.5°"
+  },
+  {
+    "q": "If each letter is moved 2 position(s) forward in the alphabet, how is TOP coded?",
+    "options": ["UPQ", "WRS", "VQR", "XST"],
+    "ans": "VQR"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 9:10?",
+    "options": ["175°", "190°", "130°", "145°"],
+    "ans": "145°"
+  },
+  {
+    "q": "Find the missing number: 3, 4, 8, 9, ?",
+    "options": ["9", "16", "18", "19"],
+    "ans": "18"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 57 days?",
+    "options": ["Wednesday", "Saturday", "Tuesday", "Friday"],
+    "ans": "Tuesday"
+  },
+  {
+    "q": "A person walks West 2 m, then South 5 m, then North 2 m, then West 8 m. In which general direction is the person from the starting point?",
+    "options": ["West", "North", "East", "South"],
+    "ans": "West"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 23 days?",
+    "options": ["Wednesday", "Sunday", "Thursday", "Tuesday"],
+    "ans": "Wednesday"
+  },
+  {
+    "q": "In a group of 57 people, Ravi ranks 28th from the top. What is his rank from the bottom?",
+    "options": ["28", "29", "31", "30"],
+    "ans": "30"
+  },
+  {
+    "q": "In a group of 52 people, Ravi ranks 26th from the top. What is his rank from the bottom?",
+    "options": ["27", "28", "26", "Option 4"],
+    "ans": "27"
+  },
+  {
+    "q": "Find the next number: 4, 9, 14, 19, 24, ?",
+    "options": ["34", "31", "28", "29"],
+    "ans": "29"
+  },
+  {
+    "q": "Farah, Ira, Bina, Deepa, Heena, Charu, Gita, Esha, Asha are seated in a row facing north. Who is sitting 9th from the left?",
+    "options": ["Farah", "Heena", "Asha", "Deepa"],
+    "ans": "Asha"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 59 days?",
+    "options": ["Thursday", "Sunday", "Saturday", "Monday"],
+    "ans": "Thursday"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 9:30?",
+    "options": ["135°", "150°", "105°", "90°"],
+    "ans": "105°"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 10:40?",
+    "options": ["80°", "65°", "110°", "125°"],
+    "ans": "80°"
+  },
+  {
+    "q": "Farah, Deepa, Gita, Esha, Asha are seated in a row facing north. Who is sitting 5th from the left?",
+    "options": ["Esha", "Asha", "Farah", "Gita"],
+    "ans": "Asha"
+  },
+  {
+    "q": "Find the missing number: 2, 3, 6, 7, ?",
+    "options": ["15", "7", "12", "14"],
+    "ans": "14"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 7:10?",
+    "options": ["155°", "200°", "140°", "185°"],
+    "ans": "155°"
+  },
+  {
+    "q": "Heena, Esha, Charu, Ira, Farah, Bina are seated in a row facing north. Who is sitting 2nd from the left?",
+    "options": ["Heena", "Farah", "Esha", "Charu"],
+    "ans": "Esha"
+  },
+  {
+    "q": "Statements: All pens are tools. Some tools are metal. Conclusion: Some pens are metal.",
+    "options": ["No pens are tools", "Conclusion follows", "Conclusion does not follow", "All tools are pens"],
+    "ans": "Conclusion does not follow"
+  },
+  {
+    "q": "Find the next number: 25, 34, 61, 106, 169, ?",
+    "options": ["245", "250", "259", "252"],
+    "ans": "250"
+  },
+  {
+    "q": "In a group of 35 people, Ravi ranks 28th from the top. What is his rank from the bottom?",
+    "options": ["8", "9", "7", "28"],
+    "ans": "8"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 6:50?",
+    "options": ["140°", "125°", "95°", "80°"],
+    "ans": "95°"
+  },
+  {
+    "q": "Find the next number: 25, 27, 31, 37, 45, ?",
+    "options": ["57", "53", "55", "65"],
+    "ans": "55"
+  },
+  {
+    "q": "Find the next letter: J , K , M , P , T, ?",
+    "options": ["Y", "X", "B", "Z"],
+    "ans": "Y"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 29 days?",
+    "options": ["Tuesday", "Thursday", "Friday", "Saturday"],
+    "ans": "Tuesday"
+  },
+  {
+    "q": "Deepa, Asha, Gita, Ira, Esha, Bina are seated in a row facing north. Who is sitting 4th from the left?",
+    "options": ["Esha", "Ira", "Asha", "Gita"],
+    "ans": "Ira"
+  },
+  {
+    "q": "Heena, Ira, Deepa, Farah, Charu are seated in a row facing north. Who is sitting 3rd from the left?",
+    "options": ["Farah", "Ira", "Charu", "Deepa"],
+    "ans": "Deepa"
+  },
+  {
+    "q": "Deepa, Heena, Charu, Ira, Gita, Esha are seated in a row facing north. Who is sitting 1st from the left?",
+    "options": ["Gita", "Deepa", "Esha", "Heena"],
+    "ans": "Deepa"
+  },
+  {
+    "q": "If each letter is moved 3 position(s) forward in the alphabet, how is FOX coded?",
+    "options": ["JSB", "KTC", "HQZ", "IRA"],
+    "ans": "IRA"
+  },
+  {
+    "q": "Choose the most logical order: Adolescent, Child, Adult, Infant.",
+    "options": ["Infant → Child → Adolescent → Adult", "Infant → Adult → Adolescent → Child", "Adult → Adolescent → Infant → Child", "Child → Adult → Infant → Adolescent"],
+    "ans": "Infant → Child → Adolescent → Adult"
+  },
+  {
+    "q": "Find the next letter: O , S , W , A , E, ?",
+    "options": ["I", "J", "H", "K"],
+    "ans": "I"
+  },
+  {
+    "q": "Heena, Esha, Ira, Charu, Deepa, Bina, Farah, Gita, Asha are seated in a row facing north. Who is sitting 9th from the left?",
+    "options": ["Asha", "Esha", "Heena", "Bina"],
+    "ans": "Asha"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 9:00?",
+    "options": ["120°", "135°", "75°", "90°"],
+    "ans": "90°"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 1:20?",
+    "options": ["80°", "125°", "110°", "65°"],
+    "ans": "80°"
+  },
+  {
+    "q": "Choose the odd one out: April, Sunday, January, March.",
+    "options": ["Sunday", "January", "April", "March"],
+    "ans": "Sunday"
+  },
+  {
+    "q": "In a group of 29 people, Ravi ranks 10th from the top. What is his rank from the bottom?",
+    "options": ["21", "10", "19", "20"],
+    "ans": "20"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 40 days?",
+    "options": ["Saturday", "Friday", "Sunday", "Monday"],
+    "ans": "Saturday"
+  },
+  {
+    "q": "Choose the most logical order: Flower, Plant, Fruit, Seed.",
+    "options": ["Flower → Plant → Seed → Fruit", "Fruit → Seed → Plant → Flower", "Flower → Seed → Fruit → Plant", "Seed → Plant → Flower → Fruit"],
+    "ans": "Seed → Plant → Flower → Fruit"
+  },
+  {
+    "q": "Eye is to See as Ear is to ____.",
+    "options": ["Hear", "Tree", "House", "Road"],
+    "ans": "Hear"
+  },
+  {
+    "q": "A person walks West 6 m, then East 9 m, then East 8 m, then South 4 m, then East 2 m. In which general direction is the person from the starting point?",
+    "options": ["North", "West", "South", "East"],
+    "ans": "East"
+  },
+  {
+    "q": "If each letter is moved 2 position(s) forward in the alphabet, how is MAP coded?",
+    "options": ["QET", "OCR", "PDS", "NBQ"],
+    "ans": "OCR"
+  },
+  {
+    "q": "Farah, Bina, Esha, Asha, Ira, Charu, Heena, Gita are seated in a row facing north. Who is sitting 2nd from the left?",
+    "options": ["Ira", "Asha", "Heena", "Bina"],
+    "ans": "Bina"
+  },
+  {
+    "q": "Find the missing number: 6, 7, 14, 15, ?",
+    "options": ["31", "15", "28", "30"],
+    "ans": "30"
+  },
+  {
+    "q": "X is the mother of Y. Y is the father of Z. How is X related to Z?",
+    "options": ["Mother", "Grandmother", "Aunt", "Sister"],
+    "ans": "Grandmother"
+  },
+  {
+    "q": "Asha, Ira, Deepa, Charu, Bina, Esha, Gita, Farah are seated in a row facing north. Who is sitting 6th from the left?",
+    "options": ["Esha", "Bina", "Deepa", "Charu"],
+    "ans": "Esha"
+  },
+  {
+    "q": "In a group of 60 people, Ravi ranks 50th from the top. What is his rank from the bottom?",
+    "options": ["11", "10", "50", "12"],
+    "ans": "11"
+  },
+  {
+    "q": "In a group of 52 people, Ravi ranks 39th from the top. What is his rank from the bottom?",
+    "options": ["15", "14", "13", "39"],
+    "ans": "14"
+  },
+  {
+    "q": "Choose the odd one out: Second, Litre, Kilogram, Metre.",
+    "options": ["Second", "Metre", "Kilogram", "Litre"],
+    "ans": "Kilogram"
+  },
+  {
+    "q": "A person walks West 9 m, then South 8 m, then West 2 m, then East 6 m. In which general direction is the person from the starting point?",
+    "options": ["South", "North", "East", "West"],
+    "ans": "South"
+  },
+  {
+    "q": "In a group of 47 people, Ravi ranks 42th from the top. What is his rank from the bottom?",
+    "options": ["6", "5", "42", "7"],
+    "ans": "6"
+  },
+  {
+    "q": "Statement: The store offers online ordering for customers who cannot visit in person. Assumption:",
+    "options": ["Online orders are always free", "The store is closing permanently", "No customer likes shopping", "Some customers may be unable to visit the store"],
+    "ans": "Some customers may be unable to visit the store"
+  },
+  {
+    "q": "Find the next letter: N , P , R , T , V, ?",
+    "options": ["W", "A", "Y", "X"],
+    "ans": "X"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 58 days?",
+    "options": ["Monday", "Tuesday", "Saturday", "Wednesday"],
+    "ans": "Wednesday"
+  },
+  {
+    "q": "Find the next number: 9, 14, 29, 54, 89, ?",
+    "options": ["139", "134", "136", "129"],
+    "ans": "134"
+  },
+  {
+    "q": "If each letter is moved 3 position(s) forward in the alphabet, how is KEY coded?",
+    "options": ["NHB", "OIC", "PJD", "MGA"],
+    "ans": "NHB"
+  },
+  {
+    "q": "In a group of 34 people, Ravi ranks 31th from the top. What is his rank from the bottom?",
+    "options": ["31", "4", "5", "3"],
+    "ans": "4"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 28 days?",
+    "options": ["Monday", "Friday", "Tuesday", "Thursday"],
+    "ans": "Monday"
+  },
+  {
+    "q": "Choose the odd one out: Second, Metre, Kilogram, Litre.",
+    "options": ["Litre", "Metre", "Kilogram", "Second"],
+    "ans": "Kilogram"
+  },
+  {
+    "q": "If each letter is moved 3 position(s) forward in the alphabet, how is TOP coded?",
+    "options": ["XST", "VQR", "YTU", "WRS"],
+    "ans": "WRS"
+  },
+  {
+    "q": "Hand is to Glove as Foot is to ____.",
+    "options": ["Sock", "Road", "House", "Tree"],
+    "ans": "Sock"
+  },
+  {
+    "q": "In a group of 54 people, Ravi ranks 7th from the top. What is his rank from the bottom?",
+    "options": ["7", "47", "49", "48"],
+    "ans": "48"
+  },
+  {
+    "q": "Choose the most logical order: Flower, Plant, Seed, Fruit.",
+    "options": ["Seed → Fruit → Plant → Flower", "Seed → Plant → Flower → Fruit", "Seed → Plant → Fruit → Flower", "Flower → Plant → Fruit → Seed"],
+    "ans": "Seed → Plant → Flower → Fruit"
+  },
+  {
+    "q": "Choose the most logical order: Infant, Child, Adult, Adolescent.",
+    "options": ["Adult → Child → Infant → Adolescent", "Infant → Adolescent → Child → Adult", "Child → Adult → Infant → Adolescent", "Infant → Child → Adolescent → Adult"],
+    "ans": "Infant → Child → Adolescent → Adult"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 42 days?",
+    "options": ["Monday", "Sunday", "Tuesday", "Wednesday"],
+    "ans": "Monday"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 3:50?",
+    "options": ["185°", "160°", "205°", "175°"],
+    "ans": "175°"
+  },
+  {
+    "q": "Farah, Esha, Charu, Deepa, Gita, Ira, Heena, Asha are seated in a row facing north. Who is sitting 4th from the left?",
+    "options": ["Ira", "Gita", "Heena", "Deepa"],
+    "ans": "Deepa"
+  },
+  {
+    "q": "Find the next letter: F , G , I , L , P, ?",
+    "options": ["V", "U", "X", "T"],
+    "ans": "U"
+  },
+  {
+    "q": "If each letter is moved 3 position(s) forward in the alphabet, how is HEN coded?",
+    "options": ["JGP", "MJS", "KHQ", "LIR"],
+    "ans": "KHQ"
+  },
+  {
+    "q": "In a group of 38 people, Ravi ranks 25th from the top. What is his rank from the bottom?",
+    "options": ["14", "13", "25", "15"],
+    "ans": "14"
+  },
+  {
+    "q": "A person walks West 2 m, then East 6 m, then North 3 m, then North 7 m. In which general direction is the person from the starting point?",
+    "options": ["East", "North", "South", "West"],
+    "ans": "North"
+  },
+  {
+    "q": "If each letter is moved 2 position(s) forward in the alphabet, how is FOX coded?",
+    "options": ["JSB", "IRA", "HQZ", "GPY"],
+    "ans": "HQZ"
+  },
+  {
+    "q": "Find the next letter: P , S , V , Y , B, ?",
+    "options": ["F", "D", "G", "E"],
+    "ans": "E"
+  },
+  {
+    "q": "If each letter is moved 2 position(s) forward in the alphabet, how is BUS coded?",
+    "options": ["EXV", "FYW", "CVT", "DWU"],
+    "ans": "DWU"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 7:45?",
+    "options": ["22.5°", "82.5°", "37.5°", "67.5°"],
+    "ans": "37.5°"
+  },
+  {
+    "q": "In a group of 22 people, Ravi ranks 14th from the top. What is his rank from the bottom?",
+    "options": ["14", "8", "9", "10"],
+    "ans": "9"
+  },
+  {
+    "q": "Find the next number: 8, 10, 12, 14, 16, ?",
+    "options": ["Option 4", "20", "18", "17"],
+    "ans": "18"
+  },
+  {
+    "q": "Find the next number: 1, 3, 5, 7, 9, ?",
+    "options": ["13", "10", "11", "Option 4"],
+    "ans": "11"
+  },
+  {
+    "q": "If each letter is moved 3 position(s) forward in the alphabet, how is BAT coded?",
+    "options": ["EDW", "DCV", "GFY", "FEX"],
+    "ans": "EDW"
+  },
+  {
+    "q": "Choose the most logical order: Fruit, Flower, Seed, Plant.",
+    "options": ["Fruit → Plant → Seed → Flower", "Seed → Flower → Plant → Fruit", "Seed → Plant → Flower → Fruit", "Option 4"],
+    "ans": "Seed → Plant → Flower → Fruit"
+  },
+  {
+    "q": "Choose the most logical order: Selection, Interview, Joining, Application.",
+    "options": ["Selection → Application → Joining → Interview", "Application → Interview → Selection → Joining", "Interview → Joining → Application → Selection", "Selection → Application → Interview → Joining"],
+    "ans": "Application → Interview → Selection → Joining"
+  },
+  {
+    "q": "Esha, Deepa, Farah, Charu, Gita, Bina are seated in a row facing north. Who is sitting 2nd from the left?",
+    "options": ["Esha", "Bina", "Deepa", "Farah"],
+    "ans": "Deepa"
+  },
+  {
+    "q": "Find the next number: 30, 120, 480, 1920, 7680, ?",
+    "options": ["30720", "7680", "30730", "30724"],
+    "ans": "30720"
+  },
+  {
+    "q": "Find the next letter: P , R , T , V , X, ?",
+    "options": ["A", "Y", "C", "Z"],
+    "ans": "Z"
+  },
+  {
+    "q": "A person walks West 7 m, then East 2 m, then East 3 m. In which general direction is the person from the starting point?",
+    "options": ["South", "West", "East", "North"],
+    "ans": "West"
+  },
+  {
+    "q": "In a group of 38 people, Ravi ranks 34th from the top. What is his rank from the bottom?",
+    "options": ["6", "4", "5", "34"],
+    "ans": "5"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 33 days?",
+    "options": ["Tuesday", "Monday", "Sunday", "Saturday"],
+    "ans": "Saturday"
+  },
+  {
+    "q": "In a group of 36 people, Ravi ranks 23th from the top. What is his rank from the bottom?",
+    "options": ["15", "13", "23", "14"],
+    "ans": "14"
+  },
+  {
+    "q": "Author is to Book as Composer is to ____.",
+    "options": ["Music", "Road", "House", "Tree"],
+    "ans": "Music"
+  },
+  {
+    "q": "Choose the most logical order: Interview, Application, Selection, Joining.",
+    "options": ["Interview → Selection → Application → Joining", "Joining → Selection → Application → Interview", "Application → Interview → Selection → Joining", "Application → Interview → Joining → Selection"],
+    "ans": "Application → Interview → Selection → Joining"
+  },
+  {
+    "q": "Find the next letter: M , N , O , P , Q, ?",
+    "options": ["Q", "R", "S", "T"],
+    "ans": "R"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 7 days?",
+    "options": ["Sunday", "Monday", "Wednesday", "Tuesday"],
+    "ans": "Monday"
+  },
+  {
+    "q": "Find the next letter: O , R , U , X , A, ?",
+    "options": ["C", "F", "E", "D"],
+    "ans": "D"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 19 days?",
+    "options": ["Tuesday", "Thursday", "Saturday", "Wednesday"],
+    "ans": "Saturday"
+  },
+  {
+    "q": "Choose the most logical order: Raw material, Packaging, Distribution, Manufacturing.",
+    "options": ["Distribution → Packaging → Manufacturing → Raw material", "Raw material → Manufacturing → Packaging → Distribution", "Manufacturing → Distribution → Packaging → Raw material", "Packaging → Manufacturing → Distribution → Raw material"],
+    "ans": "Raw material → Manufacturing → Packaging → Distribution"
+  },
+  {
+    "q": "Choose the odd one out: Yellow, Table, Red, Green.",
+    "options": ["Table", "Green", "Yellow", "Red"],
+    "ans": "Table"
+  },
+  {
+    "q": "Find the next number: 8, 10, 14, 20, 28, ?",
+    "options": ["40", "48", "38", "36"],
+    "ans": "38"
+  },
+  {
+    "q": "Gita, Charu, Esha, Ira, Asha, Deepa are seated in a row facing north. Who is sitting 4th from the left?",
+    "options": ["Gita", "Esha", "Ira", "Charu"],
+    "ans": "Ira"
+  },
+  {
+    "q": "Find the next letter: M , O , Q , S , U, ?",
+    "options": ["X", "Z", "W", "V"],
+    "ans": "W"
+  },
+  {
+    "q": "Choose the most logical order: Joining, Application, Interview, Selection.",
+    "options": ["Interview → Joining → Application → Selection", "Selection → Interview → Joining → Application", "Application → Interview → Selection → Joining", "Interview → Selection → Application → Joining"],
+    "ans": "Application → Interview → Selection → Joining"
+  },
+  {
+    "q": "If each letter is moved 2 position(s) forward in the alphabet, how is BAT coded?",
+    "options": ["EDW", "FEX", "CBU", "DCV"],
+    "ans": "DCV"
+  },
+  {
+    "q": "Choose the most logical order: Distribution, Manufacturing, Packaging, Raw material.",
+    "options": ["Manufacturing → Raw material → Packaging → Distribution", "Raw material → Packaging → Manufacturing → Distribution", "Distribution → Packaging → Raw material → Manufacturing", "Raw material → Manufacturing → Packaging → Distribution"],
+    "ans": "Raw material → Manufacturing → Packaging → Distribution"
+  },
+  {
+    "q": "Charu, Heena, Gita, Farah, Asha, Deepa are seated in a row facing north. Who is sitting 6th from the left?",
+    "options": ["Deepa", "Asha", "Charu", "Gita"],
+    "ans": "Deepa"
+  },
+  {
+    "q": "Find the next number: 10, 30, 90, 270, 810, ?",
+    "options": ["2430", "810", "2433", "2440"],
+    "ans": "2430"
+  },
+  {
+    "q": "A person walks East 2 m, then West 3 m, then South 6 m, then South 8 m, then East 3 m. In which general direction is the person from the starting point?",
+    "options": ["West", "East", "North", "South"],
+    "ans": "South"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 3:10?",
+    "options": ["35°", "80°", "20°", "65°"],
+    "ans": "35°"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 1:00?",
+    "options": ["15°", "60°", "75°", "30°"],
+    "ans": "30°"
+  },
+  {
+    "q": "Find the next number: 28, 34, 52, 82, 124, ?",
+    "options": ["173", "178", "184", "180"],
+    "ans": "178"
+  },
+  {
+    "q": "A person walks East 7 m, then South 8 m, then North 6 m, then North 6 m. In which general direction is the person from the starting point?",
+    "options": ["South", "North", "West", "East"],
+    "ans": "East"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 48 days?",
+    "options": ["Tuesday", "Sunday", "Friday", "Monday"],
+    "ans": "Sunday"
+  },
+  {
+    "q": "In a group of 48 people, Ravi ranks 41th from the top. What is his rank from the bottom?",
+    "options": ["9", "7", "8", "41"],
+    "ans": "8"
+  },
+  {
+    "q": "A person walks East 7 m, then East 3 m, then South 10 m, then East 6 m. In which general direction is the person from the starting point?",
+    "options": ["South", "North", "West", "East"],
+    "ans": "East"
+  },
+  {
+    "q": "Find the next letter: Q , R , T , W , A, ?",
+    "options": ["E", "F", "I", "G"],
+    "ans": "F"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 8 days?",
+    "options": ["Sunday", "Thursday", "Tuesday", "Friday"],
+    "ans": "Tuesday"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 10:10?",
+    "options": ["145°", "115°", "160°", "100°"],
+    "ans": "115°"
+  },
+  {
+    "q": "Find the next letter: C , F , I , L , O, ?",
+    "options": ["Q", "S", "R", "T"],
+    "ans": "R"
+  },
+  {
+    "q": "Choose the odd one out: Cube, Square, Triangle, Rectangle.",
+    "options": ["Cube", "Triangle", "Square", "Rectangle"],
+    "ans": "Cube"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 10 days?",
+    "options": ["Thursday", "Monday", "Wednesday", "Saturday"],
+    "ans": "Thursday"
+  },
+  {
+    "q": "Find the next letter: G , H , I , J , K, ?",
+    "options": ["N", "L", "K", "M"],
+    "ans": "L"
+  },
+  {
+    "q": "In a group of 22 people, Ravi ranks 9th from the top. What is his rank from the bottom?",
+    "options": ["9", "15", "14", "13"],
+    "ans": "14"
+  },
+  {
+    "q": "A person walks North 5 m, then South 8 m, then East 6 m. In which general direction is the person from the starting point?",
+    "options": ["North", "South", "East", "West"],
+    "ans": "East"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 6:40?",
+    "options": ["25°", "70°", "40°", "85°"],
+    "ans": "40°"
+  },
+  {
+    "q": "Find the next number: 22, 24, 28, 34, 42, ?",
+    "options": ["50", "62", "52", "54"],
+    "ans": "52"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 34 days?",
+    "options": ["Friday", "Tuesday", "Sunday", "Thursday"],
+    "ans": "Sunday"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 21 days?",
+    "options": ["Sunday", "Monday", "Tuesday", "Wednesday"],
+    "ans": "Monday"
+  },
+  {
+    "q": "Find the next number: 2, 4, 8, 14, 22, ?",
+    "options": ["30", "32", "42", "34"],
+    "ans": "32"
+  },
+  {
+    "q": "Find the next letter: I , K , M , O , Q, ?",
+    "options": ["R", "V", "T", "S"],
+    "ans": "S"
+  },
+  {
+    "q": "Deepa, Gita, Bina, Farah, Asha are seated in a row facing north. Who is sitting 1st from the left?",
+    "options": ["Gita", "Bina", "Farah", "Deepa"],
+    "ans": "Deepa"
+  },
+  {
+    "q": "Find the next letter: B , D , F , H , J, ?",
+    "options": ["M", "O", "K", "L"],
+    "ans": "L"
+  },
+  {
+    "q": "A person walks South 10 m, then North 4 m, then East 2 m. In which general direction is the person from the starting point?",
+    "options": ["East", "South", "West", "North"],
+    "ans": "South"
+  },
+  {
+    "q": "Find the next number: 27, 34, 55, 90, 139, ?",
+    "options": ["197", "204", "202", "209"],
+    "ans": "202"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 10:50?",
+    "options": ["10°", "55°", "25°", "70°"],
+    "ans": "25°"
+  },
+  {
+    "q": "Gita, Ira, Heena, Asha, Bina are seated in a row facing north. Who is sitting 4th from the left?",
+    "options": ["Ira", "Gita", "Asha", "Heena"],
+    "ans": "Asha"
+  },
+  {
+    "q": "A person walks West 7 m, then West 7 m, then South 9 m. In which general direction is the person from the starting point?",
+    "options": ["South", "West", "North", "East"],
+    "ans": "West"
+  },
+  {
+    "q": "A person walks North 9 m, then East 8 m, then North 4 m, then East 4 m. In which general direction is the person from the starting point?",
+    "options": ["South", "North", "West", "East"],
+    "ans": "North"
+  },
+  {
+    "q": "Find the next number: 9, 11, 15, 21, 29, ?",
+    "options": ["37", "41", "39", "49"],
+    "ans": "39"
+  },
+  {
+    "q": "If each letter is moved 3 position(s) forward in the alphabet, how is JAM coded?",
+    "options": ["LCO", "MDP", "NEQ", "OFR"],
+    "ans": "MDP"
+  },
+  {
+    "q": "Choose the odd one out: Blue, Square, Circle, Triangle.",
+    "options": ["Triangle", "Square", "Blue", "Circle"],
+    "ans": "Blue"
+  },
+  {
+    "q": "A person walks West 3 m, then South 5 m, then South 9 m, then East 10 m, then East 8 m. In which general direction is the person from the starting point?",
+    "options": ["West", "South", "East", "North"],
+    "ans": "East"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 5:30?",
+    "options": ["45°", "0°", "15°", "60°"],
+    "ans": "15°"
+  },
+  {
+    "q": "In a group of 42 people, Ravi ranks 41th from the top. What is his rank from the bottom?",
+    "options": ["41", "3", "2", "1"],
+    "ans": "2"
+  },
+  {
+    "q": "A person walks South 2 m, then West 9 m, then North 8 m, then West 7 m. In which general direction is the person from the starting point?",
+    "options": ["West", "East", "North", "South"],
+    "ans": "West"
+  },
+  {
+    "q": "Pen is to Write as Knife is to ____.",
+    "options": ["Road", "Cut", "Tree", "House"],
+    "ans": "Cut"
+  },
+  {
+    "q": "Choose the most logical order: Fruit, Seed, Plant, Flower.",
+    "options": ["Option 4", "Fruit → Flower → Seed → Plant", "Seed → Plant → Flower → Fruit", "Flower → Fruit → Seed → Plant"],
+    "ans": "Seed → Plant → Flower → Fruit"
+  },
+  {
+    "q": "Choose the odd one out: Copper, Silver, Plastic, Iron.",
+    "options": ["Copper", "Plastic", "Silver", "Iron"],
+    "ans": "Plastic"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 5:20?",
+    "options": ["70°", "40°", "85°", "25°"],
+    "ans": "40°"
+  },
+  {
+    "q": "A person walks North 8 m, then North 4 m, then East 9 m. In which general direction is the person from the starting point?",
+    "options": ["North", "South", "West", "East"],
+    "ans": "North"
+  },
+  {
+    "q": "Find the next letter: G , I , K , M , O, ?",
+    "options": ["Q", "R", "P", "T"],
+    "ans": "Q"
+  },
+  {
+    "q": "If each letter is moved 1 position(s) forward in the alphabet, how is TOP coded?",
+    "options": ["VQR", "WRS", "TOP", "UPQ"],
+    "ans": "UPQ"
+  },
+  {
+    "q": "Choose the most logical order: Raw material, Distribution, Packaging, Manufacturing.",
+    "options": ["Packaging → Distribution → Manufacturing → Raw material", "Raw material → Manufacturing → Packaging → Distribution", "Manufacturing → Distribution → Raw material → Packaging", "Packaging → Manufacturing → Raw material → Distribution"],
+    "ans": "Raw material → Manufacturing → Packaging → Distribution"
+  },
+  {
+    "q": "In a group of 36 people, Ravi ranks 34th from the top. What is his rank from the bottom?",
+    "options": ["4", "2", "34", "3"],
+    "ans": "3"
+  },
+  {
+    "q": "Gita, Ira, Farah, Deepa, Esha, Charu are seated in a row facing north. Who is sitting 2nd from the left?",
+    "options": ["Ira", "Gita", "Deepa", "Farah"],
+    "ans": "Ira"
+  },
+  {
+    "q": "A person walks North 9 m, then West 5 m, then North 5 m, then South 2 m, then South 6 m. In which general direction is the person from the starting point?",
+    "options": ["South", "North", "East", "West"],
+    "ans": "North"
+  },
+  {
+    "q": "Find the next number: 3, 9, 27, 81, 243, ?",
+    "options": ["732", "243", "729", "739"],
+    "ans": "729"
+  },
+  {
+    "q": "Find the next letter: K , M , O , Q , S, ?",
+    "options": ["V", "W", "U", "T"],
+    "ans": "U"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 3:30?",
+    "options": ["60°", "105°", "75°", "120°"],
+    "ans": "75°"
+  },
+  {
+    "q": "Choose the most logical order: Adult, Adolescent, Infant, Child.",
+    "options": ["Child → Adolescent → Adult → Infant", "Infant → Child → Adolescent → Adult", "Adolescent → Adult → Child → Infant", "Child → Adolescent → Infant → Adult"],
+    "ans": "Infant → Child → Adolescent → Adult"
+  },
+  {
+    "q": "Find the next letter: L , M , N , O , P, ?",
+    "options": ["P", "Q", "S", "R"],
+    "ans": "Q"
+  },
+  {
+    "q": "In a group of 27 people, Ravi ranks 24th from the top. What is his rank from the bottom?",
+    "options": ["24", "4", "3", "5"],
+    "ans": "4"
+  },
+  {
+    "q": "Choose the most logical order: Plant, Seed, Fruit, Flower.",
+    "options": ["Flower → Plant → Seed → Fruit", "Option 4", "Seed → Plant → Flower → Fruit", "Seed → Plant → Fruit → Flower"],
+    "ans": "Seed → Plant → Flower → Fruit"
+  },
+  {
+    "q": "In a group of 22 people, Ravi ranks 17th from the top. What is his rank from the bottom?",
+    "options": ["17", "5", "6", "7"],
+    "ans": "6"
+  },
+  {
+    "q": "Find the next letter: G , H , J , M , Q, ?",
+    "options": ["Y", "U", "V", "W"],
+    "ans": "V"
+  },
+  {
+    "q": "Choose the most logical order: Packaging, Distribution, Manufacturing, Raw material.",
+    "options": ["Raw material → Manufacturing → Packaging → Distribution", "Manufacturing → Raw material → Packaging → Distribution", "Option 3", "Option 4"],
+    "ans": "Raw material → Manufacturing → Packaging → Distribution"
+  },
+  {
+    "q": "Choose the most logical order: Adolescent, Infant, Adult, Child.",
+    "options": ["Infant → Adult → Adolescent → Child", "Adult → Child → Infant → Adolescent", "Infant → Adult → Child → Adolescent", "Infant → Child → Adolescent → Adult"],
+    "ans": "Infant → Child → Adolescent → Adult"
+  },
+  {
+    "q": "Statements: All laptops are devices. No devices are plants. Conclusion: No laptops are plants.",
+    "options": ["Conclusion follows", "Conclusion does not follow", "All plants are laptops", "Some laptops are plants"],
+    "ans": "Conclusion follows"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 2:40?",
+    "options": ["145°", "200°", "190°", "160°"],
+    "ans": "160°"
+  },
+  {
+    "q": "In a group of 59 people, Ravi ranks 29th from the top. What is his rank from the bottom?",
+    "options": ["32", "30", "31", "29"],
+    "ans": "31"
+  },
+  {
+    "q": "A person walks West 5 m, then West 2 m, then North 3 m, then West 10 m, then South 8 m. In which general direction is the person from the starting point?",
+    "options": ["South", "West", "North", "East"],
+    "ans": "West"
+  },
+  {
+    "q": "Find the next letter: I , J , L , O , S, ?",
+    "options": ["Y", "W", "A", "X"],
+    "ans": "X"
+  },
+  {
+    "q": "If each letter is moved 1 position(s) forward in the alphabet, how is CAR coded?",
+    "options": ["DBS", "ECT", "FDU", "CAR"],
+    "ans": "DBS"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 6:15?",
+    "options": ["142.5°", "82.5°", "127.5°", "97.5°"],
+    "ans": "97.5°"
+  },
+  {
+    "q": "Find the next number: 26, 30, 42, 62, 90, ?",
+    "options": ["130", "128", "126", "121"],
+    "ans": "126"
+  },
+  {
+    "q": "Choose the most logical order: Application, Joining, Interview, Selection.",
+    "options": ["Interview → Selection → Application → Joining", "Application → Interview → Selection → Joining", "Option 4", "Interview → Joining → Selection → Application"],
+    "ans": "Application → Interview → Selection → Joining"
+  },
+  {
+    "q": "Choose the most logical order: Adult, Infant, Child, Adolescent.",
+    "options": ["Child → Infant → Adolescent → Adult", "Infant → Child → Adolescent → Adult", "Adolescent → Child → Infant → Adult", "Adolescent → Adult → Infant → Child"],
+    "ans": "Infant → Child → Adolescent → Adult"
+  },
+  {
+    "q": "If each letter is moved 2 position(s) forward in the alphabet, how is CUP coded?",
+    "options": ["GYT", "FXS", "DVQ", "EWR"],
+    "ans": "EWR"
+  },
+  {
+    "q": "Esha, Gita, Ira, Charu, Bina, Heena, Farah, Asha, Deepa are seated in a row facing north. Who is sitting 1st from the left?",
+    "options": ["Esha", "Bina", "Asha", "Gita"],
+    "ans": "Esha"
+  },
+  {
+    "q": "Find the next letter: N , Q , T , W , Z, ?",
+    "options": ["B", "D", "E", "C"],
+    "ans": "C"
+  },
+  {
+    "q": "If each letter is moved 1 position(s) forward in the alphabet, how is BOX coded?",
+    "options": ["BOX", "DQZ", "ERA", "CPY"],
+    "ans": "CPY"
+  },
+  {
+    "q": "In a group of 42 people, Ravi ranks 35th from the top. What is his rank from the bottom?",
+    "options": ["7", "35", "8", "9"],
+    "ans": "8"
+  },
+  {
+    "q": "Esha, Charu, Gita, Ira, Bina, Deepa are seated in a row facing north. Who is sitting 3rd from the left?",
+    "options": ["Deepa", "Gita", "Esha", "Ira"],
+    "ans": "Gita"
+  },
+  {
+    "q": "Choose the most logical order: Manufacturing, Packaging, Raw material, Distribution.",
+    "options": ["Raw material → Distribution → Packaging → Manufacturing", "Raw material → Manufacturing → Packaging → Distribution", "Raw material → Distribution → Manufacturing → Packaging", "Option 4"],
+    "ans": "Raw material → Manufacturing → Packaging → Distribution"
+  },
+  {
+    "q": "In a group of 36 people, Ravi ranks 22th from the top. What is his rank from the bottom?",
+    "options": ["16", "22", "15", "14"],
+    "ans": "15"
+  },
+  {
+    "q": "Choose the odd one out: Rectangle, Cube, Square, Triangle.",
+    "options": ["Square", "Triangle", "Cube", "Rectangle"],
+    "ans": "Cube"
+  },
+  {
+    "q": "Find the next letter: O , P , R , U , Y, ?",
+    "options": ["G", "C", "E", "D"],
+    "ans": "D"
+  },
+  {
+    "q": "Find the next number: 10, 11, 13, 16, 20, ?",
+    "options": ["22", "26", "30", "25"],
+    "ans": "25"
+  },
+  {
+    "q": "Find the next letter: U , V , X , A , E, ?",
+    "options": ["J", "I", "K", "M"],
+    "ans": "J"
+  },
+  {
+    "q": "A person walks West 5 m, then West 6 m, then West 7 m. In which general direction is the person from the starting point?",
+    "options": ["North", "West", "South", "East"],
+    "ans": "West"
+  },
+  {
+    "q": "Choose the odd one out: Table, Green, Yellow, Red.",
+    "options": ["Table", "Yellow", "Red", "Green"],
+    "ans": "Table"
+  },
+  {
+    "q": "Choose the most logical order: Plant, Flower, Fruit, Seed.",
+    "options": ["Flower → Plant → Seed → Fruit", "Fruit → Flower → Seed → Plant", "Seed → Plant → Flower → Fruit", "Seed → Fruit → Plant → Flower"],
+    "ans": "Seed → Plant → Flower → Fruit"
+  },
+  {
+    "q": "A person walks North 3 m, then South 6 m, then South 3 m. In which general direction is the person from the starting point?",
+    "options": ["North", "East", "West", "South"],
+    "ans": "South"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 4:45?",
+    "options": ["172.5°", "157.5°", "127.5°", "112.5°"],
+    "ans": "127.5°"
+  },
+  {
+    "q": "Find the next number: 26, 31, 46, 71, 106, ?",
+    "options": ["153", "156", "151", "146"],
+    "ans": "151"
+  },
+  {
+    "q": "Choose the odd one out: Banana, Mango, Carrot, Apple.",
+    "options": ["Apple", "Carrot", "Mango", "Banana"],
+    "ans": "Carrot"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 12:30?",
+    "options": ["150°", "195°", "Option 4", "165°"],
+    "ans": "165°"
+  },
+  {
+    "q": "If each letter is moved 2 position(s) forward in the alphabet, how is PEN coded?",
+    "options": ["QFO", "TIR", "SHQ", "RGP"],
+    "ans": "RGP"
+  },
+  {
+    "q": "Find the next letter: A , E , I , M , Q, ?",
+    "options": ["W", "V", "U", "T"],
+    "ans": "U"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 45 days?",
+    "options": ["Wednesday", "Friday", "Monday", "Thursday"],
+    "ans": "Thursday"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 4:00?",
+    "options": ["120°", "165°", "105°", "150°"],
+    "ans": "120°"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 12:20?",
+    "options": ["140°", "95°", "155°", "110°"],
+    "ans": "110°"
+  },
+  {
+    "q": "A person walks West 5 m, then East 5 m, then South 10 m, then South 3 m, then South 9 m. In which general direction is the person from the starting point?",
+    "options": ["North", "West", "East", "South"],
+    "ans": "South"
+  },
+  {
+    "q": "In a group of 39 people, Ravi ranks 30th from the top. What is his rank from the bottom?",
+    "options": ["10", "11", "9", "30"],
+    "ans": "10"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 6:10?",
+    "options": ["125°", "170°", "110°", "155°"],
+    "ans": "125°"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 22 days?",
+    "options": ["Tuesday", "Sunday", "Thursday", "Friday"],
+    "ans": "Tuesday"
+  },
+  {
+    "q": "A person walks East 7 m, then North 4 m, then East 3 m, then North 3 m. In which general direction is the person from the starting point?",
+    "options": ["North", "South", "West", "East"],
+    "ans": "East"
+  },
+  {
+    "q": "Choose the odd one out: Red, Yellow, Green, Table.",
+    "options": ["Table", "Yellow", "Red", "Green"],
+    "ans": "Table"
+  },
+  {
+    "q": "A person walks East 10 m, then West 9 m, then West 9 m. In which general direction is the person from the starting point?",
+    "options": ["North", "East", "South", "West"],
+    "ans": "West"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 7:40?",
+    "options": ["55°", "5°", "40°", "10°"],
+    "ans": "10°"
+  },
+  {
+    "q": "In a group of 56 people, Ravi ranks 54th from the top. What is his rank from the bottom?",
+    "options": ["3", "4", "2", "54"],
+    "ans": "3"
+  },
+  {
+    "q": "Esha, Bina, Heena, Ira, Gita, Asha, Deepa are seated in a row facing north. Who is sitting 1st from the left?",
+    "options": ["Esha", "Deepa", "Bina", "Gita"],
+    "ans": "Esha"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 24 days?",
+    "options": ["Thursday", "Wednesday", "Monday", "Tuesday"],
+    "ans": "Thursday"
+  },
+  {
+    "q": "In a group of 46 people, Ravi ranks 16th from the top. What is his rank from the bottom?",
+    "options": ["16", "32", "30", "31"],
+    "ans": "31"
+  },
+  {
+    "q": "If each letter is moved 3 position(s) forward in the alphabet, how is CAT coded?",
+    "options": ["HFY", "GEX", "ECV", "FDW"],
+    "ans": "FDW"
+  },
+  {
+    "q": "In a group of 28 people, Ravi ranks 11th from the top. What is his rank from the bottom?",
+    "options": ["18", "19", "11", "17"],
+    "ans": "18"
+  },
+  {
+    "q": "In a group of 21 people, Ravi ranks 2th from the top. What is his rank from the bottom?",
+    "options": ["2", "21", "19", "20"],
+    "ans": "20"
+  },
+  {
+    "q": "A person walks East 8 m, then South 10 m, then East 3 m, then North 8 m, then South 9 m. In which general direction is the person from the starting point?",
+    "options": ["South", "West", "East", "North"],
+    "ans": "East"
+  },
+  {
+    "q": "Bina, Deepa, Asha, Farah, Gita are seated in a row facing north. Who is sitting 5th from the left?",
+    "options": ["Gita", "Bina", "Farah", "Asha"],
+    "ans": "Gita"
+  },
+  {
+    "q": "Find the next number: 27, 29, 33, 39, 47, ?",
+    "options": ["57", "67", "59", "55"],
+    "ans": "57"
+  },
+  {
+    "q": "A person walks West 8 m, then East 2 m, then East 6 m, then West 8 m. In which general direction is the person from the starting point?",
+    "options": ["North", "East", "West", "South"],
+    "ans": "West"
+  },
+  {
+    "q": "A person walks South 7 m, then North 4 m, then South 3 m, then West 10 m. In which general direction is the person from the starting point?",
+    "options": ["West", "East", "South", "North"],
+    "ans": "West"
+  },
+  {
+    "q": "Choose the odd one out: 2, 5, 9, 3.",
+    "options": ["5", "2", "9", "3"],
+    "ans": "9"
+  },
+  {
+    "q": "Choose the most logical order: Adult, Adolescent, Child, Infant.",
+    "options": ["Infant → Child → Adolescent → Adult", "Child → Adult → Adolescent → Infant", "Infant → Adolescent → Adult → Child", "Infant → Adult → Adolescent → Child"],
+    "ans": "Infant → Child → Adolescent → Adult"
+  },
+  {
+    "q": "Charu, Bina, Farah, Ira, Gita, Heena are seated in a row facing north. Who is sitting 3rd from the left?",
+    "options": ["Farah", "Heena", "Bina", "Charu"],
+    "ans": "Farah"
+  },
+  {
+    "q": "Choose the odd one out: Sparrow, Eagle, Shark, Parrot.",
+    "options": ["Parrot", "Eagle", "Shark", "Sparrow"],
+    "ans": "Shark"
+  },
+  {
+    "q": "Find the next letter: R , S , U , X , B, ?",
+    "options": ["G", "F", "H", "J"],
+    "ans": "G"
+  },
+  {
+    "q": "Find the next number: 20, 40, 80, 160, 320, ?",
+    "options": ["650", "642", "640", "320"],
+    "ans": "640"
+  },
+  {
+    "q": "In a group of 20 people, Ravi ranks 13th from the top. What is his rank from the bottom?",
+    "options": ["8", "9", "7", "13"],
+    "ans": "8"
+  },
+  {
+    "q": "A person walks East 10 m, then South 4 m, then North 5 m. In which general direction is the person from the starting point?",
+    "options": ["North", "East", "South", "West"],
+    "ans": "East"
+  },
+  {
+    "q": "Choose the odd one out: April, January, Sunday, March.",
+    "options": ["March", "Sunday", "January", "April"],
+    "ans": "Sunday"
+  },
+  {
+    "q": "A person walks West 10 m, then West 4 m, then West 5 m, then North 4 m, then West 2 m. In which general direction is the person from the starting point?",
+    "options": ["North", "South", "East", "West"],
+    "ans": "West"
+  },
+  {
+    "q": "In a group of 46 people, Ravi ranks 42th from the top. What is his rank from the bottom?",
+    "options": ["4", "42", "5", "6"],
+    "ans": "5"
+  },
+  {
+    "q": "Gita, Esha, Ira, Deepa, Charu, Bina, Farah, Heena, Asha are seated in a row facing north. Who is sitting 5th from the left?",
+    "options": ["Deepa", "Charu", "Ira", "Heena"],
+    "ans": "Charu"
+  },
+  {
+    "q": "Find the next number: 5, 7, 11, 17, 25, ?",
+    "options": ["37", "45", "33", "35"],
+    "ans": "35"
+  },
+  {
+    "q": "Deepa, Asha, Charu, Heena, Ira, Gita, Esha, Farah, Bina are seated in a row facing north. Who is sitting 5th from the left?",
+    "options": ["Charu", "Esha", "Bina", "Ira"],
+    "ans": "Ira"
+  },
+  {
+    "q": "If each letter is moved 2 position(s) forward in the alphabet, how is CAR coded?",
+    "options": ["ECT", "GEV", "FDU", "DBS"],
+    "ans": "ECT"
+  },
+  {
+    "q": "In a group of 21 people, Ravi ranks 7th from the top. What is his rank from the bottom?",
+    "options": ["14", "7", "16", "15"],
+    "ans": "15"
+  },
+  {
+    "q": "A person walks North 2 m, then South 8 m, then West 6 m, then South 6 m, then South 8 m. In which general direction is the person from the starting point?",
+    "options": ["East", "North", "West", "South"],
+    "ans": "South"
+  },
+  {
+    "q": "Find the next number: 22, 31, 40, 49, 58, ?",
+    "options": ["67", "69", "66", "76"],
+    "ans": "67"
+  },
+  {
+    "q": "Asha, Bina, Farah, Deepa, Ira, Charu are seated in a row facing north. Who is sitting 5th from the left?",
+    "options": ["Deepa", "Ira", "Charu", "Asha"],
+    "ans": "Ira"
+  },
+  {
+    "q": "Choose the most logical order: Infant, Adolescent, Adult, Child.",
+    "options": ["Adolescent → Child → Infant → Adult", "Infant → Child → Adolescent → Adult", "Option 4", "Infant → Adult → Child → Adolescent"],
+    "ans": "Infant → Child → Adolescent → Adult"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 1:15?",
+    "options": ["97.5°", "37.5°", "82.5°", "52.5°"],
+    "ans": "52.5°"
+  },
+  {
+    "q": "In a group of 25 people, Ravi ranks 24th from the top. What is his rank from the bottom?",
+    "options": ["1", "24", "2", "3"],
+    "ans": "2"
+  },
+  {
+    "q": "A person walks West 10 m, then North 4 m, then East 7 m, then West 4 m, then North 7 m. In which general direction is the person from the starting point?",
+    "options": ["South", "North", "West", "East"],
+    "ans": "North"
+  },
+  {
+    "q": "Find the next number: 19, 22, 31, 46, 67, ?",
+    "options": ["89", "97", "96", "94"],
+    "ans": "94"
+  },
+  {
+    "q": "Choose the odd one out: Metre, Litre, Kilogram, Second.",
+    "options": ["Litre", "Metre", "Kilogram", "Second"],
+    "ans": "Kilogram"
+  },
+  {
+    "q": "Choose the most logical order: Child, Infant, Adolescent, Adult.",
+    "options": ["Adult → Adolescent → Infant → Child", "Infant → Child → Adolescent → Adult", "Adolescent → Infant → Adult → Child", "Child → Adult → Infant → Adolescent"],
+    "ans": "Infant → Child → Adolescent → Adult"
+  },
+  {
+    "q": "Find the next number: 8, 15, 22, 29, 36, ?",
+    "options": ["50", "43", "42", "45"],
+    "ans": "43"
+  },
+  {
+    "q": "Choose the most logical order: Interview, Application, Joining, Selection.",
+    "options": ["Application → Joining → Selection → Interview", "Application → Interview → Selection → Joining", "Interview → Joining → Selection → Application", "Joining → Interview → Selection → Application"],
+    "ans": "Application → Interview → Selection → Joining"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 12 days?",
+    "options": ["Monday", "Saturday", "Thursday", "Sunday"],
+    "ans": "Saturday"
+  },
+  {
+    "q": "Find the next number: 20, 22, 26, 32, 40, ?",
+    "options": ["52", "60", "48", "50"],
+    "ans": "50"
+  },
+  {
+    "q": "In a group of 24 people, Ravi ranks 14th from the top. What is his rank from the bottom?",
+    "options": ["12", "14", "10", "11"],
+    "ans": "11"
+  },
+  {
+    "q": "In a group of 34 people, Ravi ranks 26th from the top. What is his rank from the bottom?",
+    "options": ["9", "8", "26", "10"],
+    "ans": "9"
+  },
+  {
+    "q": "Bina, Gita, Charu, Ira, Deepa, Esha are seated in a row facing north. Who is sitting 5th from the left?",
+    "options": ["Gita", "Ira", "Bina", "Deepa"],
+    "ans": "Deepa"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 10:30?",
+    "options": ["120°", "165°", "135°", "180°"],
+    "ans": "135°"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 9:45?",
+    "options": ["67.5°", "52.5°", "7.5°", "22.5°"],
+    "ans": "22.5°"
+  },
+  {
+    "q": "Find the next letter: D , H , L , P , T, ?",
+    "options": ["X", "W", "Z", "Y"],
+    "ans": "X"
+  },
+  {
+    "q": "In a group of 37 people, Ravi ranks 36th from the top. What is his rank from the bottom?",
+    "options": ["2", "36", "1", "3"],
+    "ans": "2"
+  },
+  {
+    "q": "Choose the odd one out: Red, Yellow, Table, Green.",
+    "options": ["Green", "Yellow", "Red", "Table"],
+    "ans": "Table"
+  },
+  {
+    "q": "Bina, Farah, Ira, Asha, Charu, Esha, Gita, Heena, Deepa are seated in a row facing north. Who is sitting 4th from the left?",
+    "options": ["Ira", "Gita", "Heena", "Asha"],
+    "ans": "Asha"
+  },
+  {
+    "q": "Gita, Esha, Asha, Heena, Charu are seated in a row facing north. Who is sitting 2nd from the left?",
+    "options": ["Gita", "Heena", "Esha", "Charu"],
+    "ans": "Esha"
+  },
+  {
+    "q": "Choose the most logical order: Seed, Fruit, Plant, Flower.",
+    "options": ["Seed → Plant → Flower → Fruit", "Flower → Seed → Fruit → Plant", "Seed → Flower → Fruit → Plant", "Plant → Fruit → Seed → Flower"],
+    "ans": "Seed → Plant → Flower → Fruit"
+  },
+  {
+    "q": "Farah, Charu, Ira, Bina, Gita, Heena are seated in a row facing north. Who is sitting 3rd from the left?",
+    "options": ["Heena", "Charu", "Farah", "Ira"],
+    "ans": "Ira"
+  },
+  {
+    "q": "Choose the most logical order: Interview, Joining, Selection, Application.",
+    "options": ["Selection → Joining → Interview → Application", "Selection → Application → Interview → Joining", "Joining → Selection → Application → Interview", "Application → Interview → Selection → Joining"],
+    "ans": "Application → Interview → Selection → Joining"
+  },
+  {
+    "q": "Find the next number: 18, 19, 21, 24, 28, ?",
+    "options": ["34", "30", "33", "38"],
+    "ans": "33"
+  },
+  {
+    "q": "Choose the odd one out: April, March, January, Sunday.",
+    "options": ["January", "March", "April", "Sunday"],
+    "ans": "Sunday"
+  },
+  {
+    "q": "Gita, Charu, Heena, Deepa, Asha, Esha, Farah, Bina, Ira are seated in a row facing north. Who is sitting 3rd from the left?",
+    "options": ["Ira", "Esha", "Heena", "Gita"],
+    "ans": "Heena"
+  },
+  {
+    "q": "Choose the most logical order: Manufacturing, Raw material, Packaging, Distribution.",
+    "options": ["Packaging → Distribution → Raw material → Manufacturing", "Raw material → Manufacturing → Packaging → Distribution", "Distribution → Raw material → Manufacturing → Packaging", "Raw material → Packaging → Distribution → Manufacturing"],
+    "ans": "Raw material → Manufacturing → Packaging → Distribution"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 60 days?",
+    "options": ["Saturday", "Sunday", "Tuesday", "Friday"],
+    "ans": "Friday"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 8:20?",
+    "options": ["175°", "115°", "130°", "160°"],
+    "ans": "130°"
+  },
+  {
+    "q": "If each letter is moved 1 position(s) forward in the alphabet, how is PEN coded?",
+    "options": ["RGP", "PEN", "SHQ", "QFO"],
+    "ans": "QFO"
+  },
+  {
+    "q": "Find the next number: 29, 31, 35, 41, 49, ?",
+    "options": ["61", "59", "69", "57"],
+    "ans": "59"
+  },
+  {
+    "q": "In a group of 33 people, Ravi ranks 12th from the top. What is his rank from the bottom?",
+    "options": ["23", "21", "12", "22"],
+    "ans": "22"
+  },
+  {
+    "q": "If each letter is moved 2 position(s) forward in the alphabet, how is CAT coded?",
+    "options": ["GEX", "ECV", "DBU", "FDW"],
+    "ans": "ECV"
+  },
+  {
+    "q": "Find the next number: 16, 18, 22, 28, 36, ?",
+    "options": ["56", "44", "46", "48"],
+    "ans": "46"
+  },
+  {
+    "q": "Choose the odd one out: Apple, Mango, Carrot, Banana.",
+    "options": ["Mango", "Apple", "Carrot", "Banana"],
+    "ans": "Carrot"
+  },
+  {
+    "q": "Charu, Gita, Bina, Heena, Ira, Esha, Asha, Deepa, Farah are seated in a row facing north. Who is sitting 5th from the left?",
+    "options": ["Heena", "Deepa", "Ira", "Charu"],
+    "ans": "Ira"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 4:40?",
+    "options": ["145°", "100°", "85°", "130°"],
+    "ans": "100°"
+  },
+  {
+    "q": "Bina, Heena, Deepa, Ira, Asha, Charu, Esha are seated in a row facing north. Who is sitting 3rd from the left?",
+    "options": ["Deepa", "Asha", "Heena", "Bina"],
+    "ans": "Deepa"
+  },
+  {
+    "q": "Choose the odd one out: Square, Circle, Blue, Triangle.",
+    "options": ["Blue", "Triangle", "Square", "Circle"],
+    "ans": "Blue"
+  },
+  {
+    "q": "Find the next letter: F , G , H , I , J, ?",
+    "options": ["M", "J", "K", "L"],
+    "ans": "K"
+  },
+  {
+    "q": "In a group of 21 people, Ravi ranks 17th from the top. What is his rank from the bottom?",
+    "options": ["5", "17", "6", "4"],
+    "ans": "5"
+  },
+  {
+    "q": "A person walks West 3 m, then North 2 m, then East 7 m, then North 6 m, then South 2 m. In which general direction is the person from the starting point?",
+    "options": ["West", "South", "North", "East"],
+    "ans": "North"
+  },
+  {
+    "q": "A person walks West 5 m, then West 6 m, then South 7 m, then West 7 m, then South 6 m. In which general direction is the person from the starting point?",
+    "options": ["South", "West", "East", "North"],
+    "ans": "West"
+  },
+  {
+    "q": "Find the next number: 21, 42, 84, 168, 336, ?",
+    "options": ["682", "672", "336", "674"],
+    "ans": "672"
+  },
+  {
+    "q": "In a group of 20 people, Ravi ranks 6th from the top. What is his rank from the bottom?",
+    "options": ["6", "16", "14", "15"],
+    "ans": "15"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 4:10?",
+    "options": ["95°", "110°", "50°", "65°"],
+    "ans": "65°"
+  },
+  {
+    "q": "Find the next number: 24, 96, 384, 1536, 6144, ?",
+    "options": ["24576", "6144", "24580", "24586"],
+    "ans": "24576"
+  },
+  {
+    "q": "Bina, Farah, Heena, Deepa, Gita, Ira, Esha, Charu, Asha are seated in a row facing north. Who is sitting 5th from the left?",
+    "options": ["Heena", "Esha", "Gita", "Ira"],
+    "ans": "Gita"
+  },
+  {
+    "q": "A person walks South 4 m, then South 3 m, then South 8 m, then North 4 m, then North 7 m. In which general direction is the person from the starting point?",
+    "options": ["West", "North", "East", "South"],
+    "ans": "South"
+  },
+  {
+    "q": "Find the next number: 29, 37, 61, 101, 157, ?",
+    "options": ["237", "231", "224", "229"],
+    "ans": "229"
+  },
+  {
+    "q": "Choose the odd one out: Copper, Iron, Plastic, Silver.",
+    "options": ["Plastic", "Copper", "Iron", "Silver"],
+    "ans": "Plastic"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 44 days?",
+    "options": ["Wednesday", "Thursday", "Monday", "Friday"],
+    "ans": "Wednesday"
+  },
+  {
+    "q": "Choose the most logical order: Joining, Selection, Application, Interview.",
+    "options": ["Application → Joining → Interview → Selection", "Joining → Application → Selection → Interview", "Application → Interview → Selection → Joining", "Joining → Selection → Application → Interview"],
+    "ans": "Application → Interview → Selection → Joining"
+  },
+  {
+    "q": "Find the next number: 21, 23, 27, 33, 41, ?",
+    "options": ["61", "49", "51", "53"],
+    "ans": "51"
+  },
+  {
+    "q": "Find the next letter: M , N , P , S , W, ?",
+    "options": ["E", "B", "C", "A"],
+    "ans": "B"
+  },
+  {
+    "q": "Bina, Farah, Esha, Charu, Gita, Heena, Deepa are seated in a row facing north. Who is sitting 5th from the left?",
+    "options": ["Gita", "Esha", "Bina", "Farah"],
+    "ans": "Gita"
+  },
+  {
+    "q": "Choose the odd one out: Carrot, Mango, Banana, Apple.",
+    "options": ["Banana", "Carrot", "Apple", "Mango"],
+    "ans": "Carrot"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 15 days?",
+    "options": ["Thursday", "Monday", "Tuesday", "Sunday"],
+    "ans": "Tuesday"
+  },
+  {
+    "q": "Find the next number: 14, 15, 17, 20, 24, ?",
+    "options": ["29", "26", "30", "34"],
+    "ans": "29"
+  },
+  {
+    "q": "A person walks West 10 m, then South 5 m, then West 10 m. In which general direction is the person from the starting point?",
+    "options": ["West", "East", "South", "North"],
+    "ans": "West"
+  },
+  {
+    "q": "A person walks South 5 m, then South 10 m, then West 6 m, then North 4 m. In which general direction is the person from the starting point?",
+    "options": ["South", "North", "East", "West"],
+    "ans": "South"
+  },
+  {
+    "q": "A person walks West 4 m, then South 6 m, then East 7 m. In which general direction is the person from the starting point?",
+    "options": ["West", "East", "South", "North"],
+    "ans": "South"
+  },
+  {
+    "q": "If each letter is moved 3 position(s) forward in the alphabet, how is MAP coded?",
+    "options": ["QET", "PDS", "RFU", "OCR"],
+    "ans": "PDS"
+  },
+  {
+    "q": "Choose the odd one out: Sunday, March, April, January.",
+    "options": ["January", "Sunday", "March", "April"],
+    "ans": "Sunday"
+  },
+  {
+    "q": "Find the next number: 2, 4, 10, 20, 34, ?",
+    "options": ["47", "Option 4", "54", "52"],
+    "ans": "52"
+  },
+  {
+    "q": "Find the next number: 3, 15, 27, 39, 51, ?",
+    "options": ["65", "63", "75", "62"],
+    "ans": "63"
+  },
+  {
+    "q": "In a group of 54 people, Ravi ranks 10th from the top. What is his rank from the bottom?",
+    "options": ["45", "46", "44", "10"],
+    "ans": "45"
+  },
+  {
+    "q": "If each letter is moved 1 position(s) forward in the alphabet, how is BUS coded?",
+    "options": ["CVT", "DWU", "EXV", "BUS"],
+    "ans": "CVT"
+  },
+  {
+    "q": "A person walks East 8 m, then East 9 m, then South 2 m, then East 6 m. In which general direction is the person from the starting point?",
+    "options": ["South", "West", "East", "North"],
+    "ans": "East"
+  },
+  {
+    "q": "Esha, Farah, Gita, Heena, Ira, Deepa, Asha are seated in a row facing north. Who is sitting 2nd from the left?",
+    "options": ["Farah", "Deepa", "Heena", "Asha"],
+    "ans": "Farah"
+  },
+  {
+    "q": "A person walks West 10 m, then North 3 m, then South 4 m, then West 9 m. In which general direction is the person from the starting point?",
+    "options": ["South", "West", "East", "North"],
+    "ans": "West"
+  },
+  {
+    "q": "Choose the most logical order: Adult, Infant, Adolescent, Child.",
+    "options": ["Infant → Child → Adolescent → Adult", "Adult → Adolescent → Child → Infant", "Infant → Adult → Adolescent → Child", "Infant → Child → Adult → Adolescent"],
+    "ans": "Infant → Child → Adolescent → Adult"
+  },
+  {
+    "q": "Choose the odd one out: Square, Triangle, Blue, Circle.",
+    "options": ["Blue", "Circle", "Square", "Triangle"],
+    "ans": "Blue"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 4 days?",
+    "options": ["Friday", "Tuesday", "Monday", "Thursday"],
+    "ans": "Friday"
+  },
+  {
+    "q": "Esha, Farah, Asha, Charu, Gita are seated in a row facing north. Who is sitting 4th from the left?",
+    "options": ["Gita", "Farah", "Charu", "Esha"],
+    "ans": "Charu"
+  },
+  {
+    "q": "Ira, Bina, Charu, Farah, Asha, Deepa, Heena are seated in a row facing north. Who is sitting 1st from the left?",
+    "options": ["Heena", "Asha", "Ira", "Charu"],
+    "ans": "Ira"
+  },
+  {
+    "q": "Choose the odd one out: Plastic, Silver, Copper, Iron.",
+    "options": ["Iron", "Plastic", "Silver", "Copper"],
+    "ans": "Plastic"
+  },
+  {
+    "q": "Find the next number: 11, 44, 176, 704, 2816, ?",
+    "options": ["11274", "2816", "11264", "11268"],
+    "ans": "11264"
+  },
+  {
+    "q": "In a group of 42 people, Ravi ranks 11th from the top. What is his rank from the bottom?",
+    "options": ["31", "11", "33", "32"],
+    "ans": "32"
+  },
+  {
+    "q": "Heena, Gita, Bina, Ira, Deepa, Asha are seated in a row facing north. Who is sitting 6th from the left?",
+    "options": ["Ira", "Asha", "Heena", "Deepa"],
+    "ans": "Asha"
+  },
+  {
+    "q": "Choose the most logical order: Joining, Interview, Selection, Application.",
+    "options": ["Application → Selection → Joining → Interview", "Application → Interview → Selection → Joining", "Option 4", "Selection → Interview → Joining → Application"],
+    "ans": "Application → Interview → Selection → Joining"
+  },
+  {
+    "q": "A person walks South 9 m, then East 5 m, then West 5 m. In which general direction is the person from the starting point?",
+    "options": ["South", "North", "East", "West"],
+    "ans": "South"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 1:10?",
+    "options": ["25°", "70°", "10°", "55°"],
+    "ans": "25°"
+  },
+  {
+    "q": "A person walks West 8 m, then West 5 m, then West 10 m. In which general direction is the person from the starting point?",
+    "options": ["East", "South", "West", "North"],
+    "ans": "West"
+  },
+  {
+    "q": "Find the next number: 3, 12, 48, 192, 768, ?",
+    "options": ["3082", "3076", "3072", "768"],
+    "ans": "3072"
+  },
+  {
+    "q": "Choose the odd one out: Eagle, Shark, Sparrow, Parrot.",
+    "options": ["Shark", "Eagle", "Sparrow", "Parrot"],
+    "ans": "Shark"
+  },
+  {
+    "q": "Find the next number: 26, 28, 32, 38, 46, ?",
+    "options": ["58", "66", "56", "54"],
+    "ans": "56"
+  },
+  {
+    "q": "Find the next letter: B , C , E , H , L, ?",
+    "options": ["Q", "R", "P", "T"],
+    "ans": "Q"
+  },
+  {
+    "q": "Find the next number: 28, 112, 448, 1792, 7168, ?",
+    "options": ["7168", "28676", "28682", "28672"],
+    "ans": "28672"
+  },
+  {
+    "q": "A person walks East 9 m, then North 3 m, then North 8 m, then West 4 m, then South 8 m. In which general direction is the person from the starting point?",
+    "options": ["West", "North", "East", "South"],
+    "ans": "East"
+  },
+  {
+    "q": "Find the next number: 22, 24, 26, 28, 30, ?",
+    "options": ["31", "32", "34", "Option 4"],
+    "ans": "32"
+  },
+  {
+    "q": "A person walks West 10 m, then West 5 m, then South 2 m, then North 6 m, then South 4 m. In which general direction is the person from the starting point?",
+    "options": ["East", "South", "West", "North"],
+    "ans": "West"
+  },
+  {
+    "q": "A person walks North 8 m, then West 7 m, then West 2 m, then East 9 m, then North 5 m. In which general direction is the person from the starting point?",
+    "options": ["West", "East", "South", "North"],
+    "ans": "North"
+  },
+  {
+    "q": "In a group of 57 people, Ravi ranks 49th from the top. What is his rank from the bottom?",
+    "options": ["10", "49", "8", "9"],
+    "ans": "9"
+  },
+  {
+    "q": "Find the next number: 19, 21, 25, 31, 39, ?",
+    "options": ["59", "47", "49", "51"],
+    "ans": "49"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 1 days?",
+    "options": ["Saturday", "Monday", "Thursday", "Tuesday"],
+    "ans": "Tuesday"
+  },
+  {
+    "q": "Choose the odd one out: Silver, Copper, Iron, Plastic.",
+    "options": ["Iron", "Plastic", "Silver", "Copper"],
+    "ans": "Plastic"
+  },
+  {
+    "q": "Choose the odd one out: 5, 3, 9, 2.",
+    "options": ["9", "5", "2", "3"],
+    "ans": "9"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 10:45?",
+    "options": ["82.5°", "37.5°", "97.5°", "52.5°"],
+    "ans": "52.5°"
+  },
+  {
+    "q": "Find the next letter: H , L , P , T , X, ?",
+    "options": ["D", "B", "A", "C"],
+    "ans": "B"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 7:30?",
+    "options": ["75°", "90°", "45°", "30°"],
+    "ans": "45°"
+  },
+  {
+    "q": "Ira, Charu, Asha, Bina, Farah, Esha, Deepa are seated in a row facing north. Who is sitting 5th from the left?",
+    "options": ["Farah", "Asha", "Ira", "Deepa"],
+    "ans": "Farah"
+  },
+  {
+    "q": "Find the next number: 24, 32, 56, 96, 152, ?",
+    "options": ["232", "226", "219", "224"],
+    "ans": "224"
+  },
+  {
+    "q": "Choose the odd one out: Iron, Silver, Copper, Plastic.",
+    "options": ["Iron", "Plastic", "Copper", "Silver"],
+    "ans": "Plastic"
+  },
+  {
+    "q": "If each letter is moved 2 position(s) forward in the alphabet, how is DOG coded?",
+    "options": ["HSK", "GRJ", "FQI", "EPH"],
+    "ans": "FQI"
+  },
+  {
+    "q": "Asha, Heena, Gita, Bina, Esha, Farah, Charu, Ira, Deepa are seated in a row facing north. Who is sitting 7th from the left?",
+    "options": ["Heena", "Charu", "Bina", "Farah"],
+    "ans": "Charu"
+  },
+  {
+    "q": "In a group of 16 people, Ravi ranks 12th from the top. What is his rank from the bottom?",
+    "options": ["5", "4", "6", "12"],
+    "ans": "5"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 2:30?",
+    "options": ["135°", "105°", "150°", "90°"],
+    "ans": "105°"
+  },
+  {
+    "q": "A person walks East 7 m, then South 8 m, then North 9 m. In which general direction is the person from the starting point?",
+    "options": ["East", "South", "West", "North"],
+    "ans": "East"
+  },
+  {
+    "q": "Find the next letter: S , T , V , Y , C, ?",
+    "options": ["K", "I", "G", "H"],
+    "ans": "H"
+  },
+  {
+    "q": "Choose the odd one out: Plastic, Copper, Iron, Silver.",
+    "options": ["Iron", "Plastic", "Copper", "Silver"],
+    "ans": "Plastic"
+  },
+  {
+    "q": "Find the next number: 18, 20, 24, 30, 38, ?",
+    "options": ["48", "58", "50", "46"],
+    "ans": "48"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 7:20?",
+    "options": ["145°", "130°", "100°", "85°"],
+    "ans": "100°"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 4:15?",
+    "options": ["37.5°", "82.5°", "22.5°", "67.5°"],
+    "ans": "37.5°"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 11:40?",
+    "options": ["95°", "140°", "110°", "155°"],
+    "ans": "110°"
+  },
+  {
+    "q": "Choose the odd one out: Copper, Plastic, Iron, Silver.",
+    "options": ["Copper", "Plastic", "Iron", "Silver"],
+    "ans": "Plastic"
+  },
+  {
+    "q": "A person walks North 10 m, then East 4 m, then West 8 m, then South 10 m, then North 10 m. In which general direction is the person from the starting point?",
+    "options": ["North", "South", "East", "West"],
+    "ans": "North"
+  },
+  {
+    "q": "In a group of 22 people, Ravi ranks 2th from the top. What is his rank from the bottom?",
+    "options": ["21", "20", "2", "22"],
+    "ans": "21"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 7:50?",
+    "options": ["95°", "110°", "50°", "65°"],
+    "ans": "65°"
+  },
+  {
+    "q": "Heena, Farah, Deepa, Gita, Bina, Esha are seated in a row facing north. Who is sitting 1st from the left?",
+    "options": ["Esha", "Bina", "Gita", "Heena"],
+    "ans": "Heena"
+  },
+  {
+    "q": "Farah, Asha, Deepa, Charu, Esha, Heena, Gita are seated in a row facing north. Who is sitting 6th from the left?",
+    "options": ["Heena", "Deepa", "Charu", "Gita"],
+    "ans": "Heena"
+  },
+  {
+    "q": "A person walks West 3 m, then West 9 m, then West 3 m, then North 5 m. In which general direction is the person from the starting point?",
+    "options": ["East", "North", "South", "West"],
+    "ans": "West"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 5:00?",
+    "options": ["135°", "195°", "180°", "150°"],
+    "ans": "150°"
+  },
+  {
+    "q": "Esha, Bina, Deepa, Charu, Gita, Ira, Heena are seated in a row facing north. Who is sitting 5th from the left?",
+    "options": ["Gita", "Bina", "Charu", "Ira"],
+    "ans": "Gita"
+  },
+  {
+    "q": "Choose the odd one out: 9, 5, 2, 3.",
+    "options": ["9", "5", "3", "2"],
+    "ans": "9"
+  },
+  {
+    "q": "Find the next number: 29, 32, 41, 56, 77, ?",
+    "options": ["107", "104", "106", "99"],
+    "ans": "104"
+  },
+  {
+    "q": "Choose the most logical order: Plant, Seed, Flower, Fruit.",
+    "options": ["Plant → Flower → Seed → Fruit", "Seed → Plant → Flower → Fruit", "Fruit → Plant → Seed → Flower", "Seed → Fruit → Plant → Flower"],
+    "ans": "Seed → Plant → Flower → Fruit"
+  },
+  {
+    "q": "Deepa, Esha, Charu, Bina, Asha are seated in a row facing north. Who is sitting 4th from the left?",
+    "options": ["Deepa", "Bina", "Charu", "Esha"],
+    "ans": "Bina"
+  },
+  {
+    "q": "Choose the most logical order: Child, Adolescent, Infant, Adult.",
+    "options": ["Child → Infant → Adult → Adolescent", "Child → Adolescent → Infant → Adult", "Adult → Infant → Adolescent → Child", "Infant → Child → Adolescent → Adult"],
+    "ans": "Infant → Child → Adolescent → Adult"
+  },
+  {
+    "q": "In a group of 30 people, Ravi ranks 26th from the top. What is his rank from the bottom?",
+    "options": ["6", "26", "4", "5"],
+    "ans": "5"
+  },
+  {
+    "q": "Find the next number: 28, 36, 60, 100, 156, ?",
+    "options": ["223", "236", "230", "228"],
+    "ans": "228"
+  },
+  {
+    "q": "If each letter is moved 3 position(s) forward in the alphabet, how is DOG coded?",
+    "options": ["ITL", "FQI", "GRJ", "HSK"],
+    "ans": "GRJ"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 11:20?",
+    "options": ["125°", "140°", "170°", "185°"],
+    "ans": "140°"
+  },
+  {
+    "q": "Find the next letter: F , H , J , L , N, ?",
+    "options": ["O", "P", "S", "Q"],
+    "ans": "P"
+  },
+  {
+    "q": "Choose the odd one out: Kilogram, Metre, Second, Litre.",
+    "options": ["Second", "Litre", "Kilogram", "Metre"],
+    "ans": "Kilogram"
+  },
+  {
+    "q": "A person walks South 3 m, then North 9 m, then West 10 m. In which general direction is the person from the starting point?",
+    "options": ["North", "East", "South", "West"],
+    "ans": "West"
+  },
+  {
+    "q": "Find the next letter: K , N , Q , T , W, ?",
+    "options": ["A", "B", "Z", "Y"],
+    "ans": "Z"
+  },
+  {
+    "q": "Find the next number: 7, 9, 13, 19, 27, ?",
+    "options": ["39", "37", "35", "47"],
+    "ans": "37"
+  },
+  {
+    "q": "If each letter is moved 3 position(s) forward in the alphabet, how is SUN coded?",
+    "options": ["VXQ", "WYR", "XZS", "UWP"],
+    "ans": "VXQ"
+  },
+  {
+    "q": "Heena, Asha, Ira, Charu, Gita are seated in a row facing north. Who is sitting 1st from the left?",
+    "options": ["Ira", "Heena", "Gita", "Charu"],
+    "ans": "Heena"
+  },
+  {
+    "q": "Find the next letter: E , G , I , K , M, ?",
+    "options": ["N", "P", "R", "O"],
+    "ans": "O"
+  },
+  {
+    "q": "Find the next number: 12, 48, 192, 768, 3072, ?",
+    "options": ["3072", "12292", "12288", "12298"],
+    "ans": "12288"
+  },
+  {
+    "q": "A person walks North 5 m, then West 2 m, then West 6 m, then East 7 m. In which general direction is the person from the starting point?",
+    "options": ["West", "East", "North", "South"],
+    "ans": "North"
+  },
+  {
+    "q": "In a group of 15 people, Ravi ranks 14th from the top. What is his rank from the bottom?",
+    "options": ["2", "1", "14", "3"],
+    "ans": "2"
+  },
+  {
+    "q": "Choose the most logical order: Child, Adult, Adolescent, Infant.",
+    "options": ["Infant → Child → Adolescent → Adult", "Adult → Infant → Child → Adolescent", "Adult → Child → Infant → Adolescent", "Adolescent → Child → Infant → Adult"],
+    "ans": "Infant → Child → Adolescent → Adult"
+  },
+  {
+    "q": "Choose the odd one out: Shark, Sparrow, Parrot, Eagle.",
+    "options": ["Sparrow", "Eagle", "Parrot", "Shark"],
+    "ans": "Shark"
+  },
+  {
+    "q": "Choose the odd one out: 5, 2, 9, 3.",
+    "options": ["5", "9", "3", "2"],
+    "ans": "9"
+  },
+  {
+    "q": "In a group of 59 people, Ravi ranks 55th from the top. What is his rank from the bottom?",
+    "options": ["6", "4", "55", "5"],
+    "ans": "5"
+  },
+  {
+    "q": "Find the next number: 29, 35, 41, 47, 53, ?",
+    "options": ["65", "58", "59", "61"],
+    "ans": "59"
+  },
+  {
+    "q": "Find the next number: 3, 5, 9, 15, 23, ?",
+    "options": ["33", "35", "31", "43"],
+    "ans": "33"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 11 days?",
+    "options": ["Sunday", "Friday", "Thursday", "Wednesday"],
+    "ans": "Friday"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 4:30?",
+    "options": ["90°", "75°", "30°", "45°"],
+    "ans": "45°"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 8:40?",
+    "options": ["20°", "65°", "50°", "5°"],
+    "ans": "20°"
+  },
+  {
+    "q": "Find the next number: 19, 23, 27, 31, 35, ?",
+    "options": ["41", "38", "43", "39"],
+    "ans": "39"
+  },
+  {
+    "q": "Choose the most logical order: Distribution, Packaging, Manufacturing, Raw material.",
+    "options": ["Distribution → Manufacturing → Raw material → Packaging", "Raw material → Packaging → Manufacturing → Distribution", "Raw material → Manufacturing → Packaging → Distribution", "Distribution → Raw material → Manufacturing → Packaging"],
+    "ans": "Raw material → Manufacturing → Packaging → Distribution"
+  },
+  {
+    "q": "A person walks North 4 m, then East 4 m, then North 2 m. In which general direction is the person from the starting point?",
+    "options": ["North", "West", "South", "East"],
+    "ans": "North"
+  },
+  {
+    "q": "In a group of 48 people, Ravi ranks 5th from the top. What is his rank from the bottom?",
+    "options": ["44", "45", "43", "5"],
+    "ans": "44"
+  },
+  {
+    "q": "Heena, Esha, Deepa, Charu, Asha, Ira, Bina, Farah are seated in a row facing north. Who is sitting 3rd from the left?",
+    "options": ["Deepa", "Asha", "Charu", "Bina"],
+    "ans": "Deepa"
+  },
+  {
+    "q": "Asha, Farah, Heena, Deepa, Charu, Gita, Ira, Esha, Bina are seated in a row facing north. Who is sitting 3rd from the left?",
+    "options": ["Heena", "Gita", "Bina", "Esha"],
+    "ans": "Heena"
+  },
+  {
+    "q": "Choose the most logical order: Adolescent, Adult, Infant, Child.",
+    "options": ["Adolescent → Infant → Child → Adult", "Option 3", "Infant → Child → Adolescent → Adult", "Option 4"],
+    "ans": "Infant → Child → Adolescent → Adult"
+  },
+  {
+    "q": "Find the next letter: H , I , J , K , L, ?",
+    "options": ["O", "M", "N", "L"],
+    "ans": "M"
+  },
+  {
+    "q": "Find the next number: 22, 44, 88, 176, 352, ?",
+    "options": ["706", "714", "352", "704"],
+    "ans": "704"
+  },
+  {
+    "q": "Choose the odd one out: Table, Green, Red, Yellow.",
+    "options": ["Red", "Table", "Green", "Yellow"],
+    "ans": "Table"
+  },
+  {
+    "q": "Find the next number: 7, 18, 29, 40, 51, ?",
+    "options": ["62", "64", "61", "73"],
+    "ans": "62"
+  },
+  {
+    "q": "Asha, Deepa, Farah, Heena, Ira are seated in a row facing north. Who is sitting 1st from the left?",
+    "options": ["Ira", "Asha", "Deepa", "Heena"],
+    "ans": "Asha"
+  },
+  {
+    "q": "A person walks West 2 m, then East 8 m, then East 2 m. In which general direction is the person from the starting point?",
+    "options": ["South", "East", "North", "West"],
+    "ans": "East"
+  },
+  {
+    "q": "In a group of 35 people, Ravi ranks 21th from the top. What is his rank from the bottom?",
+    "options": ["15", "16", "14", "21"],
+    "ans": "15"
+  },
+  {
+    "q": "A person walks North 10 m, then South 4 m, then South 8 m, then East 4 m. In which general direction is the person from the starting point?",
+    "options": ["West", "South", "North", "East"],
+    "ans": "East"
+  },
+  {
+    "q": "Gita, Farah, Charu, Esha, Bina, Ira, Deepa, Asha are seated in a row facing north. Who is sitting 1st from the left?",
+    "options": ["Farah", "Gita", "Charu", "Ira"],
+    "ans": "Gita"
+  },
+  {
+    "q": "A person walks West 9 m, then East 8 m, then North 3 m, then West 6 m. In which general direction is the person from the starting point?",
+    "options": ["North", "East", "West", "South"],
+    "ans": "West"
+  },
+  {
+    "q": "A person walks West 4 m, then East 7 m, then West 10 m, then South 6 m. In which general direction is the person from the starting point?",
+    "options": ["West", "South", "North", "East"],
+    "ans": "West"
+  },
+  {
+    "q": "Choose the most logical order: Raw material, Packaging, Manufacturing, Distribution.",
+    "options": ["Raw material → Manufacturing → Packaging → Distribution", "Distribution → Packaging → Raw material → Manufacturing", "Packaging → Distribution → Raw material → Manufacturing", "Option 4"],
+    "ans": "Raw material → Manufacturing → Packaging → Distribution"
+  },
+  {
+    "q": "A person walks South 3 m, then South 4 m, then East 2 m. In which general direction is the person from the starting point?",
+    "options": ["North", "West", "South", "East"],
+    "ans": "South"
+  },
+  {
+    "q": "Choose the odd one out: Second, Kilogram, Litre, Metre.",
+    "options": ["Kilogram", "Metre", "Litre", "Second"],
+    "ans": "Kilogram"
+  },
+  {
+    "q": "A person walks East 8 m, then North 6 m, then South 9 m, then South 10 m. In which general direction is the person from the starting point?",
+    "options": ["East", "South", "North", "West"],
+    "ans": "South"
+  },
+  {
+    "q": "Find the next letter: A , D , G , J , M, ?",
+    "options": ["P", "R", "Q", "O"],
+    "ans": "P"
+  },
+  {
+    "q": "Choose the odd one out: 9, 5, 3, 2.",
+    "options": ["9", "3", "5", "2"],
+    "ans": "9"
+  },
+  {
+    "q": "Find the next letter: O , Q , S , U , W, ?",
+    "options": ["Y", "B", "X", "Z"],
+    "ans": "Y"
+  },
+  {
+    "q": "A person walks North 3 m, then West 3 m, then West 5 m. In which general direction is the person from the starting point?",
+    "options": ["West", "North", "South", "East"],
+    "ans": "West"
+  },
+  {
+    "q": "Find the next number: 13, 15, 19, 25, 33, ?",
+    "options": ["43", "53", "41", "45"],
+    "ans": "43"
+  },
+  {
+    "q": "A person walks West 8 m, then South 3 m, then North 4 m. In which general direction is the person from the starting point?",
+    "options": ["East", "North", "South", "West"],
+    "ans": "West"
+  },
+  {
+    "q": "Find the next number: 30, 35, 40, 45, 50, ?",
+    "options": ["57", "60", "54", "55"],
+    "ans": "55"
+  },
+  {
+    "q": "A person walks West 6 m, then West 6 m, then West 7 m. In which general direction is the person from the starting point?",
+    "options": ["South", "North", "East", "West"],
+    "ans": "West"
+  },
+  {
+    "q": "A person walks West 10 m, then East 7 m, then North 5 m. In which general direction is the person from the starting point?",
+    "options": ["East", "West", "North", "South"],
+    "ans": "North"
+  },
+  {
+    "q": "Find the next number: 23, 33, 63, 113, 183, ?",
+    "options": ["268", "275", "283", "273"],
+    "ans": "273"
+  },
+  {
+    "q": "Find the next letter: H , I , K , N , R, ?",
+    "options": ["X", "Z", "V", "W"],
+    "ans": "W"
+  },
+  {
+    "q": "Find the next number: 1, 3, 7, 13, 21, ?",
+    "options": ["29", "41", "33", "31"],
+    "ans": "31"
+  },
+  {
+    "q": "Bina, Asha, Charu, Ira, Farah, Deepa, Heena, Esha, Gita are seated in a row facing north. Who is sitting 6th from the left?",
+    "options": ["Asha", "Gita", "Deepa", "Ira"],
+    "ans": "Deepa"
+  },
+  {
+    "q": "Find the next number: 11, 13, 17, 23, 31, ?",
+    "options": ["39", "41", "51", "43"],
+    "ans": "41"
+  },
+  {
+    "q": "Choose the most logical order: Packaging, Distribution, Raw material, Manufacturing.",
+    "options": ["Distribution → Packaging → Raw material → Manufacturing", "Distribution → Manufacturing → Raw material → Packaging", "Raw material → Manufacturing → Distribution → Packaging", "Raw material → Manufacturing → Packaging → Distribution"],
+    "ans": "Raw material → Manufacturing → Packaging → Distribution"
+  },
+  {
+    "q": "Choose the most logical order: Interview, Joining, Application, Selection.",
+    "options": ["Application → Interview → Selection → Joining", "Interview → Application → Selection → Joining", "Application → Interview → Joining → Selection", "Joining → Application → Interview → Selection"],
+    "ans": "Application → Interview → Selection → Joining"
+  },
+  {
+    "q": "If each letter is moved 2 position(s) forward in the alphabet, how is RED coded?",
+    "options": ["TGF", "VIH", "UHG", "SFE"],
+    "ans": "TGF"
+  },
+  {
+    "q": "If each letter is moved 3 position(s) forward in the alphabet, how is BUS coded?",
+    "options": ["GZX", "FYW", "DWU", "EXV"],
+    "ans": "EXV"
+  },
+  {
+    "q": "Gita, Charu, Bina, Esha, Ira, Deepa are seated in a row facing north. Who is sitting 2nd from the left?",
+    "options": ["Ira", "Esha", "Charu", "Bina"],
+    "ans": "Charu"
+  },
+  {
+    "q": "A person walks West 8 m, then West 6 m, then West 4 m, then West 2 m, then East 3 m. In which general direction is the person from the starting point?",
+    "options": ["East", "South", "West", "North"],
+    "ans": "West"
+  },
+  {
+    "q": "Find the next number: 24, 72, 216, 648, 1944, ?",
+    "options": ["5832", "5842", "5835", "1944"],
+    "ans": "5832"
+  },
+  {
+    "q": "In a group of 41 people, Ravi ranks 18th from the top. What is his rank from the bottom?",
+    "options": ["24", "23", "25", "18"],
+    "ans": "24"
+  },
+  {
+    "q": "Find the next number: 9, 10, 12, 15, 19, ?",
+    "options": ["21", "29", "25", "24"],
+    "ans": "24"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 2:50?",
+    "options": ["190°", "175°", "130°", "145°"],
+    "ans": "145°"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 2:00?",
+    "options": ["45°", "60°", "105°", "90°"],
+    "ans": "60°"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 8:00?",
+    "options": ["120°", "150°", "165°", "105°"],
+    "ans": "120°"
+  },
+  {
+    "q": "Find the next number: 14, 17, 20, 23, 26, ?",
+    "options": ["31", "28", "29", "32"],
+    "ans": "29"
+  },
+  {
+    "q": "Choose the odd one out: Blue, Square, Triangle, Circle.",
+    "options": ["Blue", "Circle", "Square", "Triangle"],
+    "ans": "Blue"
+  },
+  {
+    "q": "Find the next number: 5, 6, 8, 11, 15, ?",
+    "options": ["17", "25", "20", "21"],
+    "ans": "20"
+  },
+  {
+    "q": "Choose the most logical order: Packaging, Manufacturing, Raw material, Distribution.",
+    "options": ["Packaging → Distribution → Manufacturing → Raw material", "Raw material → Packaging → Distribution → Manufacturing", "Raw material → Manufacturing → Packaging → Distribution", "Packaging → Distribution → Raw material → Manufacturing"],
+    "ans": "Raw material → Manufacturing → Packaging → Distribution"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 3:15?",
+    "options": ["7.5°", "52.5°", "Option 4", "37.5°"],
+    "ans": "7.5°"
+  },
+  {
+    "q": "A person walks North 9 m, then West 7 m, then North 5 m. In which general direction is the person from the starting point?",
+    "options": ["South", "East", "North", "West"],
+    "ans": "North"
+  },
+  {
+    "q": "In a group of 48 people, Ravi ranks 35th from the top. What is his rank from the bottom?",
+    "options": ["13", "35", "15", "14"],
+    "ans": "14"
+  },
+  {
+    "q": "Gita, Esha, Farah, Heena, Asha, Deepa, Ira, Bina are seated in a row facing north. Who is sitting 2nd from the left?",
+    "options": ["Asha", "Esha", "Gita", "Farah"],
+    "ans": "Esha"
+  },
+  {
+    "q": "Choose the odd one out: Triangle, Square, Blue, Circle.",
+    "options": ["Blue", "Triangle", "Circle", "Square"],
+    "ans": "Blue"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 13 days?",
+    "options": ["Sunday", "Monday", "Tuesday", "Saturday"],
+    "ans": "Sunday"
+  },
+  {
+    "q": "In a group of 42 people, Ravi ranks 20th from the top. What is his rank from the bottom?",
+    "options": ["20", "23", "24", "22"],
+    "ans": "23"
+  },
+  {
+    "q": "Choose the odd one out: January, April, Sunday, March.",
+    "options": ["January", "March", "Sunday", "April"],
+    "ans": "Sunday"
+  },
+  {
+    "q": "A person walks East 7 m, then North 3 m, then West 6 m, then East 3 m, then East 8 m. In which general direction is the person from the starting point?",
+    "options": ["East", "North", "West", "South"],
+    "ans": "East"
+  },
+  {
+    "q": "Choose the odd one out: Triangle, Blue, Circle, Square.",
+    "options": ["Circle", "Square", "Triangle", "Blue"],
+    "ans": "Blue"
+  },
+  {
+    "q": "A person walks North 7 m, then East 4 m, then East 5 m, then North 6 m. In which general direction is the person from the starting point?",
+    "options": ["East", "North", "South", "West"],
+    "ans": "North"
+  },
+  {
+    "q": "Find the next number: 3, 12, 21, 30, 39, ?",
+    "options": ["57", "50", "48", "47"],
+    "ans": "48"
+  },
+  {
+    "q": "In a group of 41 people, Ravi ranks 35th from the top. What is his rank from the bottom?",
+    "options": ["7", "8", "35", "6"],
+    "ans": "7"
+  },
+  {
+    "q": "Choose the odd one out: April, January, March, Sunday.",
+    "options": ["January", "March", "Sunday", "April"],
+    "ans": "Sunday"
+  },
+  {
+    "q": "Choose the odd one out: Apple, Banana, Carrot, Mango.",
+    "options": ["Apple", "Banana", "Carrot", "Mango"],
+    "ans": "Carrot"
+  },
+  {
+    "q": "Choose the most logical order: Distribution, Raw material, Manufacturing, Packaging.",
+    "options": ["Raw material → Distribution → Manufacturing → Packaging", "Raw material → Manufacturing → Packaging → Distribution", "Option 4", "Distribution → Raw material → Packaging → Manufacturing"],
+    "ans": "Raw material → Manufacturing → Packaging → Distribution"
+  },
+  {
+    "q": "If each letter is moved 2 position(s) forward in the alphabet, how is BOX coded?",
+    "options": ["ERA", "CPY", "FSB", "DQZ"],
+    "ans": "DQZ"
+  },
+  {
+    "q": "Choose the odd one out: Iron, Copper, Plastic, Silver.",
+    "options": ["Iron", "Silver", "Copper", "Plastic"],
+    "ans": "Plastic"
+  },
+  {
+    "q": "A person walks West 9 m, then North 8 m, then North 2 m. In which general direction is the person from the starting point?",
+    "options": ["South", "North", "East", "West"],
+    "ans": "North"
+  },
+  {
+    "q": "A person walks South 3 m, then West 3 m, then East 10 m. In which general direction is the person from the starting point?",
+    "options": ["West", "South", "North", "East"],
+    "ans": "East"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 36 days?",
+    "options": ["Tuesday", "Thursday", "Sunday", "Monday"],
+    "ans": "Tuesday"
+  },
+  {
+    "q": "Find the next number: 25, 28, 31, 34, 37, ?",
+    "options": ["42", "39", "43", "40"],
+    "ans": "40"
+  },
+  {
+    "q": "Choose the odd one out: Triangle, Rectangle, Square, Cube.",
+    "options": ["Rectangle", "Cube", "Triangle", "Square"],
+    "ans": "Cube"
+  },
+  {
+    "q": "If each letter is moved 3 position(s) forward in the alphabet, how is CAR coded?",
+    "options": ["HFW", "FDU", "GEV", "ECT"],
+    "ans": "FDU"
+  },
+  {
+    "q": "Choose the odd one out: Triangle, Square, Circle, Blue.",
+    "options": ["Square", "Triangle", "Circle", "Blue"],
+    "ans": "Blue"
+  },
+  {
+    "q": "Choose the odd one out: 3, 9, 5, 2.",
+    "options": ["3", "2", "5", "9"],
+    "ans": "9"
+  },
+  {
+    "q": "Bina, Esha, Heena, Charu, Asha, Gita, Deepa, Ira, Farah are seated in a row facing north. Who is sitting 3rd from the left?",
+    "options": ["Bina", "Heena", "Charu", "Asha"],
+    "ans": "Heena"
+  },
+  {
+    "q": "Choose the odd one out: Square, Circle, Triangle, Blue.",
+    "options": ["Triangle", "Blue", "Square", "Circle"],
+    "ans": "Blue"
+  },
+  {
+    "q": "In a group of 45 people, Ravi ranks 39th from the top. What is his rank from the bottom?",
+    "options": ["8", "6", "7", "39"],
+    "ans": "7"
+  },
+  {
+    "q": "Choose the most logical order: Child, Adult, Infant, Adolescent.",
+    "options": ["Adolescent → Child → Adult → Infant", "Infant → Adult → Child → Adolescent", "Child → Infant → Adolescent → Adult", "Infant → Child → Adolescent → Adult"],
+    "ans": "Infant → Child → Adolescent → Adult"
+  },
+  {
+    "q": "In a group of 22 people, Ravi ranks 19th from the top. What is his rank from the bottom?",
+    "options": ["19", "5", "4", "3"],
+    "ans": "4"
+  },
+  {
+    "q": "A person walks South 2 m, then East 10 m, then East 10 m, then West 3 m, then East 10 m. In which general direction is the person from the starting point?",
+    "options": ["South", "East", "West", "North"],
+    "ans": "East"
+  },
+  {
+    "q": "Choose the odd one out: 9, 2, 5, 3.",
+    "options": ["9", "2", "5", "3"],
+    "ans": "9"
+  },
+  {
+    "q": "In a group of 32 people, Ravi ranks 14th from the top. What is his rank from the bottom?",
+    "options": ["19", "20", "14", "18"],
+    "ans": "19"
+  },
+  {
+    "q": "Choose the odd one out: Banana, Apple, Mango, Carrot.",
+    "options": ["Mango", "Apple", "Carrot", "Banana"],
+    "ans": "Carrot"
+  },
+  {
+    "q": "Choose the most logical order: Joining, Selection, Interview, Application.",
+    "options": ["Application → Interview → Selection → Joining", "Application → Joining → Interview → Selection", "Selection → Interview → Joining → Application", "Joining → Interview → Application → Selection"],
+    "ans": "Application → Interview → Selection → Joining"
+  },
+  {
+    "q": "Find the next number: 18, 28, 58, 108, 178, ?",
+    "options": ["270", "268", "263", "278"],
+    "ans": "268"
+  },
+  {
+    "q": "Heena, Asha, Gita, Deepa, Charu, Esha, Farah are seated in a row facing north. Who is sitting 7th from the left?",
+    "options": ["Farah", "Heena", "Charu", "Asha"],
+    "ans": "Farah"
+  },
+  {
+    "q": "Gita, Charu, Asha, Esha, Deepa, Farah are seated in a row facing north. Who is sitting 2nd from the left?",
+    "options": ["Gita", "Asha", "Charu", "Farah"],
+    "ans": "Charu"
+  },
+  {
+    "q": "Choose the odd one out: Yellow, Table, Green, Red.",
+    "options": ["Table", "Yellow", "Red", "Green"],
+    "ans": "Table"
+  },
+  {
+    "q": "If each letter is moved 1 position(s) forward in the alphabet, how is FOX coded?",
+    "options": ["IRA", "FOX", "GPY", "HQZ"],
+    "ans": "GPY"
+  },
+  {
+    "q": "Find the next number: 25, 100, 400, 1600, 6400, ?",
+    "options": ["6400", "25604", "25610", "25600"],
+    "ans": "25600"
+  },
+  {
+    "q": "In a group of 16 people, Ravi ranks 2th from the top. What is his rank from the bottom?",
+    "options": ["16", "15", "2", "14"],
+    "ans": "15"
+  },
+  {
+    "q": "A person walks West 10 m, then West 3 m, then North 2 m. In which general direction is the person from the starting point?",
+    "options": ["East", "West", "North", "South"],
+    "ans": "West"
+  },
+  {
+    "q": "In a group of 24 people, Ravi ranks 6th from the top. What is his rank from the bottom?",
+    "options": ["6", "18", "20", "19"],
+    "ans": "19"
+  },
+  {
+    "q": "Ira, Farah, Charu, Gita, Deepa, Esha are seated in a row facing north. Who is sitting 1st from the left?",
+    "options": ["Ira", "Gita", "Farah", "Charu"],
+    "ans": "Ira"
+  },
+  {
+    "q": "Choose the odd one out: Rectangle, Triangle, Cube, Square.",
+    "options": ["Square", "Rectangle", "Cube", "Triangle"],
+    "ans": "Cube"
+  },
+  {
+    "q": "Choose the odd one out: Parrot, Sparrow, Eagle, Shark.",
+    "options": ["Eagle", "Parrot", "Sparrow", "Shark"],
+    "ans": "Shark"
+  },
+  {
+    "q": "If each letter is moved 1 position(s) forward in the alphabet, how is CUP coded?",
+    "options": ["DVQ", "EWR", "CUP", "FXS"],
+    "ans": "DVQ"
+  },
+  {
+    "q": "Esha, Charu, Ira, Deepa, Bina are seated in a row facing north. Who is sitting 3rd from the left?",
+    "options": ["Esha", "Deepa", "Ira", "Charu"],
+    "ans": "Ira"
+  },
+  {
+    "q": "In a group of 38 people, Ravi ranks 9th from the top. What is his rank from the bottom?",
+    "options": ["30", "29", "9", "31"],
+    "ans": "30"
+  },
+  {
+    "q": "A person walks West 5 m, then East 9 m, then South 3 m. In which general direction is the person from the starting point?",
+    "options": ["West", "East", "North", "South"],
+    "ans": "East"
+  },
+  {
+    "q": "In a group of 29 people, Ravi ranks 9th from the top. What is his rank from the bottom?",
+    "options": ["22", "9", "21", "20"],
+    "ans": "21"
+  },
+  {
+    "q": "Find the next number: 15, 18, 21, 24, 27, ?",
+    "options": ["32", "29", "30", "33"],
+    "ans": "30"
+  },
+  {
+    "q": "In a group of 41 people, Ravi ranks 23th from the top. What is his rank from the bottom?",
+    "options": ["20", "18", "19", "23"],
+    "ans": "19"
+  },
+  {
+    "q": "In a group of 44 people, Ravi ranks 25th from the top. What is his rank from the bottom?",
+    "options": ["25", "19", "20", "21"],
+    "ans": "20"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 10:00?",
+    "options": ["45°", "90°", "60°", "105°"],
+    "ans": "60°"
+  },
+  {
+    "q": "Find the next letter: E , F , H , K , O, ?",
+    "options": ["T", "W", "S", "U"],
+    "ans": "T"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 7:15?",
+    "options": ["112.5°", "172.5°", "127.5°", "157.5°"],
+    "ans": "127.5°"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 11:10?",
+    "options": ["70°", "130°", "115°", "85°"],
+    "ans": "85°"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 5:15?",
+    "options": ["112.5°", "52.5°", "97.5°", "67.5°"],
+    "ans": "67.5°"
+  },
+  {
+    "q": "Deepa, Asha, Farah, Esha, Ira, Heena, Gita, Charu are seated in a row facing north. Who is sitting 7th from the left?",
+    "options": ["Gita", "Heena", "Esha", "Charu"],
+    "ans": "Gita"
+  },
+  {
+    "q": "Choose the most logical order: Manufacturing, Raw material, Distribution, Packaging.",
+    "options": ["Raw material → Manufacturing → Packaging → Distribution", "Raw material → Distribution → Packaging → Manufacturing", "Manufacturing → Packaging → Raw material → Distribution", "Raw material → Packaging → Distribution → Manufacturing"],
+    "ans": "Raw material → Manufacturing → Packaging → Distribution"
+  },
+  {
+    "q": "Choose the most logical order: Flower, Fruit, Seed, Plant.",
+    "options": ["Plant → Seed → Flower → Fruit", "Plant → Fruit → Flower → Seed", "Seed → Plant → Flower → Fruit", "Fruit → Flower → Seed → Plant"],
+    "ans": "Seed → Plant → Flower → Fruit"
+  },
+  {
+    "q": "A person walks North 2 m, then North 6 m, then East 9 m, then West 10 m. In which general direction is the person from the starting point?",
+    "options": ["South", "East", "West", "North"],
+    "ans": "North"
+  },
+  {
+    "q": "Choose the odd one out: Litre, Metre, Second, Kilogram.",
+    "options": ["Litre", "Metre", "Kilogram", "Second"],
+    "ans": "Kilogram"
+  },
+  {
+    "q": "Find the next number: 2, 11, 38, 83, 146, ?",
+    "options": ["229", "222", "236", "227"],
+    "ans": "227"
+  },
+  {
+    "q": "Choose the most logical order: Seed, Flower, Plant, Fruit.",
+    "options": ["Plant → Seed → Fruit → Flower", "Plant → Flower → Seed → Fruit", "Seed → Plant → Flower → Fruit", "Fruit → Flower → Seed → Plant"],
+    "ans": "Seed → Plant → Flower → Fruit"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 1:40?",
+    "options": ["155°", "190°", "170°", "200°"],
+    "ans": "170°"
+  },
+  {
+    "q": "In a group of 42 people, Ravi ranks 37th from the top. What is his rank from the bottom?",
+    "options": ["5", "37", "6", "7"],
+    "ans": "6"
+  },
+  {
+    "q": "A person walks North 9 m, then North 5 m, then North 8 m, then East 2 m. In which general direction is the person from the starting point?",
+    "options": ["East", "West", "North", "South"],
+    "ans": "North"
+  },
+  {
+    "q": "Farah, Deepa, Asha, Esha, Charu, Gita, Ira, Bina are seated in a row facing north. Who is sitting 2nd from the left?",
+    "options": ["Deepa", "Esha", "Farah", "Asha"],
+    "ans": "Deepa"
+  },
+  {
+    "q": "Bina, Asha, Farah, Deepa, Gita, Heena, Ira are seated in a row facing north. Who is sitting 3rd from the left?",
+    "options": ["Heena", "Ira", "Farah", "Gita"],
+    "ans": "Farah"
+  },
+  {
+    "q": "Find the next number: 3, 9, 15, 21, 27, ?",
+    "options": ["35", "32", "33", "39"],
+    "ans": "33"
+  },
+  {
+    "q": "Choose the odd one out: January, Sunday, April, March.",
+    "options": ["March", "April", "Sunday", "January"],
+    "ans": "Sunday"
+  },
+  {
+    "q": "A person walks North 8 m, then South 8 m, then South 5 m, then South 3 m. In which general direction is the person from the starting point?",
+    "options": ["North", "East", "South", "West"],
+    "ans": "South"
+  },
+  {
+    "q": "In a group of 50 people, Ravi ranks 24th from the top. What is his rank from the bottom?",
+    "options": ["24", "27", "26", "28"],
+    "ans": "27"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 18 days?",
+    "options": ["Thursday", "Monday", "Friday", "Saturday"],
+    "ans": "Friday"
+  },
+  {
+    "q": "Find the next number: 3, 8, 13, 18, 23, ?",
+    "options": ["33", "27", "30", "28"],
+    "ans": "28"
+  },
+  {
+    "q": "Find the next number: 6, 13, 34, 69, 118, ?",
+    "options": ["176", "188", "183", "181"],
+    "ans": "181"
+  },
+  {
+    "q": "Find the next number: 22, 88, 352, 1408, 5632, ?",
+    "options": ["22538", "22532", "5632", "22528"],
+    "ans": "22528"
+  },
+  {
+    "q": "Find the next number: 30, 32, 36, 42, 50, ?",
+    "options": ["60", "62", "58", "70"],
+    "ans": "60"
+  },
+  {
+    "q": "In a group of 41 people, Ravi ranks 3th from the top. What is his rank from the bottom?",
+    "options": ["38", "39", "3", "40"],
+    "ans": "39"
+  },
+  {
+    "q": "In a group of 24 people, Ravi ranks 9th from the top. What is his rank from the bottom?",
+    "options": ["9", "17", "15", "16"],
+    "ans": "16"
+  },
+  {
+    "q": "Choose the odd one out: Mango, Apple, Carrot, Banana.",
+    "options": ["Carrot", "Mango", "Apple", "Banana"],
+    "ans": "Carrot"
+  },
+  {
+    "q": "Heena, Gita, Ira, Bina, Asha, Deepa, Farah, Charu, Esha are seated in a row facing north. Who is sitting 8th from the left?",
+    "options": ["Gita", "Charu", "Ira", "Deepa"],
+    "ans": "Charu"
+  },
+  {
+    "q": "A person walks South 8 m, then West 9 m, then South 5 m, then East 3 m, then West 4 m. In which general direction is the person from the starting point?",
+    "options": ["West", "East", "North", "South"],
+    "ans": "South"
+  },
+  {
+    "q": "If each letter is moved 1 position(s) forward in the alphabet, how is DOG coded?",
+    "options": ["GRJ", "DOG", "FQI", "EPH"],
+    "ans": "EPH"
+  },
+  {
+    "q": "Farah, Esha, Deepa, Asha, Gita, Charu, Ira, Heena are seated in a row facing north. Who is sitting 6th from the left?",
+    "options": ["Charu", "Gita", "Esha", "Farah"],
+    "ans": "Charu"
+  },
+  {
+    "q": "A person walks East 5 m, then South 2 m, then West 5 m, then South 6 m, then West 6 m. In which general direction is the person from the starting point?",
+    "options": ["South", "North", "East", "West"],
+    "ans": "South"
+  },
+  {
+    "q": "If each letter is moved 2 position(s) forward in the alphabet, how is KEY coded?",
+    "options": ["OIC", "NHB", "LFZ", "MGA"],
+    "ans": "MGA"
+  },
+  {
+    "q": "A person walks South 5 m, then West 5 m, then South 10 m. In which general direction is the person from the starting point?",
+    "options": ["West", "North", "East", "South"],
+    "ans": "South"
+  },
+  {
+    "q": "Find the next number: 14, 24, 54, 104, 174, ?",
+    "options": ["259", "274", "266", "264"],
+    "ans": "264"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 8:10?",
+    "options": ["175°", "160°", "205°", "185°"],
+    "ans": "175°"
+  },
+  {
+    "q": "Find the next number: 8, 17, 26, 35, 44, ?",
+    "options": ["55", "52", "62", "53"],
+    "ans": "53"
+  },
+  {
+    "q": "Find the next letter: N , O , Q , T , X, ?",
+    "options": ["B", "C", "F", "D"],
+    "ans": "B"
+  },
+  {
+    "q": "Charu, Bina, Esha, Gita, Asha, Farah, Heena, Deepa, Ira are seated in a row facing north. Who is sitting 3rd from the left?",
+    "options": ["Charu", "Esha", "Deepa", "Farah"],
+    "ans": "Esha"
+  },
+  {
+    "q": "Choose the most logical order: Application, Joining, Selection, Interview.",
+    "options": ["Application → Interview → Selection → Joining", "Option 4", "Joining → Interview → Selection → Application", "Application → Joining → Selection → Interview"],
+    "ans": "Application → Interview → Selection → Joining"
+  },
+  {
+    "q": "Find the next number: 1, 2, 4, 8, 16, ?",
+    "options": ["32", "16", "42", "34"],
+    "ans": "32"
+  },
+  {
+    "q": "In a group of 43 people, Ravi ranks 22th from the top. What is his rank from the bottom?",
+    "options": ["23", "21", "22", "Option 4"],
+    "ans": "22"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 4:20?",
+    "options": ["10°", "55°", "40°", "5°"],
+    "ans": "10°"
+  },
+  {
+    "q": "Gita, Asha, Esha, Bina, Farah, Charu, Ira are seated in a row facing north. Who is sitting 1st from the left?",
+    "options": ["Gita", "Ira", "Charu", "Asha"],
+    "ans": "Gita"
+  },
+  {
+    "q": "Find the next number: 25, 31, 37, 43, 49, ?",
+    "options": ["61", "57", "54", "55"],
+    "ans": "55"
+  },
+  {
+    "q": "Find the next number: 14, 23, 32, 41, 50, ?",
+    "options": ["61", "59", "68", "58"],
+    "ans": "59"
+  },
+  {
+    "q": "Choose the odd one out: Square, Cube, Rectangle, Triangle.",
+    "options": ["Rectangle", "Triangle", "Cube", "Square"],
+    "ans": "Cube"
+  },
+  {
+    "q": "In a group of 28 people, Ravi ranks 20th from the top. What is his rank from the bottom?",
+    "options": ["10", "9", "8", "20"],
+    "ans": "9"
+  },
+  {
+    "q": "Choose the most logical order: Packaging, Raw material, Manufacturing, Distribution.",
+    "options": ["Distribution → Packaging → Raw material → Manufacturing", "Distribution → Raw material → Packaging → Manufacturing", "Raw material → Manufacturing → Packaging → Distribution", "Raw material → Packaging → Distribution → Manufacturing"],
+    "ans": "Raw material → Manufacturing → Packaging → Distribution"
+  },
+  {
+    "q": "Find the next number: 26, 38, 50, 62, 74, ?",
+    "options": ["86", "88", "98", "85"],
+    "ans": "86"
+  },
+  {
+    "q": "Deepa, Asha, Heena, Ira, Esha, Charu are seated in a row facing north. Who is sitting 2nd from the left?",
+    "options": ["Esha", "Asha", "Ira", "Deepa"],
+    "ans": "Asha"
+  },
+  {
+    "q": "In a group of 38 people, Ravi ranks 29th from the top. What is his rank from the bottom?",
+    "options": ["9", "10", "29", "11"],
+    "ans": "10"
+  },
+  {
+    "q": "Find the next letter: I , L , O , R , U, ?",
+    "options": ["Z", "Y", "W", "X"],
+    "ans": "X"
+  },
+  {
+    "q": "A person walks South 2 m, then East 3 m, then East 2 m, then North 10 m, then West 7 m. In which general direction is the person from the starting point?",
+    "options": ["South", "West", "North", "East"],
+    "ans": "North"
+  },
+  {
+    "q": "Find the next number: 3, 5, 11, 21, 35, ?",
+    "options": ["53", "55", "48", "Option 4"],
+    "ans": "53"
+  },
+  {
+    "q": "In a group of 37 people, Ravi ranks 18th from the top. What is his rank from the bottom?",
+    "options": ["19", "21", "18", "20"],
+    "ans": "20"
+  },
+  {
+    "q": "Gita, Bina, Farah, Ira, Charu, Esha, Deepa, Heena are seated in a row facing north. Who is sitting 8th from the left?",
+    "options": ["Charu", "Deepa", "Ira", "Heena"],
+    "ans": "Heena"
+  },
+  {
+    "q": "A person walks South 6 m, then North 6 m, then West 6 m, then West 2 m, then South 7 m. In which general direction is the person from the starting point?",
+    "options": ["West", "South", "North", "East"],
+    "ans": "West"
+  },
+  {
+    "q": "Find the next number: 2, 8, 26, 56, 98, ?",
+    "options": ["152", "147", "154", "158"],
+    "ans": "152"
+  },
+  {
+    "q": "Choose the odd one out: Cube, Rectangle, Triangle, Square.",
+    "options": ["Cube", "Rectangle", "Triangle", "Square"],
+    "ans": "Cube"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 8:15?",
+    "options": ["202.5°", "187.5°", "157.5°", "142.5°"],
+    "ans": "157.5°"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 10:15?",
+    "options": ["142.5°", "172.5°", "127.5°", "187.5°"],
+    "ans": "142.5°"
+  },
+  {
+    "q": "Choose the most logical order: Plant, Fruit, Seed, Flower.",
+    "options": ["Fruit → Seed → Plant → Flower", "Seed → Plant → Flower → Fruit", "Plant → Seed → Flower → Fruit", "Option 4"],
+    "ans": "Seed → Plant → Flower → Fruit"
+  },
+  {
+    "q": "Bina, Esha, Charu, Ira, Deepa are seated in a row facing north. Who is sitting 1st from the left?",
+    "options": ["Esha", "Bina", "Charu", "Ira"],
+    "ans": "Bina"
+  },
+  {
+    "q": "Farah, Heena, Bina, Charu, Deepa, Asha, Ira, Esha, Gita are seated in a row facing north. Who is sitting 3rd from the left?",
+    "options": ["Esha", "Heena", "Gita", "Bina"],
+    "ans": "Bina"
+  },
+  {
+    "q": "In a group of 54 people, Ravi ranks 43th from the top. What is his rank from the bottom?",
+    "options": ["43", "12", "13", "11"],
+    "ans": "12"
+  },
+  {
+    "q": "Choose the most logical order: Selection, Application, Joining, Interview.",
+    "options": ["Selection → Interview → Application → Joining", "Application → Interview → Selection → Joining", "Joining → Application → Selection → Interview", "Interview → Application → Joining → Selection"],
+    "ans": "Application → Interview → Selection → Joining"
+  },
+  {
+    "q": "Choose the odd one out: Plastic, Iron, Copper, Silver.",
+    "options": ["Copper", "Plastic", "Silver", "Iron"],
+    "ans": "Plastic"
+  },
+  {
+    "q": "Choose the odd one out: Triangle, Cube, Rectangle, Square.",
+    "options": ["Cube", "Triangle", "Square", "Rectangle"],
+    "ans": "Cube"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 10:20?",
+    "options": ["200°", "190°", "155°", "170°"],
+    "ans": "170°"
+  },
+  {
+    "q": "Choose the odd one out: Carrot, Banana, Mango, Apple.",
+    "options": ["Carrot", "Mango", "Banana", "Apple"],
+    "ans": "Carrot"
+  },
+  {
+    "q": "Find the next number: 23, 30, 51, 86, 135, ?",
+    "options": ["205", "193", "198", "200"],
+    "ans": "198"
+  },
+  {
+    "q": "In a group of 17 people, Ravi ranks 14th from the top. What is his rank from the bottom?",
+    "options": ["5", "14", "3", "4"],
+    "ans": "4"
+  },
+  {
+    "q": "Farah, Asha, Bina, Ira, Gita, Charu, Deepa, Heena are seated in a row facing north. Who is sitting 4th from the left?",
+    "options": ["Farah", "Ira", "Bina", "Heena"],
+    "ans": "Ira"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 55 days?",
+    "options": ["Monday", "Tuesday", "Wednesday", "Sunday"],
+    "ans": "Sunday"
+  },
+  {
+    "q": "A person walks West 4 m, then South 7 m, then South 4 m. In which general direction is the person from the starting point?",
+    "options": ["West", "South", "North", "East"],
+    "ans": "South"
+  },
+  {
+    "q": "In a group of 49 people, Ravi ranks 22th from the top. What is his rank from the bottom?",
+    "options": ["29", "22", "28", "27"],
+    "ans": "28"
+  },
+  {
+    "q": "Bina, Ira, Charu, Esha, Heena, Deepa, Farah are seated in a row facing north. Who is sitting 3rd from the left?",
+    "options": ["Heena", "Ira", "Bina", "Charu"],
+    "ans": "Charu"
+  },
+  {
+    "q": "Deepa, Asha, Bina, Heena, Ira, Farah, Esha, Gita, Charu are seated in a row facing north. Who is sitting 8th from the left?",
+    "options": ["Deepa", "Gita", "Farah", "Ira"],
+    "ans": "Gita"
+  },
+  {
+    "q": "A person walks North 3 m, then East 3 m, then East 6 m, then North 6 m. In which general direction is the person from the starting point?",
+    "options": ["West", "South", "North", "East"],
+    "ans": "East"
+  },
+  {
+    "q": "Find the next number: 9, 18, 45, 90, 153, ?",
+    "options": ["229", "236", "234", "243"],
+    "ans": "234"
+  },
+  {
+    "q": "Choose the odd one out: Blue, Triangle, Square, Circle.",
+    "options": ["Circle", "Square", "Blue", "Triangle"],
+    "ans": "Blue"
+  },
+  {
+    "q": "Choose the odd one out: Green, Yellow, Red, Table.",
+    "options": ["Red", "Table", "Yellow", "Green"],
+    "ans": "Table"
+  },
+  {
+    "q": "A person walks East 5 m, then West 9 m, then West 10 m. In which general direction is the person from the starting point?",
+    "options": ["North", "East", "West", "South"],
+    "ans": "West"
+  },
+  {
+    "q": "Choose the odd one out: Copper, Silver, Iron, Plastic.",
+    "options": ["Plastic", "Iron", "Copper", "Silver"],
+    "ans": "Plastic"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 8:45?",
+    "options": ["52.5°", "37.5°", "Option 4", "7.5°"],
+    "ans": "7.5°"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 31 days?",
+    "options": ["Friday", "Thursday", "Monday", "Tuesday"],
+    "ans": "Thursday"
+  },
+  {
+    "q": "Choose the odd one out: Mango, Apple, Banana, Carrot.",
+    "options": ["Carrot", "Banana", "Mango", "Apple"],
+    "ans": "Carrot"
+  },
+  {
+    "q": "A person walks East 6 m, then West 6 m, then North 5 m, then East 8 m, then East 5 m. In which general direction is the person from the starting point?",
+    "options": ["North", "South", "West", "East"],
+    "ans": "East"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 6:00?",
+    "options": ["210°", "165°", "180°", "Option 4"],
+    "ans": "180°"
+  },
+  {
+    "q": "Choose the most logical order: Application, Selection, Interview, Joining.",
+    "options": ["Application → Interview → Joining → Selection", "Application → Interview → Selection → Joining", "Application → Joining → Interview → Selection", "Selection → Application → Interview → Joining"],
+    "ans": "Application → Interview → Selection → Joining"
+  },
+  {
+    "q": "A person walks South 7 m, then South 9 m, then West 8 m, then East 8 m. In which general direction is the person from the starting point?",
+    "options": ["North", "South", "East", "West"],
+    "ans": "South"
+  },
+  {
+    "q": "In a group of 20 people, Ravi ranks 10th from the top. What is his rank from the bottom?",
+    "options": ["10", "11", "Option 4", "12"],
+    "ans": "11"
+  },
+  {
+    "q": "Find the next number: 15, 23, 47, 87, 143, ?",
+    "options": ["215", "210", "223", "217"],
+    "ans": "215"
+  },
+  {
+    "q": "If each letter is moved 2 position(s) forward in the alphabet, how is JAM coded?",
+    "options": ["MDP", "LCO", "KBN", "NEQ"],
+    "ans": "LCO"
+  },
+  {
+    "q": "A person walks West 10 m, then East 10 m, then North 5 m, then South 4 m, then South 7 m. In which general direction is the person from the starting point?",
+    "options": ["West", "South", "North", "East"],
+    "ans": "South"
+  },
+  {
+    "q": "Find the next letter: F , J , N , R , V, ?",
+    "options": ["A", "Y", "B", "Z"],
+    "ans": "Z"
+  },
+  {
+    "q": "A person walks North 4 m, then North 4 m, then North 10 m. In which general direction is the person from the starting point?",
+    "options": ["West", "East", "North", "South"],
+    "ans": "North"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 9:40?",
+    "options": ["35°", "80°", "50°", "95°"],
+    "ans": "50°"
+  },
+  {
+    "q": "In a group of 44 people, Ravi ranks 13th from the top. What is his rank from the bottom?",
+    "options": ["13", "31", "32", "33"],
+    "ans": "32"
+  },
+  {
+    "q": "Choose the odd one out: Green, Red, Yellow, Table.",
+    "options": ["Table", "Yellow", "Green", "Red"],
+    "ans": "Table"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 12:45?",
+    "options": ["157.5°", "142.5°", "97.5°", "112.5°"],
+    "ans": "112.5°"
+  },
+  {
+    "q": "Bina, Heena, Farah, Charu, Gita, Ira, Esha, Asha are seated in a row facing north. Who is sitting 4th from the left?",
+    "options": ["Charu", "Ira", "Asha", "Heena"],
+    "ans": "Charu"
+  },
+  {
+    "q": "In a group of 50 people, Ravi ranks 16th from the top. What is his rank from the bottom?",
+    "options": ["35", "36", "34", "16"],
+    "ans": "35"
+  },
+  {
+    "q": "A person walks South 7 m, then South 6 m, then West 9 m, then West 10 m, then North 2 m. In which general direction is the person from the starting point?",
+    "options": ["West", "East", "North", "South"],
+    "ans": "West"
+  },
+  {
+    "q": "Find the next number: 12, 14, 18, 24, 32, ?",
+    "options": ["42", "44", "52", "40"],
+    "ans": "42"
+  },
+  {
+    "q": "Find the next number: 18, 72, 288, 1152, 4608, ?",
+    "options": ["18436", "18432", "4608", "18442"],
+    "ans": "18432"
+  },
+  {
+    "q": "A person walks East 4 m, then West 5 m, then South 2 m. In which general direction is the person from the starting point?",
+    "options": ["West", "North", "East", "South"],
+    "ans": "South"
+  },
+  {
+    "q": "A person walks North 3 m, then East 5 m, then West 5 m. In which general direction is the person from the starting point?",
+    "options": ["West", "East", "South", "North"],
+    "ans": "North"
+  },
+  {
+    "q": "Esha, Bina, Ira, Deepa, Heena are seated in a row facing north. Who is sitting 4th from the left?",
+    "options": ["Bina", "Esha", "Heena", "Deepa"],
+    "ans": "Deepa"
+  },
+  {
+    "q": "In a group of 51 people, Ravi ranks 34th from the top. What is his rank from the bottom?",
+    "options": ["19", "34", "18", "17"],
+    "ans": "18"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 53 days?",
+    "options": ["Thursday", "Friday", "Tuesday", "Monday"],
+    "ans": "Friday"
+  },
+  {
+    "q": "Choose the most logical order: Manufacturing, Distribution, Raw material, Packaging.",
+    "options": ["Raw material → Manufacturing → Packaging → Distribution", "Option 4", "Manufacturing → Distribution → Packaging → Raw material", "Distribution → Packaging → Manufacturing → Raw material"],
+    "ans": "Raw material → Manufacturing → Packaging → Distribution"
+  },
+  {
+    "q": "Heena, Ira, Bina, Esha, Deepa are seated in a row facing north. Who is sitting 5th from the left?",
+    "options": ["Bina", "Esha", "Deepa", "Heena"],
+    "ans": "Deepa"
+  },
+  {
+    "q": "Choose the odd one out: Metre, Litre, Second, Kilogram.",
+    "options": ["Second", "Kilogram", "Litre", "Metre"],
+    "ans": "Kilogram"
+  },
+  {
+    "q": "Ira, Farah, Esha, Bina, Charu, Asha, Gita are seated in a row facing north. Who is sitting 3rd from the left?",
+    "options": ["Esha", "Ira", "Asha", "Bina"],
+    "ans": "Esha"
+  },
+  {
+    "q": "Choose the odd one out: Rectangle, Triangle, Square, Cube.",
+    "options": ["Rectangle", "Triangle", "Cube", "Square"],
+    "ans": "Cube"
+  },
+  {
+    "q": "Gita, Bina, Esha, Charu, Deepa, Ira are seated in a row facing north. Who is sitting 4th from the left?",
+    "options": ["Gita", "Bina", "Esha", "Charu"],
+    "ans": "Charu"
+  },
+  {
+    "q": "In a group of 33 people, Ravi ranks 24th from the top. What is his rank from the bottom?",
+    "options": ["24", "9", "10", "11"],
+    "ans": "10"
+  },
+  {
+    "q": "Choose the odd one out: Sunday, January, March, April.",
+    "options": ["Sunday", "April", "January", "March"],
+    "ans": "Sunday"
+  },
+  {
+    "q": "Find the next number: 21, 84, 336, 1344, 5376, ?",
+    "options": ["21504", "21508", "5376", "21514"],
+    "ans": "21504"
+  },
+  {
+    "q": "Choose the most logical order: Fruit, Plant, Flower, Seed.",
+    "options": ["Plant → Flower → Seed → Fruit", "Plant → Flower → Fruit → Seed", "Flower → Plant → Fruit → Seed", "Seed → Plant → Flower → Fruit"],
+    "ans": "Seed → Plant → Flower → Fruit"
+  },
+  {
+    "q": "A person walks West 5 m, then South 6 m, then West 8 m, then North 10 m, then South 10 m. In which general direction is the person from the starting point?",
+    "options": ["West", "North", "East", "South"],
+    "ans": "West"
+  },
+  {
+    "q": "In a group of 59 people, Ravi ranks 9th from the top. What is his rank from the bottom?",
+    "options": ["52", "51", "50", "9"],
+    "ans": "51"
+  },
+  {
+    "q": "A person walks South 5 m, then West 4 m, then West 6 m. In which general direction is the person from the starting point?",
+    "options": ["South", "North", "West", "East"],
+    "ans": "West"
+  },
+  {
+    "q": "Find the next letter: H , K , N , Q , T, ?",
+    "options": ["X", "W", "Y", "V"],
+    "ans": "W"
+  },
+  {
+    "q": "Choose the odd one out: Cube, Triangle, Square, Rectangle.",
+    "options": ["Cube", "Rectangle", "Square", "Triangle"],
+    "ans": "Cube"
+  },
+  {
+    "q": "Choose the odd one out: Red, Table, Green, Yellow.",
+    "options": ["Green", "Yellow", "Table", "Red"],
+    "ans": "Table"
+  },
+  {
+    "q": "Choose the odd one out: April, March, Sunday, January.",
+    "options": ["Sunday", "January", "March", "April"],
+    "ans": "Sunday"
+  },
+  {
+    "q": "A person walks South 6 m, then West 7 m, then South 6 m, then South 4 m. In which general direction is the person from the starting point?",
+    "options": ["North", "West", "East", "South"],
+    "ans": "South"
+  },
+  {
+    "q": "Deepa, Heena, Ira, Bina, Esha are seated in a row facing north. Who is sitting 4th from the left?",
+    "options": ["Bina", "Heena", "Ira", "Esha"],
+    "ans": "Bina"
+  },
+  {
+    "q": "Find the next number: 16, 17, 19, 22, 26, ?",
+    "options": ["36", "31", "28", "32"],
+    "ans": "31"
+  },
+  {
+    "q": "Choose the odd one out: January, March, April, Sunday.",
+    "options": ["March", "January", "April", "Sunday"],
+    "ans": "Sunday"
+  },
+  {
+    "q": "Choose the most logical order: Raw material, Distribution, Manufacturing, Packaging.",
+    "options": ["Distribution → Packaging → Manufacturing → Raw material", "Manufacturing → Distribution → Raw material → Packaging", "Raw material → Packaging → Distribution → Manufacturing", "Raw material → Manufacturing → Packaging → Distribution"],
+    "ans": "Raw material → Manufacturing → Packaging → Distribution"
+  },
+  {
+    "q": "If each letter is moved 1 position(s) forward in the alphabet, how is MAP coded?",
+    "options": ["PDS", "NBQ", "OCR", "MAP"],
+    "ans": "NBQ"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 50 days?",
+    "options": ["Friday", "Tuesday", "Sunday", "Saturday"],
+    "ans": "Tuesday"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 54 days?",
+    "options": ["Friday", "Monday", "Sunday", "Saturday"],
+    "ans": "Saturday"
+  },
+  {
+    "q": "If each letter is moved 2 position(s) forward in the alphabet, how is HEN coded?",
+    "options": ["JGP", "LIR", "IFO", "KHQ"],
+    "ans": "JGP"
+  },
+  {
+    "q": "Find the next number: 15, 30, 60, 120, 240, ?",
+    "options": ["480", "240", "482", "490"],
+    "ans": "480"
+  },
+  {
+    "q": "If each letter is moved 1 position(s) forward in the alphabet, how is SUN coded?",
+    "options": ["UWP", "TVO", "VXQ", "SUN"],
+    "ans": "TVO"
+  },
+  {
+    "q": "Charu, Asha, Farah, Esha, Ira, Gita are seated in a row facing north. Who is sitting 2nd from the left?",
+    "options": ["Ira", "Asha", "Gita", "Esha"],
+    "ans": "Asha"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 20 days?",
+    "options": ["Saturday", "Thursday", "Friday", "Sunday"],
+    "ans": "Sunday"
+  },
+  {
+    "q": "Choose the odd one out: Green, Red, Table, Yellow.",
+    "options": ["Yellow", "Table", "Green", "Red"],
+    "ans": "Table"
+  },
+  {
+    "q": "In a group of 58 people, Ravi ranks 12th from the top. What is his rank from the bottom?",
+    "options": ["12", "48", "47", "46"],
+    "ans": "47"
+  },
+  {
+    "q": "Choose the most logical order: Infant, Child, Adolescent, Adult.",
+    "options": ["Infant → Adult → Adolescent → Child", "Infant → Child → Adult → Adolescent", "Infant → Child → Adolescent → Adult", "Infant → Adolescent → Child → Adult"],
+    "ans": "Infant → Child → Adolescent → Adult"
+  },
+  {
+    "q": "A person walks East 9 m, then East 10 m, then North 9 m. In which general direction is the person from the starting point?",
+    "options": ["North", "East", "South", "West"],
+    "ans": "East"
+  },
+  {
+    "q": "Choose the odd one out: March, Sunday, April, January.",
+    "options": ["April", "Sunday", "January", "March"],
+    "ans": "Sunday"
+  },
+  {
+    "q": "In a group of 41 people, Ravi ranks 27th from the top. What is his rank from the bottom?",
+    "options": ["14", "27", "15", "16"],
+    "ans": "15"
+  },
+  {
+    "q": "Find the next number: 13, 26, 52, 104, 208, ?",
+    "options": ["416", "426", "418", "208"],
+    "ans": "416"
+  },
+  {
+    "q": "Bina, Esha, Heena, Ira, Asha, Gita, Charu, Deepa, Farah are seated in a row facing north. Who is sitting 2nd from the left?",
+    "options": ["Deepa", "Esha", "Bina", "Heena"],
+    "ans": "Esha"
+  },
+  {
+    "q": "Choose the odd one out: 9, 3, 2, 5.",
+    "options": ["2", "5", "9", "3"],
+    "ans": "9"
+  },
+  {
+    "q": "Find the next number: 7, 28, 112, 448, 1792, ?",
+    "options": ["1792", "7172", "7168", "7178"],
+    "ans": "7168"
+  },
+  {
+    "q": "A person walks North 6 m, then East 5 m, then West 5 m, then West 3 m. In which general direction is the person from the starting point?",
+    "options": ["North", "South", "West", "East"],
+    "ans": "North"
+  },
+  {
+    "q": "Choose the most logical order: Adolescent, Infant, Child, Adult.",
+    "options": ["Adolescent → Adult → Infant → Child", "Child → Infant → Adolescent → Adult", "Infant → Child → Adolescent → Adult", "Adolescent → Child → Infant → Adult"],
+    "ans": "Infant → Child → Adolescent → Adult"
+  },
+  {
+    "q": "Choose the most logical order: Infant, Adult, Adolescent, Child.",
+    "options": ["Option 4", "Adult → Child → Infant → Adolescent", "Adult → Infant → Child → Adolescent", "Infant → Child → Adolescent → Adult"],
+    "ans": "Infant → Child → Adolescent → Adult"
+  },
+  {
+    "q": "Choose the odd one out: 2, 9, 5, 3.",
+    "options": ["9", "2", "5", "3"],
+    "ans": "9"
+  },
+  {
+    "q": "Asha, Esha, Gita, Bina, Farah, Ira, Charu are seated in a row facing north. Who is sitting 4th from the left?",
+    "options": ["Farah", "Asha", "Esha", "Bina"],
+    "ans": "Bina"
+  },
+  {
+    "q": "Farah, Asha, Bina, Charu, Deepa, Ira, Esha are seated in a row facing north. Who is sitting 5th from the left?",
+    "options": ["Esha", "Ira", "Deepa", "Bina"],
+    "ans": "Deepa"
+  },
+  {
+    "q": "Gita, Bina, Deepa, Esha, Ira, Asha, Heena, Charu, Farah are seated in a row facing north. Who is sitting 6th from the left?",
+    "options": ["Bina", "Farah", "Heena", "Asha"],
+    "ans": "Asha"
+  },
+  {
+    "q": "In a group of 25 people, Ravi ranks 4th from the top. What is his rank from the bottom?",
+    "options": ["4", "22", "21", "23"],
+    "ans": "22"
+  },
+  {
+    "q": "In a group of 53 people, Ravi ranks 50th from the top. What is his rank from the bottom?",
+    "options": ["3", "4", "50", "5"],
+    "ans": "4"
+  },
+  {
+    "q": "Choose the most logical order: Flower, Fruit, Plant, Seed.",
+    "options": ["Seed → Flower → Plant → Fruit", "Seed → Plant → Flower → Fruit", "Seed → Flower → Fruit → Plant", "Fruit → Plant → Flower → Seed"],
+    "ans": "Seed → Plant → Flower → Fruit"
+  },
+  {
+    "q": "In a group of 41 people, Ravi ranks 14th from the top. What is his rank from the bottom?",
+    "options": ["29", "27", "14", "28"],
+    "ans": "28"
+  },
+  {
+    "q": "Find the next number: 23, 32, 59, 104, 167, ?",
+    "options": ["243", "250", "248", "257"],
+    "ans": "248"
+  },
+  {
+    "q": "A person walks West 9 m, then South 3 m, then West 10 m, then West 7 m. In which general direction is the person from the starting point?",
+    "options": ["North", "South", "East", "West"],
+    "ans": "West"
+  },
+  {
+    "q": "A person walks West 4 m, then West 10 m, then South 2 m, then West 7 m, then West 5 m. In which general direction is the person from the starting point?",
+    "options": ["East", "North", "West", "South"],
+    "ans": "West"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 9 days?",
+    "options": ["Saturday", "Sunday", "Wednesday", "Friday"],
+    "ans": "Wednesday"
+  },
+  {
+    "q": "Choose the odd one out: Yellow, Green, Table, Red.",
+    "options": ["Red", "Yellow", "Table", "Green"],
+    "ans": "Table"
+  },
+  {
+    "q": "Find the next number: 4, 6, 10, 16, 24, ?",
+    "options": ["36", "44", "34", "32"],
+    "ans": "34"
+  },
+  {
+    "q": "Deepa, Gita, Heena, Charu, Ira, Farah, Asha are seated in a row facing north. Who is sitting 4th from the left?",
+    "options": ["Ira", "Charu", "Asha", "Gita"],
+    "ans": "Charu"
+  },
+  {
+    "q": "Heena, Esha, Bina, Deepa, Farah, Charu are seated in a row facing north. Who is sitting 4th from the left?",
+    "options": ["Charu", "Deepa", "Heena", "Esha"],
+    "ans": "Deepa"
+  },
+  {
+    "q": "Gita, Esha, Asha, Deepa, Ira are seated in a row facing north. Who is sitting 3rd from the left?",
+    "options": ["Asha", "Esha", "Deepa", "Ira"],
+    "ans": "Asha"
+  },
+  {
+    "q": "A person walks East 2 m, then West 10 m, then North 2 m, then East 5 m. In which general direction is the person from the starting point?",
+    "options": ["North", "South", "West", "East"],
+    "ans": "West"
+  },
+  {
+    "q": "Choose the most logical order: Manufacturing, Distribution, Packaging, Raw material.",
+    "options": ["Manufacturing → Raw material → Packaging → Distribution", "Packaging → Distribution → Raw material → Manufacturing", "Raw material → Manufacturing → Packaging → Distribution", "Distribution → Packaging → Manufacturing → Raw material"],
+    "ans": "Raw material → Manufacturing → Packaging → Distribution"
+  },
+  {
+    "q": "In a group of 57 people, Ravi ranks 24th from the top. What is his rank from the bottom?",
+    "options": ["34", "35", "24", "33"],
+    "ans": "34"
+  },
+  {
+    "q": "Choose the odd one out: Circle, Square, Blue, Triangle.",
+    "options": ["Circle", "Square", "Triangle", "Blue"],
+    "ans": "Blue"
+  },
+  {
+    "q": "Choose the most logical order: Infant, Adult, Child, Adolescent.",
+    "options": ["Adolescent → Child → Adult → Infant", "Infant → Child → Adolescent → Adult", "Adolescent → Child → Infant → Adult", "Child → Adult → Adolescent → Infant"],
+    "ans": "Infant → Child → Adolescent → Adult"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 43 days?",
+    "options": ["Thursday", "Tuesday", "Friday", "Monday"],
+    "ans": "Tuesday"
+  },
+  {
+    "q": "Choose the most logical order: Packaging, Manufacturing, Distribution, Raw material.",
+    "options": ["Distribution → Manufacturing → Raw material → Packaging", "Raw material → Manufacturing → Packaging → Distribution", "Distribution → Packaging → Manufacturing → Raw material", "Packaging → Manufacturing → Raw material → Distribution"],
+    "ans": "Raw material → Manufacturing → Packaging → Distribution"
+  },
+  {
+    "q": "Choose the odd one out: Parrot, Sparrow, Shark, Eagle.",
+    "options": ["Parrot", "Eagle", "Shark", "Sparrow"],
+    "ans": "Shark"
+  },
+  {
+    "q": "In a group of 18 people, Ravi ranks 3th from the top. What is his rank from the bottom?",
+    "options": ["3", "15", "16", "17"],
+    "ans": "16"
+  },
+  {
+    "q": "Bina, Farah, Heena, Deepa, Asha, Charu, Gita, Esha are seated in a row facing north. Who is sitting 1st from the left?",
+    "options": ["Bina", "Esha", "Gita", "Farah"],
+    "ans": "Bina"
+  },
+  {
+    "q": "Charu, Deepa, Asha, Heena, Ira, Farah, Gita are seated in a row facing north. Who is sitting 6th from the left?",
+    "options": ["Heena", "Deepa", "Charu", "Farah"],
+    "ans": "Farah"
+  },
+  {
+    "q": "Find the next number: 20, 21, 23, 26, 30, ?",
+    "options": ["35", "32", "36", "40"],
+    "ans": "35"
+  },
+  {
+    "q": "Ira, Charu, Farah, Bina, Heena, Gita, Asha are seated in a row facing north. Who is sitting 7th from the left?",
+    "options": ["Farah", "Ira", "Bina", "Asha"],
+    "ans": "Asha"
+  },
+  {
+    "q": "In a group of 33 people, Ravi ranks 18th from the top. What is his rank from the bottom?",
+    "options": ["15", "18", "17", "16"],
+    "ans": "16"
+  },
+  {
+    "q": "In a group of 29 people, Ravi ranks 22th from the top. What is his rank from the bottom?",
+    "options": ["22", "8", "9", "7"],
+    "ans": "8"
+  },
+  {
+    "q": "In a group of 21 people, Ravi ranks 4th from the top. What is his rank from the bottom?",
+    "options": ["18", "17", "19", "4"],
+    "ans": "18"
+  },
+  {
+    "q": "A person walks South 9 m, then West 8 m, then South 6 m, then West 3 m. In which general direction is the person from the starting point?",
+    "options": ["West", "East", "South", "North"],
+    "ans": "South"
+  },
+  {
+    "q": "Bina, Esha, Asha, Gita, Ira, Deepa, Farah are seated in a row facing north. Who is sitting 1st from the left?",
+    "options": ["Esha", "Gita", "Bina", "Deepa"],
+    "ans": "Bina"
+  },
+  {
+    "q": "In a group of 48 people, Ravi ranks 7th from the top. What is his rank from the bottom?",
+    "options": ["42", "43", "7", "41"],
+    "ans": "42"
+  },
+  {
+    "q": "In a group of 46 people, Ravi ranks 25th from the top. What is his rank from the bottom?",
+    "options": ["22", "25", "23", "21"],
+    "ans": "22"
+  },
+  {
+    "q": "A person walks West 10 m, then South 10 m, then West 7 m, then South 4 m, then South 2 m. In which general direction is the person from the starting point?",
+    "options": ["North", "South", "East", "West"],
+    "ans": "West"
+  },
+  {
+    "q": "In a group of 32 people, Ravi ranks 20th from the top. What is his rank from the bottom?",
+    "options": ["12", "20", "14", "13"],
+    "ans": "13"
+  },
+  {
+    "q": "Find the next number: 29, 58, 116, 232, 464, ?",
+    "options": ["930", "938", "928", "464"],
+    "ans": "928"
+  },
+  {
+    "q": "Find the next letter: K , L , N , Q , U, ?",
+    "options": ["Z", "Y", "A", "C"],
+    "ans": "Z"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 26 days?",
+    "options": ["Sunday", "Saturday", "Monday", "Thursday"],
+    "ans": "Saturday"
+  },
+  {
+    "q": "In a group of 29 people, Ravi ranks 23th from the top. What is his rank from the bottom?",
+    "options": ["8", "6", "23", "7"],
+    "ans": "7"
+  },
+  {
+    "q": "In a group of 19 people, Ravi ranks 10th from the top. What is his rank from the bottom?",
+    "options": ["Option 4", "11", "10", "9"],
+    "ans": "10"
+  },
+  {
+    "q": "Find the next letter: P , Q , S , V , Z, ?",
+    "options": ["E", "D", "F", "H"],
+    "ans": "E"
+  },
+  {
+    "q": "A person walks South 5 m, then West 9 m, then West 7 m, then West 8 m. In which general direction is the person from the starting point?",
+    "options": ["South", "East", "West", "North"],
+    "ans": "West"
+  },
+  {
+    "q": "Bina, Farah, Heena, Gita, Asha, Deepa are seated in a row facing north. Who is sitting 2nd from the left?",
+    "options": ["Deepa", "Farah", "Gita", "Heena"],
+    "ans": "Farah"
+  },
+  {
+    "q": "Choose the odd one out: Silver, Plastic, Iron, Copper.",
+    "options": ["Copper", "Silver", "Plastic", "Iron"],
+    "ans": "Plastic"
+  },
+  {
+    "q": "Choose the odd one out: Circle, Blue, Square, Triangle.",
+    "options": ["Triangle", "Blue", "Circle", "Square"],
+    "ans": "Blue"
+  },
+  {
+    "q": "In a group of 37 people, Ravi ranks 26th from the top. What is his rank from the bottom?",
+    "options": ["12", "26", "13", "11"],
+    "ans": "12"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 6 days?",
+    "options": ["Friday", "Monday", "Thursday", "Sunday"],
+    "ans": "Sunday"
+  },
+  {
+    "q": "Heena, Charu, Ira, Farah, Bina, Asha, Esha, Deepa, Gita are seated in a row facing north. Who is sitting 6th from the left?",
+    "options": ["Asha", "Gita", "Charu", "Bina"],
+    "ans": "Asha"
+  },
+  {
+    "q": "In a group of 55 people, Ravi ranks 36th from the top. What is his rank from the bottom?",
+    "options": ["19", "36", "20", "21"],
+    "ans": "20"
+  },
+  {
+    "q": "Bina, Deepa, Farah, Heena, Esha, Asha, Gita, Ira are seated in a row facing north. Who is sitting 5th from the left?",
+    "options": ["Bina", "Farah", "Deepa", "Esha"],
+    "ans": "Esha"
+  },
+  {
+    "q": "In a group of 24 people, Ravi ranks 8th from the top. What is his rank from the bottom?",
+    "options": ["17", "8", "16", "18"],
+    "ans": "17"
+  },
+  {
+    "q": "Choose the most logical order: Joining, Interview, Application, Selection.",
+    "options": ["Application → Joining → Selection → Interview", "Interview → Application → Joining → Selection", "Interview → Joining → Selection → Application", "Application → Interview → Selection → Joining"],
+    "ans": "Application → Interview → Selection → Joining"
+  },
+  {
+    "q": "A person walks South 8 m, then North 6 m, then North 6 m, then North 9 m, then South 8 m. In which general direction is the person from the starting point?",
+    "options": ["South", "East", "North", "West"],
+    "ans": "North"
+  },
+  {
+    "q": "Gita, Asha, Esha, Deepa, Charu, Farah, Ira, Bina, Heena are seated in a row facing north. Who is sitting 1st from the left?",
+    "options": ["Ira", "Heena", "Bina", "Gita"],
+    "ans": "Gita"
+  },
+  {
+    "q": "A person walks East 10 m, then South 4 m, then West 10 m, then South 4 m, then North 8 m. In which general direction is the person from the starting point?",
+    "options": ["East", "South", "West", "North"],
+    "ans": "East"
+  },
+  {
+    "q": "In a group of 20 people, Ravi ranks 11th from the top. What is his rank from the bottom?",
+    "options": ["Option 4", "10", "11", "9"],
+    "ans": "10"
+  },
+  {
+    "q": "In a group of 34 people, Ravi ranks 27th from the top. What is his rank from the bottom?",
+    "options": ["8", "7", "27", "9"],
+    "ans": "8"
+  },
+  {
+    "q": "Find the next number: 13, 19, 25, 31, 37, ?",
+    "options": ["43", "42", "49", "45"],
+    "ans": "43"
+  },
+  {
+    "q": "Deepa, Ira, Charu, Heena, Esha, Farah, Asha, Gita are seated in a row facing north. Who is sitting 1st from the left?",
+    "options": ["Farah", "Esha", "Ira", "Deepa"],
+    "ans": "Deepa"
+  },
+  {
+    "q": "Choose the most logical order: Infant, Adolescent, Child, Adult.",
+    "options": ["Adolescent → Adult → Child → Infant", "Child → Infant → Adolescent → Adult", "Infant → Child → Adolescent → Adult", "Adult → Child → Adolescent → Infant"],
+    "ans": "Infant → Child → Adolescent → Adult"
+  },
+  {
+    "q": "Choose the odd one out: Banana, Carrot, Apple, Mango.",
+    "options": ["Carrot", "Apple", "Banana", "Mango"],
+    "ans": "Carrot"
+  },
+  {
+    "q": "Find the next number: 15, 16, 18, 21, 25, ?",
+    "options": ["31", "30", "35", "27"],
+    "ans": "30"
+  },
+  {
+    "q": "A person walks West 10 m, then South 7 m, then South 3 m, then West 5 m. In which general direction is the person from the starting point?",
+    "options": ["East", "West", "North", "South"],
+    "ans": "West"
+  },
+  {
+    "q": "In a group of 28 people, Ravi ranks 19th from the top. What is his rank from the bottom?",
+    "options": ["11", "9", "10", "19"],
+    "ans": "10"
+  },
+  {
+    "q": "A person walks West 5 m, then East 2 m, then North 9 m, then North 5 m. In which general direction is the person from the starting point?",
+    "options": ["East", "South", "West", "North"],
+    "ans": "North"
+  },
+  {
+    "q": "A person walks South 10 m, then East 2 m, then South 6 m, then North 7 m. In which general direction is the person from the starting point?",
+    "options": ["North", "South", "East", "West"],
+    "ans": "South"
+  },
+  {
+    "q": "A person walks North 7 m, then West 4 m, then North 10 m, then South 6 m, then South 10 m. In which general direction is the person from the starting point?",
+    "options": ["West", "East", "North", "South"],
+    "ans": "West"
+  },
+  {
+    "q": "Find the next number: 5, 15, 25, 35, 45, ?",
+    "options": ["57", "54", "65", "55"],
+    "ans": "55"
+  },
+  {
+    "q": "Ira, Farah, Bina, Deepa, Charu, Gita, Heena, Esha, Asha are seated in a row facing north. Who is sitting 3rd from the left?",
+    "options": ["Esha", "Bina", "Gita", "Farah"],
+    "ans": "Bina"
+  },
+  {
+    "q": "Esha, Bina, Asha, Heena, Farah, Charu, Ira, Gita are seated in a row facing north. Who is sitting 8th from the left?",
+    "options": ["Asha", "Gita", "Esha", "Charu"],
+    "ans": "Gita"
+  },
+  {
+    "q": "Find the next number: 1, 12, 23, 34, 45, ?",
+    "options": ["58", "55", "67", "56"],
+    "ans": "56"
+  },
+  {
+    "q": "Asha, Heena, Charu, Bina, Esha, Ira, Deepa, Gita are seated in a row facing north. Who is sitting 6th from the left?",
+    "options": ["Ira", "Charu", "Deepa", "Asha"],
+    "ans": "Ira"
+  },
+  {
+    "q": "Find the next number: 23, 27, 39, 59, 87, ?",
+    "options": ["125", "127", "123", "118"],
+    "ans": "123"
+  },
+  {
+    "q": "Choose the odd one out: March, January, April, Sunday.",
+    "options": ["April", "Sunday", "January", "March"],
+    "ans": "Sunday"
+  },
+  {
+    "q": "If each letter is moved 1 position(s) forward in the alphabet, how is KEY coded?",
+    "options": ["NHB", "KEY", "MGA", "LFZ"],
+    "ans": "LFZ"
+  },
+  {
+    "q": "Choose the odd one out: Table, Red, Yellow, Green.",
+    "options": ["Red", "Yellow", "Green", "Table"],
+    "ans": "Table"
+  },
+  {
+    "q": "A person walks East 7 m, then South 7 m, then North 4 m, then South 5 m. In which general direction is the person from the starting point?",
+    "options": ["East", "North", "South", "West"],
+    "ans": "South"
+  },
+  {
+    "q": "A person walks West 5 m, then North 7 m, then East 2 m. In which general direction is the person from the starting point?",
+    "options": ["North", "South", "West", "East"],
+    "ans": "North"
+  },
+  {
+    "q": "Farah, Gita, Deepa, Esha, Bina, Charu are seated in a row facing north. Who is sitting 4th from the left?",
+    "options": ["Bina", "Charu", "Gita", "Esha"],
+    "ans": "Esha"
+  },
+  {
+    "q": "Bina, Asha, Heena, Gita, Esha, Farah, Charu, Ira are seated in a row facing north. Who is sitting 4th from the left?",
+    "options": ["Gita", "Esha", "Farah", "Heena"],
+    "ans": "Gita"
+  },
+  {
+    "q": "In a group of 35 people, Ravi ranks 25th from the top. What is his rank from the bottom?",
+    "options": ["10", "12", "25", "11"],
+    "ans": "11"
+  },
+  {
+    "q": "In a group of 57 people, Ravi ranks 8th from the top. What is his rank from the bottom?",
+    "options": ["51", "50", "8", "49"],
+    "ans": "50"
+  },
+  {
+    "q": "Bina, Heena, Gita, Charu, Ira, Deepa, Esha, Farah are seated in a row facing north. Who is sitting 1st from the left?",
+    "options": ["Charu", "Heena", "Ira", "Bina"],
+    "ans": "Bina"
+  },
+  {
+    "q": "Find the next number: 10, 13, 16, 19, 22, ?",
+    "options": ["27", "24", "28", "25"],
+    "ans": "25"
+  },
+  {
+    "q": "Choose the odd one out: Cube, Rectangle, Square, Triangle.",
+    "options": ["Cube", "Square", "Rectangle", "Triangle"],
+    "ans": "Cube"
+  },
+  {
+    "q": "Find the next number: 7, 11, 23, 43, 71, ?",
+    "options": ["109", "107", "102", "111"],
+    "ans": "107"
+  },
+  {
+    "q": "Find the next number: 17, 18, 20, 23, 27, ?",
+    "options": ["32", "37", "29", "33"],
+    "ans": "32"
+  },
+  {
+    "q": "Find the next number: 19, 30, 41, 52, 63, ?",
+    "options": ["73", "85", "74", "76"],
+    "ans": "74"
+  },
+  {
+    "q": "A person walks East 4 m, then East 2 m, then South 10 m, then East 5 m, then East 7 m. In which general direction is the person from the starting point?",
+    "options": ["East", "South", "West", "North"],
+    "ans": "East"
+  },
+  {
+    "q": "A person walks North 3 m, then South 6 m, then South 6 m, then East 7 m. In which general direction is the person from the starting point?",
+    "options": ["South", "North", "West", "East"],
+    "ans": "South"
+  },
+  {
+    "q": "Find the next number: 28, 84, 252, 756, 2268, ?",
+    "options": ["6804", "6814", "2268", "6807"],
+    "ans": "6804"
+  },
+  {
+    "q": "A person walks North 8 m, then South 2 m, then West 4 m, then North 6 m. In which general direction is the person from the starting point?",
+    "options": ["East", "South", "West", "North"],
+    "ans": "North"
+  },
+  {
+    "q": "Bina, Gita, Asha, Charu, Ira are seated in a row facing north. Who is sitting 5th from the left?",
+    "options": ["Ira", "Asha", "Bina", "Gita"],
+    "ans": "Ira"
+  },
+  {
+    "q": "In a group of 16 people, Ravi ranks 9th from the top. What is his rank from the bottom?",
+    "options": ["Option 4", "9", "8", "7"],
+    "ans": "8"
+  },
+  {
+    "q": "In a group of 53 people, Ravi ranks 51th from the top. What is his rank from the bottom?",
+    "options": ["3", "4", "2", "51"],
+    "ans": "3"
+  },
+  {
+    "q": "Choose the odd one out: Plastic, Copper, Silver, Iron.",
+    "options": ["Plastic", "Copper", "Silver", "Iron"],
+    "ans": "Plastic"
+  },
+  {
+    "q": "Choose the odd one out: Silver, Plastic, Copper, Iron.",
+    "options": ["Plastic", "Copper", "Silver", "Iron"],
+    "ans": "Plastic"
+  },
+  {
+    "q": "Choose the most logical order: Application, Interview, Joining, Selection.",
+    "options": ["Interview → Application → Selection → Joining", "Joining → Selection → Application → Interview", "Selection → Joining → Application → Interview", "Application → Interview → Selection → Joining"],
+    "ans": "Application → Interview → Selection → Joining"
+  },
+  {
+    "q": "A person walks South 6 m, then North 3 m, then West 5 m, then North 3 m, then West 2 m. In which general direction is the person from the starting point?",
+    "options": ["East", "West", "North", "South"],
+    "ans": "West"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 3:40?",
+    "options": ["160°", "115°", "175°", "130°"],
+    "ans": "130°"
+  },
+  {
+    "q": "Heena, Esha, Deepa, Charu, Bina are seated in a row facing north. Who is sitting 4th from the left?",
+    "options": ["Esha", "Bina", "Heena", "Charu"],
+    "ans": "Charu"
+  },
+  {
+    "q": "A person walks South 8 m, then North 9 m, then North 9 m, then East 4 m, then East 3 m. In which general direction is the person from the starting point?",
+    "options": ["East", "South", "West", "North"],
+    "ans": "North"
+  },
+  {
+    "q": "A person walks East 10 m, then South 7 m, then West 2 m. In which general direction is the person from the starting point?",
+    "options": ["West", "East", "South", "North"],
+    "ans": "East"
+  },
+  {
+    "q": "Charu, Heena, Farah, Ira, Bina, Esha, Deepa, Asha, Gita are seated in a row facing north. Who is sitting 5th from the left?",
+    "options": ["Esha", "Charu", "Bina", "Gita"],
+    "ans": "Bina"
+  },
+  {
+    "q": "In a group of 22 people, Ravi ranks 18th from the top. What is his rank from the bottom?",
+    "options": ["5", "6", "18", "4"],
+    "ans": "5"
+  },
+  {
+    "q": "Gita, Asha, Ira, Farah, Deepa, Heena, Charu, Bina are seated in a row facing north. Who is sitting 8th from the left?",
+    "options": ["Heena", "Charu", "Bina", "Asha"],
+    "ans": "Bina"
+  },
+  {
+    "q": "A person walks North 9 m, then South 6 m, then North 9 m, then North 6 m, then East 6 m. In which general direction is the person from the starting point?",
+    "options": ["North", "South", "West", "East"],
+    "ans": "North"
+  },
+  {
+    "q": "Heena, Gita, Charu, Bina, Deepa, Farah are seated in a row facing north. Who is sitting 2nd from the left?",
+    "options": ["Charu", "Gita", "Bina", "Deepa"],
+    "ans": "Gita"
+  },
+  {
+    "q": "A person walks North 7 m, then North 9 m, then North 9 m, then North 7 m. In which general direction is the person from the starting point?",
+    "options": ["North", "East", "South", "West"],
+    "ans": "North"
+  },
+  {
+    "q": "Deepa, Bina, Asha, Heena, Ira, Esha, Gita, Charu, Farah are seated in a row facing north. Who is sitting 4th from the left?",
+    "options": ["Heena", "Ira", "Gita", "Farah"],
+    "ans": "Heena"
+  },
+  {
+    "q": "Find the next number: 6, 8, 12, 18, 26, ?",
+    "options": ["38", "46", "36", "34"],
+    "ans": "36"
+  },
+  {
+    "q": "In a group of 60 people, Ravi ranks 3th from the top. What is his rank from the bottom?",
+    "options": ["59", "3", "57", "58"],
+    "ans": "58"
+  },
+  {
+    "q": "A person walks West 9 m, then North 4 m, then West 3 m. In which general direction is the person from the starting point?",
+    "options": ["South", "North", "East", "West"],
+    "ans": "West"
+  },
+  {
+    "q": "Find the next number: 7, 8, 10, 13, 17, ?",
+    "options": ["22", "27", "19", "23"],
+    "ans": "22"
+  },
+  {
+    "q": "Choose the odd one out: Sunday, April, January, March.",
+    "options": ["Sunday", "March", "January", "April"],
+    "ans": "Sunday"
+  },
+  {
+    "q": "Choose the most logical order: Application, Interview, Selection, Joining.",
+    "options": ["Joining → Selection → Application → Interview", "Option 4", "Application → Interview → Selection → Joining", "Application → Interview → Joining → Selection"],
+    "ans": "Application → Interview → Selection → Joining"
+  },
+  {
+    "q": "Find the next letter: I , J , K , L , M, ?",
+    "options": ["O", "M", "P", "N"],
+    "ans": "N"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 30 days?",
+    "options": ["Saturday", "Tuesday", "Sunday", "Wednesday"],
+    "ans": "Wednesday"
+  },
+  {
+    "q": "In a group of 60 people, Ravi ranks 28th from the top. What is his rank from the bottom?",
+    "options": ["32", "33", "34", "28"],
+    "ans": "33"
+  },
+  {
+    "q": "Find the next number: 5, 11, 29, 59, 101, ?",
+    "options": ["161", "157", "150", "155"],
+    "ans": "155"
+  },
+  {
+    "q": "Asha, Heena, Esha, Farah, Charu, Bina, Deepa, Ira are seated in a row facing north. Who is sitting 8th from the left?",
+    "options": ["Farah", "Esha", "Heena", "Ira"],
+    "ans": "Ira"
+  },
+  {
+    "q": "In a group of 56 people, Ravi ranks 12th from the top. What is his rank from the bottom?",
+    "options": ["12", "46", "45", "44"],
+    "ans": "45"
+  },
+  {
+    "q": "A person walks South 2 m, then East 7 m, then East 5 m. In which general direction is the person from the starting point?",
+    "options": ["North", "East", "West", "South"],
+    "ans": "East"
+  },
+  {
+    "q": "Choose the odd one out: Triangle, Square, Rectangle, Cube.",
+    "options": ["Square", "Cube", "Rectangle", "Triangle"],
+    "ans": "Cube"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 17 days?",
+    "options": ["Tuesday", "Monday", "Wednesday", "Thursday"],
+    "ans": "Thursday"
+  },
+  {
+    "q": "Choose the odd one out: Triangle, Square, Cube, Rectangle.",
+    "options": ["Square", "Triangle", "Cube", "Rectangle"],
+    "ans": "Cube"
+  },
+  {
+    "q": "A person walks East 9 m, then East 8 m, then North 9 m, then East 5 m. In which general direction is the person from the starting point?",
+    "options": ["East", "North", "South", "West"],
+    "ans": "East"
+  },
+  {
+    "q": "Choose the odd one out: March, April, Sunday, January.",
+    "options": ["Sunday", "April", "March", "January"],
+    "ans": "Sunday"
+  },
+  {
+    "q": "In a group of 37 people, Ravi ranks 9th from the top. What is his rank from the bottom?",
+    "options": ["29", "28", "30", "9"],
+    "ans": "29"
+  },
+  {
+    "q": "Deepa, Farah, Heena, Asha, Esha, Charu, Ira are seated in a row facing north. Who is sitting 6th from the left?",
+    "options": ["Farah", "Charu", "Heena", "Esha"],
+    "ans": "Charu"
+  },
+  {
+    "q": "Find the next number: 2, 9, 16, 23, 30, ?",
+    "options": ["36", "37", "44", "39"],
+    "ans": "37"
+  },
+  {
+    "q": "Find the next number: 10, 12, 16, 22, 30, ?",
+    "options": ["38", "42", "40", "50"],
+    "ans": "40"
+  },
+  {
+    "q": "Heena, Gita, Farah, Bina, Ira, Asha, Charu, Esha, Deepa are seated in a row facing north. Who is sitting 6th from the left?",
+    "options": ["Heena", "Asha", "Charu", "Esha"],
+    "ans": "Asha"
+  },
+  {
+    "q": "Gita, Heena, Esha, Charu, Farah, Deepa, Bina, Asha are seated in a row facing north. Who is sitting 3rd from the left?",
+    "options": ["Bina", "Esha", "Farah", "Heena"],
+    "ans": "Esha"
+  },
+  {
+    "q": "In a group of 50 people, Ravi ranks 17th from the top. What is his rank from the bottom?",
+    "options": ["35", "17", "34", "33"],
+    "ans": "34"
+  },
+  {
+    "q": "Choose the odd one out: Plastic, Silver, Iron, Copper.",
+    "options": ["Silver", "Copper", "Iron", "Plastic"],
+    "ans": "Plastic"
+  },
+  {
+    "q": "Deepa, Charu, Ira, Esha, Farah, Heena, Gita, Bina are seated in a row facing north. Who is sitting 3rd from the left?",
+    "options": ["Heena", "Ira", "Gita", "Farah"],
+    "ans": "Ira"
+  },
+  {
+    "q": "In a group of 41 people, Ravi ranks 40th from the top. What is his rank from the bottom?",
+    "options": ["40", "2", "1", "3"],
+    "ans": "2"
+  },
+  {
+    "q": "In a group of 28 people, Ravi ranks 16th from the top. What is his rank from the bottom?",
+    "options": ["14", "13", "12", "16"],
+    "ans": "13"
+  },
+  {
+    "q": "Bina, Farah, Esha, Ira, Heena are seated in a row facing north. Who is sitting 5th from the left?",
+    "options": ["Heena", "Esha", "Ira", "Farah"],
+    "ans": "Heena"
+  },
+  {
+    "q": "In a group of 51 people, Ravi ranks 36th from the top. What is his rank from the bottom?",
+    "options": ["17", "15", "36", "16"],
+    "ans": "16"
+  },
+  {
+    "q": "Find the next number: 19, 27, 35, 43, 51, ?",
+    "options": ["61", "67", "58", "59"],
+    "ans": "59"
+  },
+  {
+    "q": "Find the next number: 5, 7, 13, 23, 37, ?",
+    "options": ["57", "50", "55", "Option 4"],
+    "ans": "55"
+  },
+  {
+    "q": "A person walks North 9 m, then East 5 m, then South 7 m. In which general direction is the person from the starting point?",
+    "options": ["West", "East", "North", "South"],
+    "ans": "East"
+  },
+  {
+    "q": "A person walks South 4 m, then North 10 m, then South 8 m. In which general direction is the person from the starting point?",
+    "options": ["South", "North", "East", "West"],
+    "ans": "South"
+  },
+  {
+    "q": "A person walks South 3 m, then East 7 m, then East 10 m. In which general direction is the person from the starting point?",
+    "options": ["East", "West", "North", "South"],
+    "ans": "East"
+  },
+  {
+    "q": "A person walks West 10 m, then South 2 m, then West 10 m, then South 7 m, then East 8 m. In which general direction is the person from the starting point?",
+    "options": ["East", "North", "West", "South"],
+    "ans": "West"
+  },
+  {
+    "q": "Find the next number: 17, 23, 41, 71, 113, ?",
+    "options": ["169", "162", "167", "173"],
+    "ans": "167"
+  },
+  {
+    "q": "In a group of 36 people, Ravi ranks 10th from the top. What is his rank from the bottom?",
+    "options": ["28", "26", "27", "10"],
+    "ans": "27"
+  },
+  {
+    "q": "Choose the most logical order: Distribution, Packaging, Raw material, Manufacturing.",
+    "options": ["Packaging → Manufacturing → Distribution → Raw material", "Raw material → Distribution → Packaging → Manufacturing", "Raw material → Manufacturing → Packaging → Distribution", "Option 4"],
+    "ans": "Raw material → Manufacturing → Packaging → Distribution"
+  },
+  {
+    "q": "Find the next number: 12, 24, 48, 96, 192, ?",
+    "options": ["192", "384", "394", "386"],
+    "ans": "384"
+  },
+  {
+    "q": "In a group of 31 people, Ravi ranks 26th from the top. What is his rank from the bottom?",
+    "options": ["6", "26", "5", "7"],
+    "ans": "6"
+  },
+  {
+    "q": "Asha, Deepa, Gita, Charu, Bina, Esha, Ira, Farah, Heena are seated in a row facing north. Who is sitting 5th from the left?",
+    "options": ["Deepa", "Bina", "Farah", "Charu"],
+    "ans": "Bina"
+  },
+  {
+    "q": "A person walks East 10 m, then South 9 m, then North 9 m, then East 3 m, then East 4 m. In which general direction is the person from the starting point?",
+    "options": ["South", "East", "North", "West"],
+    "ans": "East"
+  },
+  {
+    "q": "A person walks East 7 m, then West 4 m, then West 5 m, then North 8 m, then West 6 m. In which general direction is the person from the starting point?",
+    "options": ["South", "East", "North", "West"],
+    "ans": "West"
+  },
+  {
+    "q": "In a group of 29 people, Ravi ranks 19th from the top. What is his rank from the bottom?",
+    "options": ["12", "10", "11", "19"],
+    "ans": "11"
+  },
+  {
+    "q": "In a group of 46 people, Ravi ranks 13th from the top. What is his rank from the bottom?",
+    "options": ["34", "13", "35", "33"],
+    "ans": "34"
+  },
+  {
+    "q": "A person walks East 2 m, then East 10 m, then East 2 m, then North 2 m, then West 2 m. In which general direction is the person from the starting point?",
+    "options": ["West", "East", "North", "South"],
+    "ans": "East"
+  },
+  {
+    "q": "In a group of 29 people, Ravi ranks 24th from the top. What is his rank from the bottom?",
+    "options": ["6", "7", "24", "5"],
+    "ans": "6"
+  },
+  {
+    "q": "In a group of 47 people, Ravi ranks 27th from the top. What is his rank from the bottom?",
+    "options": ["22", "27", "21", "20"],
+    "ans": "21"
+  },
+  {
+    "q": "Find the next number: 18, 54, 162, 486, 1458, ?",
+    "options": ["1458", "4374", "4384", "4377"],
+    "ans": "4374"
+  },
+  {
+    "q": "Find the next letter: L , M , O , R , V, ?",
+    "options": ["D", "B", "Z", "A"],
+    "ans": "A"
+  },
+  {
+    "q": "Farah, Asha, Bina, Ira, Deepa, Charu are seated in a row facing north. Who is sitting 4th from the left?",
+    "options": ["Farah", "Charu", "Ira", "Asha"],
+    "ans": "Ira"
+  },
+  {
+    "q": "Farah, Heena, Esha, Ira, Gita, Deepa, Charu, Asha are seated in a row facing north. Who is sitting 3rd from the left?",
+    "options": ["Heena", "Asha", "Gita", "Esha"],
+    "ans": "Esha"
+  },
+  {
+    "q": "In a group of 16 people, Ravi ranks 7th from the top. What is his rank from the bottom?",
+    "options": ["10", "11", "9", "7"],
+    "ans": "10"
+  },
+  {
+    "q": "Choose the most logical order: Flower, Seed, Fruit, Plant.",
+    "options": ["Plant → Seed → Fruit → Flower", "Fruit → Flower → Seed → Plant", "Seed → Plant → Flower → Fruit", "Seed → Fruit → Flower → Plant"],
+    "ans": "Seed → Plant → Flower → Fruit"
+  },
+  {
+    "q": "Esha, Deepa, Charu, Bina, Asha, Ira are seated in a row facing north. Who is sitting 1st from the left?",
+    "options": ["Deepa", "Ira", "Esha", "Charu"],
+    "ans": "Esha"
+  },
+  {
+    "q": "Deepa, Charu, Ira, Esha, Gita are seated in a row facing north. Who is sitting 2nd from the left?",
+    "options": ["Ira", "Deepa", "Charu", "Gita"],
+    "ans": "Charu"
+  },
+  {
+    "q": "In a group of 42 people, Ravi ranks 12th from the top. What is his rank from the bottom?",
+    "options": ["32", "12", "31", "30"],
+    "ans": "31"
+  },
+  {
+    "q": "A person walks East 6 m, then West 10 m, then South 5 m, then South 5 m. In which general direction is the person from the starting point?",
+    "options": ["North", "West", "South", "East"],
+    "ans": "South"
+  },
+  {
+    "q": "A person walks South 9 m, then South 8 m, then South 9 m. In which general direction is the person from the starting point?",
+    "options": ["North", "West", "East", "South"],
+    "ans": "South"
+  },
+  {
+    "q": "Choose the most logical order: Fruit, Seed, Flower, Plant.",
+    "options": ["Plant → Flower → Seed → Fruit", "Seed → Plant → Flower → Fruit", "Fruit → Seed → Flower → Plant", "Flower → Plant → Fruit → Seed"],
+    "ans": "Seed → Plant → Flower → Fruit"
+  },
+  {
+    "q": "Choose the most logical order: Selection, Joining, Interview, Application.",
+    "options": ["Application → Interview → Selection → Joining", "Interview → Selection → Joining → Application", "Interview → Selection → Application → Joining", "Option 4"],
+    "ans": "Application → Interview → Selection → Joining"
+  },
+  {
+    "q": "A person walks East 4 m, then West 7 m, then North 3 m, then South 10 m, then South 3 m. In which general direction is the person from the starting point?",
+    "options": ["West", "South", "North", "East"],
+    "ans": "South"
+  },
+  {
+    "q": "A person walks North 10 m, then East 8 m, then South 9 m, then North 2 m, then North 2 m. In which general direction is the person from the starting point?",
+    "options": ["East", "West", "South", "North"],
+    "ans": "East"
+  },
+  {
+    "q": "In a group of 34 people, Ravi ranks 28th from the top. What is his rank from the bottom?",
+    "options": ["6", "7", "28", "8"],
+    "ans": "7"
+  },
+  {
+    "q": "In a group of 48 people, Ravi ranks 43th from the top. What is his rank from the bottom?",
+    "options": ["5", "43", "6", "7"],
+    "ans": "6"
+  },
+  {
+    "q": "In a group of 41 people, Ravi ranks 39th from the top. What is his rank from the bottom?",
+    "options": ["4", "2", "3", "39"],
+    "ans": "3"
+  },
+  {
+    "q": "Heena, Charu, Ira, Gita, Farah, Esha, Deepa are seated in a row facing north. Who is sitting 5th from the left?",
+    "options": ["Charu", "Farah", "Deepa", "Ira"],
+    "ans": "Farah"
+  },
+  {
+    "q": "In a group of 29 people, Ravi ranks 28th from the top. What is his rank from the bottom?",
+    "options": ["1", "28", "2", "3"],
+    "ans": "2"
+  },
+  {
+    "q": "Find the next number: 20, 30, 40, 50, 60, ?",
+    "options": ["72", "69", "80", "70"],
+    "ans": "70"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 1:45?",
+    "options": ["172.5°", "127.5°", "187.5°", "142.5°"],
+    "ans": "142.5°"
+  },
+  {
+    "q": "Deepa, Esha, Asha, Bina, Gita, Charu, Heena are seated in a row facing north. Who is sitting 5th from the left?",
+    "options": ["Gita", "Bina", "Heena", "Charu"],
+    "ans": "Gita"
+  },
+  {
+    "q": "Choose the odd one out: April, Sunday, March, January.",
+    "options": ["January", "April", "March", "Sunday"],
+    "ans": "Sunday"
+  },
+  {
+    "q": "If today is Monday, what day will it be after 56 days?",
+    "options": ["Tuesday", "Thursday", "Saturday", "Monday"],
+    "ans": "Monday"
+  },
+  {
+    "q": "Find the next number: 15, 17, 23, 33, 47, ?",
+    "options": ["Option 4", "65", "67", "60"],
+    "ans": "65"
+  },
+  {
+    "q": "In a group of 21 people, Ravi ranks 20th from the top. What is his rank from the bottom?",
+    "options": ["1", "20", "2", "3"],
+    "ans": "2"
+  },
+  {
+    "q": "Find the next number: 4, 8, 12, 16, 20, ?",
+    "options": ["24", "23", "28", "26"],
+    "ans": "24"
+  },
+  {
+    "q": "Choose the odd one out: January, March, Sunday, April.",
+    "options": ["April", "January", "Sunday", "March"],
+    "ans": "Sunday"
+  },
+  {
+    "q": "Esha, Heena, Deepa, Bina, Farah, Asha, Charu, Gita are seated in a row facing north. Who is sitting 1st from the left?",
+    "options": ["Charu", "Farah", "Heena", "Esha"],
+    "ans": "Esha"
+  },
+  {
+    "q": "In a group of 55 people, Ravi ranks 45th from the top. What is his rank from the bottom?",
+    "options": ["45", "11", "10", "12"],
+    "ans": "11"
+  },
+  {
+    "q": "If each letter is moved 3 position(s) forward in the alphabet, how is CUP coded?",
+    "options": ["EWR", "GYT", "HZU", "FXS"],
+    "ans": "FXS"
+  },
+  {
+    "q": "Choose the odd one out: Triangle, Cube, Square, Rectangle.",
+    "options": ["Cube", "Rectangle", "Square", "Triangle"],
+    "ans": "Cube"
+  },
+  {
+    "q": "In a group of 44 people, Ravi ranks 8th from the top. What is his rank from the bottom?",
+    "options": ["37", "36", "8", "38"],
+    "ans": "37"
+  },
+  {
+    "q": "A person walks East 9 m, then East 8 m, then West 2 m, then North 3 m, then East 9 m. In which general direction is the person from the starting point?",
+    "options": ["North", "East", "South", "West"],
+    "ans": "East"
+  },
+  {
+    "q": "A person walks North 2 m, then South 6 m, then West 2 m. In which general direction is the person from the starting point?",
+    "options": ["North", "South", "East", "West"],
+    "ans": "South"
+  },
+  {
+    "q": "A person walks East 7 m, then South 9 m, then North 8 m, then North 4 m, then South 9 m. In which general direction is the person from the starting point?",
+    "options": ["West", "South", "East", "North"],
+    "ans": "East"
+  },
+  {
+    "q": "What is the smaller angle between the hands of a clock at 9:20?",
+    "options": ["190°", "160°", "200°", "145°"],
+    "ans": "160°"
+  },
+  {
+    "q": "In a group of 31 people, Ravi ranks 29th from the top. What is his rank from the bottom?",
+    "options": ["2", "3", "4", "29"],
+    "ans": "3"
+  }
+]

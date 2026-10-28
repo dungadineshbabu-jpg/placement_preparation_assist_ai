@@ -1,0 +1,5002 @@
+[
+  {
+    "q": "A car travels at 50 km/h for 8 hours. How far does it travel?",
+    "options": ["398", "405", "403", "400"],
+    "ans": "400"
+  },
+  {
+    "q": "Find the 25th term of an arithmetic progression with first term 29 and common difference 4.",
+    "options": ["128", "123", "130", "125"],
+    "ans": "125"
+  },
+  {
+    "q": "After a 15% increase, a number becomes 480. Find the original number.",
+    "options": ["9623/23", "19200/23", "9577/23", "9600/23"],
+    "ans": "9600/23"
+  },
+  {
+    "q": "An item marked at ₹600 is discounted by 30%. Find its selling price.",
+    "options": ["425", "418", "420", "423"],
+    "ans": "420"
+  },
+  {
+    "q": "A mixture contains 12 litres of milk and 60 litres of water. What percentage of the mixture is milk?",
+    "options": ["47/3", "53/3", "100/3", "50/3"],
+    "ans": "50/3"
+  },
+  {
+    "q": "A company records quarterly sales of 130, 70, 27, and 147 units. Find the total sales.",
+    "options": ["379", "372", "374", "377"],
+    "ans": "374"
+  },
+  {
+    "q": "A train 180 metres long travels at 36 km/h. How many seconds does it take to pass a pole?",
+    "options": ["23", "16", "21", "18"],
+    "ans": "18"
+  },
+  {
+    "q": "After a 15% increase, a number becomes 180. Find the original number.",
+    "options": ["7200/23", "3600/23", "3577/23", "3623/23"],
+    "ans": "3600/23"
+  },
+  {
+    "q": "A company records quarterly sales of 122, 65, 136, and 134 units. Find the total sales.",
+    "options": ["457", "462", "455", "460"],
+    "ans": "457"
+  },
+  {
+    "q": "Two numbers are in the ratio 2:5. Their sum is 105. Find the smaller number.",
+    "options": ["35", "33", "28", "30"],
+    "ans": "30"
+  },
+  {
+    "q": "Find the area of a rectangle with length 29 cm and width 21 cm.",
+    "options": ["609", "612", "607", "614"],
+    "ans": "609"
+  },
+  {
+    "q": "The average score of 12 candidates is 42. Find their total score.",
+    "options": ["509", "502", "504", "507"],
+    "ans": "504"
+  },
+  {
+    "q": "A can complete a job in 5 days and B in 5 days. How long will they take working together?",
+    "options": ["3/2", "7/2", "5/2", "5"],
+    "ans": "5/2"
+  },
+  {
+    "q": "Solve for x: 7x + 25 = 123.",
+    "options": ["17", "14", "12", "19"],
+    "ans": "14"
+  },
+  {
+    "q": "After a 20% increase, a number becomes 120. Find the original number.",
+    "options": ["103", "100", "105", "98"],
+    "ans": "100"
+  },
+  {
+    "q": "Find the HCF of 174 and 109.",
+    "options": ["4", "-1", "1", "6"],
+    "ans": "1"
+  },
+  {
+    "q": "In how many ways can 4 people be selected from 5 people?",
+    "options": ["8", "3", "10", "5"],
+    "ans": "5"
+  },
+  {
+    "q": "Find the 8th term of an arithmetic progression with first term 24 and common difference 3.",
+    "options": ["45", "48", "50", "43"],
+    "ans": "45"
+  },
+  {
+    "q": "A train 150 metres long travels at 90 km/h. How many seconds does it take to pass a pole?",
+    "options": ["4", "11", "6", "9"],
+    "ans": "6"
+  },
+  {
+    "q": "Find the 8th term of an arithmetic progression with first term 26 and common difference 12.",
+    "options": ["108", "113", "110", "115"],
+    "ans": "110"
+  },
+  {
+    "q": "The average score of 9 candidates is 48. Find their total score.",
+    "options": ["435", "432", "437", "430"],
+    "ans": "432"
+  },
+  {
+    "q": "In how many ways can 2 people be selected from 11 people?",
+    "options": ["58", "55", "53", "60"],
+    "ans": "55"
+  },
+  {
+    "q": "After a 15% increase, a number becomes 240. Find the original number.",
+    "options": ["4823/23", "4800/23", "9600/23", "4777/23"],
+    "ans": "4800/23"
+  },
+  {
+    "q": "A train 100 metres long travels at 45 km/h. How many seconds does it take to pass a pole?",
+    "options": ["13", "11", "8", "6"],
+    "ans": "8"
+  },
+  {
+    "q": "The average score of 4 candidates is 45. Find their total score.",
+    "options": ["183", "185", "180", "178"],
+    "ans": "180"
+  },
+  {
+    "q": "Find the 29th term of an arithmetic progression with first term 28 and common difference 9.",
+    "options": ["278", "283", "285", "280"],
+    "ans": "280"
+  },
+  {
+    "q": "A can complete a job in 13 days and B in 5 days. How long will they take working together?",
+    "options": ["65/18", "47/18", "83/18", "65/9"],
+    "ans": "65/18"
+  },
+  {
+    "q": "A bag contains 6 red balls and 6 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["3/2", "1/2", "0", "1"],
+    "ans": "1/2"
+  },
+  {
+    "q": "Ravi is 22 years old. How old will he be after 6 years?",
+    "options": ["31", "28", "26", "33"],
+    "ans": "28"
+  },
+  {
+    "q": "A car travels at 36 km/h for 8 hours. How far does it travel?",
+    "options": ["288", "291", "286", "293"],
+    "ans": "288"
+  },
+  {
+    "q": "A mixture contains 15 litres of milk and 40 litres of water. What percentage of the mixture is milk?",
+    "options": ["289/11", "600/11", "300/11", "311/11"],
+    "ans": "300/11"
+  },
+  {
+    "q": "An item bought for ₹200 is sold at a profit of 30%. Find its selling price.",
+    "options": ["258", "263", "260", "265"],
+    "ans": "260"
+  },
+  {
+    "q": "A company records quarterly sales of 20, 147, 73, and 74 units. Find the total sales.",
+    "options": ["312", "319", "314", "317"],
+    "ans": "314"
+  },
+  {
+    "q": "A company records quarterly sales of 26, 67, 100, and 104 units. Find the total sales.",
+    "options": ["302", "300", "297", "295"],
+    "ans": "297"
+  },
+  {
+    "q": "Find the HCF of 29 and 36.",
+    "options": ["1", "6", "-1", "4"],
+    "ans": "1"
+  },
+  {
+    "q": "Find the 17th term of an arithmetic progression with first term 29 and common difference 9.",
+    "options": ["178", "173", "171", "176"],
+    "ans": "173"
+  },
+  {
+    "q": "Find the 18th term of an arithmetic progression with first term 17 and common difference 8.",
+    "options": ["156", "158", "153", "151"],
+    "ans": "153"
+  },
+  {
+    "q": "An item bought for ₹300 is sold at a profit of 5%. Find its selling price.",
+    "options": ["318", "313", "320", "315"],
+    "ans": "315"
+  },
+  {
+    "q": "Pipe A fills a tank in 13 hours and Pipe B fills it in 3 hours. How long will they take together?",
+    "options": ["39/8", "55/16", "23/16", "39/16"],
+    "ans": "39/16"
+  },
+  {
+    "q": "In how many ways can 2 people be selected from 6 people?",
+    "options": ["18", "13", "20", "15"],
+    "ans": "15"
+  },
+  {
+    "q": "Solve for x: 7x + 11 = 123.",
+    "options": ["14", "21", "19", "16"],
+    "ans": "16"
+  },
+  {
+    "q": "Solve for x: 12x + 27 = 339.",
+    "options": ["24", "26", "29", "31"],
+    "ans": "26"
+  },
+  {
+    "q": "The average score of 8 candidates is 70. Find their total score.",
+    "options": ["563", "558", "565", "560"],
+    "ans": "560"
+  },
+  {
+    "q": "In how many ways can 4 people be selected from 10 people?",
+    "options": ["210", "213", "208", "215"],
+    "ans": "210"
+  },
+  {
+    "q": "Two numbers are in the ratio 8:5. Their sum is 65. Find the smaller number.",
+    "options": ["23", "28", "30", "25"],
+    "ans": "25"
+  },
+  {
+    "q": "Two numbers are in the ratio 2:3. Their sum is 60. Find the smaller number.",
+    "options": ["27", "24", "29", "22"],
+    "ans": "24"
+  },
+  {
+    "q": "Find the area of a rectangle with length 12 cm and width 21 cm.",
+    "options": ["255", "252", "250", "257"],
+    "ans": "252"
+  },
+  {
+    "q": "Pipe A fills a tank in 14 hours and Pipe B fills it in 14 hours. How long will they take together?",
+    "options": ["5", "7", "12", "10"],
+    "ans": "7"
+  },
+  {
+    "q": "Two numbers are in the ratio 5:2. Their sum is 84. Find the smaller number.",
+    "options": ["29", "27", "24", "22"],
+    "ans": "24"
+  },
+  {
+    "q": "Two numbers are in the ratio 4:5. Their sum is 90. Find the smaller number.",
+    "options": ["45", "40", "43", "38"],
+    "ans": "40"
+  },
+  {
+    "q": "Ravi is 29 years old. How old will he be after 15 years?",
+    "options": ["47", "44", "49", "42"],
+    "ans": "44"
+  },
+  {
+    "q": "A mixture contains 10 litres of milk and 25 litres of water. What percentage of the mixture is milk?",
+    "options": ["200/7", "207/7", "193/7", "400/7"],
+    "ans": "200/7"
+  },
+  {
+    "q": "Find the simple interest on ₹2500 at 4% per annum for 4 year(s).",
+    "options": ["403", "400", "398", "405"],
+    "ans": "400"
+  },
+  {
+    "q": "A can complete a job in 14 days and B in 4 days. How long will they take working together?",
+    "options": ["28/9", "37/9", "56/9", "19/9"],
+    "ans": "28/9"
+  },
+  {
+    "q": "Two numbers are in the ratio 2:6. Their sum is 400. Find the smaller number.",
+    "options": ["103", "100", "98", "105"],
+    "ans": "100"
+  },
+  {
+    "q": "A can complete a job in 16 days and B in 8 days. How long will they take working together?",
+    "options": ["19/3", "16/3", "32/3", "13/3"],
+    "ans": "16/3"
+  },
+  {
+    "q": "Find the area of a rectangle with length 32 cm and width 19 cm.",
+    "options": ["608", "606", "611", "613"],
+    "ans": "608"
+  },
+  {
+    "q": "Solve for x: 3x + 20 = 53.",
+    "options": ["14", "16", "11", "9"],
+    "ans": "11"
+  },
+  {
+    "q": "A train 360 metres long travels at 36 km/h. How many seconds does it take to pass a pole?",
+    "options": ["41", "39", "36", "34"],
+    "ans": "36"
+  },
+  {
+    "q": "Two numbers are in the ratio 7:8. Their sum is 375. Find the smaller number.",
+    "options": ["173", "180", "175", "178"],
+    "ans": "175"
+  },
+  {
+    "q": "Two numbers are in the ratio 8:9. Their sum is 170. Find the smaller number.",
+    "options": ["80", "85", "78", "83"],
+    "ans": "80"
+  },
+  {
+    "q": "The average score of 5 candidates is 65. Find their total score.",
+    "options": ["330", "328", "325", "323"],
+    "ans": "325"
+  },
+  {
+    "q": "A can complete a job in 9 days and B in 5 days. How long will they take working together?",
+    "options": ["45/7", "45/14", "31/14", "59/14"],
+    "ans": "45/14"
+  },
+  {
+    "q": "Two numbers are in the ratio 5:2. Their sum is 350. Find the smaller number.",
+    "options": ["105", "100", "103", "98"],
+    "ans": "100"
+  },
+  {
+    "q": "A company records quarterly sales of 64, 95, 110, and 33 units. Find the total sales.",
+    "options": ["300", "302", "305", "307"],
+    "ans": "302"
+  },
+  {
+    "q": "A mixture contains 45 litres of milk and 40 litres of water. What percentage of the mixture is milk?",
+    "options": ["900/17", "1800/17", "883/17", "917/17"],
+    "ans": "900/17"
+  },
+  {
+    "q": "A mixture contains 20 litres of milk and 50 litres of water. What percentage of the mixture is milk?",
+    "options": ["193/7", "200/7", "207/7", "400/7"],
+    "ans": "200/7"
+  },
+  {
+    "q": "In how many ways can 3 people be selected from 10 people?",
+    "options": ["120", "123", "118", "125"],
+    "ans": "120"
+  },
+  {
+    "q": "Two numbers are in the ratio 2:3. Their sum is 50. Find the smaller number.",
+    "options": ["20", "18", "23", "25"],
+    "ans": "20"
+  },
+  {
+    "q": "Solve for x: 2x + 13 = 43.",
+    "options": ["18", "15", "13", "20"],
+    "ans": "15"
+  },
+  {
+    "q": "Find the 16th term of an arithmetic progression with first term 23 and common difference 9.",
+    "options": ["158", "163", "161", "156"],
+    "ans": "158"
+  },
+  {
+    "q": "A car travels at 90 km/h for 4 hours. How far does it travel?",
+    "options": ["358", "365", "363", "360"],
+    "ans": "360"
+  },
+  {
+    "q": "Find the 9th term of an arithmetic progression with first term 25 and common difference 12.",
+    "options": ["124", "126", "119", "121"],
+    "ans": "121"
+  },
+  {
+    "q": "Find the simple interest on ₹10000 at 8% per annum for 2 year(s).",
+    "options": ["1598", "1603", "1605", "1600"],
+    "ans": "1600"
+  },
+  {
+    "q": "Find the 25th term of an arithmetic progression with first term 10 and common difference 7.",
+    "options": ["176", "178", "181", "183"],
+    "ans": "178"
+  },
+  {
+    "q": "A bag contains 4 red balls and 2 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["5/3", "2/3", "4/3", "0"],
+    "ans": "2/3"
+  },
+  {
+    "q": "An item bought for ₹800 is sold at a profit of 12%. Find its selling price.",
+    "options": ["901", "894", "899", "896"],
+    "ans": "896"
+  },
+  {
+    "q": "A company records quarterly sales of 31, 20, 148, and 89 units. Find the total sales.",
+    "options": ["286", "291", "293", "288"],
+    "ans": "288"
+  },
+  {
+    "q": "A can complete a job in 8 days and B in 10 days. How long will they take working together?",
+    "options": ["49/9", "40/9", "31/9", "80/9"],
+    "ans": "40/9"
+  },
+  {
+    "q": "Pipe A fills a tank in 4 hours and Pipe B fills it in 15 hours. How long will they take together?",
+    "options": ["60/19", "120/19", "79/19", "41/19"],
+    "ans": "60/19"
+  },
+  {
+    "q": "A car travels at 30 km/h for 8 hours. How far does it travel?",
+    "options": ["245", "238", "240", "243"],
+    "ans": "240"
+  },
+  {
+    "q": "What is 12% of 180?",
+    "options": ["108/5", "103/5", "113/5", "216/5"],
+    "ans": "108/5"
+  },
+  {
+    "q": "What is 40% of 240?",
+    "options": ["94", "96", "99", "101"],
+    "ans": "96"
+  },
+  {
+    "q": "Find the 14th term of an arithmetic progression with first term 19 and common difference 6.",
+    "options": ["95", "100", "102", "97"],
+    "ans": "97"
+  },
+  {
+    "q": "A car travels at 30 km/h for 4 hours. How far does it travel?",
+    "options": ["118", "123", "125", "120"],
+    "ans": "120"
+  },
+  {
+    "q": "An item marked at ₹800 is discounted by 40%. Find its selling price.",
+    "options": ["483", "480", "485", "478"],
+    "ans": "480"
+  },
+  {
+    "q": "Find the simple interest on ₹5000 at 8% per annum for 2 year(s).",
+    "options": ["803", "805", "800", "798"],
+    "ans": "800"
+  },
+  {
+    "q": "What is 60% of 400?",
+    "options": ["245", "240", "243", "238"],
+    "ans": "240"
+  },
+  {
+    "q": "Solve for x: 4x + 8 = 32.",
+    "options": ["11", "9", "4", "6"],
+    "ans": "6"
+  },
+  {
+    "q": "An item marked at ₹800 is discounted by 5%. Find its selling price.",
+    "options": ["765", "763", "760", "758"],
+    "ans": "760"
+  },
+  {
+    "q": "After a 25% increase, a number becomes 360. Find the original number.",
+    "options": ["286", "293", "288", "291"],
+    "ans": "288"
+  },
+  {
+    "q": "Find the HCF of 136 and 34.",
+    "options": ["32", "37", "34", "39"],
+    "ans": "34"
+  },
+  {
+    "q": "An item bought for ₹1000 is sold at a profit of 12%. Find its selling price.",
+    "options": ["1118", "1120", "1125", "1123"],
+    "ans": "1120"
+  },
+  {
+    "q": "An item bought for ₹1000 is sold at a profit of 20%. Find its selling price.",
+    "options": ["1205", "1200", "1203", "1198"],
+    "ans": "1200"
+  },
+  {
+    "q": "The average score of 6 candidates is 60. Find their total score.",
+    "options": ["360", "358", "363", "365"],
+    "ans": "360"
+  },
+  {
+    "q": "Solve for x: 4x + 25 = 81.",
+    "options": ["12", "19", "14", "17"],
+    "ans": "14"
+  },
+  {
+    "q": "Find the 11th term of an arithmetic progression with first term 28 and common difference 11.",
+    "options": ["143", "136", "138", "141"],
+    "ans": "138"
+  },
+  {
+    "q": "In how many ways can 4 people be selected from 9 people?",
+    "options": ["124", "126", "129", "131"],
+    "ans": "126"
+  },
+  {
+    "q": "An item marked at ₹2500 is discounted by 25%. Find its selling price.",
+    "options": ["1875", "1873", "1878", "1880"],
+    "ans": "1875"
+  },
+  {
+    "q": "A bag contains 4 red balls and 8 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["1/3", "0", "4/3", "2/3"],
+    "ans": "1/3"
+  },
+  {
+    "q": "Pipe A fills a tank in 3 hours and Pipe B fills it in 15 hours. How long will they take together?",
+    "options": ["5/2", "3/2", "5", "7/2"],
+    "ans": "5/2"
+  },
+  {
+    "q": "The average score of 9 candidates is 32. Find their total score.",
+    "options": ["286", "293", "288", "291"],
+    "ans": "288"
+  },
+  {
+    "q": "In how many ways can 2 people be selected from 7 people?",
+    "options": ["26", "21", "19", "24"],
+    "ans": "21"
+  },
+  {
+    "q": "Two numbers are in the ratio 6:8. Their sum is 140. Find the smaller number.",
+    "options": ["65", "58", "60", "63"],
+    "ans": "60"
+  },
+  {
+    "q": "A mixture contains 50 litres of milk and 20 litres of water. What percentage of the mixture is milk?",
+    "options": ["500/7", "507/7", "493/7", "1000/7"],
+    "ans": "500/7"
+  },
+  {
+    "q": "A company records quarterly sales of 55, 58, 80, and 78 units. Find the total sales.",
+    "options": ["276", "269", "271", "274"],
+    "ans": "271"
+  },
+  {
+    "q": "Pipe A fills a tank in 5 hours and Pipe B fills it in 14 hours. How long will they take together?",
+    "options": ["70/19", "140/19", "51/19", "89/19"],
+    "ans": "70/19"
+  },
+  {
+    "q": "Find the simple interest on ₹8000 at 5% per annum for 3 year(s).",
+    "options": ["1198", "1203", "1200", "1205"],
+    "ans": "1200"
+  },
+  {
+    "q": "Solve for x: 9x + 3 = 192.",
+    "options": ["24", "26", "21", "19"],
+    "ans": "21"
+  },
+  {
+    "q": "Find the 18th term of an arithmetic progression with first term 19 and common difference 12.",
+    "options": ["221", "223", "226", "228"],
+    "ans": "223"
+  },
+  {
+    "q": "What is 5% of 450?",
+    "options": ["45", "47/2", "43/2", "45/2"],
+    "ans": "45/2"
+  },
+  {
+    "q": "A car travels at 72 km/h for 8 hours. How far does it travel?",
+    "options": ["576", "574", "581", "579"],
+    "ans": "576"
+  },
+  {
+    "q": "A car travels at 36 km/h for 7 hours. How far does it travel?",
+    "options": ["255", "257", "252", "250"],
+    "ans": "252"
+  },
+  {
+    "q": "What is 12% of 800?",
+    "options": ["99", "94", "101", "96"],
+    "ans": "96"
+  },
+  {
+    "q": "After a 10% increase, a number becomes 120. Find the original number.",
+    "options": ["2400/11", "1211/11", "1200/11", "1189/11"],
+    "ans": "1200/11"
+  },
+  {
+    "q": "An item marked at ₹2500 is discounted by 10%. Find its selling price.",
+    "options": ["2253", "2255", "2248", "2250"],
+    "ans": "2250"
+  },
+  {
+    "q": "Find the simple interest on ₹10000 at 4% per annum for 4 year(s).",
+    "options": ["1598", "1600", "1603", "1605"],
+    "ans": "1600"
+  },
+  {
+    "q": "Find the simple interest on ₹3000 at 5% per annum for 4 year(s).",
+    "options": ["603", "598", "600", "605"],
+    "ans": "600"
+  },
+  {
+    "q": "A mixture contains 30 litres of milk and 50 litres of water. What percentage of the mixture is milk?",
+    "options": ["75/2", "75", "77/2", "73/2"],
+    "ans": "75/2"
+  },
+  {
+    "q": "A company records quarterly sales of 31, 98, 111, and 123 units. Find the total sales.",
+    "options": ["363", "366", "361", "368"],
+    "ans": "363"
+  },
+  {
+    "q": "A car travels at 36 km/h for 6 hours. How far does it travel?",
+    "options": ["219", "214", "216", "221"],
+    "ans": "216"
+  },
+  {
+    "q": "A car travels at 90 km/h for 6 hours. How far does it travel?",
+    "options": ["543", "540", "538", "545"],
+    "ans": "540"
+  },
+  {
+    "q": "An item marked at ₹600 is discounted by 25%. Find its selling price.",
+    "options": ["453", "450", "448", "455"],
+    "ans": "450"
+  },
+  {
+    "q": "Find the 27th term of an arithmetic progression with first term 11 and common difference 8.",
+    "options": ["219", "224", "222", "217"],
+    "ans": "219"
+  },
+  {
+    "q": "Find the simple interest on ₹1000 at 15% per annum for 1 year(s).",
+    "options": ["153", "150", "155", "148"],
+    "ans": "150"
+  },
+  {
+    "q": "The average score of 5 candidates is 48. Find their total score.",
+    "options": ["245", "240", "238", "243"],
+    "ans": "240"
+  },
+  {
+    "q": "A bag contains 8 red balls and 4 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["2/3", "0", "4/3", "5/3"],
+    "ans": "2/3"
+  },
+  {
+    "q": "A car travels at 40 km/h for 2 hours. How far does it travel?",
+    "options": ["80", "78", "83", "85"],
+    "ans": "80"
+  },
+  {
+    "q": "In how many ways can 3 people be selected from 7 people?",
+    "options": ["33", "38", "35", "40"],
+    "ans": "35"
+  },
+  {
+    "q": "After a 20% increase, a number becomes 180. Find the original number.",
+    "options": ["150", "153", "155", "148"],
+    "ans": "150"
+  },
+  {
+    "q": "Find the 9th term of an arithmetic progression with first term 12 and common difference 7.",
+    "options": ["73", "66", "71", "68"],
+    "ans": "68"
+  },
+  {
+    "q": "Pipe A fills a tank in 15 hours and Pipe B fills it in 6 hours. How long will they take together?",
+    "options": ["37/7", "60/7", "23/7", "30/7"],
+    "ans": "30/7"
+  },
+  {
+    "q": "Find the HCF of 36 and 55.",
+    "options": ["-1", "1", "6", "4"],
+    "ans": "1"
+  },
+  {
+    "q": "A mixture contains 25 litres of milk and 30 litres of water. What percentage of the mixture is milk?",
+    "options": ["489/11", "511/11", "1000/11", "500/11"],
+    "ans": "500/11"
+  },
+  {
+    "q": "A car travels at 80 km/h for 7 hours. How far does it travel?",
+    "options": ["565", "558", "563", "560"],
+    "ans": "560"
+  },
+  {
+    "q": "A train 360 metres long travels at 45 km/h. How many seconds does it take to pass a pole?",
+    "options": ["288/5", "139/5", "144/5", "149/5"],
+    "ans": "144/5"
+  },
+  {
+    "q": "The average score of 11 candidates is 55. Find their total score.",
+    "options": ["610", "603", "608", "605"],
+    "ans": "605"
+  },
+  {
+    "q": "An item marked at ₹800 is discounted by 15%. Find its selling price.",
+    "options": ["685", "680", "683", "678"],
+    "ans": "680"
+  },
+  {
+    "q": "An item bought for ₹300 is sold at a profit of 15%. Find its selling price.",
+    "options": ["343", "350", "345", "348"],
+    "ans": "345"
+  },
+  {
+    "q": "A company records quarterly sales of 25, 76, 146, and 128 units. Find the total sales.",
+    "options": ["375", "378", "380", "373"],
+    "ans": "375"
+  },
+  {
+    "q": "A company records quarterly sales of 50, 34, 136, and 80 units. Find the total sales.",
+    "options": ["300", "298", "303", "305"],
+    "ans": "300"
+  },
+  {
+    "q": "A mixture contains 50 litres of milk and 15 litres of water. What percentage of the mixture is milk?",
+    "options": ["1000/13", "987/13", "1013/13", "2000/13"],
+    "ans": "1000/13"
+  },
+  {
+    "q": "Ravi is 28 years old. How old will he be after 5 years?",
+    "options": ["31", "36", "38", "33"],
+    "ans": "33"
+  },
+  {
+    "q": "Pipe A fills a tank in 13 hours and Pipe B fills it in 12 hours. How long will they take together?",
+    "options": ["156/25", "312/25", "181/25", "131/25"],
+    "ans": "156/25"
+  },
+  {
+    "q": "Find the 26th term of an arithmetic progression with first term 13 and common difference 10.",
+    "options": ["268", "266", "263", "261"],
+    "ans": "263"
+  },
+  {
+    "q": "A company records quarterly sales of 37, 139, 133, and 122 units. Find the total sales.",
+    "options": ["434", "429", "436", "431"],
+    "ans": "431"
+  },
+  {
+    "q": "A mixture contains 10 litres of milk and 20 litres of water. What percentage of the mixture is milk?",
+    "options": ["100/3", "103/3", "200/3", "97/3"],
+    "ans": "100/3"
+  },
+  {
+    "q": "Ravi is 28 years old. How old will he be after 3 years?",
+    "options": ["31", "34", "36", "29"],
+    "ans": "31"
+  },
+  {
+    "q": "An item marked at ₹800 is discounted by 30%. Find its selling price.",
+    "options": ["560", "558", "563", "565"],
+    "ans": "560"
+  },
+  {
+    "q": "Two numbers are in the ratio 6:5. Their sum is 165. Find the smaller number.",
+    "options": ["73", "80", "78", "75"],
+    "ans": "75"
+  },
+  {
+    "q": "Find the simple interest on ₹2500 at 10% per annum for 3 year(s).",
+    "options": ["755", "748", "753", "750"],
+    "ans": "750"
+  },
+  {
+    "q": "What is 15% of 160?",
+    "options": ["22", "24", "27", "29"],
+    "ans": "24"
+  },
+  {
+    "q": "Find the 21th term of an arithmetic progression with first term 12 and common difference 7.",
+    "options": ["150", "157", "152", "155"],
+    "ans": "152"
+  },
+  {
+    "q": "In how many ways can 3 people be selected from 11 people?",
+    "options": ["165", "168", "163", "170"],
+    "ans": "165"
+  },
+  {
+    "q": "What is 15% of 500?",
+    "options": ["80", "73", "75", "78"],
+    "ans": "75"
+  },
+  {
+    "q": "Ravi is 35 years old. How old will he be after 3 years?",
+    "options": ["41", "36", "38", "43"],
+    "ans": "38"
+  },
+  {
+    "q": "A car travels at 40 km/h for 5 hours. How far does it travel?",
+    "options": ["198", "205", "203", "200"],
+    "ans": "200"
+  },
+  {
+    "q": "What is 50% of 750?",
+    "options": ["375", "373", "380", "378"],
+    "ans": "375"
+  },
+  {
+    "q": "An item marked at ₹500 is discounted by 20%. Find its selling price.",
+    "options": ["405", "398", "403", "400"],
+    "ans": "400"
+  },
+  {
+    "q": "An item bought for ₹500 is sold at a profit of 40%. Find its selling price.",
+    "options": ["698", "700", "703", "705"],
+    "ans": "700"
+  },
+  {
+    "q": "The average score of 7 candidates is 48. Find their total score.",
+    "options": ["336", "341", "334", "339"],
+    "ans": "336"
+  },
+  {
+    "q": "Solve for x: 2x + 25 = 77.",
+    "options": ["31", "29", "26", "24"],
+    "ans": "26"
+  },
+  {
+    "q": "Find the HCF of 43 and 122.",
+    "options": ["-1", "6", "1", "4"],
+    "ans": "1"
+  },
+  {
+    "q": "Pipe A fills a tank in 11 hours and Pipe B fills it in 7 hours. How long will they take together?",
+    "options": ["77/9", "59/18", "95/18", "77/18"],
+    "ans": "77/18"
+  },
+  {
+    "q": "A can complete a job in 10 days and B in 5 days. How long will they take working together?",
+    "options": ["13/3", "20/3", "7/3", "10/3"],
+    "ans": "10/3"
+  },
+  {
+    "q": "Find the HCF of 77 and 43.",
+    "options": ["6", "1", "-1", "4"],
+    "ans": "1"
+  },
+  {
+    "q": "Find the 14th term of an arithmetic progression with first term 13 and common difference 3.",
+    "options": ["50", "55", "57", "52"],
+    "ans": "52"
+  },
+  {
+    "q": "A bag contains 9 red balls and 5 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["23/14", "0", "9/7", "9/14"],
+    "ans": "9/14"
+  },
+  {
+    "q": "A company records quarterly sales of 66, 53, 62, and 100 units. Find the total sales.",
+    "options": ["281", "279", "286", "284"],
+    "ans": "281"
+  },
+  {
+    "q": "A bag contains 10 red balls and 3 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["0", "10/13", "23/13", "20/13"],
+    "ans": "10/13"
+  },
+  {
+    "q": "Find the HCF of 40 and 31.",
+    "options": ["6", "-1", "1", "4"],
+    "ans": "1"
+  },
+  {
+    "q": "What is 75% of 400?",
+    "options": ["303", "300", "305", "298"],
+    "ans": "300"
+  },
+  {
+    "q": "Two numbers are in the ratio 9:6. Their sum is 375. Find the smaller number.",
+    "options": ["150", "155", "148", "153"],
+    "ans": "150"
+  },
+  {
+    "q": "Find the 24th term of an arithmetic progression with first term 24 and common difference 12.",
+    "options": ["303", "298", "305", "300"],
+    "ans": "300"
+  },
+  {
+    "q": "Pipe A fills a tank in 14 hours and Pipe B fills it in 15 hours. How long will they take together?",
+    "options": ["210/29", "420/29", "181/29", "239/29"],
+    "ans": "210/29"
+  },
+  {
+    "q": "Find the 18th term of an arithmetic progression with first term 3 and common difference 10.",
+    "options": ["176", "178", "173", "171"],
+    "ans": "173"
+  },
+  {
+    "q": "A can complete a job in 5 days and B in 8 days. How long will they take working together?",
+    "options": ["80/13", "53/13", "40/13", "27/13"],
+    "ans": "40/13"
+  },
+  {
+    "q": "A mixture contains 15 litres of milk and 10 litres of water. What percentage of the mixture is milk?",
+    "options": ["60", "58", "65", "63"],
+    "ans": "60"
+  },
+  {
+    "q": "An item bought for ₹1200 is sold at a profit of 20%. Find its selling price.",
+    "options": ["1440", "1443", "1438", "1445"],
+    "ans": "1440"
+  },
+  {
+    "q": "Find the simple interest on ₹10000 at 10% per annum for 3 year(s).",
+    "options": ["3003", "3005", "3000", "2998"],
+    "ans": "3000"
+  },
+  {
+    "q": "What is 5% of 150?",
+    "options": ["15/2", "17/2", "13/2", "15"],
+    "ans": "15/2"
+  },
+  {
+    "q": "A mixture contains 25 litres of milk and 35 litres of water. What percentage of the mixture is milk?",
+    "options": ["128/3", "250/3", "125/3", "122/3"],
+    "ans": "125/3"
+  },
+  {
+    "q": "Find the area of a rectangle with length 28 cm and width 8 cm.",
+    "options": ["227", "222", "229", "224"],
+    "ans": "224"
+  },
+  {
+    "q": "What is 40% of 120?",
+    "options": ["51", "53", "48", "46"],
+    "ans": "48"
+  },
+  {
+    "q": "Solve for x: 2x + 20 = 80.",
+    "options": ["35", "28", "30", "33"],
+    "ans": "30"
+  },
+  {
+    "q": "What is 40% of 320?",
+    "options": ["128", "131", "126", "133"],
+    "ans": "128"
+  },
+  {
+    "q": "A company records quarterly sales of 100, 66, 64, and 130 units. Find the total sales.",
+    "options": ["358", "365", "363", "360"],
+    "ans": "360"
+  },
+  {
+    "q": "Find the 12th term of an arithmetic progression with first term 5 and common difference 7.",
+    "options": ["85", "87", "82", "80"],
+    "ans": "82"
+  },
+  {
+    "q": "An item bought for ₹400 is sold at a profit of 30%. Find its selling price.",
+    "options": ["518", "523", "520", "525"],
+    "ans": "520"
+  },
+  {
+    "q": "A car travels at 60 km/h for 6 hours. How far does it travel?",
+    "options": ["363", "360", "358", "365"],
+    "ans": "360"
+  },
+  {
+    "q": "Solve for x: 11x + 21 = 252.",
+    "options": ["24", "19", "26", "21"],
+    "ans": "21"
+  },
+  {
+    "q": "A mixture contains 15 litres of milk and 15 litres of water. What percentage of the mixture is milk?",
+    "options": ["48", "53", "55", "50"],
+    "ans": "50"
+  },
+  {
+    "q": "An item marked at ₹3000 is discounted by 25%. Find its selling price.",
+    "options": ["2248", "2250", "2253", "2255"],
+    "ans": "2250"
+  },
+  {
+    "q": "Find the 23th term of an arithmetic progression with first term 21 and common difference 2.",
+    "options": ["63", "68", "65", "70"],
+    "ans": "65"
+  },
+  {
+    "q": "The average score of 4 candidates is 30. Find their total score.",
+    "options": ["118", "120", "123", "125"],
+    "ans": "120"
+  },
+  {
+    "q": "In how many ways can 4 people be selected from 11 people?",
+    "options": ["335", "330", "328", "333"],
+    "ans": "330"
+  },
+  {
+    "q": "Find the simple interest on ₹10000 at 10% per annum for 4 year(s).",
+    "options": ["3998", "4003", "4005", "4000"],
+    "ans": "4000"
+  },
+  {
+    "q": "What is 20% of 320?",
+    "options": ["67", "62", "64", "69"],
+    "ans": "64"
+  },
+  {
+    "q": "A company records quarterly sales of 146, 114, 128, and 51 units. Find the total sales.",
+    "options": ["442", "437", "439", "444"],
+    "ans": "439"
+  },
+  {
+    "q": "Ravi is 24 years old. How old will he be after 4 years?",
+    "options": ["28", "33", "26", "31"],
+    "ans": "28"
+  },
+  {
+    "q": "Find the area of a rectangle with length 27 cm and width 7 cm.",
+    "options": ["189", "192", "194", "187"],
+    "ans": "189"
+  },
+  {
+    "q": "A car travels at 50 km/h for 2 hours. How far does it travel?",
+    "options": ["103", "105", "100", "98"],
+    "ans": "100"
+  },
+  {
+    "q": "Find the simple interest on ₹6000 at 12% per annum for 4 year(s).",
+    "options": ["2883", "2878", "2885", "2880"],
+    "ans": "2880"
+  },
+  {
+    "q": "Find the 9th term of an arithmetic progression with first term 18 and common difference 6.",
+    "options": ["66", "69", "64", "71"],
+    "ans": "66"
+  },
+  {
+    "q": "Find the HCF of 129 and 41.",
+    "options": ["-1", "1", "6", "4"],
+    "ans": "1"
+  },
+  {
+    "q": "Find the area of a rectangle with length 18 cm and width 16 cm.",
+    "options": ["293", "288", "286", "291"],
+    "ans": "288"
+  },
+  {
+    "q": "A car travels at 54 km/h for 8 hours. How far does it travel?",
+    "options": ["437", "430", "435", "432"],
+    "ans": "432"
+  },
+  {
+    "q": "An item marked at ₹1000 is discounted by 30%. Find its selling price.",
+    "options": ["698", "705", "700", "703"],
+    "ans": "700"
+  },
+  {
+    "q": "A company records quarterly sales of 143, 28, 75, and 90 units. Find the total sales.",
+    "options": ["336", "341", "339", "334"],
+    "ans": "336"
+  },
+  {
+    "q": "Ravi is 32 years old. How old will he be after 3 years?",
+    "options": ["38", "35", "33", "40"],
+    "ans": "35"
+  },
+  {
+    "q": "Find the HCF of 161 and 134.",
+    "options": ["6", "4", "-1", "1"],
+    "ans": "1"
+  },
+  {
+    "q": "Pipe A fills a tank in 10 hours and Pipe B fills it in 15 hours. How long will they take together?",
+    "options": ["4", "6", "9", "11"],
+    "ans": "6"
+  },
+  {
+    "q": "Find the 16th term of an arithmetic progression with first term 25 and common difference 2.",
+    "options": ["60", "55", "58", "53"],
+    "ans": "55"
+  },
+  {
+    "q": "The average score of 8 candidates is 35. Find their total score.",
+    "options": ["278", "285", "280", "283"],
+    "ans": "280"
+  },
+  {
+    "q": "The average score of 5 candidates is 28. Find their total score.",
+    "options": ["140", "138", "145", "143"],
+    "ans": "140"
+  },
+  {
+    "q": "After a 40% increase, a number becomes 150. Find the original number.",
+    "options": ["1500/7", "757/7", "743/7", "750/7"],
+    "ans": "750/7"
+  },
+  {
+    "q": "An item marked at ₹1200 is discounted by 25%. Find its selling price.",
+    "options": ["898", "900", "905", "903"],
+    "ans": "900"
+  },
+  {
+    "q": "Find the simple interest on ₹8000 at 12% per annum for 4 year(s).",
+    "options": ["3845", "3843", "3838", "3840"],
+    "ans": "3840"
+  },
+  {
+    "q": "Find the area of a rectangle with length 22 cm and width 24 cm.",
+    "options": ["528", "526", "531", "533"],
+    "ans": "528"
+  },
+  {
+    "q": "Solve for x: 7x + 16 = 79.",
+    "options": ["12", "7", "9", "14"],
+    "ans": "9"
+  },
+  {
+    "q": "Find the simple interest on ₹5000 at 15% per annum for 1 year(s).",
+    "options": ["750", "753", "748", "755"],
+    "ans": "750"
+  },
+  {
+    "q": "A train 100 metres long travels at 54 km/h. How many seconds does it take to pass a pole?",
+    "options": ["23/3", "17/3", "20/3", "40/3"],
+    "ans": "20/3"
+  },
+  {
+    "q": "Find the 26th term of an arithmetic progression with first term 24 and common difference 6.",
+    "options": ["179", "177", "172", "174"],
+    "ans": "174"
+  },
+  {
+    "q": "A mixture contains 25 litres of milk and 15 litres of water. What percentage of the mixture is milk?",
+    "options": ["125/2", "125", "127/2", "123/2"],
+    "ans": "125/2"
+  },
+  {
+    "q": "Two numbers are in the ratio 5:7. Their sum is 480. Find the smaller number.",
+    "options": ["200", "198", "203", "205"],
+    "ans": "200"
+  },
+  {
+    "q": "Two numbers are in the ratio 8:3. Their sum is 55. Find the smaller number.",
+    "options": ["20", "15", "13", "18"],
+    "ans": "15"
+  },
+  {
+    "q": "A bag contains 9 red balls and 7 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["25/16", "9/16", "0", "9/8"],
+    "ans": "9/16"
+  },
+  {
+    "q": "Find the simple interest on ₹2000 at 6% per annum for 1 year(s).",
+    "options": ["123", "125", "118", "120"],
+    "ans": "120"
+  },
+  {
+    "q": "A company records quarterly sales of 143, 110, 37, and 128 units. Find the total sales.",
+    "options": ["418", "423", "421", "416"],
+    "ans": "418"
+  },
+  {
+    "q": "Two numbers are in the ratio 7:8. Their sum is 150. Find the smaller number.",
+    "options": ["68", "70", "73", "75"],
+    "ans": "70"
+  },
+  {
+    "q": "A bag contains 6 red balls and 5 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["0", "17/11", "12/11", "6/11"],
+    "ans": "6/11"
+  },
+  {
+    "q": "An item marked at ₹2000 is discounted by 20%. Find its selling price.",
+    "options": ["1600", "1605", "1598", "1603"],
+    "ans": "1600"
+  },
+  {
+    "q": "In how many ways can 5 people be selected from 7 people?",
+    "options": ["21", "24", "19", "26"],
+    "ans": "21"
+  },
+  {
+    "q": "Find the HCF of 61 and 54.",
+    "options": ["1", "4", "-1", "6"],
+    "ans": "1"
+  },
+  {
+    "q": "Pipe A fills a tank in 14 hours and Pipe B fills it in 9 hours. How long will they take together?",
+    "options": ["103/23", "252/23", "149/23", "126/23"],
+    "ans": "126/23"
+  },
+  {
+    "q": "In how many ways can 2 people be selected from 10 people?",
+    "options": ["45", "50", "43", "48"],
+    "ans": "45"
+  },
+  {
+    "q": "Ravi is 31 years old. How old will he be after 9 years?",
+    "options": ["40", "38", "43", "45"],
+    "ans": "40"
+  },
+  {
+    "q": "A mixture contains 10 litres of milk and 15 litres of water. What percentage of the mixture is milk?",
+    "options": ["38", "45", "40", "43"],
+    "ans": "40"
+  },
+  {
+    "q": "Pipe A fills a tank in 9 hours and Pipe B fills it in 12 hours. How long will they take together?",
+    "options": ["29/7", "43/7", "36/7", "72/7"],
+    "ans": "36/7"
+  },
+  {
+    "q": "Pipe A fills a tank in 14 hours and Pipe B fills it in 4 hours. How long will they take together?",
+    "options": ["19/9", "37/9", "28/9", "56/9"],
+    "ans": "28/9"
+  },
+  {
+    "q": "Solve for x: 7x + 4 = 158.",
+    "options": ["22", "20", "25", "27"],
+    "ans": "22"
+  },
+  {
+    "q": "In how many ways can 2 people be selected from 12 people?",
+    "options": ["69", "64", "71", "66"],
+    "ans": "66"
+  },
+  {
+    "q": "An item marked at ₹2500 is discounted by 20%. Find its selling price.",
+    "options": ["2005", "2000", "1998", "2003"],
+    "ans": "2000"
+  },
+  {
+    "q": "Find the HCF of 123 and 31.",
+    "options": ["6", "1", "4", "-1"],
+    "ans": "1"
+  },
+  {
+    "q": "A car travels at 50 km/h for 6 hours. How far does it travel?",
+    "options": ["303", "305", "300", "298"],
+    "ans": "300"
+  },
+  {
+    "q": "Find the simple interest on ₹3000 at 8% per annum for 4 year(s).",
+    "options": ["960", "963", "965", "958"],
+    "ans": "960"
+  },
+  {
+    "q": "A train 200 metres long travels at 54 km/h. How many seconds does it take to pass a pole?",
+    "options": ["43/3", "40/3", "80/3", "37/3"],
+    "ans": "40/3"
+  },
+  {
+    "q": "In how many ways can 5 people be selected from 10 people?",
+    "options": ["252", "257", "255", "250"],
+    "ans": "252"
+  },
+  {
+    "q": "An item marked at ₹1000 is discounted by 15%. Find its selling price.",
+    "options": ["853", "850", "855", "848"],
+    "ans": "850"
+  },
+  {
+    "q": "A car travels at 60 km/h for 7 hours. How far does it travel?",
+    "options": ["418", "420", "425", "423"],
+    "ans": "420"
+  },
+  {
+    "q": "A train 300 metres long travels at 60 km/h. How many seconds does it take to pass a pole?",
+    "options": ["21", "18", "16", "23"],
+    "ans": "18"
+  },
+  {
+    "q": "Ravi is 28 years old. How old will he be after 8 years?",
+    "options": ["36", "41", "34", "39"],
+    "ans": "36"
+  },
+  {
+    "q": "Solve for x: 8x + 9 = 73.",
+    "options": ["8", "11", "6", "13"],
+    "ans": "8"
+  },
+  {
+    "q": "Find the HCF of 111 and 25.",
+    "options": ["1", "4", "6", "-1"],
+    "ans": "1"
+  },
+  {
+    "q": "Pipe A fills a tank in 10 hours and Pipe B fills it in 9 hours. How long will they take together?",
+    "options": ["71/19", "90/19", "180/19", "109/19"],
+    "ans": "90/19"
+  },
+  {
+    "q": "What is 25% of 200?",
+    "options": ["50", "53", "55", "48"],
+    "ans": "50"
+  },
+  {
+    "q": "A company records quarterly sales of 22, 20, 64, and 113 units. Find the total sales.",
+    "options": ["224", "222", "217", "219"],
+    "ans": "219"
+  },
+  {
+    "q": "In how many ways can 4 people be selected from 8 people?",
+    "options": ["70", "73", "68", "75"],
+    "ans": "70"
+  },
+  {
+    "q": "A car travels at 40 km/h for 4 hours. How far does it travel?",
+    "options": ["165", "160", "163", "158"],
+    "ans": "160"
+  },
+  {
+    "q": "A car travels at 54 km/h for 5 hours. How far does it travel?",
+    "options": ["268", "275", "270", "273"],
+    "ans": "270"
+  },
+  {
+    "q": "Find the simple interest on ₹10000 at 4% per annum for 2 year(s).",
+    "options": ["798", "803", "805", "800"],
+    "ans": "800"
+  },
+  {
+    "q": "Ravi is 23 years old. How old will he be after 6 years?",
+    "options": ["27", "34", "29", "32"],
+    "ans": "29"
+  },
+  {
+    "q": "A car travels at 72 km/h for 4 hours. How far does it travel?",
+    "options": ["293", "288", "291", "286"],
+    "ans": "288"
+  },
+  {
+    "q": "A company records quarterly sales of 107, 61, 108, and 137 units. Find the total sales.",
+    "options": ["411", "413", "416", "418"],
+    "ans": "413"
+  },
+  {
+    "q": "In how many ways can 3 people be selected from 12 people?",
+    "options": ["225", "218", "223", "220"],
+    "ans": "220"
+  },
+  {
+    "q": "The average score of 10 candidates is 42. Find their total score.",
+    "options": ["425", "418", "420", "423"],
+    "ans": "420"
+  },
+  {
+    "q": "A can complete a job in 19 days and B in 12 days. How long will they take working together?",
+    "options": ["197/31", "259/31", "228/31", "456/31"],
+    "ans": "228/31"
+  },
+  {
+    "q": "Pipe A fills a tank in 12 hours and Pipe B fills it in 11 hours. How long will they take together?",
+    "options": ["155/23", "132/23", "109/23", "264/23"],
+    "ans": "132/23"
+  },
+  {
+    "q": "Two numbers are in the ratio 3:7. Their sum is 400. Find the smaller number.",
+    "options": ["125", "123", "118", "120"],
+    "ans": "120"
+  },
+  {
+    "q": "Find the 12th term of an arithmetic progression with first term 26 and common difference 4.",
+    "options": ["73", "68", "70", "75"],
+    "ans": "70"
+  },
+  {
+    "q": "After a 20% increase, a number becomes 300. Find the original number.",
+    "options": ["253", "250", "248", "255"],
+    "ans": "250"
+  },
+  {
+    "q": "Find the 8th term of an arithmetic progression with first term 24 and common difference 11.",
+    "options": ["101", "99", "106", "104"],
+    "ans": "101"
+  },
+  {
+    "q": "Two numbers are in the ratio 8:5. Their sum is 390. Find the smaller number.",
+    "options": ["155", "153", "150", "148"],
+    "ans": "150"
+  },
+  {
+    "q": "A train 180 metres long travels at 72 km/h. How many seconds does it take to pass a pole?",
+    "options": ["7", "14", "9", "12"],
+    "ans": "9"
+  },
+  {
+    "q": "Find the area of a rectangle with length 23 cm and width 24 cm.",
+    "options": ["557", "550", "552", "555"],
+    "ans": "552"
+  },
+  {
+    "q": "A train 180 metres long travels at 45 km/h. How many seconds does it take to pass a pole?",
+    "options": ["77/5", "144/5", "72/5", "67/5"],
+    "ans": "72/5"
+  },
+  {
+    "q": "Find the 16th term of an arithmetic progression with first term 7 and common difference 7.",
+    "options": ["117", "110", "115", "112"],
+    "ans": "112"
+  },
+  {
+    "q": "Pipe A fills a tank in 4 hours and Pipe B fills it in 12 hours. How long will they take together?",
+    "options": ["1", "3", "8", "6"],
+    "ans": "3"
+  },
+  {
+    "q": "Two numbers are in the ratio 2:5. Their sum is 84. Find the smaller number.",
+    "options": ["29", "27", "24", "22"],
+    "ans": "24"
+  },
+  {
+    "q": "Find the area of a rectangle with length 22 cm and width 20 cm.",
+    "options": ["440", "438", "445", "443"],
+    "ans": "440"
+  },
+  {
+    "q": "A car travels at 54 km/h for 2 hours. How far does it travel?",
+    "options": ["113", "106", "108", "111"],
+    "ans": "108"
+  },
+  {
+    "q": "A bag contains 7 red balls and 3 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["7/5", "0", "7/10", "17/10"],
+    "ans": "7/10"
+  },
+  {
+    "q": "A can complete a job in 20 days and B in 15 days. How long will they take working together?",
+    "options": ["120/7", "60/7", "67/7", "53/7"],
+    "ans": "60/7"
+  },
+  {
+    "q": "After a 30% increase, a number becomes 150. Find the original number.",
+    "options": ["1513/13", "1487/13", "1500/13", "3000/13"],
+    "ans": "1500/13"
+  },
+  {
+    "q": "Solve for x: 7x + 24 = 94.",
+    "options": ["13", "8", "15", "10"],
+    "ans": "10"
+  },
+  {
+    "q": "A mixture contains 35 litres of milk and 25 litres of water. What percentage of the mixture is milk?",
+    "options": ["172/3", "350/3", "175/3", "178/3"],
+    "ans": "175/3"
+  },
+  {
+    "q": "A can complete a job in 17 days and B in 19 days. How long will they take working together?",
+    "options": ["287/36", "359/36", "323/36", "323/18"],
+    "ans": "323/36"
+  },
+  {
+    "q": "Solve for x: 9x + 2 = 191.",
+    "options": ["24", "19", "26", "21"],
+    "ans": "21"
+  },
+  {
+    "q": "Find the area of a rectangle with length 18 cm and width 5 cm.",
+    "options": ["90", "95", "88", "93"],
+    "ans": "90"
+  },
+  {
+    "q": "A car travels at 90 km/h for 5 hours. How far does it travel?",
+    "options": ["448", "450", "453", "455"],
+    "ans": "450"
+  },
+  {
+    "q": "A mixture contains 15 litres of milk and 60 litres of water. What percentage of the mixture is milk?",
+    "options": ["18", "25", "20", "23"],
+    "ans": "20"
+  },
+  {
+    "q": "The average score of 10 candidates is 45. Find their total score.",
+    "options": ["453", "448", "455", "450"],
+    "ans": "450"
+  },
+  {
+    "q": "An item marked at ₹1000 is discounted by 10%. Find its selling price.",
+    "options": ["905", "903", "898", "900"],
+    "ans": "900"
+  },
+  {
+    "q": "A car travels at 60 km/h for 2 hours. How far does it travel?",
+    "options": ["120", "123", "118", "125"],
+    "ans": "120"
+  },
+  {
+    "q": "A car travels at 30 km/h for 7 hours. How far does it travel?",
+    "options": ["213", "215", "210", "208"],
+    "ans": "210"
+  },
+  {
+    "q": "What is 50% of 320?",
+    "options": ["160", "158", "163", "165"],
+    "ans": "160"
+  },
+  {
+    "q": "A can complete a job in 4 days and B in 15 days. How long will they take working together?",
+    "options": ["79/19", "60/19", "41/19", "120/19"],
+    "ans": "60/19"
+  },
+  {
+    "q": "An item bought for ₹1500 is sold at a profit of 12%. Find its selling price.",
+    "options": ["1680", "1678", "1685", "1683"],
+    "ans": "1680"
+  },
+  {
+    "q": "What is 30% of 1200?",
+    "options": ["358", "363", "360", "365"],
+    "ans": "360"
+  },
+  {
+    "q": "Find the area of a rectangle with length 33 cm and width 4 cm.",
+    "options": ["135", "132", "130", "137"],
+    "ans": "132"
+  },
+  {
+    "q": "Find the area of a rectangle with length 28 cm and width 23 cm.",
+    "options": ["644", "642", "647", "649"],
+    "ans": "644"
+  },
+  {
+    "q": "Ravi is 45 years old. How old will he be after 8 years?",
+    "options": ["53", "56", "51", "58"],
+    "ans": "53"
+  },
+  {
+    "q": "Find the area of a rectangle with length 5 cm and width 22 cm.",
+    "options": ["113", "115", "108", "110"],
+    "ans": "110"
+  },
+  {
+    "q": "Solve for x: 7x + 26 = 82.",
+    "options": ["8", "13", "11", "6"],
+    "ans": "8"
+  },
+  {
+    "q": "After a 30% increase, a number becomes 120. Find the original number.",
+    "options": ["1200/13", "1213/13", "2400/13", "1187/13"],
+    "ans": "1200/13"
+  },
+  {
+    "q": "Find the 17th term of an arithmetic progression with first term 27 and common difference 7.",
+    "options": ["137", "139", "144", "142"],
+    "ans": "139"
+  },
+  {
+    "q": "Pipe A fills a tank in 3 hours and Pipe B fills it in 10 hours. How long will they take together?",
+    "options": ["30/13", "60/13", "43/13", "17/13"],
+    "ans": "30/13"
+  },
+  {
+    "q": "Find the HCF of 111 and 130.",
+    "options": ["-1", "6", "4", "1"],
+    "ans": "1"
+  },
+  {
+    "q": "A mixture contains 12 litres of milk and 25 litres of water. What percentage of the mixture is milk?",
+    "options": ["1163/37", "1200/37", "2400/37", "1237/37"],
+    "ans": "1200/37"
+  },
+  {
+    "q": "The average score of 7 candidates is 55. Find their total score.",
+    "options": ["383", "385", "388", "390"],
+    "ans": "385"
+  },
+  {
+    "q": "A can complete a job in 7 days and B in 20 days. How long will they take working together?",
+    "options": ["280/27", "113/27", "140/27", "167/27"],
+    "ans": "140/27"
+  },
+  {
+    "q": "Find the 17th term of an arithmetic progression with first term 11 and common difference 7.",
+    "options": ["126", "123", "128", "121"],
+    "ans": "123"
+  },
+  {
+    "q": "In how many ways can 3 people be selected from 8 people?",
+    "options": ["56", "54", "59", "61"],
+    "ans": "56"
+  },
+  {
+    "q": "A car travels at 45 km/h for 2 hours. How far does it travel?",
+    "options": ["95", "90", "88", "93"],
+    "ans": "90"
+  },
+  {
+    "q": "Pipe A fills a tank in 15 hours and Pipe B fills it in 4 hours. How long will they take together?",
+    "options": ["79/19", "120/19", "41/19", "60/19"],
+    "ans": "60/19"
+  },
+  {
+    "q": "A train 240 metres long travels at 60 km/h. How many seconds does it take to pass a pole?",
+    "options": ["144/5", "67/5", "77/5", "72/5"],
+    "ans": "72/5"
+  },
+  {
+    "q": "After a 15% increase, a number becomes 360. Find the original number.",
+    "options": ["14400/23", "7177/23", "7200/23", "7223/23"],
+    "ans": "7200/23"
+  },
+  {
+    "q": "A company records quarterly sales of 88, 60, 116, and 141 units. Find the total sales.",
+    "options": ["408", "403", "410", "405"],
+    "ans": "405"
+  },
+  {
+    "q": "In how many ways can 4 people be selected from 7 people?",
+    "options": ["35", "40", "38", "33"],
+    "ans": "35"
+  },
+  {
+    "q": "Find the 25th term of an arithmetic progression with first term 10 and common difference 9.",
+    "options": ["224", "231", "229", "226"],
+    "ans": "226"
+  },
+  {
+    "q": "Find the 24th term of an arithmetic progression with first term 7 and common difference 11.",
+    "options": ["258", "260", "263", "265"],
+    "ans": "260"
+  },
+  {
+    "q": "Find the HCF of 101 and 18.",
+    "options": ["1", "6", "-1", "4"],
+    "ans": "1"
+  },
+  {
+    "q": "Two numbers are in the ratio 3:5. Their sum is 80. Find the smaller number.",
+    "options": ["33", "28", "35", "30"],
+    "ans": "30"
+  },
+  {
+    "q": "A can complete a job in 6 days and B in 18 days. How long will they take working together?",
+    "options": ["11/2", "7/2", "9", "9/2"],
+    "ans": "9/2"
+  },
+  {
+    "q": "Find the 18th term of an arithmetic progression with first term 10 and common difference 4.",
+    "options": ["81", "83", "78", "76"],
+    "ans": "78"
+  },
+  {
+    "q": "Pipe A fills a tank in 4 hours and Pipe B fills it in 3 hours. How long will they take together?",
+    "options": ["19/7", "12/7", "24/7", "5/7"],
+    "ans": "12/7"
+  },
+  {
+    "q": "Two numbers are in the ratio 4:9. Their sum is 130. Find the smaller number.",
+    "options": ["38", "45", "40", "43"],
+    "ans": "40"
+  },
+  {
+    "q": "Pipe A fills a tank in 4 hours and Pipe B fills it in 7 hours. How long will they take together?",
+    "options": ["56/11", "17/11", "28/11", "39/11"],
+    "ans": "28/11"
+  },
+  {
+    "q": "After a 25% increase, a number becomes 480. Find the original number.",
+    "options": ["387", "389", "384", "382"],
+    "ans": "384"
+  },
+  {
+    "q": "A can complete a job in 17 days and B in 16 days. How long will they take working together?",
+    "options": ["544/33", "305/33", "272/33", "239/33"],
+    "ans": "272/33"
+  },
+  {
+    "q": "In how many ways can 4 people be selected from 12 people?",
+    "options": ["498", "495", "493", "500"],
+    "ans": "495"
+  },
+  {
+    "q": "Find the area of a rectangle with length 20 cm and width 9 cm.",
+    "options": ["185", "178", "183", "180"],
+    "ans": "180"
+  },
+  {
+    "q": "A train 300 metres long travels at 90 km/h. How many seconds does it take to pass a pole?",
+    "options": ["15", "12", "17", "10"],
+    "ans": "12"
+  },
+  {
+    "q": "Find the area of a rectangle with length 16 cm and width 24 cm.",
+    "options": ["384", "389", "387", "382"],
+    "ans": "384"
+  },
+  {
+    "q": "Ravi is 40 years old. How old will he be after 10 years?",
+    "options": ["55", "53", "48", "50"],
+    "ans": "50"
+  },
+  {
+    "q": "A bag contains 2 red balls and 5 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["0", "4/7", "2/7", "9/7"],
+    "ans": "2/7"
+  },
+  {
+    "q": "Solve for x: 11x + 8 = 96.",
+    "options": ["6", "8", "13", "11"],
+    "ans": "8"
+  },
+  {
+    "q": "What is 75% of 240?",
+    "options": ["180", "183", "185", "178"],
+    "ans": "180"
+  },
+  {
+    "q": "A bag contains 3 red balls and 9 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["5/4", "1/4", "1/2", "0"],
+    "ans": "1/4"
+  },
+  {
+    "q": "Find the 27th term of an arithmetic progression with first term 22 and common difference 5.",
+    "options": ["152", "155", "150", "157"],
+    "ans": "152"
+  },
+  {
+    "q": "The average score of 4 candidates is 40. Find their total score.",
+    "options": ["165", "160", "163", "158"],
+    "ans": "160"
+  },
+  {
+    "q": "Find the 28th term of an arithmetic progression with first term 3 and common difference 12.",
+    "options": ["327", "330", "325", "332"],
+    "ans": "327"
+  },
+  {
+    "q": "Solve for x: 10x + 27 = 257.",
+    "options": ["28", "23", "21", "26"],
+    "ans": "23"
+  },
+  {
+    "q": "An item marked at ₹500 is discounted by 15%. Find its selling price.",
+    "options": ["425", "430", "428", "423"],
+    "ans": "425"
+  },
+  {
+    "q": "What is 5% of 160?",
+    "options": ["11", "8", "13", "6"],
+    "ans": "8"
+  },
+  {
+    "q": "An item bought for ₹2000 is sold at a profit of 40%. Find its selling price.",
+    "options": ["2800", "2798", "2805", "2803"],
+    "ans": "2800"
+  },
+  {
+    "q": "A can complete a job in 12 days and B in 15 days. How long will they take working together?",
+    "options": ["20/3", "23/3", "40/3", "17/3"],
+    "ans": "20/3"
+  },
+  {
+    "q": "An item marked at ₹600 is discounted by 20%. Find its selling price.",
+    "options": ["480", "478", "483", "485"],
+    "ans": "480"
+  },
+  {
+    "q": "A can complete a job in 9 days and B in 18 days. How long will they take working together?",
+    "options": ["9", "11", "4", "6"],
+    "ans": "6"
+  },
+  {
+    "q": "A can complete a job in 20 days and B in 19 days. How long will they take working together?",
+    "options": ["380/39", "419/39", "760/39", "341/39"],
+    "ans": "380/39"
+  },
+  {
+    "q": "An item marked at ₹1200 is discounted by 15%. Find its selling price.",
+    "options": ["1023", "1018", "1020", "1025"],
+    "ans": "1020"
+  },
+  {
+    "q": "Find the 30th term of an arithmetic progression with first term 26 and common difference 10.",
+    "options": ["321", "319", "316", "314"],
+    "ans": "316"
+  },
+  {
+    "q": "Ravi is 39 years old. How old will he be after 15 years?",
+    "options": ["54", "52", "57", "59"],
+    "ans": "54"
+  },
+  {
+    "q": "Find the simple interest on ₹4000 at 12% per annum for 2 year(s).",
+    "options": ["965", "958", "960", "963"],
+    "ans": "960"
+  },
+  {
+    "q": "A can complete a job in 5 days and B in 12 days. How long will they take working together?",
+    "options": ["77/17", "43/17", "120/17", "60/17"],
+    "ans": "60/17"
+  },
+  {
+    "q": "Find the area of a rectangle with length 17 cm and width 8 cm.",
+    "options": ["136", "141", "134", "139"],
+    "ans": "136"
+  },
+  {
+    "q": "Two numbers are in the ratio 6:2. Their sum is 96. Find the smaller number.",
+    "options": ["24", "27", "29", "22"],
+    "ans": "24"
+  },
+  {
+    "q": "Find the area of a rectangle with length 29 cm and width 13 cm.",
+    "options": ["375", "377", "382", "380"],
+    "ans": "377"
+  },
+  {
+    "q": "Find the 28th term of an arithmetic progression with first term 15 and common difference 2.",
+    "options": ["67", "69", "74", "72"],
+    "ans": "69"
+  },
+  {
+    "q": "An item bought for ₹2000 is sold at a profit of 20%. Find its selling price.",
+    "options": ["2405", "2403", "2398", "2400"],
+    "ans": "2400"
+  },
+  {
+    "q": "Solve for x: 5x + 13 = 63.",
+    "options": ["10", "13", "15", "8"],
+    "ans": "10"
+  },
+  {
+    "q": "Solve for x: 6x + 24 = 132.",
+    "options": ["16", "21", "23", "18"],
+    "ans": "18"
+  },
+  {
+    "q": "Find the 8th term of an arithmetic progression with first term 15 and common difference 12.",
+    "options": ["97", "102", "104", "99"],
+    "ans": "99"
+  },
+  {
+    "q": "Find the 14th term of an arithmetic progression with first term 18 and common difference 10.",
+    "options": ["148", "153", "146", "151"],
+    "ans": "148"
+  },
+  {
+    "q": "Find the simple interest on ₹8000 at 12% per annum for 2 year(s).",
+    "options": ["1918", "1925", "1923", "1920"],
+    "ans": "1920"
+  },
+  {
+    "q": "A bag contains 2 red balls and 8 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["2/5", "6/5", "0", "1/5"],
+    "ans": "1/5"
+  },
+  {
+    "q": "Two numbers are in the ratio 9:2. Their sum is 550. Find the smaller number.",
+    "options": ["103", "105", "98", "100"],
+    "ans": "100"
+  },
+  {
+    "q": "Ravi is 20 years old. How old will he be after 7 years?",
+    "options": ["32", "25", "30", "27"],
+    "ans": "27"
+  },
+  {
+    "q": "A company records quarterly sales of 85, 98, 111, and 85 units. Find the total sales.",
+    "options": ["379", "377", "384", "382"],
+    "ans": "379"
+  },
+  {
+    "q": "Find the HCF of 72 and 42.",
+    "options": ["6", "11", "4", "9"],
+    "ans": "6"
+  },
+  {
+    "q": "Ravi is 44 years old. How old will he be after 10 years?",
+    "options": ["59", "54", "57", "52"],
+    "ans": "54"
+  },
+  {
+    "q": "Find the area of a rectangle with length 22 cm and width 6 cm.",
+    "options": ["137", "132", "130", "135"],
+    "ans": "132"
+  },
+  {
+    "q": "Ravi is 32 years old. How old will he be after 8 years?",
+    "options": ["43", "45", "38", "40"],
+    "ans": "40"
+  },
+  {
+    "q": "Find the HCF of 123 and 106.",
+    "options": ["6", "-1", "4", "1"],
+    "ans": "1"
+  },
+  {
+    "q": "An item marked at ₹600 is discounted by 5%. Find its selling price.",
+    "options": ["575", "570", "568", "573"],
+    "ans": "570"
+  },
+  {
+    "q": "A bag contains 2 red balls and 2 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["3/2", "0", "1/2", "1"],
+    "ans": "1/2"
+  },
+  {
+    "q": "After a 30% increase, a number becomes 300. Find the original number.",
+    "options": ["2987/13", "3013/13", "6000/13", "3000/13"],
+    "ans": "3000/13"
+  },
+  {
+    "q": "A train 100 metres long travels at 72 km/h. How many seconds does it take to pass a pole?",
+    "options": ["3", "5", "10", "8"],
+    "ans": "5"
+  },
+  {
+    "q": "Solve for x: 3x + 25 = 100.",
+    "options": ["25", "28", "30", "23"],
+    "ans": "25"
+  },
+  {
+    "q": "Solve for x: 11x + 18 = 205.",
+    "options": ["20", "22", "15", "17"],
+    "ans": "17"
+  },
+  {
+    "q": "Find the area of a rectangle with length 9 cm and width 18 cm.",
+    "options": ["162", "167", "160", "165"],
+    "ans": "162"
+  },
+  {
+    "q": "Two numbers are in the ratio 6:4. Their sum is 150. Find the smaller number.",
+    "options": ["58", "65", "60", "63"],
+    "ans": "60"
+  },
+  {
+    "q": "Find the area of a rectangle with length 12 cm and width 18 cm.",
+    "options": ["216", "219", "214", "221"],
+    "ans": "216"
+  },
+  {
+    "q": "A bag contains 8 red balls and 10 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["0", "4/9", "13/9", "8/9"],
+    "ans": "4/9"
+  },
+  {
+    "q": "In how many ways can 5 people be selected from 5 people?",
+    "options": ["-1", "4", "1", "6"],
+    "ans": "1"
+  },
+  {
+    "q": "Ravi is 45 years old. How old will he be after 3 years?",
+    "options": ["51", "48", "53", "46"],
+    "ans": "48"
+  },
+  {
+    "q": "Solve for x: 8x + 8 = 216.",
+    "options": ["29", "26", "24", "31"],
+    "ans": "26"
+  },
+  {
+    "q": "A train 150 metres long travels at 72 km/h. How many seconds does it take to pass a pole?",
+    "options": ["15/2", "15", "13/2", "17/2"],
+    "ans": "15/2"
+  },
+  {
+    "q": "A car travels at 45 km/h for 5 hours. How far does it travel?",
+    "options": ["228", "223", "225", "230"],
+    "ans": "225"
+  },
+  {
+    "q": "Find the area of a rectangle with length 8 cm and width 12 cm.",
+    "options": ["101", "94", "99", "96"],
+    "ans": "96"
+  },
+  {
+    "q": "A company records quarterly sales of 102, 70, 136, and 98 units. Find the total sales.",
+    "options": ["409", "411", "404", "406"],
+    "ans": "406"
+  },
+  {
+    "q": "Find the simple interest on ₹2500 at 15% per annum for 3 year(s).",
+    "options": ["1130", "1125", "1128", "1123"],
+    "ans": "1125"
+  },
+  {
+    "q": "Pipe A fills a tank in 5 hours and Pipe B fills it in 6 hours. How long will they take together?",
+    "options": ["19/11", "41/11", "30/11", "60/11"],
+    "ans": "30/11"
+  },
+  {
+    "q": "Pipe A fills a tank in 15 hours and Pipe B fills it in 13 hours. How long will they take together?",
+    "options": ["195/28", "195/14", "167/28", "223/28"],
+    "ans": "195/28"
+  },
+  {
+    "q": "Find the HCF of 39 and 138.",
+    "options": ["3", "8", "1", "6"],
+    "ans": "3"
+  },
+  {
+    "q": "A can complete a job in 4 days and B in 16 days. How long will they take working together?",
+    "options": ["11/5", "21/5", "32/5", "16/5"],
+    "ans": "16/5"
+  },
+  {
+    "q": "Find the simple interest on ₹6000 at 6% per annum for 3 year(s).",
+    "options": ["1078", "1080", "1085", "1083"],
+    "ans": "1080"
+  },
+  {
+    "q": "A bag contains 3 red balls and 6 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["4/3", "1/3", "0", "2/3"],
+    "ans": "1/3"
+  },
+  {
+    "q": "Solve for x: 10x + 12 = 112.",
+    "options": ["10", "15", "13", "8"],
+    "ans": "10"
+  },
+  {
+    "q": "Solve for x: 12x + 26 = 134.",
+    "options": ["14", "7", "12", "9"],
+    "ans": "9"
+  },
+  {
+    "q": "Solve for x: 6x + 13 = 49.",
+    "options": ["11", "9", "4", "6"],
+    "ans": "6"
+  },
+  {
+    "q": "After a 30% increase, a number becomes 180. Find the original number.",
+    "options": ["1813/13", "3600/13", "1800/13", "1787/13"],
+    "ans": "1800/13"
+  },
+  {
+    "q": "A can complete a job in 12 days and B in 10 days. How long will they take working together?",
+    "options": ["60/11", "71/11", "120/11", "49/11"],
+    "ans": "60/11"
+  },
+  {
+    "q": "Find the area of a rectangle with length 31 cm and width 24 cm.",
+    "options": ["747", "744", "749", "742"],
+    "ans": "744"
+  },
+  {
+    "q": "What is 35% of 320?",
+    "options": ["112", "115", "110", "117"],
+    "ans": "112"
+  },
+  {
+    "q": "A car travels at 80 km/h for 5 hours. How far does it travel?",
+    "options": ["403", "398", "405", "400"],
+    "ans": "400"
+  },
+  {
+    "q": "Find the HCF of 118 and 46.",
+    "options": ["5", "7", "2", "0"],
+    "ans": "2"
+  },
+  {
+    "q": "After a 20% increase, a number becomes 200. Find the original number.",
+    "options": ["503/3", "500/3", "1000/3", "497/3"],
+    "ans": "500/3"
+  },
+  {
+    "q": "Ravi is 21 years old. How old will he be after 14 years?",
+    "options": ["35", "38", "33", "40"],
+    "ans": "35"
+  },
+  {
+    "q": "A company records quarterly sales of 49, 78, 35, and 148 units. Find the total sales.",
+    "options": ["315", "313", "308", "310"],
+    "ans": "310"
+  },
+  {
+    "q": "The average score of 4 candidates is 42. Find their total score.",
+    "options": ["171", "173", "166", "168"],
+    "ans": "168"
+  },
+  {
+    "q": "A company records quarterly sales of 37, 142, 56, and 121 units. Find the total sales.",
+    "options": ["361", "359", "354", "356"],
+    "ans": "356"
+  },
+  {
+    "q": "An item marked at ₹1200 is discounted by 5%. Find its selling price.",
+    "options": ["1138", "1145", "1140", "1143"],
+    "ans": "1140"
+  },
+  {
+    "q": "Pipe A fills a tank in 4 hours and Pipe B fills it in 14 hours. How long will they take together?",
+    "options": ["28/9", "37/9", "19/9", "56/9"],
+    "ans": "28/9"
+  },
+  {
+    "q": "A bag contains 4 red balls and 6 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["4/5", "2/5", "0", "7/5"],
+    "ans": "2/5"
+  },
+  {
+    "q": "What is 25% of 600?",
+    "options": ["155", "150", "148", "153"],
+    "ans": "150"
+  },
+  {
+    "q": "A can complete a job in 18 days and B in 13 days. How long will they take working together?",
+    "options": ["234/31", "265/31", "203/31", "468/31"],
+    "ans": "234/31"
+  },
+  {
+    "q": "Two numbers are in the ratio 4:3. Their sum is 350. Find the smaller number.",
+    "options": ["150", "153", "155", "148"],
+    "ans": "150"
+  },
+  {
+    "q": "Find the simple interest on ₹6000 at 10% per annum for 3 year(s).",
+    "options": ["1803", "1800", "1798", "1805"],
+    "ans": "1800"
+  },
+  {
+    "q": "A company records quarterly sales of 150, 21, 146, and 72 units. Find the total sales.",
+    "options": ["392", "387", "389", "394"],
+    "ans": "389"
+  },
+  {
+    "q": "Find the area of a rectangle with length 19 cm and width 18 cm.",
+    "options": ["340", "342", "345", "347"],
+    "ans": "342"
+  },
+  {
+    "q": "A car travels at 40 km/h for 8 hours. How far does it travel?",
+    "options": ["323", "325", "318", "320"],
+    "ans": "320"
+  },
+  {
+    "q": "In how many ways can 4 people be selected from 6 people?",
+    "options": ["13", "15", "20", "18"],
+    "ans": "15"
+  },
+  {
+    "q": "Solve for x: 11x + 9 = 273.",
+    "options": ["22", "24", "29", "27"],
+    "ans": "24"
+  },
+  {
+    "q": "A bag contains 6 red balls and 7 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["0", "6/13", "19/13", "12/13"],
+    "ans": "6/13"
+  },
+  {
+    "q": "Ravi is 20 years old. How old will he be after 15 years?",
+    "options": ["40", "35", "38", "33"],
+    "ans": "35"
+  },
+  {
+    "q": "An item marked at ₹1000 is discounted by 20%. Find its selling price.",
+    "options": ["805", "798", "800", "803"],
+    "ans": "800"
+  },
+  {
+    "q": "A can complete a job in 17 days and B in 12 days. How long will they take working together?",
+    "options": ["408/29", "204/29", "233/29", "175/29"],
+    "ans": "204/29"
+  },
+  {
+    "q": "Two numbers are in the ratio 5:6. Their sum is 55. Find the smaller number.",
+    "options": ["28", "23", "25", "30"],
+    "ans": "25"
+  },
+  {
+    "q": "After a 20% increase, a number becomes 150. Find the original number.",
+    "options": ["130", "123", "125", "128"],
+    "ans": "125"
+  },
+  {
+    "q": "A train 200 metres long travels at 60 km/h. How many seconds does it take to pass a pole?",
+    "options": ["15", "12", "10", "17"],
+    "ans": "12"
+  },
+  {
+    "q": "What is 60% of 750?",
+    "options": ["448", "450", "455", "453"],
+    "ans": "450"
+  },
+  {
+    "q": "An item marked at ₹1500 is discounted by 5%. Find its selling price.",
+    "options": ["1428", "1425", "1430", "1423"],
+    "ans": "1425"
+  },
+  {
+    "q": "Ravi is 41 years old. How old will he be after 5 years?",
+    "options": ["44", "49", "51", "46"],
+    "ans": "46"
+  },
+  {
+    "q": "A train 240 metres long travels at 72 km/h. How many seconds does it take to pass a pole?",
+    "options": ["17", "10", "12", "15"],
+    "ans": "12"
+  },
+  {
+    "q": "Find the area of a rectangle with length 26 cm and width 12 cm.",
+    "options": ["312", "317", "315", "310"],
+    "ans": "312"
+  },
+  {
+    "q": "A mixture contains 35 litres of milk and 45 litres of water. What percentage of the mixture is milk?",
+    "options": ["175/4", "175/2", "179/4", "171/4"],
+    "ans": "175/4"
+  },
+  {
+    "q": "A mixture contains 40 litres of milk and 30 litres of water. What percentage of the mixture is milk?",
+    "options": ["800/7", "400/7", "393/7", "407/7"],
+    "ans": "400/7"
+  },
+  {
+    "q": "Find the area of a rectangle with length 13 cm and width 14 cm.",
+    "options": ["187", "180", "182", "185"],
+    "ans": "182"
+  },
+  {
+    "q": "An item bought for ₹1500 is sold at a profit of 5%. Find its selling price.",
+    "options": ["1573", "1575", "1578", "1580"],
+    "ans": "1575"
+  },
+  {
+    "q": "Ravi is 28 years old. How old will he be after 11 years?",
+    "options": ["39", "37", "44", "42"],
+    "ans": "39"
+  },
+  {
+    "q": "Two numbers are in the ratio 3:9. Their sum is 480. Find the smaller number.",
+    "options": ["118", "120", "123", "125"],
+    "ans": "120"
+  },
+  {
+    "q": "Solve for x: 11x + 26 = 235.",
+    "options": ["22", "24", "19", "17"],
+    "ans": "19"
+  },
+  {
+    "q": "Find the area of a rectangle with length 8 cm and width 7 cm.",
+    "options": ["56", "54", "61", "59"],
+    "ans": "56"
+  },
+  {
+    "q": "In how many ways can 3 people be selected from 6 people?",
+    "options": ["20", "23", "18", "25"],
+    "ans": "20"
+  },
+  {
+    "q": "Pipe A fills a tank in 4 hours and Pipe B fills it in 9 hours. How long will they take together?",
+    "options": ["23/13", "72/13", "36/13", "49/13"],
+    "ans": "36/13"
+  },
+  {
+    "q": "Find the 21th term of an arithmetic progression with first term 3 and common difference 4.",
+    "options": ["81", "83", "86", "88"],
+    "ans": "83"
+  },
+  {
+    "q": "Find the simple interest on ₹4000 at 4% per annum for 1 year(s).",
+    "options": ["160", "163", "165", "158"],
+    "ans": "160"
+  },
+  {
+    "q": "Solve for x: 8x + 12 = 124.",
+    "options": ["19", "12", "17", "14"],
+    "ans": "14"
+  },
+  {
+    "q": "An item bought for ₹1200 is sold at a profit of 25%. Find its selling price.",
+    "options": ["1500", "1503", "1498", "1505"],
+    "ans": "1500"
+  },
+  {
+    "q": "The average score of 8 candidates is 48. Find their total score.",
+    "options": ["384", "387", "382", "389"],
+    "ans": "384"
+  },
+  {
+    "q": "A can complete a job in 11 days and B in 9 days. How long will they take working together?",
+    "options": ["119/20", "79/20", "99/10", "99/20"],
+    "ans": "99/20"
+  },
+  {
+    "q": "The average score of 11 candidates is 60. Find their total score.",
+    "options": ["663", "665", "660", "658"],
+    "ans": "660"
+  },
+  {
+    "q": "Solve for x: 2x + 4 = 48.",
+    "options": ["27", "20", "22", "25"],
+    "ans": "22"
+  },
+  {
+    "q": "Find the area of a rectangle with length 22 cm and width 15 cm.",
+    "options": ["335", "333", "330", "328"],
+    "ans": "330"
+  },
+  {
+    "q": "Two numbers are in the ratio 3:5. Their sum is 400. Find the smaller number.",
+    "options": ["155", "153", "150", "148"],
+    "ans": "150"
+  },
+  {
+    "q": "A bag contains 8 red balls and 5 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["0", "8/13", "21/13", "16/13"],
+    "ans": "8/13"
+  },
+  {
+    "q": "What is 60% of 120?",
+    "options": ["70", "77", "75", "72"],
+    "ans": "72"
+  },
+  {
+    "q": "An item marked at ₹3000 is discounted by 15%. Find its selling price.",
+    "options": ["2553", "2550", "2555", "2548"],
+    "ans": "2550"
+  },
+  {
+    "q": "Find the area of a rectangle with length 16 cm and width 16 cm.",
+    "options": ["254", "261", "256", "259"],
+    "ans": "256"
+  },
+  {
+    "q": "A bag contains 2 red balls and 4 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["4/3", "1/3", "2/3", "0"],
+    "ans": "1/3"
+  },
+  {
+    "q": "A can complete a job in 16 days and B in 20 days. How long will they take working together?",
+    "options": ["71/9", "160/9", "80/9", "89/9"],
+    "ans": "80/9"
+  },
+  {
+    "q": "Pipe A fills a tank in 3 hours and Pipe B fills it in 8 hours. How long will they take together?",
+    "options": ["13/11", "35/11", "24/11", "48/11"],
+    "ans": "24/11"
+  },
+  {
+    "q": "Find the 17th term of an arithmetic progression with first term 5 and common difference 4.",
+    "options": ["69", "72", "74", "67"],
+    "ans": "69"
+  },
+  {
+    "q": "An item bought for ₹1200 is sold at a profit of 12%. Find its selling price.",
+    "options": ["1347", "1344", "1342", "1349"],
+    "ans": "1344"
+  },
+  {
+    "q": "Find the HCF of 58 and 126.",
+    "options": ["2", "7", "5", "0"],
+    "ans": "2"
+  },
+  {
+    "q": "A mixture contains 20 litres of milk and 10 litres of water. What percentage of the mixture is milk?",
+    "options": ["203/3", "400/3", "197/3", "200/3"],
+    "ans": "200/3"
+  },
+  {
+    "q": "An item bought for ₹200 is sold at a profit of 20%. Find its selling price.",
+    "options": ["240", "245", "243", "238"],
+    "ans": "240"
+  },
+  {
+    "q": "A can complete a job in 16 days and B in 6 days. How long will they take working together?",
+    "options": ["48/11", "37/11", "96/11", "59/11"],
+    "ans": "48/11"
+  },
+  {
+    "q": "After a 10% increase, a number becomes 180. Find the original number.",
+    "options": ["3600/11", "1789/11", "1800/11", "1811/11"],
+    "ans": "1800/11"
+  },
+  {
+    "q": "A mixture contains 12 litres of milk and 40 litres of water. What percentage of the mixture is milk?",
+    "options": ["287/13", "313/13", "300/13", "600/13"],
+    "ans": "300/13"
+  },
+  {
+    "q": "Find the area of a rectangle with length 9 cm and width 6 cm.",
+    "options": ["52", "57", "54", "59"],
+    "ans": "54"
+  },
+  {
+    "q": "Solve for x: 7x + 30 = 177.",
+    "options": ["24", "19", "21", "26"],
+    "ans": "21"
+  },
+  {
+    "q": "A mixture contains 20 litres of milk and 30 litres of water. What percentage of the mixture is milk?",
+    "options": ["38", "45", "43", "40"],
+    "ans": "40"
+  },
+  {
+    "q": "A mixture contains 15 litres of milk and 50 litres of water. What percentage of the mixture is milk?",
+    "options": ["313/13", "287/13", "600/13", "300/13"],
+    "ans": "300/13"
+  },
+  {
+    "q": "A company records quarterly sales of 149, 95, 20, and 119 units. Find the total sales.",
+    "options": ["386", "383", "381", "388"],
+    "ans": "383"
+  },
+  {
+    "q": "A train 120 metres long travels at 45 km/h. How many seconds does it take to pass a pole?",
+    "options": ["96/5", "48/5", "53/5", "43/5"],
+    "ans": "48/5"
+  },
+  {
+    "q": "A bag contains 10 red balls and 6 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["5/8", "0", "5/4", "13/8"],
+    "ans": "5/8"
+  },
+  {
+    "q": "What is 40% of 150?",
+    "options": ["60", "58", "63", "65"],
+    "ans": "60"
+  },
+  {
+    "q": "A can complete a job in 6 days and B in 6 days. How long will they take working together?",
+    "options": ["1", "8", "6", "3"],
+    "ans": "3"
+  },
+  {
+    "q": "Find the HCF of 145 and 33.",
+    "options": ["4", "-1", "1", "6"],
+    "ans": "1"
+  },
+  {
+    "q": "In how many ways can 2 people be selected from 9 people?",
+    "options": ["39", "34", "36", "41"],
+    "ans": "36"
+  },
+  {
+    "q": "Solve for x: 3x + 7 = 43.",
+    "options": ["10", "15", "12", "17"],
+    "ans": "12"
+  },
+  {
+    "q": "Find the simple interest on ₹2000 at 15% per annum for 3 year(s).",
+    "options": ["900", "903", "905", "898"],
+    "ans": "900"
+  },
+  {
+    "q": "A can complete a job in 19 days and B in 10 days. How long will they take working together?",
+    "options": ["161/29", "380/29", "219/29", "190/29"],
+    "ans": "190/29"
+  },
+  {
+    "q": "Find the simple interest on ₹2000 at 5% per annum for 3 year(s).",
+    "options": ["300", "298", "303", "305"],
+    "ans": "300"
+  },
+  {
+    "q": "A can complete a job in 8 days and B in 13 days. How long will they take working together?",
+    "options": ["125/21", "83/21", "208/21", "104/21"],
+    "ans": "104/21"
+  },
+  {
+    "q": "The average score of 11 candidates is 50. Find their total score.",
+    "options": ["550", "553", "548", "555"],
+    "ans": "550"
+  },
+  {
+    "q": "Two numbers are in the ratio 4:2. Their sum is 72. Find the smaller number.",
+    "options": ["29", "22", "27", "24"],
+    "ans": "24"
+  },
+  {
+    "q": "Solve for x: 8x + 12 = 84.",
+    "options": ["9", "12", "14", "7"],
+    "ans": "9"
+  },
+  {
+    "q": "Two numbers are in the ratio 2:5. Their sum is 280. Find the smaller number.",
+    "options": ["83", "78", "85", "80"],
+    "ans": "80"
+  },
+  {
+    "q": "An item marked at ₹1500 is discounted by 20%. Find its selling price.",
+    "options": ["1200", "1198", "1203", "1205"],
+    "ans": "1200"
+  },
+  {
+    "q": "Find the HCF of 35 and 28.",
+    "options": ["7", "12", "10", "5"],
+    "ans": "7"
+  },
+  {
+    "q": "An item bought for ₹500 is sold at a profit of 15%. Find its selling price.",
+    "options": ["575", "573", "578", "580"],
+    "ans": "575"
+  },
+  {
+    "q": "Find the HCF of 100 and 53.",
+    "options": ["6", "4", "-1", "1"],
+    "ans": "1"
+  },
+  {
+    "q": "Find the simple interest on ₹10000 at 12% per annum for 1 year(s).",
+    "options": ["1198", "1205", "1203", "1200"],
+    "ans": "1200"
+  },
+  {
+    "q": "A company records quarterly sales of 133, 143, 92, and 123 units. Find the total sales.",
+    "options": ["491", "494", "496", "489"],
+    "ans": "491"
+  },
+  {
+    "q": "Pipe A fills a tank in 10 hours and Pipe B fills it in 14 hours. How long will they take together?",
+    "options": ["29/6", "35/6", "41/6", "35/3"],
+    "ans": "35/6"
+  },
+  {
+    "q": "The average score of 6 candidates is 36. Find their total score.",
+    "options": ["214", "221", "216", "219"],
+    "ans": "216"
+  },
+  {
+    "q": "Pipe A fills a tank in 6 hours and Pipe B fills it in 13 hours. How long will they take together?",
+    "options": ["78/19", "59/19", "156/19", "97/19"],
+    "ans": "78/19"
+  },
+  {
+    "q": "Ravi is 35 years old. How old will he be after 5 years?",
+    "options": ["45", "38", "40", "43"],
+    "ans": "40"
+  },
+  {
+    "q": "The average score of 5 candidates is 30. Find their total score.",
+    "options": ["150", "153", "155", "148"],
+    "ans": "150"
+  },
+  {
+    "q": "Ravi is 44 years old. How old will he be after 11 years?",
+    "options": ["53", "55", "58", "60"],
+    "ans": "55"
+  },
+  {
+    "q": "Two numbers are in the ratio 5:6. Their sum is 110. Find the smaller number.",
+    "options": ["53", "48", "55", "50"],
+    "ans": "50"
+  },
+  {
+    "q": "A can complete a job in 17 days and B in 13 days. How long will they take working together?",
+    "options": ["191/30", "221/30", "251/30", "221/15"],
+    "ans": "221/30"
+  },
+  {
+    "q": "Find the HCF of 100 and 60.",
+    "options": ["18", "23", "20", "25"],
+    "ans": "20"
+  },
+  {
+    "q": "What is 12% of 1200?",
+    "options": ["142", "147", "149", "144"],
+    "ans": "144"
+  },
+  {
+    "q": "After a 30% increase, a number becomes 400. Find the original number.",
+    "options": ["4013/13", "3987/13", "4000/13", "8000/13"],
+    "ans": "4000/13"
+  },
+  {
+    "q": "A train 120 metres long travels at 90 km/h. How many seconds does it take to pass a pole?",
+    "options": ["24/5", "29/5", "19/5", "48/5"],
+    "ans": "24/5"
+  },
+  {
+    "q": "Pipe A fills a tank in 11 hours and Pipe B fills it in 12 hours. How long will they take together?",
+    "options": ["132/23", "109/23", "264/23", "155/23"],
+    "ans": "132/23"
+  },
+  {
+    "q": "Find the area of a rectangle with length 19 cm and width 17 cm.",
+    "options": ["328", "326", "321", "323"],
+    "ans": "323"
+  },
+  {
+    "q": "The average score of 7 candidates is 65. Find their total score.",
+    "options": ["455", "453", "460", "458"],
+    "ans": "455"
+  },
+  {
+    "q": "After a 20% increase, a number becomes 360. Find the original number.",
+    "options": ["300", "303", "305", "298"],
+    "ans": "300"
+  },
+  {
+    "q": "The average score of 10 candidates is 48. Find their total score.",
+    "options": ["480", "478", "485", "483"],
+    "ans": "480"
+  },
+  {
+    "q": "Find the 11th term of an arithmetic progression with first term 11 and common difference 9.",
+    "options": ["104", "101", "106", "99"],
+    "ans": "101"
+  },
+  {
+    "q": "A bag contains 10 red balls and 9 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["20/19", "0", "10/19", "29/19"],
+    "ans": "10/19"
+  },
+  {
+    "q": "Find the HCF of 59 and 112.",
+    "options": ["6", "-1", "4", "1"],
+    "ans": "1"
+  },
+  {
+    "q": "Find the HCF of 47 and 91.",
+    "options": ["1", "4", "-1", "6"],
+    "ans": "1"
+  },
+  {
+    "q": "A car travels at 50 km/h for 7 hours. How far does it travel?",
+    "options": ["355", "350", "348", "353"],
+    "ans": "350"
+  },
+  {
+    "q": "A train 180 metres long travels at 60 km/h. How many seconds does it take to pass a pole?",
+    "options": ["59/5", "108/5", "49/5", "54/5"],
+    "ans": "54/5"
+  },
+  {
+    "q": "A mixture contains 12 litres of milk and 50 litres of water. What percentage of the mixture is milk?",
+    "options": ["569/31", "631/31", "1200/31", "600/31"],
+    "ans": "600/31"
+  },
+  {
+    "q": "The average score of 8 candidates is 40. Find their total score.",
+    "options": ["318", "325", "320", "323"],
+    "ans": "320"
+  },
+  {
+    "q": "A mixture contains 35 litres of milk and 40 litres of water. What percentage of the mixture is milk?",
+    "options": ["143/3", "137/3", "280/3", "140/3"],
+    "ans": "140/3"
+  },
+  {
+    "q": "Find the area of a rectangle with length 24 cm and width 14 cm.",
+    "options": ["341", "339", "334", "336"],
+    "ans": "336"
+  },
+  {
+    "q": "Find the simple interest on ₹8000 at 15% per annum for 4 year(s).",
+    "options": ["4803", "4805", "4798", "4800"],
+    "ans": "4800"
+  },
+  {
+    "q": "After a 40% increase, a number becomes 120. Find the original number.",
+    "options": ["593/7", "1200/7", "600/7", "607/7"],
+    "ans": "600/7"
+  },
+  {
+    "q": "Find the HCF of 139 and 128.",
+    "options": ["6", "1", "-1", "4"],
+    "ans": "1"
+  },
+  {
+    "q": "Find the HCF of 41 and 64.",
+    "options": ["-1", "6", "4", "1"],
+    "ans": "1"
+  },
+  {
+    "q": "Find the 23th term of an arithmetic progression with first term 2 and common difference 9.",
+    "options": ["205", "200", "203", "198"],
+    "ans": "200"
+  },
+  {
+    "q": "A company records quarterly sales of 105, 91, 35, and 48 units. Find the total sales.",
+    "options": ["277", "284", "279", "282"],
+    "ans": "279"
+  },
+  {
+    "q": "Two numbers are in the ratio 4:7. Their sum is 110. Find the smaller number.",
+    "options": ["43", "38", "45", "40"],
+    "ans": "40"
+  },
+  {
+    "q": "Ravi is 39 years old. How old will he be after 8 years?",
+    "options": ["52", "45", "50", "47"],
+    "ans": "47"
+  },
+  {
+    "q": "Find the area of a rectangle with length 5 cm and width 24 cm.",
+    "options": ["125", "120", "123", "118"],
+    "ans": "120"
+  },
+  {
+    "q": "Find the area of a rectangle with length 12 cm and width 9 cm.",
+    "options": ["106", "108", "113", "111"],
+    "ans": "108"
+  },
+  {
+    "q": "What is 35% of 160?",
+    "options": ["59", "56", "61", "54"],
+    "ans": "56"
+  },
+  {
+    "q": "An item bought for ₹800 is sold at a profit of 30%. Find its selling price.",
+    "options": ["1040", "1045", "1038", "1043"],
+    "ans": "1040"
+  },
+  {
+    "q": "A can complete a job in 18 days and B in 9 days. How long will they take working together?",
+    "options": ["4", "11", "9", "6"],
+    "ans": "6"
+  },
+  {
+    "q": "A train 360 metres long travels at 60 km/h. How many seconds does it take to pass a pole?",
+    "options": ["108/5", "103/5", "216/5", "113/5"],
+    "ans": "108/5"
+  },
+  {
+    "q": "After a 25% increase, a number becomes 120. Find the original number.",
+    "options": ["96", "101", "94", "99"],
+    "ans": "96"
+  },
+  {
+    "q": "After a 15% increase, a number becomes 150. Find the original number.",
+    "options": ["2977/23", "3000/23", "3023/23", "6000/23"],
+    "ans": "3000/23"
+  },
+  {
+    "q": "An item bought for ₹2000 is sold at a profit of 25%. Find its selling price.",
+    "options": ["2503", "2505", "2500", "2498"],
+    "ans": "2500"
+  },
+  {
+    "q": "The average score of 5 candidates is 70. Find their total score.",
+    "options": ["355", "348", "350", "353"],
+    "ans": "350"
+  },
+  {
+    "q": "A train 200 metres long travels at 90 km/h. How many seconds does it take to pass a pole?",
+    "options": ["8", "6", "13", "11"],
+    "ans": "8"
+  },
+  {
+    "q": "Find the simple interest on ₹1000 at 12% per annum for 1 year(s).",
+    "options": ["125", "120", "123", "118"],
+    "ans": "120"
+  },
+  {
+    "q": "The average score of 8 candidates is 55. Find their total score.",
+    "options": ["443", "445", "438", "440"],
+    "ans": "440"
+  },
+  {
+    "q": "Pipe A fills a tank in 11 hours and Pipe B fills it in 6 hours. How long will they take together?",
+    "options": ["132/17", "49/17", "83/17", "66/17"],
+    "ans": "66/17"
+  },
+  {
+    "q": "Ravi is 24 years old. How old will he be after 8 years?",
+    "options": ["37", "35", "30", "32"],
+    "ans": "32"
+  },
+  {
+    "q": "Solve for x: 11x + 4 = 103.",
+    "options": ["14", "7", "9", "12"],
+    "ans": "9"
+  },
+  {
+    "q": "The average score of 4 candidates is 48. Find their total score.",
+    "options": ["192", "197", "195", "190"],
+    "ans": "192"
+  },
+  {
+    "q": "Ravi is 44 years old. How old will he be after 6 years?",
+    "options": ["53", "50", "55", "48"],
+    "ans": "50"
+  },
+  {
+    "q": "Ravi is 34 years old. How old will he be after 14 years?",
+    "options": ["51", "48", "46", "53"],
+    "ans": "48"
+  },
+  {
+    "q": "Find the area of a rectangle with length 25 cm and width 18 cm.",
+    "options": ["448", "450", "453", "455"],
+    "ans": "450"
+  },
+  {
+    "q": "A train 300 metres long travels at 36 km/h. How many seconds does it take to pass a pole?",
+    "options": ["33", "35", "30", "28"],
+    "ans": "30"
+  },
+  {
+    "q": "Solve for x: 12x + 4 = 304.",
+    "options": ["25", "30", "28", "23"],
+    "ans": "25"
+  },
+  {
+    "q": "Find the area of a rectangle with length 15 cm and width 4 cm.",
+    "options": ["63", "60", "58", "65"],
+    "ans": "60"
+  },
+  {
+    "q": "Two numbers are in the ratio 5:7. Their sum is 300. Find the smaller number.",
+    "options": ["130", "125", "123", "128"],
+    "ans": "125"
+  },
+  {
+    "q": "A train 300 metres long travels at 72 km/h. How many seconds does it take to pass a pole?",
+    "options": ["20", "15", "13", "18"],
+    "ans": "15"
+  },
+  {
+    "q": "A mixture contains 10 litres of milk and 30 litres of water. What percentage of the mixture is milk?",
+    "options": ["23", "25", "28", "30"],
+    "ans": "25"
+  },
+  {
+    "q": "Find the HCF of 155 and 18.",
+    "options": ["1", "6", "-1", "4"],
+    "ans": "1"
+  },
+  {
+    "q": "Two numbers are in the ratio 2:5. Their sum is 70. Find the smaller number.",
+    "options": ["18", "23", "25", "20"],
+    "ans": "20"
+  },
+  {
+    "q": "Find the HCF of 168 and 114.",
+    "options": ["4", "9", "11", "6"],
+    "ans": "6"
+  },
+  {
+    "q": "Ravi is 36 years old. How old will he be after 4 years?",
+    "options": ["38", "43", "45", "40"],
+    "ans": "40"
+  },
+  {
+    "q": "A company records quarterly sales of 97, 59, 77, and 148 units. Find the total sales.",
+    "options": ["386", "379", "384", "381"],
+    "ans": "381"
+  },
+  {
+    "q": "Two numbers are in the ratio 5:3. Their sum is 200. Find the smaller number.",
+    "options": ["80", "78", "75", "73"],
+    "ans": "75"
+  },
+  {
+    "q": "A can complete a job in 14 days and B in 5 days. How long will they take working together?",
+    "options": ["51/19", "140/19", "89/19", "70/19"],
+    "ans": "70/19"
+  },
+  {
+    "q": "A can complete a job in 14 days and B in 13 days. How long will they take working together?",
+    "options": ["209/27", "182/27", "364/27", "155/27"],
+    "ans": "182/27"
+  },
+  {
+    "q": "The average score of 10 candidates is 28. Find their total score.",
+    "options": ["278", "285", "283", "280"],
+    "ans": "280"
+  },
+  {
+    "q": "An item bought for ₹1200 is sold at a profit of 40%. Find its selling price.",
+    "options": ["1683", "1680", "1685", "1678"],
+    "ans": "1680"
+  },
+  {
+    "q": "A train 150 metres long travels at 60 km/h. How many seconds does it take to pass a pole?",
+    "options": ["9", "12", "7", "14"],
+    "ans": "9"
+  },
+  {
+    "q": "Solve for x: 9x + 4 = 76.",
+    "options": ["11", "8", "6", "13"],
+    "ans": "8"
+  },
+  {
+    "q": "What is 5% of 500?",
+    "options": ["23", "25", "28", "30"],
+    "ans": "25"
+  },
+  {
+    "q": "The average score of 11 candidates is 45. Find their total score.",
+    "options": ["493", "500", "498", "495"],
+    "ans": "495"
+  },
+  {
+    "q": "Find the HCF of 27 and 116.",
+    "options": ["4", "-1", "6", "1"],
+    "ans": "1"
+  },
+  {
+    "q": "A mixture contains 45 litres of milk and 15 litres of water. What percentage of the mixture is milk?",
+    "options": ["73", "80", "78", "75"],
+    "ans": "75"
+  },
+  {
+    "q": "Ravi is 18 years old. How old will he be after 14 years?",
+    "options": ["37", "30", "32", "35"],
+    "ans": "32"
+  },
+  {
+    "q": "Find the 18th term of an arithmetic progression with first term 17 and common difference 2.",
+    "options": ["51", "54", "56", "49"],
+    "ans": "51"
+  },
+  {
+    "q": "Solve for x: 11x + 7 = 95.",
+    "options": ["8", "13", "11", "6"],
+    "ans": "8"
+  },
+  {
+    "q": "What is 25% of 120?",
+    "options": ["30", "33", "35", "28"],
+    "ans": "30"
+  },
+  {
+    "q": "After a 10% increase, a number becomes 360. Find the original number.",
+    "options": ["7200/11", "3611/11", "3589/11", "3600/11"],
+    "ans": "3600/11"
+  },
+  {
+    "q": "Find the HCF of 92 and 25.",
+    "options": ["4", "1", "6", "-1"],
+    "ans": "1"
+  },
+  {
+    "q": "Ravi is 41 years old. How old will he be after 13 years?",
+    "options": ["54", "59", "52", "57"],
+    "ans": "54"
+  },
+  {
+    "q": "Find the simple interest on ₹10000 at 12% per annum for 3 year(s).",
+    "options": ["3605", "3600", "3598", "3603"],
+    "ans": "3600"
+  },
+  {
+    "q": "Two numbers are in the ratio 5:9. Their sum is 140. Find the smaller number.",
+    "options": ["48", "53", "55", "50"],
+    "ans": "50"
+  },
+  {
+    "q": "Find the HCF of 67 and 125.",
+    "options": ["-1", "6", "1", "4"],
+    "ans": "1"
+  },
+  {
+    "q": "A mixture contains 10 litres of milk and 50 litres of water. What percentage of the mixture is milk?",
+    "options": ["100/3", "47/3", "50/3", "53/3"],
+    "ans": "50/3"
+  },
+  {
+    "q": "Two numbers are in the ratio 2:6. Their sum is 40. Find the smaller number.",
+    "options": ["8", "10", "15", "13"],
+    "ans": "10"
+  },
+  {
+    "q": "The average score of 4 candidates is 35. Find their total score.",
+    "options": ["140", "143", "145", "138"],
+    "ans": "140"
+  },
+  {
+    "q": "After a 20% increase, a number becomes 600. Find the original number.",
+    "options": ["500", "498", "503", "505"],
+    "ans": "500"
+  },
+  {
+    "q": "A bag contains 8 red balls and 9 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["25/17", "8/17", "16/17", "0"],
+    "ans": "8/17"
+  },
+  {
+    "q": "Find the HCF of 58 and 42.",
+    "options": ["7", "5", "0", "2"],
+    "ans": "2"
+  },
+  {
+    "q": "A company records quarterly sales of 56, 146, 121, and 122 units. Find the total sales.",
+    "options": ["450", "445", "443", "448"],
+    "ans": "445"
+  },
+  {
+    "q": "Find the HCF of 141 and 121.",
+    "options": ["4", "1", "6", "-1"],
+    "ans": "1"
+  },
+  {
+    "q": "Find the simple interest on ₹3000 at 15% per annum for 2 year(s).",
+    "options": ["898", "903", "905", "900"],
+    "ans": "900"
+  },
+  {
+    "q": "A can complete a job in 5 days and B in 19 days. How long will they take working together?",
+    "options": ["95/12", "71/24", "95/24", "119/24"],
+    "ans": "95/24"
+  },
+  {
+    "q": "Two numbers are in the ratio 3:4. Their sum is 280. Find the smaller number.",
+    "options": ["125", "120", "118", "123"],
+    "ans": "120"
+  },
+  {
+    "q": "Ravi is 41 years old. How old will he be after 4 years?",
+    "options": ["50", "45", "48", "43"],
+    "ans": "45"
+  },
+  {
+    "q": "Solve for x: 8x + 2 = 194.",
+    "options": ["22", "29", "27", "24"],
+    "ans": "24"
+  },
+  {
+    "q": "The average score of 11 candidates is 42. Find their total score.",
+    "options": ["465", "462", "467", "460"],
+    "ans": "462"
+  },
+  {
+    "q": "A can complete a job in 10 days and B in 16 days. How long will they take working together?",
+    "options": ["93/13", "160/13", "80/13", "67/13"],
+    "ans": "80/13"
+  },
+  {
+    "q": "After a 25% increase, a number becomes 240. Find the original number.",
+    "options": ["197", "192", "195", "190"],
+    "ans": "192"
+  },
+  {
+    "q": "A bag contains 8 red balls and 7 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["16/15", "8/15", "0", "23/15"],
+    "ans": "8/15"
+  },
+  {
+    "q": "Two numbers are in the ratio 6:8. Their sum is 560. Find the smaller number.",
+    "options": ["243", "238", "245", "240"],
+    "ans": "240"
+  },
+  {
+    "q": "A company records quarterly sales of 97, 147, 62, and 83 units. Find the total sales.",
+    "options": ["389", "387", "394", "392"],
+    "ans": "389"
+  },
+  {
+    "q": "What is 15% of 150?",
+    "options": ["45/2", "47/2", "43/2", "45"],
+    "ans": "45/2"
+  },
+  {
+    "q": "A can complete a job in 6 days and B in 12 days. How long will they take working together?",
+    "options": ["2", "7", "9", "4"],
+    "ans": "4"
+  },
+  {
+    "q": "After a 30% increase, a number becomes 240. Find the original number.",
+    "options": ["2400/13", "4800/13", "2387/13", "2413/13"],
+    "ans": "2400/13"
+  },
+  {
+    "q": "Ravi is 43 years old. How old will he be after 6 years?",
+    "options": ["54", "52", "47", "49"],
+    "ans": "49"
+  },
+  {
+    "q": "A bag contains 3 red balls and 10 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["0", "16/13", "6/13", "3/13"],
+    "ans": "3/13"
+  },
+  {
+    "q": "A can complete a job in 7 days and B in 19 days. How long will they take working together?",
+    "options": ["133/26", "107/26", "133/13", "159/26"],
+    "ans": "133/26"
+  },
+  {
+    "q": "What is 5% of 800?",
+    "options": ["38", "45", "40", "43"],
+    "ans": "40"
+  },
+  {
+    "q": "The average score of 10 candidates is 55. Find their total score.",
+    "options": ["550", "553", "548", "555"],
+    "ans": "550"
+  },
+  {
+    "q": "Find the simple interest on ₹4000 at 4% per annum for 2 year(s).",
+    "options": ["320", "325", "323", "318"],
+    "ans": "320"
+  },
+  {
+    "q": "An item marked at ₹500 is discounted by 25%. Find its selling price.",
+    "options": ["378", "373", "380", "375"],
+    "ans": "375"
+  },
+  {
+    "q": "A company records quarterly sales of 58, 131, 52, and 34 units. Find the total sales.",
+    "options": ["280", "275", "278", "273"],
+    "ans": "275"
+  },
+  {
+    "q": "Two numbers are in the ratio 2:5. Their sum is 140. Find the smaller number.",
+    "options": ["38", "45", "43", "40"],
+    "ans": "40"
+  },
+  {
+    "q": "Solve for x: 5x + 9 = 49.",
+    "options": ["8", "13", "6", "11"],
+    "ans": "8"
+  },
+  {
+    "q": "Pipe A fills a tank in 3 hours and Pipe B fills it in 9 hours. How long will they take together?",
+    "options": ["5/4", "13/4", "9/2", "9/4"],
+    "ans": "9/4"
+  },
+  {
+    "q": "Pipe A fills a tank in 7 hours and Pipe B fills it in 8 hours. How long will they take together?",
+    "options": ["56/15", "41/15", "112/15", "71/15"],
+    "ans": "56/15"
+  },
+  {
+    "q": "A car travels at 48 km/h for 6 hours. How far does it travel?",
+    "options": ["293", "291", "288", "286"],
+    "ans": "288"
+  },
+  {
+    "q": "What is 60% of 500?",
+    "options": ["298", "300", "305", "303"],
+    "ans": "300"
+  },
+  {
+    "q": "After a 40% increase, a number becomes 480. Find the original number.",
+    "options": ["2407/7", "2400/7", "2393/7", "4800/7"],
+    "ans": "2400/7"
+  },
+  {
+    "q": "Find the HCF of 127 and 84.",
+    "options": ["1", "4", "-1", "6"],
+    "ans": "1"
+  },
+  {
+    "q": "An item bought for ₹800 is sold at a profit of 15%. Find its selling price.",
+    "options": ["923", "925", "920", "918"],
+    "ans": "920"
+  },
+  {
+    "q": "Find the HCF of 125 and 81.",
+    "options": ["6", "1", "4", "-1"],
+    "ans": "1"
+  },
+  {
+    "q": "Two numbers are in the ratio 8:9. Their sum is 850. Find the smaller number.",
+    "options": ["403", "400", "398", "405"],
+    "ans": "400"
+  },
+  {
+    "q": "A company records quarterly sales of 122, 53, 79, and 53 units. Find the total sales.",
+    "options": ["305", "312", "307", "310"],
+    "ans": "307"
+  },
+  {
+    "q": "Find the 12th term of an arithmetic progression with first term 7 and common difference 8.",
+    "options": ["93", "98", "100", "95"],
+    "ans": "95"
+  },
+  {
+    "q": "Find the simple interest on ₹1000 at 4% per annum for 4 year(s).",
+    "options": ["163", "160", "158", "165"],
+    "ans": "160"
+  },
+  {
+    "q": "A can complete a job in 14 days and B in 20 days. How long will they take working together?",
+    "options": ["157/17", "123/17", "280/17", "140/17"],
+    "ans": "140/17"
+  },
+  {
+    "q": "Find the HCF of 127 and 19.",
+    "options": ["6", "4", "-1", "1"],
+    "ans": "1"
+  },
+  {
+    "q": "Find the simple interest on ₹3000 at 6% per annum for 1 year(s).",
+    "options": ["180", "185", "178", "183"],
+    "ans": "180"
+  },
+  {
+    "q": "An item bought for ₹800 is sold at a profit of 25%. Find its selling price.",
+    "options": ["998", "1000", "1005", "1003"],
+    "ans": "1000"
+  },
+  {
+    "q": "Find the area of a rectangle with length 12 cm and width 19 cm.",
+    "options": ["228", "233", "231", "226"],
+    "ans": "228"
+  },
+  {
+    "q": "A car travels at 30 km/h for 5 hours. How far does it travel?",
+    "options": ["150", "153", "148", "155"],
+    "ans": "150"
+  },
+  {
+    "q": "The average score of 9 candidates is 36. Find their total score.",
+    "options": ["329", "322", "327", "324"],
+    "ans": "324"
+  },
+  {
+    "q": "Two numbers are in the ratio 9:5. Their sum is 280. Find the smaller number.",
+    "options": ["98", "105", "103", "100"],
+    "ans": "100"
+  },
+  {
+    "q": "An item marked at ₹3000 is discounted by 40%. Find its selling price.",
+    "options": ["1798", "1805", "1800", "1803"],
+    "ans": "1800"
+  },
+  {
+    "q": "A bag contains 4 red balls and 7 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["8/11", "4/11", "0", "15/11"],
+    "ans": "4/11"
+  },
+  {
+    "q": "An item bought for ₹600 is sold at a profit of 40%. Find its selling price.",
+    "options": ["845", "840", "843", "838"],
+    "ans": "840"
+  },
+  {
+    "q": "The average score of 8 candidates is 32. Find their total score.",
+    "options": ["261", "256", "259", "254"],
+    "ans": "256"
+  },
+  {
+    "q": "A car travels at 50 km/h for 5 hours. How far does it travel?",
+    "options": ["255", "253", "248", "250"],
+    "ans": "250"
+  },
+  {
+    "q": "A car travels at 50 km/h for 4 hours. How far does it travel?",
+    "options": ["205", "203", "200", "198"],
+    "ans": "200"
+  },
+  {
+    "q": "Find the area of a rectangle with length 5 cm and width 20 cm.",
+    "options": ["103", "100", "105", "98"],
+    "ans": "100"
+  },
+  {
+    "q": "The average score of 10 candidates is 70. Find their total score.",
+    "options": ["705", "700", "698", "703"],
+    "ans": "700"
+  },
+  {
+    "q": "Find the HCF of 33 and 85.",
+    "options": ["4", "-1", "6", "1"],
+    "ans": "1"
+  },
+  {
+    "q": "Pipe A fills a tank in 8 hours and Pipe B fills it in 11 hours. How long will they take together?",
+    "options": ["69/19", "88/19", "107/19", "176/19"],
+    "ans": "88/19"
+  },
+  {
+    "q": "Pipe A fills a tank in 13 hours and Pipe B fills it in 4 hours. How long will they take together?",
+    "options": ["52/17", "69/17", "104/17", "35/17"],
+    "ans": "52/17"
+  },
+  {
+    "q": "An item bought for ₹300 is sold at a profit of 12%. Find its selling price.",
+    "options": ["341", "339", "336", "334"],
+    "ans": "336"
+  },
+  {
+    "q": "A company records quarterly sales of 42, 146, 99, and 71 units. Find the total sales.",
+    "options": ["363", "358", "356", "361"],
+    "ans": "358"
+  },
+  {
+    "q": "Two numbers are in the ratio 7:5. Their sum is 120. Find the smaller number.",
+    "options": ["53", "55", "50", "48"],
+    "ans": "50"
+  },
+  {
+    "q": "Find the simple interest on ₹4000 at 15% per annum for 1 year(s).",
+    "options": ["598", "603", "600", "605"],
+    "ans": "600"
+  },
+  {
+    "q": "Find the area of a rectangle with length 21 cm and width 18 cm.",
+    "options": ["376", "383", "378", "381"],
+    "ans": "378"
+  },
+  {
+    "q": "Find the area of a rectangle with length 16 cm and width 6 cm.",
+    "options": ["96", "94", "101", "99"],
+    "ans": "96"
+  },
+  {
+    "q": "What is 30% of 240?",
+    "options": ["72", "75", "77", "70"],
+    "ans": "72"
+  },
+  {
+    "q": "An item bought for ₹500 is sold at a profit of 12%. Find its selling price.",
+    "options": ["563", "560", "565", "558"],
+    "ans": "560"
+  },
+  {
+    "q": "Two numbers are in the ratio 2:9. Their sum is 440. Find the smaller number.",
+    "options": ["80", "83", "78", "85"],
+    "ans": "80"
+  },
+  {
+    "q": "Find the simple interest on ₹5000 at 4% per annum for 4 year(s).",
+    "options": ["805", "798", "803", "800"],
+    "ans": "800"
+  },
+  {
+    "q": "What is 15% of 250?",
+    "options": ["73/2", "77/2", "75", "75/2"],
+    "ans": "75/2"
+  },
+  {
+    "q": "Find the area of a rectangle with length 12 cm and width 22 cm.",
+    "options": ["267", "264", "262", "269"],
+    "ans": "264"
+  },
+  {
+    "q": "An item marked at ₹2500 is discounted by 40%. Find its selling price.",
+    "options": ["1503", "1505", "1500", "1498"],
+    "ans": "1500"
+  },
+  {
+    "q": "An item marked at ₹1200 is discounted by 40%. Find its selling price.",
+    "options": ["720", "723", "725", "718"],
+    "ans": "720"
+  },
+  {
+    "q": "A train 120 metres long travels at 60 km/h. How many seconds does it take to pass a pole?",
+    "options": ["72/5", "31/5", "36/5", "41/5"],
+    "ans": "36/5"
+  },
+  {
+    "q": "After a 30% increase, a number becomes 600. Find the original number.",
+    "options": ["5987/13", "12000/13", "6000/13", "6013/13"],
+    "ans": "6000/13"
+  },
+  {
+    "q": "Find the simple interest on ₹2500 at 5% per annum for 1 year(s).",
+    "options": ["123", "128", "125", "130"],
+    "ans": "125"
+  },
+  {
+    "q": "A mixture contains 12 litres of milk and 10 litres of water. What percentage of the mixture is milk?",
+    "options": ["600/11", "611/11", "589/11", "1200/11"],
+    "ans": "600/11"
+  },
+  {
+    "q": "An item bought for ₹400 is sold at a profit of 12%. Find its selling price.",
+    "options": ["446", "453", "448", "451"],
+    "ans": "448"
+  },
+  {
+    "q": "Ravi is 26 years old. How old will he be after 7 years?",
+    "options": ["31", "33", "38", "36"],
+    "ans": "33"
+  },
+  {
+    "q": "A train 200 metres long travels at 72 km/h. How many seconds does it take to pass a pole?",
+    "options": ["8", "13", "10", "15"],
+    "ans": "10"
+  },
+  {
+    "q": "Find the area of a rectangle with length 10 cm and width 12 cm.",
+    "options": ["118", "120", "123", "125"],
+    "ans": "120"
+  },
+  {
+    "q": "The average score of 7 candidates is 50. Find their total score.",
+    "options": ["353", "350", "355", "348"],
+    "ans": "350"
+  },
+  {
+    "q": "Solve for x: 5x + 5 = 75.",
+    "options": ["12", "19", "17", "14"],
+    "ans": "14"
+  },
+  {
+    "q": "What is 30% of 400?",
+    "options": ["118", "120", "125", "123"],
+    "ans": "120"
+  },
+  {
+    "q": "Pipe A fills a tank in 9 hours and Pipe B fills it in 9 hours. How long will they take together?",
+    "options": ["11/2", "9/2", "7/2", "9"],
+    "ans": "9/2"
+  },
+  {
+    "q": "A company records quarterly sales of 112, 109, 102, and 107 units. Find the total sales.",
+    "options": ["428", "430", "433", "435"],
+    "ans": "430"
+  },
+  {
+    "q": "Find the HCF of 119 and 47.",
+    "options": ["6", "-1", "1", "4"],
+    "ans": "1"
+  },
+  {
+    "q": "An item bought for ₹250 is sold at a profit of 10%. Find its selling price.",
+    "options": ["275", "278", "273", "280"],
+    "ans": "275"
+  },
+  {
+    "q": "Solve for x: 4x + 28 = 72.",
+    "options": ["9", "16", "14", "11"],
+    "ans": "11"
+  },
+  {
+    "q": "In how many ways can 2 people be selected from 8 people?",
+    "options": ["31", "28", "26", "33"],
+    "ans": "28"
+  },
+  {
+    "q": "Solve for x: 9x + 30 = 57.",
+    "options": ["3", "6", "1", "8"],
+    "ans": "3"
+  },
+  {
+    "q": "After a 25% increase, a number becomes 300. Find the original number.",
+    "options": ["243", "240", "245", "238"],
+    "ans": "240"
+  },
+  {
+    "q": "Solve for x: 12x + 9 = 201.",
+    "options": ["19", "21", "16", "14"],
+    "ans": "16"
+  },
+  {
+    "q": "A car travels at 30 km/h for 2 hours. How far does it travel?",
+    "options": ["63", "60", "58", "65"],
+    "ans": "60"
+  },
+  {
+    "q": "An item bought for ₹1000 is sold at a profit of 5%. Find its selling price.",
+    "options": ["1048", "1053", "1055", "1050"],
+    "ans": "1050"
+  },
+  {
+    "q": "Pipe A fills a tank in 9 hours and Pipe B fills it in 8 hours. How long will they take together?",
+    "options": ["55/17", "72/17", "144/17", "89/17"],
+    "ans": "72/17"
+  },
+  {
+    "q": "The average score of 4 candidates is 24. Find their total score.",
+    "options": ["96", "94", "101", "99"],
+    "ans": "96"
+  },
+  {
+    "q": "Pipe A fills a tank in 13 hours and Pipe B fills it in 10 hours. How long will they take together?",
+    "options": ["107/23", "260/23", "153/23", "130/23"],
+    "ans": "130/23"
+  },
+  {
+    "q": "Ravi is 27 years old. How old will he be after 8 years?",
+    "options": ["35", "40", "38", "33"],
+    "ans": "35"
+  },
+  {
+    "q": "What is 35% of 240?",
+    "options": ["84", "89", "82", "87"],
+    "ans": "84"
+  },
+  {
+    "q": "Find the area of a rectangle with length 13 cm and width 24 cm.",
+    "options": ["312", "310", "315", "317"],
+    "ans": "312"
+  },
+  {
+    "q": "Pipe A fills a tank in 6 hours and Pipe B fills it in 10 hours. How long will they take together?",
+    "options": ["15/2", "19/4", "15/4", "11/4"],
+    "ans": "15/4"
+  },
+  {
+    "q": "Find the area of a rectangle with length 13 cm and width 11 cm.",
+    "options": ["141", "148", "146", "143"],
+    "ans": "143"
+  },
+  {
+    "q": "Find the HCF of 101 and 26.",
+    "options": ["-1", "1", "4", "6"],
+    "ans": "1"
+  },
+  {
+    "q": "Pipe A fills a tank in 7 hours and Pipe B fills it in 14 hours. How long will they take together?",
+    "options": ["28/3", "17/3", "14/3", "11/3"],
+    "ans": "14/3"
+  },
+  {
+    "q": "A can complete a job in 12 days and B in 7 days. How long will they take working together?",
+    "options": ["103/19", "65/19", "84/19", "168/19"],
+    "ans": "84/19"
+  },
+  {
+    "q": "An item bought for ₹1500 is sold at a profit of 40%. Find its selling price.",
+    "options": ["2105", "2100", "2098", "2103"],
+    "ans": "2100"
+  },
+  {
+    "q": "Solve for x: 11x + 2 = 178.",
+    "options": ["14", "16", "21", "19"],
+    "ans": "16"
+  },
+  {
+    "q": "A bag contains 4 red balls and 4 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["3/2", "0", "1/2", "1"],
+    "ans": "1/2"
+  },
+  {
+    "q": "A can complete a job in 18 days and B in 15 days. How long will they take working together?",
+    "options": ["180/11", "90/11", "79/11", "101/11"],
+    "ans": "90/11"
+  },
+  {
+    "q": "Find the 11th term of an arithmetic progression with first term 23 and common difference 7.",
+    "options": ["96", "93", "91", "98"],
+    "ans": "93"
+  },
+  {
+    "q": "A train 150 metres long travels at 36 km/h. How many seconds does it take to pass a pole?",
+    "options": ["20", "18", "15", "13"],
+    "ans": "15"
+  },
+  {
+    "q": "Find the 22th term of an arithmetic progression with first term 21 and common difference 2.",
+    "options": ["68", "63", "66", "61"],
+    "ans": "63"
+  },
+  {
+    "q": "A car travels at 30 km/h for 6 hours. How far does it travel?",
+    "options": ["185", "180", "183", "178"],
+    "ans": "180"
+  },
+  {
+    "q": "A company records quarterly sales of 69, 85, 24, and 44 units. Find the total sales.",
+    "options": ["220", "227", "222", "225"],
+    "ans": "222"
+  },
+  {
+    "q": "The average score of 10 candidates is 60. Find their total score.",
+    "options": ["605", "598", "603", "600"],
+    "ans": "600"
+  },
+  {
+    "q": "Find the HCF of 50 and 98.",
+    "options": ["2", "7", "0", "5"],
+    "ans": "2"
+  },
+  {
+    "q": "Pipe A fills a tank in 6 hours and Pipe B fills it in 12 hours. How long will they take together?",
+    "options": ["4", "2", "7", "9"],
+    "ans": "4"
+  },
+  {
+    "q": "What is 5% of 200?",
+    "options": ["8", "13", "15", "10"],
+    "ans": "10"
+  },
+  {
+    "q": "Pipe A fills a tank in 7 hours and Pipe B fills it in 5 hours. How long will they take together?",
+    "options": ["35/12", "23/12", "47/12", "35/6"],
+    "ans": "35/12"
+  },
+  {
+    "q": "Find the 21th term of an arithmetic progression with first term 10 and common difference 9.",
+    "options": ["190", "188", "193", "195"],
+    "ans": "190"
+  },
+  {
+    "q": "A bag contains 7 red balls and 5 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["7/12", "7/6", "0", "19/12"],
+    "ans": "7/12"
+  },
+  {
+    "q": "Find the HCF of 45 and 27.",
+    "options": ["7", "9", "12", "14"],
+    "ans": "9"
+  },
+  {
+    "q": "Two numbers are in the ratio 6:4. Their sum is 100. Find the smaller number.",
+    "options": ["45", "43", "40", "38"],
+    "ans": "40"
+  },
+  {
+    "q": "The average score of 12 candidates is 70. Find their total score.",
+    "options": ["845", "838", "843", "840"],
+    "ans": "840"
+  },
+  {
+    "q": "A mixture contains 30 litres of milk and 40 litres of water. What percentage of the mixture is milk?",
+    "options": ["600/7", "300/7", "307/7", "293/7"],
+    "ans": "300/7"
+  },
+  {
+    "q": "Two numbers are in the ratio 2:9. Their sum is 220. Find the smaller number.",
+    "options": ["43", "40", "45", "38"],
+    "ans": "40"
+  },
+  {
+    "q": "Find the area of a rectangle with length 32 cm and width 18 cm.",
+    "options": ["574", "581", "579", "576"],
+    "ans": "576"
+  },
+  {
+    "q": "What is 60% of 250?",
+    "options": ["150", "153", "155", "148"],
+    "ans": "150"
+  },
+  {
+    "q": "A company records quarterly sales of 147, 115, 114, and 138 units. Find the total sales.",
+    "options": ["517", "512", "519", "514"],
+    "ans": "514"
+  },
+  {
+    "q": "An item marked at ₹600 is discounted by 10%. Find its selling price.",
+    "options": ["545", "540", "538", "543"],
+    "ans": "540"
+  },
+  {
+    "q": "A bag contains 8 red balls and 2 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["4/5", "8/5", "9/5", "0"],
+    "ans": "4/5"
+  },
+  {
+    "q": "A can complete a job in 8 days and B in 14 days. How long will they take working together?",
+    "options": ["56/11", "67/11", "112/11", "45/11"],
+    "ans": "56/11"
+  },
+  {
+    "q": "A car travels at 90 km/h for 3 hours. How far does it travel?",
+    "options": ["275", "268", "270", "273"],
+    "ans": "270"
+  },
+  {
+    "q": "What is 5% of 120?",
+    "options": ["6", "11", "9", "4"],
+    "ans": "6"
+  },
+  {
+    "q": "Find the simple interest on ₹2500 at 5% per annum for 4 year(s).",
+    "options": ["505", "503", "500", "498"],
+    "ans": "500"
+  },
+  {
+    "q": "Two numbers are in the ratio 9:6. Their sum is 300. Find the smaller number.",
+    "options": ["123", "118", "120", "125"],
+    "ans": "120"
+  },
+  {
+    "q": "An item marked at ₹500 is discounted by 40%. Find its selling price.",
+    "options": ["298", "303", "300", "305"],
+    "ans": "300"
+  },
+  {
+    "q": "Pipe A fills a tank in 9 hours and Pipe B fills it in 13 hours. How long will they take together?",
+    "options": ["139/22", "117/11", "95/22", "117/22"],
+    "ans": "117/22"
+  },
+  {
+    "q": "A can complete a job in 10 days and B in 11 days. How long will they take working together?",
+    "options": ["131/21", "220/21", "89/21", "110/21"],
+    "ans": "110/21"
+  },
+  {
+    "q": "A can complete a job in 13 days and B in 10 days. How long will they take working together?",
+    "options": ["130/23", "260/23", "107/23", "153/23"],
+    "ans": "130/23"
+  },
+  {
+    "q": "An item bought for ₹1500 is sold at a profit of 15%. Find its selling price.",
+    "options": ["1725", "1728", "1730", "1723"],
+    "ans": "1725"
+  },
+  {
+    "q": "Find the 16th term of an arithmetic progression with first term 27 and common difference 5.",
+    "options": ["102", "105", "100", "107"],
+    "ans": "102"
+  },
+  {
+    "q": "Two numbers are in the ratio 4:2. Their sum is 180. Find the smaller number.",
+    "options": ["65", "63", "58", "60"],
+    "ans": "60"
+  },
+  {
+    "q": "Find the HCF of 38 and 113.",
+    "options": ["4", "-1", "6", "1"],
+    "ans": "1"
+  },
+  {
+    "q": "Find the HCF of 77 and 98.",
+    "options": ["12", "5", "7", "10"],
+    "ans": "7"
+  },
+  {
+    "q": "Solve for x: 6x + 22 = 136.",
+    "options": ["22", "24", "19", "17"],
+    "ans": "19"
+  },
+  {
+    "q": "An item marked at ₹1000 is discounted by 25%. Find its selling price.",
+    "options": ["755", "753", "748", "750"],
+    "ans": "750"
+  },
+  {
+    "q": "Ravi is 31 years old. How old will he be after 3 years?",
+    "options": ["32", "34", "37", "39"],
+    "ans": "34"
+  },
+  {
+    "q": "Ravi is 22 years old. How old will he be after 14 years?",
+    "options": ["39", "36", "41", "34"],
+    "ans": "36"
+  },
+  {
+    "q": "Find the HCF of 36 and 105.",
+    "options": ["1", "3", "8", "6"],
+    "ans": "3"
+  },
+  {
+    "q": "Ravi is 40 years old. How old will he be after 15 years?",
+    "options": ["60", "53", "55", "58"],
+    "ans": "55"
+  },
+  {
+    "q": "Pipe A fills a tank in 8 hours and Pipe B fills it in 9 hours. How long will they take together?",
+    "options": ["144/17", "72/17", "89/17", "55/17"],
+    "ans": "72/17"
+  },
+  {
+    "q": "An item marked at ₹2500 is discounted by 5%. Find its selling price.",
+    "options": ["2378", "2380", "2373", "2375"],
+    "ans": "2375"
+  },
+  {
+    "q": "Solve for x: 4x + 20 = 44.",
+    "options": ["4", "9", "11", "6"],
+    "ans": "6"
+  },
+  {
+    "q": "Find the HCF of 46 and 32.",
+    "options": ["0", "5", "2", "7"],
+    "ans": "2"
+  },
+  {
+    "q": "An item bought for ₹400 is sold at a profit of 40%. Find its selling price.",
+    "options": ["565", "563", "558", "560"],
+    "ans": "560"
+  },
+  {
+    "q": "A car travels at 60 km/h for 4 hours. How far does it travel?",
+    "options": ["240", "245", "238", "243"],
+    "ans": "240"
+  },
+  {
+    "q": "Pipe A fills a tank in 15 hours and Pipe B fills it in 11 hours. How long will they take together?",
+    "options": ["165/26", "165/13", "139/26", "191/26"],
+    "ans": "165/26"
+  },
+  {
+    "q": "Find the simple interest on ₹3000 at 10% per annum for 2 year(s).",
+    "options": ["600", "605", "598", "603"],
+    "ans": "600"
+  },
+  {
+    "q": "Pipe A fills a tank in 7 hours and Pipe B fills it in 3 hours. How long will they take together?",
+    "options": ["21/5", "11/10", "31/10", "21/10"],
+    "ans": "21/10"
+  },
+  {
+    "q": "A bag contains 4 red balls and 9 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["4/13", "17/13", "8/13", "0"],
+    "ans": "4/13"
+  },
+  {
+    "q": "After a 30% increase, a number becomes 200. Find the original number.",
+    "options": ["2000/13", "4000/13", "2013/13", "1987/13"],
+    "ans": "2000/13"
+  },
+  {
+    "q": "Find the area of a rectangle with length 33 cm and width 10 cm.",
+    "options": ["333", "335", "328", "330"],
+    "ans": "330"
+  },
+  {
+    "q": "A car travels at 54 km/h for 3 hours. How far does it travel?",
+    "options": ["162", "165", "160", "167"],
+    "ans": "162"
+  },
+  {
+    "q": "A bag contains 3 red balls and 5 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["11/8", "3/8", "3/4", "0"],
+    "ans": "3/8"
+  },
+  {
+    "q": "Pipe A fills a tank in 8 hours and Pipe B fills it in 5 hours. How long will they take together?",
+    "options": ["27/13", "40/13", "80/13", "53/13"],
+    "ans": "40/13"
+  },
+  {
+    "q": "A can complete a job in 10 days and B in 14 days. How long will they take working together?",
+    "options": ["29/6", "41/6", "35/6", "35/3"],
+    "ans": "35/6"
+  },
+  {
+    "q": "Find the simple interest on ₹5000 at 6% per annum for 4 year(s).",
+    "options": ["1198", "1203", "1200", "1205"],
+    "ans": "1200"
+  },
+  {
+    "q": "Find the HCF of 144 and 26.",
+    "options": ["0", "2", "7", "5"],
+    "ans": "2"
+  },
+  {
+    "q": "A mixture contains 20 litres of milk and 25 litres of water. What percentage of the mixture is milk?",
+    "options": ["800/9", "391/9", "400/9", "409/9"],
+    "ans": "400/9"
+  },
+  {
+    "q": "Find the area of a rectangle with length 16 cm and width 10 cm.",
+    "options": ["160", "158", "163", "165"],
+    "ans": "160"
+  },
+  {
+    "q": "After a 10% increase, a number becomes 480. Find the original number.",
+    "options": ["4789/11", "9600/11", "4811/11", "4800/11"],
+    "ans": "4800/11"
+  },
+  {
+    "q": "A mixture contains 35 litres of milk and 10 litres of water. What percentage of the mixture is milk?",
+    "options": ["1400/9", "709/9", "691/9", "700/9"],
+    "ans": "700/9"
+  },
+  {
+    "q": "Find the area of a rectangle with length 21 cm and width 8 cm.",
+    "options": ["168", "166", "171", "173"],
+    "ans": "168"
+  },
+  {
+    "q": "The average score of 6 candidates is 32. Find their total score.",
+    "options": ["197", "190", "195", "192"],
+    "ans": "192"
+  },
+  {
+    "q": "Find the 8th term of an arithmetic progression with first term 3 and common difference 7.",
+    "options": ["57", "50", "52", "55"],
+    "ans": "52"
+  },
+  {
+    "q": "A car travels at 60 km/h for 5 hours. How far does it travel?",
+    "options": ["303", "298", "305", "300"],
+    "ans": "300"
+  },
+  {
+    "q": "After a 40% increase, a number becomes 200. Find the original number.",
+    "options": ["2000/7", "1000/7", "993/7", "1007/7"],
+    "ans": "1000/7"
+  },
+  {
+    "q": "Solve for x: 8x + 22 = 238.",
+    "options": ["30", "32", "25", "27"],
+    "ans": "27"
+  },
+  {
+    "q": "Find the simple interest on ₹2000 at 10% per annum for 1 year(s).",
+    "options": ["200", "205", "203", "198"],
+    "ans": "200"
+  },
+  {
+    "q": "Find the HCF of 76 and 69.",
+    "options": ["1", "4", "-1", "6"],
+    "ans": "1"
+  },
+  {
+    "q": "A bag contains 5 red balls and 5 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["1/2", "1", "3/2", "0"],
+    "ans": "1/2"
+  },
+  {
+    "q": "Pipe A fills a tank in 9 hours and Pipe B fills it in 4 hours. How long will they take together?",
+    "options": ["36/13", "49/13", "72/13", "23/13"],
+    "ans": "36/13"
+  },
+  {
+    "q": "A company records quarterly sales of 114, 132, 148, and 67 units. Find the total sales.",
+    "options": ["459", "466", "464", "461"],
+    "ans": "461"
+  },
+  {
+    "q": "A train 120 metres long travels at 54 km/h. How many seconds does it take to pass a pole?",
+    "options": ["8", "6", "13", "11"],
+    "ans": "8"
+  },
+  {
+    "q": "Find the area of a rectangle with length 19 cm and width 10 cm.",
+    "options": ["190", "193", "188", "195"],
+    "ans": "190"
+  },
+  {
+    "q": "An item marked at ₹1200 is discounted by 10%. Find its selling price.",
+    "options": ["1085", "1083", "1078", "1080"],
+    "ans": "1080"
+  },
+  {
+    "q": "Two numbers are in the ratio 6:3. Their sum is 225. Find the smaller number.",
+    "options": ["75", "80", "78", "73"],
+    "ans": "75"
+  },
+  {
+    "q": "What is 50% of 800?",
+    "options": ["398", "405", "400", "403"],
+    "ans": "400"
+  },
+  {
+    "q": "Find the 11th term of an arithmetic progression with first term 29 and common difference 2.",
+    "options": ["49", "54", "47", "52"],
+    "ans": "49"
+  },
+  {
+    "q": "After a 15% increase, a number becomes 200. Find the original number.",
+    "options": ["4023/23", "4000/23", "8000/23", "3977/23"],
+    "ans": "4000/23"
+  },
+  {
+    "q": "A bag contains 5 red balls and 2 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["0", "5/7", "12/7", "10/7"],
+    "ans": "5/7"
+  },
+  {
+    "q": "Find the 24th term of an arithmetic progression with first term 11 and common difference 9.",
+    "options": ["216", "221", "218", "223"],
+    "ans": "218"
+  },
+  {
+    "q": "In how many ways can 5 people be selected from 9 people?",
+    "options": ["124", "131", "126", "129"],
+    "ans": "126"
+  },
+  {
+    "q": "Find the area of a rectangle with length 34 cm and width 5 cm.",
+    "options": ["173", "170", "168", "175"],
+    "ans": "170"
+  },
+  {
+    "q": "Find the simple interest on ₹5000 at 6% per annum for 2 year(s).",
+    "options": ["598", "600", "605", "603"],
+    "ans": "600"
+  },
+  {
+    "q": "What is 15% of 450?",
+    "options": ["135/2", "133/2", "135", "137/2"],
+    "ans": "135/2"
+  },
+  {
+    "q": "A mixture contains 50 litres of milk and 60 litres of water. What percentage of the mixture is milk?",
+    "options": ["511/11", "489/11", "500/11", "1000/11"],
+    "ans": "500/11"
+  },
+  {
+    "q": "Two numbers are in the ratio 5:9. Their sum is 70. Find the smaller number.",
+    "options": ["25", "28", "30", "23"],
+    "ans": "25"
+  },
+  {
+    "q": "A company records quarterly sales of 75, 119, 72, and 142 units. Find the total sales.",
+    "options": ["413", "411", "408", "406"],
+    "ans": "408"
+  },
+  {
+    "q": "What is 35% of 250?",
+    "options": ["175/2", "173/2", "177/2", "175"],
+    "ans": "175/2"
+  },
+  {
+    "q": "A can complete a job in 7 days and B in 16 days. How long will they take working together?",
+    "options": ["112/23", "89/23", "224/23", "135/23"],
+    "ans": "112/23"
+  },
+  {
+    "q": "Ravi is 43 years old. How old will he be after 3 years?",
+    "options": ["44", "51", "46", "49"],
+    "ans": "46"
+  },
+  {
+    "q": "An item bought for ₹300 is sold at a profit of 25%. Find its selling price.",
+    "options": ["373", "375", "380", "378"],
+    "ans": "375"
+  },
+  {
+    "q": "What is 25% of 160?",
+    "options": ["40", "45", "43", "38"],
+    "ans": "40"
+  },
+  {
+    "q": "A company records quarterly sales of 36, 138, 83, and 37 units. Find the total sales.",
+    "options": ["292", "297", "294", "299"],
+    "ans": "294"
+  },
+  {
+    "q": "Solve for x: 4x + 3 = 87.",
+    "options": ["24", "21", "26", "19"],
+    "ans": "21"
+  },
+  {
+    "q": "A mixture contains 20 litres of milk and 40 litres of water. What percentage of the mixture is milk?",
+    "options": ["97/3", "200/3", "103/3", "100/3"],
+    "ans": "100/3"
+  },
+  {
+    "q": "Find the HCF of 24 and 88.",
+    "options": ["6", "13", "8", "11"],
+    "ans": "8"
+  },
+  {
+    "q": "Find the area of a rectangle with length 35 cm and width 25 cm.",
+    "options": ["878", "880", "873", "875"],
+    "ans": "875"
+  },
+  {
+    "q": "Find the 30th term of an arithmetic progression with first term 16 and common difference 11.",
+    "options": ["333", "335", "338", "340"],
+    "ans": "335"
+  },
+  {
+    "q": "The average score of 8 candidates is 45. Find their total score.",
+    "options": ["360", "365", "363", "358"],
+    "ans": "360"
+  },
+  {
+    "q": "Find the 22th term of an arithmetic progression with first term 23 and common difference 9.",
+    "options": ["217", "215", "212", "210"],
+    "ans": "212"
+  },
+  {
+    "q": "The average score of 11 candidates is 24. Find their total score.",
+    "options": ["262", "269", "264", "267"],
+    "ans": "264"
+  },
+  {
+    "q": "Find the area of a rectangle with length 11 cm and width 15 cm.",
+    "options": ["163", "168", "165", "170"],
+    "ans": "165"
+  },
+  {
+    "q": "Find the HCF of 150 and 46.",
+    "options": ["5", "2", "7", "0"],
+    "ans": "2"
+  },
+  {
+    "q": "Solve for x: 4x + 18 = 62.",
+    "options": ["14", "16", "11", "9"],
+    "ans": "11"
+  },
+  {
+    "q": "A company records quarterly sales of 126, 137, 81, and 69 units. Find the total sales.",
+    "options": ["416", "411", "413", "418"],
+    "ans": "413"
+  },
+  {
+    "q": "Find the 23th term of an arithmetic progression with first term 20 and common difference 12.",
+    "options": ["287", "282", "284", "289"],
+    "ans": "284"
+  },
+  {
+    "q": "Find the 22th term of an arithmetic progression with first term 17 and common difference 8.",
+    "options": ["185", "188", "183", "190"],
+    "ans": "185"
+  },
+  {
+    "q": "An item marked at ₹1200 is discounted by 30%. Find its selling price.",
+    "options": ["840", "838", "845", "843"],
+    "ans": "840"
+  },
+  {
+    "q": "Find the 8th term of an arithmetic progression with first term 16 and common difference 10.",
+    "options": ["86", "89", "91", "84"],
+    "ans": "86"
+  },
+  {
+    "q": "A bag contains 7 red balls and 6 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["0", "20/13", "14/13", "7/13"],
+    "ans": "7/13"
+  },
+  {
+    "q": "The average score of 4 candidates is 36. Find their total score.",
+    "options": ["144", "147", "142", "149"],
+    "ans": "144"
+  },
+  {
+    "q": "Two numbers are in the ratio 3:7. Their sum is 250. Find the smaller number.",
+    "options": ["73", "80", "75", "78"],
+    "ans": "75"
+  },
+  {
+    "q": "A mixture contains 40 litres of milk and 40 litres of water. What percentage of the mixture is milk?",
+    "options": ["50", "55", "48", "53"],
+    "ans": "50"
+  },
+  {
+    "q": "Find the HCF of 45 and 116.",
+    "options": ["-1", "4", "6", "1"],
+    "ans": "1"
+  },
+  {
+    "q": "A car travels at 48 km/h for 2 hours. How far does it travel?",
+    "options": ["94", "101", "96", "99"],
+    "ans": "96"
+  },
+  {
+    "q": "Find the HCF of 44 and 27.",
+    "options": ["4", "-1", "1", "6"],
+    "ans": "1"
+  },
+  {
+    "q": "Find the 21th term of an arithmetic progression with first term 17 and common difference 6.",
+    "options": ["135", "137", "142", "140"],
+    "ans": "137"
+  },
+  {
+    "q": "Two numbers are in the ratio 7:9. Their sum is 800. Find the smaller number.",
+    "options": ["355", "353", "350", "348"],
+    "ans": "350"
+  },
+  {
+    "q": "A company records quarterly sales of 26, 23, 123, and 104 units. Find the total sales.",
+    "options": ["274", "281", "279", "276"],
+    "ans": "276"
+  },
+  {
+    "q": "Solve for x: 2x + 26 = 54.",
+    "options": ["17", "14", "12", "19"],
+    "ans": "14"
+  },
+  {
+    "q": "Ravi is 26 years old. How old will he be after 4 years?",
+    "options": ["28", "35", "33", "30"],
+    "ans": "30"
+  },
+  {
+    "q": "What is 20% of 240?",
+    "options": ["48", "53", "51", "46"],
+    "ans": "48"
+  },
+  {
+    "q": "Find the area of a rectangle with length 11 cm and width 21 cm.",
+    "options": ["231", "236", "234", "229"],
+    "ans": "231"
+  },
+  {
+    "q": "Find the 30th term of an arithmetic progression with first term 10 and common difference 4.",
+    "options": ["131", "124", "129", "126"],
+    "ans": "126"
+  },
+  {
+    "q": "A bag contains 6 red balls and 4 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["6/5", "8/5", "0", "3/5"],
+    "ans": "3/5"
+  },
+  {
+    "q": "The average score of 9 candidates is 70. Find their total score.",
+    "options": ["628", "630", "635", "633"],
+    "ans": "630"
+  },
+  {
+    "q": "Find the simple interest on ₹10000 at 8% per annum for 1 year(s).",
+    "options": ["800", "803", "805", "798"],
+    "ans": "800"
+  },
+  {
+    "q": "A car travels at 54 km/h for 6 hours. How far does it travel?",
+    "options": ["322", "327", "329", "324"],
+    "ans": "324"
+  },
+  {
+    "q": "A can complete a job in 6 days and B in 10 days. How long will they take working together?",
+    "options": ["15/2", "11/4", "19/4", "15/4"],
+    "ans": "15/4"
+  },
+  {
+    "q": "Find the HCF of 33 and 113.",
+    "options": ["6", "-1", "1", "4"],
+    "ans": "1"
+  },
+  {
+    "q": "A company records quarterly sales of 80, 51, 148, and 118 units. Find the total sales.",
+    "options": ["397", "400", "395", "402"],
+    "ans": "397"
+  },
+  {
+    "q": "Two numbers are in the ratio 6:9. Their sum is 75. Find the smaller number.",
+    "options": ["28", "30", "35", "33"],
+    "ans": "30"
+  },
+  {
+    "q": "A bag contains 8 red balls and 3 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["0", "19/11", "16/11", "8/11"],
+    "ans": "8/11"
+  },
+  {
+    "q": "Solve for x: 3x + 8 = 14.",
+    "options": ["2", "7", "0", "5"],
+    "ans": "2"
+  },
+  {
+    "q": "Two numbers are in the ratio 2:8. Their sum is 100. Find the smaller number.",
+    "options": ["20", "23", "25", "18"],
+    "ans": "20"
+  },
+  {
+    "q": "Find the 20th term of an arithmetic progression with first term 12 and common difference 3.",
+    "options": ["67", "74", "72", "69"],
+    "ans": "69"
+  },
+  {
+    "q": "What is 25% of 450?",
+    "options": ["225", "225/2", "227/2", "223/2"],
+    "ans": "225/2"
+  },
+  {
+    "q": "Find the area of a rectangle with length 16 cm and width 14 cm.",
+    "options": ["229", "227", "222", "224"],
+    "ans": "224"
+  },
+  {
+    "q": "Ravi is 26 years old. How old will he be after 9 years?",
+    "options": ["35", "40", "38", "33"],
+    "ans": "35"
+  },
+  {
+    "q": "Find the 21th term of an arithmetic progression with first term 12 and common difference 3.",
+    "options": ["77", "70", "75", "72"],
+    "ans": "72"
+  },
+  {
+    "q": "In how many ways can 3 people be selected from 5 people?",
+    "options": ["8", "15", "10", "13"],
+    "ans": "10"
+  },
+  {
+    "q": "Find the HCF of 144 and 137.",
+    "options": ["-1", "6", "1", "4"],
+    "ans": "1"
+  },
+  {
+    "q": "In how many ways can 5 people be selected from 12 people?",
+    "options": ["797", "790", "792", "795"],
+    "ans": "792"
+  },
+  {
+    "q": "What is 5% of 600?",
+    "options": ["30", "35", "33", "28"],
+    "ans": "30"
+  },
+  {
+    "q": "A mixture contains 15 litres of milk and 45 litres of water. What percentage of the mixture is milk?",
+    "options": ["28", "23", "25", "30"],
+    "ans": "25"
+  },
+  {
+    "q": "Two numbers are in the ratio 8:2. Their sum is 500. Find the smaller number.",
+    "options": ["98", "103", "100", "105"],
+    "ans": "100"
+  },
+  {
+    "q": "Pipe A fills a tank in 12 hours and Pipe B fills it in 12 hours. How long will they take together?",
+    "options": ["4", "6", "9", "11"],
+    "ans": "6"
+  },
+  {
+    "q": "Find the area of a rectangle with length 15 cm and width 9 cm.",
+    "options": ["138", "135", "133", "140"],
+    "ans": "135"
+  },
+  {
+    "q": "The average score of 4 candidates is 65. Find their total score.",
+    "options": ["258", "265", "263", "260"],
+    "ans": "260"
+  },
+  {
+    "q": "A mixture contains 20 litres of milk and 45 litres of water. What percentage of the mixture is milk?",
+    "options": ["387/13", "800/13", "413/13", "400/13"],
+    "ans": "400/13"
+  },
+  {
+    "q": "A train 240 metres long travels at 90 km/h. How many seconds does it take to pass a pole?",
+    "options": ["96/5", "53/5", "48/5", "43/5"],
+    "ans": "48/5"
+  },
+  {
+    "q": "Find the 26th term of an arithmetic progression with first term 29 and common difference 12.",
+    "options": ["327", "334", "329", "332"],
+    "ans": "329"
+  },
+  {
+    "q": "Solve for x: 11x + 28 = 226.",
+    "options": ["23", "21", "16", "18"],
+    "ans": "18"
+  },
+  {
+    "q": "An item marked at ₹800 is discounted by 10%. Find its selling price.",
+    "options": ["720", "718", "725", "723"],
+    "ans": "720"
+  },
+  {
+    "q": "Ravi is 18 years old. How old will he be after 11 years?",
+    "options": ["34", "32", "27", "29"],
+    "ans": "29"
+  },
+  {
+    "q": "Find the 27th term of an arithmetic progression with first term 30 and common difference 7.",
+    "options": ["210", "215", "217", "212"],
+    "ans": "212"
+  },
+  {
+    "q": "A can complete a job in 6 days and B in 16 days. How long will they take working together?",
+    "options": ["48/11", "59/11", "96/11", "37/11"],
+    "ans": "48/11"
+  },
+  {
+    "q": "Find the area of a rectangle with length 14 cm and width 25 cm.",
+    "options": ["353", "355", "348", "350"],
+    "ans": "350"
+  },
+  {
+    "q": "Find the area of a rectangle with length 35 cm and width 10 cm.",
+    "options": ["353", "348", "355", "350"],
+    "ans": "350"
+  },
+  {
+    "q": "What is 50% of 1200?",
+    "options": ["598", "600", "605", "603"],
+    "ans": "600"
+  },
+  {
+    "q": "Pipe A fills a tank in 5 hours and Pipe B fills it in 11 hours. How long will they take together?",
+    "options": ["55/16", "39/16", "55/8", "71/16"],
+    "ans": "55/16"
+  },
+  {
+    "q": "A company records quarterly sales of 103, 120, 121, and 66 units. Find the total sales.",
+    "options": ["415", "410", "408", "413"],
+    "ans": "410"
+  },
+  {
+    "q": "In how many ways can 3 people be selected from 9 people?",
+    "options": ["84", "87", "82", "89"],
+    "ans": "84"
+  },
+  {
+    "q": "Find the area of a rectangle with length 28 cm and width 20 cm.",
+    "options": ["565", "560", "558", "563"],
+    "ans": "560"
+  },
+  {
+    "q": "Find the 10th term of an arithmetic progression with first term 27 and common difference 8.",
+    "options": ["99", "102", "97", "104"],
+    "ans": "99"
+  },
+  {
+    "q": "Find the HCF of 128 and 103.",
+    "options": ["6", "1", "4", "-1"],
+    "ans": "1"
+  },
+  {
+    "q": "A can complete a job in 11 days and B in 15 days. How long will they take working together?",
+    "options": ["191/26", "165/13", "165/26", "139/26"],
+    "ans": "165/26"
+  },
+  {
+    "q": "An item marked at ₹1500 is discounted by 40%. Find its selling price.",
+    "options": ["900", "898", "905", "903"],
+    "ans": "900"
+  },
+  {
+    "q": "Two numbers are in the ratio 8:5. Their sum is 260. Find the smaller number.",
+    "options": ["100", "98", "105", "103"],
+    "ans": "100"
+  },
+  {
+    "q": "A can complete a job in 19 days and B in 5 days. How long will they take working together?",
+    "options": ["119/24", "95/24", "95/12", "71/24"],
+    "ans": "95/24"
+  },
+  {
+    "q": "Solve for x: 6x + 9 = 183.",
+    "options": ["32", "29", "27", "34"],
+    "ans": "29"
+  },
+  {
+    "q": "Pipe A fills a tank in 9 hours and Pipe B fills it in 11 hours. How long will they take together?",
+    "options": ["99/10", "99/20", "119/20", "79/20"],
+    "ans": "99/20"
+  },
+  {
+    "q": "A train 200 metres long travels at 36 km/h. How many seconds does it take to pass a pole?",
+    "options": ["23", "18", "20", "25"],
+    "ans": "20"
+  },
+  {
+    "q": "The average score of 8 candidates is 65. Find their total score.",
+    "options": ["518", "525", "520", "523"],
+    "ans": "520"
+  },
+  {
+    "q": "A company records quarterly sales of 76, 116, 116, and 63 units. Find the total sales.",
+    "options": ["374", "371", "376", "369"],
+    "ans": "371"
+  },
+  {
+    "q": "Find the HCF of 66 and 21.",
+    "options": ["8", "1", "3", "6"],
+    "ans": "3"
+  },
+  {
+    "q": "Find the area of a rectangle with length 31 cm and width 21 cm.",
+    "options": ["649", "651", "654", "656"],
+    "ans": "651"
+  },
+  {
+    "q": "Find the 21th term of an arithmetic progression with first term 2 and common difference 7.",
+    "options": ["142", "147", "145", "140"],
+    "ans": "142"
+  },
+  {
+    "q": "Find the area of a rectangle with length 31 cm and width 22 cm.",
+    "options": ["680", "685", "687", "682"],
+    "ans": "682"
+  },
+  {
+    "q": "Find the HCF of 117 and 34.",
+    "options": ["1", "6", "-1", "4"],
+    "ans": "1"
+  },
+  {
+    "q": "Ravi is 43 years old. How old will he be after 7 years?",
+    "options": ["53", "48", "50", "55"],
+    "ans": "50"
+  },
+  {
+    "q": "The average score of 10 candidates is 35. Find their total score.",
+    "options": ["353", "348", "350", "355"],
+    "ans": "350"
+  },
+  {
+    "q": "Find the simple interest on ₹6000 at 10% per annum for 2 year(s).",
+    "options": ["1205", "1198", "1200", "1203"],
+    "ans": "1200"
+  },
+  {
+    "q": "Two numbers are in the ratio 5:8. Their sum is 390. Find the smaller number.",
+    "options": ["150", "153", "148", "155"],
+    "ans": "150"
+  },
+  {
+    "q": "Solve for x: 7x + 20 = 76.",
+    "options": ["11", "6", "8", "13"],
+    "ans": "8"
+  },
+  {
+    "q": "The average score of 5 candidates is 35. Find their total score.",
+    "options": ["180", "175", "178", "173"],
+    "ans": "175"
+  },
+  {
+    "q": "An item marked at ₹500 is discounted by 30%. Find its selling price.",
+    "options": ["350", "353", "348", "355"],
+    "ans": "350"
+  },
+  {
+    "q": "Solve for x: 12x + 12 = 108.",
+    "options": ["11", "13", "8", "6"],
+    "ans": "8"
+  },
+  {
+    "q": "Find the simple interest on ₹2500 at 15% per annum for 4 year(s).",
+    "options": ["1503", "1500", "1505", "1498"],
+    "ans": "1500"
+  },
+  {
+    "q": "An item marked at ₹1500 is discounted by 15%. Find its selling price.",
+    "options": ["1278", "1275", "1273", "1280"],
+    "ans": "1275"
+  },
+  {
+    "q": "Find the area of a rectangle with length 13 cm and width 9 cm.",
+    "options": ["115", "120", "122", "117"],
+    "ans": "117"
+  },
+  {
+    "q": "Find the 22th term of an arithmetic progression with first term 3 and common difference 3.",
+    "options": ["69", "64", "66", "71"],
+    "ans": "66"
+  },
+  {
+    "q": "Find the 9th term of an arithmetic progression with first term 18 and common difference 5.",
+    "options": ["58", "61", "63", "56"],
+    "ans": "58"
+  },
+  {
+    "q": "Pipe A fills a tank in 12 hours and Pipe B fills it in 13 hours. How long will they take together?",
+    "options": ["131/25", "156/25", "312/25", "181/25"],
+    "ans": "156/25"
+  },
+  {
+    "q": "The average score of 11 candidates is 70. Find their total score.",
+    "options": ["770", "773", "775", "768"],
+    "ans": "770"
+  },
+  {
+    "q": "An item bought for ₹400 is sold at a profit of 10%. Find its selling price.",
+    "options": ["443", "438", "440", "445"],
+    "ans": "440"
+  },
+  {
+    "q": "A bag contains 6 red balls and 8 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["3/7", "0", "6/7", "10/7"],
+    "ans": "3/7"
+  },
+  {
+    "q": "A car travels at 72 km/h for 7 hours. How far does it travel?",
+    "options": ["504", "507", "509", "502"],
+    "ans": "504"
+  },
+  {
+    "q": "Find the HCF of 40 and 68.",
+    "options": ["4", "7", "2", "9"],
+    "ans": "4"
+  },
+  {
+    "q": "A mixture contains 25 litres of milk and 20 litres of water. What percentage of the mixture is milk?",
+    "options": ["491/9", "500/9", "509/9", "1000/9"],
+    "ans": "500/9"
+  },
+  {
+    "q": "Find the simple interest on ₹2000 at 15% per annum for 1 year(s).",
+    "options": ["303", "300", "298", "305"],
+    "ans": "300"
+  },
+  {
+    "q": "What is 20% of 120?",
+    "options": ["27", "24", "22", "29"],
+    "ans": "24"
+  },
+  {
+    "q": "Find the 19th term of an arithmetic progression with first term 16 and common difference 6.",
+    "options": ["122", "127", "129", "124"],
+    "ans": "124"
+  },
+  {
+    "q": "A mixture contains 30 litres of milk and 15 litres of water. What percentage of the mixture is milk?",
+    "options": ["197/3", "203/3", "200/3", "400/3"],
+    "ans": "200/3"
+  },
+  {
+    "q": "Find the area of a rectangle with length 21 cm and width 5 cm.",
+    "options": ["110", "105", "108", "103"],
+    "ans": "105"
+  },
+  {
+    "q": "Solve for x: 9x + 9 = 144.",
+    "options": ["15", "18", "20", "13"],
+    "ans": "15"
+  },
+  {
+    "q": "Find the HCF of 123 and 103.",
+    "options": ["1", "-1", "6", "4"],
+    "ans": "1"
+  },
+  {
+    "q": "A car travels at 45 km/h for 8 hours. How far does it travel?",
+    "options": ["360", "358", "365", "363"],
+    "ans": "360"
+  },
+  {
+    "q": "A company records quarterly sales of 58, 125, 140, and 122 units. Find the total sales.",
+    "options": ["443", "448", "450", "445"],
+    "ans": "445"
+  },
+  {
+    "q": "Ravi is 40 years old. How old will he be after 8 years?",
+    "options": ["53", "46", "48", "51"],
+    "ans": "48"
+  },
+  {
+    "q": "Solve for x: 12x + 20 = 380.",
+    "options": ["30", "28", "33", "35"],
+    "ans": "30"
+  },
+  {
+    "q": "Find the 20th term of an arithmetic progression with first term 15 and common difference 5.",
+    "options": ["110", "115", "113", "108"],
+    "ans": "110"
+  },
+  {
+    "q": "Find the area of a rectangle with length 27 cm and width 15 cm.",
+    "options": ["410", "408", "405", "403"],
+    "ans": "405"
+  },
+  {
+    "q": "Find the 23th term of an arithmetic progression with first term 20 and common difference 9.",
+    "options": ["216", "218", "221", "223"],
+    "ans": "218"
+  },
+  {
+    "q": "A car travels at 40 km/h for 3 hours. How far does it travel?",
+    "options": ["123", "125", "120", "118"],
+    "ans": "120"
+  },
+  {
+    "q": "Find the area of a rectangle with length 31 cm and width 17 cm.",
+    "options": ["527", "530", "532", "525"],
+    "ans": "527"
+  },
+  {
+    "q": "A bag contains 7 red balls and 8 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["14/15", "0", "22/15", "7/15"],
+    "ans": "7/15"
+  },
+  {
+    "q": "An item bought for ₹250 is sold at a profit of 15%. Find its selling price.",
+    "options": ["573/2", "577/2", "575", "575/2"],
+    "ans": "575/2"
+  },
+  {
+    "q": "A train 120 metres long travels at 72 km/h. How many seconds does it take to pass a pole?",
+    "options": ["6", "11", "4", "9"],
+    "ans": "6"
+  },
+  {
+    "q": "A car travels at 72 km/h for 3 hours. How far does it travel?",
+    "options": ["221", "214", "219", "216"],
+    "ans": "216"
+  },
+  {
+    "q": "Find the simple interest on ₹3000 at 4% per annum for 2 year(s).",
+    "options": ["243", "238", "245", "240"],
+    "ans": "240"
+  },
+  {
+    "q": "Ravi is 27 years old. How old will he be after 14 years?",
+    "options": ["46", "44", "41", "39"],
+    "ans": "41"
+  },
+  {
+    "q": "A company records quarterly sales of 59, 85, 127, and 94 units. Find the total sales.",
+    "options": ["365", "370", "368", "363"],
+    "ans": "365"
+  },
+  {
+    "q": "An item bought for ₹400 is sold at a profit of 20%. Find its selling price.",
+    "options": ["483", "480", "478", "485"],
+    "ans": "480"
+  },
+  {
+    "q": "A car travels at 54 km/h for 7 hours. How far does it travel?",
+    "options": ["381", "376", "383", "378"],
+    "ans": "378"
+  },
+  {
+    "q": "Find the HCF of 127 and 108.",
+    "options": ["1", "6", "-1", "4"],
+    "ans": "1"
+  },
+  {
+    "q": "Ravi is 31 years old. How old will he be after 11 years?",
+    "options": ["40", "45", "42", "47"],
+    "ans": "42"
+  },
+  {
+    "q": "Ravi is 41 years old. How old will he be after 3 years?",
+    "options": ["47", "42", "49", "44"],
+    "ans": "44"
+  },
+  {
+    "q": "A can complete a job in 5 days and B in 16 days. How long will they take working together?",
+    "options": ["160/21", "101/21", "80/21", "59/21"],
+    "ans": "80/21"
+  },
+  {
+    "q": "What is 5% of 1200?",
+    "options": ["65", "63", "60", "58"],
+    "ans": "60"
+  },
+  {
+    "q": "A can complete a job in 18 days and B in 14 days. How long will they take working together?",
+    "options": ["71/8", "55/8", "63/8", "63/4"],
+    "ans": "63/8"
+  },
+  {
+    "q": "Find the area of a rectangle with length 26 cm and width 7 cm.",
+    "options": ["182", "180", "185", "187"],
+    "ans": "182"
+  },
+  {
+    "q": "The average score of 7 candidates is 30. Find their total score.",
+    "options": ["208", "215", "213", "210"],
+    "ans": "210"
+  },
+  {
+    "q": "An item bought for ₹300 is sold at a profit of 20%. Find its selling price.",
+    "options": ["363", "358", "365", "360"],
+    "ans": "360"
+  },
+  {
+    "q": "An item bought for ₹1200 is sold at a profit of 5%. Find its selling price.",
+    "options": ["1263", "1258", "1260", "1265"],
+    "ans": "1260"
+  },
+  {
+    "q": "Find the 17th term of an arithmetic progression with first term 12 and common difference 5.",
+    "options": ["90", "95", "92", "97"],
+    "ans": "92"
+  },
+  {
+    "q": "An item bought for ₹800 is sold at a profit of 40%. Find its selling price.",
+    "options": ["1125", "1123", "1118", "1120"],
+    "ans": "1120"
+  },
+  {
+    "q": "Pipe A fills a tank in 11 hours and Pipe B fills it in 3 hours. How long will they take together?",
+    "options": ["19/14", "33/14", "33/7", "47/14"],
+    "ans": "33/14"
+  },
+  {
+    "q": "A mixture contains 30 litres of milk and 30 litres of water. What percentage of the mixture is milk?",
+    "options": ["50", "53", "55", "48"],
+    "ans": "50"
+  },
+  {
+    "q": "A can complete a job in 16 days and B in 10 days. How long will they take working together?",
+    "options": ["93/13", "67/13", "160/13", "80/13"],
+    "ans": "80/13"
+  },
+  {
+    "q": "Find the 20th term of an arithmetic progression with first term 22 and common difference 12.",
+    "options": ["248", "253", "255", "250"],
+    "ans": "250"
+  },
+  {
+    "q": "A can complete a job in 11 days and B in 12 days. How long will they take working together?",
+    "options": ["264/23", "155/23", "132/23", "109/23"],
+    "ans": "132/23"
+  },
+  {
+    "q": "Find the 13th term of an arithmetic progression with first term 4 and common difference 4.",
+    "options": ["57", "50", "55", "52"],
+    "ans": "52"
+  },
+  {
+    "q": "Solve for x: 12x + 16 = 256.",
+    "options": ["18", "20", "23", "25"],
+    "ans": "20"
+  },
+  {
+    "q": "A bag contains 5 red balls and 4 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["0", "14/9", "10/9", "5/9"],
+    "ans": "5/9"
+  },
+  {
+    "q": "A bag contains 6 red balls and 2 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["0", "7/4", "3/4", "3/2"],
+    "ans": "3/4"
+  },
+  {
+    "q": "Find the 24th term of an arithmetic progression with first term 14 and common difference 9.",
+    "options": ["221", "219", "226", "224"],
+    "ans": "221"
+  },
+  {
+    "q": "Solve for x: 7x + 29 = 225.",
+    "options": ["26", "33", "31", "28"],
+    "ans": "28"
+  },
+  {
+    "q": "Solve for x: 5x + 6 = 86.",
+    "options": ["14", "19", "21", "16"],
+    "ans": "16"
+  },
+  {
+    "q": "Two numbers are in the ratio 3:8. Their sum is 440. Find the smaller number.",
+    "options": ["120", "125", "123", "118"],
+    "ans": "120"
+  },
+  {
+    "q": "Find the 14th term of an arithmetic progression with first term 14 and common difference 9.",
+    "options": ["136", "131", "129", "134"],
+    "ans": "131"
+  },
+  {
+    "q": "Ravi is 37 years old. How old will he be after 13 years?",
+    "options": ["50", "55", "48", "53"],
+    "ans": "50"
+  },
+  {
+    "q": "Find the HCF of 163 and 95.",
+    "options": ["1", "-1", "6", "4"],
+    "ans": "1"
+  },
+  {
+    "q": "Find the area of a rectangle with length 12 cm and width 8 cm.",
+    "options": ["96", "101", "94", "99"],
+    "ans": "96"
+  },
+  {
+    "q": "After a 15% increase, a number becomes 300. Find the original number.",
+    "options": ["12000/23", "6023/23", "5977/23", "6000/23"],
+    "ans": "6000/23"
+  },
+  {
+    "q": "Ravi is 42 years old. How old will he be after 10 years?",
+    "options": ["55", "50", "52", "57"],
+    "ans": "52"
+  },
+  {
+    "q": "Find the simple interest on ₹2500 at 4% per annum for 1 year(s).",
+    "options": ["103", "100", "98", "105"],
+    "ans": "100"
+  },
+  {
+    "q": "An item bought for ₹250 is sold at a profit of 30%. Find its selling price.",
+    "options": ["330", "323", "328", "325"],
+    "ans": "325"
+  },
+  {
+    "q": "An item bought for ₹500 is sold at a profit of 10%. Find its selling price.",
+    "options": ["553", "548", "550", "555"],
+    "ans": "550"
+  },
+  {
+    "q": "What is 35% of 1200?",
+    "options": ["425", "420", "418", "423"],
+    "ans": "420"
+  },
+  {
+    "q": "Two numbers are in the ratio 3:4. Their sum is 84. Find the smaller number.",
+    "options": ["34", "39", "41", "36"],
+    "ans": "36"
+  },
+  {
+    "q": "An item bought for ₹1500 is sold at a profit of 20%. Find its selling price.",
+    "options": ["1805", "1803", "1798", "1800"],
+    "ans": "1800"
+  },
+  {
+    "q": "The average score of 11 candidates is 28. Find their total score.",
+    "options": ["313", "311", "308", "306"],
+    "ans": "308"
+  },
+  {
+    "q": "Two numbers are in the ratio 4:8. Their sum is 180. Find the smaller number.",
+    "options": ["58", "65", "63", "60"],
+    "ans": "60"
+  },
+  {
+    "q": "The average score of 7 candidates is 36. Find their total score.",
+    "options": ["257", "250", "252", "255"],
+    "ans": "252"
+  },
+  {
+    "q": "Two numbers are in the ratio 8:7. Their sum is 150. Find the smaller number.",
+    "options": ["73", "68", "75", "70"],
+    "ans": "70"
+  },
+  {
+    "q": "Pipe A fills a tank in 4 hours and Pipe B fills it in 13 hours. How long will they take together?",
+    "options": ["35/17", "52/17", "69/17", "104/17"],
+    "ans": "52/17"
+  },
+  {
+    "q": "Pipe A fills a tank in 8 hours and Pipe B fills it in 7 hours. How long will they take together?",
+    "options": ["71/15", "112/15", "41/15", "56/15"],
+    "ans": "56/15"
+  },
+  {
+    "q": "A mixture contains 35 litres of milk and 50 litres of water. What percentage of the mixture is milk?",
+    "options": ["683/17", "1400/17", "717/17", "700/17"],
+    "ans": "700/17"
+  },
+  {
+    "q": "Solve for x: 2x + 26 = 80.",
+    "options": ["27", "25", "32", "30"],
+    "ans": "27"
+  },
+  {
+    "q": "Find the HCF of 96 and 134.",
+    "options": ["2", "7", "5", "0"],
+    "ans": "2"
+  },
+  {
+    "q": "A mixture contains 12 litres of milk and 15 litres of water. What percentage of the mixture is milk?",
+    "options": ["409/9", "391/9", "800/9", "400/9"],
+    "ans": "400/9"
+  },
+  {
+    "q": "An item bought for ₹200 is sold at a profit of 10%. Find its selling price.",
+    "options": ["218", "225", "223", "220"],
+    "ans": "220"
+  },
+  {
+    "q": "What is 60% of 240?",
+    "options": ["144", "142", "147", "149"],
+    "ans": "144"
+  },
+  {
+    "q": "Find the HCF of 112 and 25.",
+    "options": ["6", "4", "-1", "1"],
+    "ans": "1"
+  },
+  {
+    "q": "What is 12% of 160?",
+    "options": ["192/5", "101/5", "91/5", "96/5"],
+    "ans": "96/5"
+  },
+  {
+    "q": "Find the simple interest on ₹2500 at 10% per annum for 4 year(s).",
+    "options": ["1005", "998", "1003", "1000"],
+    "ans": "1000"
+  },
+  {
+    "q": "Solve for x: 2x + 27 = 71.",
+    "options": ["25", "27", "22", "20"],
+    "ans": "22"
+  },
+  {
+    "q": "Find the 30th term of an arithmetic progression with first term 9 and common difference 5.",
+    "options": ["152", "159", "157", "154"],
+    "ans": "154"
+  },
+  {
+    "q": "Find the area of a rectangle with length 19 cm and width 7 cm.",
+    "options": ["138", "136", "133", "131"],
+    "ans": "133"
+  },
+  {
+    "q": "The average score of 8 candidates is 60. Find their total score.",
+    "options": ["478", "485", "483", "480"],
+    "ans": "480"
+  },
+  {
+    "q": "Find the area of a rectangle with length 26 cm and width 23 cm.",
+    "options": ["598", "596", "601", "603"],
+    "ans": "598"
+  },
+  {
+    "q": "A train 180 metres long travels at 90 km/h. How many seconds does it take to pass a pole?",
+    "options": ["31/5", "72/5", "36/5", "41/5"],
+    "ans": "36/5"
+  },
+  {
+    "q": "Ravi is 28 years old. How old will he be after 14 years?",
+    "options": ["47", "42", "45", "40"],
+    "ans": "42"
+  },
+  {
+    "q": "A can complete a job in 8 days and B in 11 days. How long will they take working together?",
+    "options": ["88/19", "69/19", "176/19", "107/19"],
+    "ans": "88/19"
+  },
+  {
+    "q": "After a 25% increase, a number becomes 200. Find the original number.",
+    "options": ["160", "165", "158", "163"],
+    "ans": "160"
+  },
+  {
+    "q": "Solve for x: 5x + 6 = 96.",
+    "options": ["16", "18", "23", "21"],
+    "ans": "18"
+  },
+  {
+    "q": "A car travels at 72 km/h for 6 hours. How far does it travel?",
+    "options": ["435", "432", "437", "430"],
+    "ans": "432"
+  },
+  {
+    "q": "Find the 25th term of an arithmetic progression with first term 12 and common difference 8.",
+    "options": ["209", "207", "202", "204"],
+    "ans": "204"
+  },
+  {
+    "q": "An item marked at ₹1000 is discounted by 5%. Find its selling price.",
+    "options": ["955", "953", "950", "948"],
+    "ans": "950"
+  },
+  {
+    "q": "Solve for x: 11x + 10 = 120.",
+    "options": ["15", "10", "8", "13"],
+    "ans": "10"
+  },
+  {
+    "q": "Solve for x: 7x + 2 = 30.",
+    "options": ["7", "2", "9", "4"],
+    "ans": "4"
+  },
+  {
+    "q": "Find the 9th term of an arithmetic progression with first term 6 and common difference 9.",
+    "options": ["78", "76", "81", "83"],
+    "ans": "78"
+  },
+  {
+    "q": "A company records quarterly sales of 34, 70, 54, and 126 units. Find the total sales.",
+    "options": ["284", "287", "289", "282"],
+    "ans": "284"
+  },
+  {
+    "q": "Find the area of a rectangle with length 7 cm and width 11 cm.",
+    "options": ["80", "82", "77", "75"],
+    "ans": "77"
+  },
+  {
+    "q": "A company records quarterly sales of 37, 116, 96, and 104 units. Find the total sales.",
+    "options": ["358", "356", "351", "353"],
+    "ans": "353"
+  },
+  {
+    "q": "A can complete a job in 8 days and B in 20 days. How long will they take working together?",
+    "options": ["80/7", "33/7", "40/7", "47/7"],
+    "ans": "40/7"
+  },
+  {
+    "q": "A bag contains 10 red balls and 8 blue balls. One ball is selected randomly. What is the probability it is red?",
+    "options": ["14/9", "5/9", "0", "10/9"],
+    "ans": "5/9"
+  }
+]

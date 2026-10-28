@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow mb-4">
+                <div class="card-header bg-aptitude text-white d-flex justify-content-between align-items-center">
+                    <h4 class="mb-0">🧠 {{ role_name }} Daily Quiz</h4>
+                    <span class="badge bg-light text-dark">10 Questions</span>
+                </div>
+                <div class="card-body">
+                    <form id="quizForm">
+                        {% for q in questions %}
+                        <div class="question-block mb-4 pb-3 border-bottom">
+                            <h5 class="mb-3">Q{{ loop.index }}. {{ q.question }}</h5>
+                            <div class="options">
+                                {% for option in q.options %}
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="radio" 
+                                           name="q{{ q.id }}" 
+                                           id="q{{ q.id }}_opt{{ loop.index }}" 
+                                           value="{{ option }}">
+                                    <label class="form-check-label w-100" for="q{{ q.id }}_opt{{ loop.index }}">
+                                        {{ option }}
+                                    </label>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        {% endfor %}
+                        
+                        <div class="text-center mt-4">
+                            <button type="button" id="submitQuizBtn" class="btn btn-aptitude btn-lg px-5">
+                                Submit Answers 🚀
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div id="resultsSection" style="display: none;">
+                <div class="card shadow">
+                    <div class="card-header bg-success text-white">
+                        <h4 class="mb-0">📊 Quiz Results</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-center mb-4">
+                            <h2 id="finalScore" class="display-4 text-success">0/10</h2>
+                            <p id="scoreMessage" class="lead"></p>
+                        </div>
+                        <div id="detailedResults"></div>
+                        <div class="text-center mt-4">
+                            <a href="{{ url_for('preparation') }}" class="btn btn-primary">Back to Preparation</a>
+                            <button onclick="location.reload()" class="btn btn-outline-primary">Retake Quiz</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('submitQuizBtn').addEventListener('click', function() {
+    const form = document.getElementById('quizForm');
+    const formData = new FormData(form);
+    const answers = {};
+    
+    // Collect answers
+    for (let [key, value] of formData.entries()) {
+        const qId = key.replace('q', '');
+        answers[qId] = value;
+    }
+    
+    // Validate all answered
+    const totalQuestions = {{ questions|length }};
+    if (Object.keys(answers).length < totalQuestions) {
+        alert('Please answer all questions before submitting!');
+        return;
+    }
+    
+    const btn = this;
+    btn.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Evaluating...';
+    btn.disabled = true;
+    
+    fetch('/check_job_quiz', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({answers: answers})
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.error) {
+            alert(data.error);
+            return;
+        }
+        
+        // Hide form, show results
+        form.style.display = 'none';
+        document.getElementById('resultsSection').style.display = 'block';
+        
+        // Set score
+        const scorePercent = (data.score / data.total) * 100;
+        const scoreEl = document.getElementById('finalScore');
+        scoreEl.textContent = `${data.score}/${data.total}`;
+        scoreEl.className = `display-4 ${scorePercent >= 70 ? 'text-success' : scorePercent >= 40 ? 'text-warning' : 'text-danger'}`;
+        
+        const msgEl = document.getElementById('scoreMessage');
+        if (scorePercent >= 70) msgEl.textContent = "Excellent! You have a strong grasp of this role's concepts.";
+        else if (scorePercent >= 40) msgEl.textContent = "Good effort. Review the explanations below to improve.";
+        else msgEl.textContent = "Needs improvement. Study the explanations carefully.";
+        
+        // Build detailed results
+        let html = '';
+        data.results.forEach((res, i) => {
+            const statusIcon = res.is_correct ? '✅' : '❌';
+            const statusColor = res.is_correct ? 'border-success' : 'border-danger';
+            
+            html += `
+                <div class="card mb-3 border-start border-4 ${statusColor}">
+                    <div class="card-body">
+                        <h6 class="mb-2">${statusIcon} Q${i+1}: ${res.question}</h6>
+                        <p class="mb-1"><strong>Your Answer:</strong> <span class="${res.is_correct ? 'text-success' : 'text-danger'}">${res.user_answer || 'Not answered'}</span></p>
+                        ${!res.is_correct ? `<p class="mb-1"><strong>Correct Answer:</strong> <span class="text-success">${res.correct_answer}</span></p>` : ''}
+                        <div class="alert alert-secondary mt-2 mb-0 py-2">
+                            <small><strong>💡 Explanation:</strong> ${res.explanation}</small>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+        
+        document.getElementById('detailedResults').innerHTML = html;
+    })
+    .catch(err => {
+        alert('An error occurred. Please try again.');
+        btn.innerHTML = 'Submit Answers 🚀';
+        btn.disabled = false;
+    });
+});
+</script>
+{% endblock %}

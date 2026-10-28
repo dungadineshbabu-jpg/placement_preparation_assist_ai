@@ -1,0 +1,207 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <div>
+            <h2><i class="fas fa-calendar-day"></i> Today's Coding Challenge</h2>
+            <p class="text-muted mb-0">{{ today }}</p>
+        </div>
+        <div>
+            <a href="{{ url_for('coding_leaderboard') }}" class="btn btn-outline-warning btn-sm">
+                <i class="fas fa-trophy"></i> Leaderboard
+            </a>
+            <a href="{{ url_for('my_daily_submissions') }}" class="btn btn-outline-info btn-sm">
+                <i class="fas fa-history"></i> My Submissions
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Problem statement -->
+        <div class="col-md-5">
+            <div class="card shadow mb-3">
+                <div class="card-header" style="background: linear-gradient(135deg, #2563eb, #3b82f6); color: white;">
+                    <h5 class="mb-0">
+                        {{ problem.title }}
+                        <span class="badge bg-{% if problem.difficulty == 'Easy' %}success{% elif problem.difficulty == 'Medium' %}warning{% else %}danger{% endif %} float-end">
+                            {{ problem.difficulty }}
+                        </span>
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>Problem Statement:</strong></p>
+                    <p>{{ problem.statement }}</p>
+                    <p><strong>Sample Input:</strong></p>
+                    <pre class="bg-dark p-2 text-light">{{ problem.sample_input }}</pre>
+                    <p><strong>Sample Output:</strong></p>
+                    <pre class="bg-dark p-2 text-light">{{ problem.sample_output }}</pre>
+                    <p><strong>Constraints:</strong></p>
+                    <p>{{ problem.constraints }}</p>
+                </div>
+            </div>
+
+            {% if existing %}
+            <div class="alert alert-info">
+                <i class="fas fa-check-circle"></i>
+                You have already submitted today's challenge.<br>
+                <strong>Score: {{ existing.score }}%</strong> ({{ existing.passed }}/{{ existing.total }} passed)<br>
+                <small>Submitted at {{ existing.submitted_at.strftime('%H:%M') }}</small>
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- Editor -->
+        <div class="col-md-7">
+            <div class="card shadow">
+                <div class="card-header" style="background: linear-gradient(135deg, #7c3aed, #8b5cf6); color: white; display: flex; justify-content: space-between; align-items: center;">
+                    <span><i class="fas fa-pencil-alt"></i> Code Editor</span>
+                    <div>
+                        <select id="languageSelect" class="form-select form-select-sm d-inline-block me-2" style="width: 150px;">
+                            <option value="python">Python 3</option>
+                            <option value="c">C (GCC)</option>
+                            <option value="cpp">C++ (G++)</option>
+                            <option value="java">Java</option>
+                            <option value="csharp">C#</option>
+                            <option value="javascript">JavaScript</option>
+                        </select>
+                        <button id="runBtn" class="btn btn-success btn-sm" type="button">
+                            <i class="fas fa-play"></i> Run
+                        </button>
+                        <button id="submitBtn" class="btn btn-primary btn-sm" type="button">
+                            <i class="fas fa-paper-plane"></i> Submit
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body p-0">
+                    <textarea id="codeEditor" style="width: 100%; height: 500px; font-family: Consolas, Monaco, monospace; font-size: 14px; background: #1e293b; color: #e2e8f0; border: none; padding: 15px; resize: vertical;"># Write your Python solution here
+def solve():
+    pass
+
+solve()
+</textarea>
+                </div>
+            </div>
+
+            <!-- Output -->
+            <div class="card mt-3 shadow">
+                <div class="card-header bg-info text-white d-flex justify-content-between">
+                    <span><i class="fas fa-terminal"></i> Output</span>
+                    <span id="statusBadge" class="badge bg-secondary">Idle</span>
+                </div>
+                <div class="card-body p-0">
+                    <pre id="outputArea" style="background: #0f172a; color: #a5f3fc; padding: 15px; margin: 0; min-height: 200px; white-space: pre-wrap; font-family: Consolas, monospace;">Click "Run" to test your code, then "Submit" to save your score.</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Fixed problem ID from template -->
+<script>
+    window.PROBLEM_ID = {{ problem.id }};
+</script>
+
+<script>
+    console.log('✅ daily_challenge.html script loaded');
+
+    const problemId = window.PROBLEM_ID;
+    const editor = document.getElementById('codeEditor');
+    const langSelect = document.getElementById('languageSelect');
+    const runBtn = document.getElementById('runBtn');
+    const submitBtn = document.getElementById('submitBtn');
+    const out = document.getElementById('outputArea');
+    const badge = document.getElementById('statusBadge');
+
+    const starterCode = {
+        python: "# Write your Python solution here\ndef solve():\n    pass\n\nsolve()\n",
+        c: "// Write your C solution\n#include <stdio.h>\n\nint main() {\n    // Your code\n    return 0;\n}\n",
+        cpp: "// Write your C++ solution\n#include <iostream>\nusing namespace std;\n\nint main() {\n    // Your code\n    return 0;\n}\n",
+        java: "// Write your Java solution\npublic class Main {\n    public static void main(String[] args) {\n        // Your code\n    }\n}\n",
+        csharp: "// Write your C# solution\nusing System;\n\nclass Program {\n    static void Main() {\n        // Your code\n    }\n}\n",
+        javascript: "// Write your JavaScript solution\nfunction solve() {\n    // Your code\n}\nsolve();\n"
+    };
+
+    langSelect.addEventListener('change', function () {
+        editor.value = starterCode[this.value] || '';
+        console.log('Language switched to', this.value);
+    });
+
+    runBtn.addEventListener('click', async function () {
+        console.log('▶️ Run clicked');
+        const lang = langSelect.value;
+        const code = editor.value;
+        if (!code.trim()) { out.textContent = '⚠️ Please write code first.'; return; }
+
+        runBtn.disabled = true;
+        runBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Running...';
+        out.textContent = '⏳ Compiling and running...';
+        badge.className = 'badge bg-warning';
+        badge.textContent = 'Running';
+
+        try {
+            const res = await fetch('/run_code', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ language: lang, code: code })
+            });
+            const data = await res.json();
+            console.log('Run response:', data);
+            if (data.error) {
+                out.textContent = '❌ Error:\n' + data.error;
+                badge.className = 'badge bg-danger';
+                badge.textContent = 'Error';
+            } else {
+                out.textContent = data.output || '(No output)';
+                badge.className = 'badge bg-success';
+                badge.textContent = 'Success';
+            }
+        } catch (e) {
+            console.error('Run error:', e);
+            out.textContent = '❌ Network error: ' + e.message;
+            badge.className = 'badge bg-danger';
+            badge.textContent = 'Error';
+        }
+        runBtn.disabled = false;
+        runBtn.innerHTML = '<i class="fas fa-play"></i> Run';
+    });
+
+    submitBtn.addEventListener('click', async function () {
+        console.log('📤 Submit clicked');
+        const lang = langSelect.value;
+        const code = editor.value;
+        if (!code.trim()) { alert('Please write code first.'); return; }
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+        out.textContent = '⏳ Running test cases and saving your submission...';
+        badge.className = 'badge bg-warning';
+        badge.textContent = 'Submitting';
+
+        try {
+            const res = await fetch('/submit_daily_challenge', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ code: code, language: lang, problem_id: problemId })
+            });
+            const data = await res.json();
+            console.log('Submit response:', data);
+            if (data.error) {
+                out.textContent = '❌ ' + data.error;
+                badge.className = 'badge bg-danger';
+                badge.textContent = 'Error';
+            } else {
+                out.textContent = `✅ Score: ${data.score}%\n${data.message}\n\n--- Last Test Output ---\n${data.output || '(no output)'}`;
+                badge.className = data.score >= 80 ? 'badge bg-success' : 'badge bg-warning';
+                badge.textContent = 'Submitted';
+            }
+        } catch (e) {
+            console.error('Submit error:', e);
+            out.textContent = '❌ Submission failed: ' + e.message;
+            badge.className = 'badge bg-danger';
+            badge.textContent = 'Error';
+        }
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Submit';
+    });
+</script>
+{% endblock %}

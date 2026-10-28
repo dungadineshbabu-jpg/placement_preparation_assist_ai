@@ -1,0 +1,76 @@
+﻿ 
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2 class="mb-4"><i class="fas fa-users"></i> Group Discussion Practice</h2>
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-header bg-primary text-white"><h5>GD Topics</h5></div>
+                <div class="card-body">
+                    <div class="list-group" id="topicList">
+                        {% for topic in topics %}
+                        <a href="#" class="list-group-item list-group-item-action topic-item" data-topic="{{ topic }}">{{ topic }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="card">
+                <div class="card-header bg-success text-white"><h5>Your Response</h5></div>
+                <div class="card-body">
+                    <div id="selectedTopic" class="alert alert-info">Select a topic to begin</div>
+                    <textarea id="gdResponse" class="form-control" rows="8" placeholder="Write your response here..."></textarea>
+                    <button id="submitGD" class="btn btn-primary mt-3">Submit Response</button>
+                </div>
+            </div>
+            <div id="gdResult" class="card mt-3" style="display: none;">
+                <div class="card-header bg-warning text-dark"><h5>Evaluation Results</h5></div>
+                <div class="card-body" id="resultContent"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let currentTopic = '';
+    document.querySelectorAll('.topic-item').forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.querySelectorAll('.topic-item').forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+            currentTopic = item.dataset.topic;
+            document.getElementById('selectedTopic').innerHTML = `<strong>Topic:</strong> ${currentTopic}`;
+            document.getElementById('gdResponse').value = '';
+            document.getElementById('gdResult').style.display = 'none';
+        });
+    });
+    
+    document.getElementById('submitGD').addEventListener('click', async () => {
+        const response = document.getElementById('gdResponse').value.trim();
+        if (!currentTopic) return alert('Select a topic first');
+        if (!response) return alert('Write your response');
+        
+        const res = await fetch('/evaluate_gd', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({topic: currentTopic, response: response})
+        });
+        const data = await res.json();
+        
+        document.getElementById('resultContent').innerHTML = `
+            <div class="row">
+                <div class="col-md-6"><strong>Communication:</strong> ${data.communication_score}%</div>
+                <div class="col-md-6"><strong>Grammar:</strong> ${data.grammar_score}%</div>
+                <div class="col-md-6"><strong>Confidence:</strong> ${data.confidence_score}%</div>
+                <div class="col-md-6"><strong>Overall:</strong> ${data.overall_score}%</div>
+            </div>
+            <hr>
+            <p>${data.comm_feedback}</p>
+            <p><strong>Word Count:</strong> ${data.word_count}</p>
+        `;
+        document.getElementById('gdResult').style.display = 'block';
+    });
+</script>
+{% endblock %}

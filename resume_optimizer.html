@@ -1,0 +1,488 @@
+﻿ 
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid">
+    <h2 class="mb-4"><i class="fas fa-magic"></i> Company-Specific Resume Optimizer</h2>
+    <p class="text-muted">Customize your resume for target companies and improve ATS compatibility</p>
+    
+    <div class="row">
+        <!-- Company Selection -->
+        <div class="col-md-3">
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5><i class="fas fa-building"></i> Select Company</h5>
+                </div>
+                <div class="card-body" style="max-height: 500px; overflow-y: auto;">
+                    <div class="list-group" id="companyList">
+                        {% for company in companies %}
+                        <a href="#" class="list-group-item list-group-item-action company-item" data-company="{{ company }}">
+                            <i class="fas fa-building me-2"></i> {{ company }}
+                            <span class="badge bg-secondary float-end" id="score-{{ company }}">-</span>
+                        </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Multi-Company Comparison -->
+            <div class="card mb-4">
+                <div class="card-header bg-info text-white">
+                    <h5><i class="fas fa-chart-line"></i> Company Comparison</h5>
+                </div>
+                <div class="card-body">
+                    <button id="compareBtn" class="btn btn-info w-100 mb-3">
+                        <i class="fas fa-chart-bar"></i> Compare All Companies
+                    </button>
+                    <div id="comparisonChart"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Analysis Results -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header bg-success text-white">
+                    <h5><i class="fas fa-chart-pie"></i> Resume Analysis</h5>
+                </div>
+                <div class="card-body" id="analysisResults">
+                    <div class="text-center text-muted py-5">
+                        <i class="fas fa-upload fa-3x mb-3"></i>
+                        <p>Select a company to analyze your resume</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Improvement Suggestions -->
+            <div class="card mb-4">
+                <div class="card-header bg-warning text-dark">
+                    <h5><i class="fas fa-lightbulb"></i> Improvement Suggestions</h5>
+                </div>
+                <div class="card-body" id="suggestionsList" style="min-height: 150px;">
+                    <div class="text-muted text-center">Select a company to see suggestions</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Optimized Resume -->
+        <div class="col-md-5">
+            <div class="card mb-4">
+                <div class="card-header bg-danger text-white">
+                    <h5><i class="fas fa-file-alt"></i> Optimized Resume</h5>
+                </div>
+                <div class="card-body" style="max-height: 600px; overflow-y: auto;" id="optimizedResume">
+                    <div class="text-center text-muted py-5">
+                        <i class="fas fa-magic fa-3x mb-3"></i>
+                        <p>Click "Generate Optimized Resume" to create company-specific version</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button id="optimizeBtn" class="btn btn-danger w-100" disabled>
+                        <i class="fas fa-magic"></i> Generate Optimized Resume
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Version History -->
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-secondary text-white">
+                    <h5><i class="fas fa-history"></i> Resume Version History</h5>
+                </div>
+                <div class="card-body">
+                    <div id="versionHistory">
+                        <div class="text-muted text-center">No versions saved yet</div>
+                    </div>
+                    <div class="mt-3">
+                        <input type="text" id="versionName" class="form-control mb-2" placeholder="Version name (e.g., Google_Resume_v1)">
+                        <button id="saveVersionBtn" class="btn btn-secondary w-100">
+                            <i class="fas fa-save"></i> Save Current Resume Version
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let currentCompany = null;
+    let currentAnalysis = null;
+    let currentOptimized = null;
+    
+    // Company selection
+    document.querySelectorAll('.company-item').forEach(item => {
+        item.addEventListener('click', async (e) => {
+            e.preventDefault();
+            
+            // Update active state
+            document.querySelectorAll('.company-item').forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+            
+            currentCompany = item.dataset.company;
+            
+            // Show loading
+            document.getElementById('analysisResults').innerHTML = `
+                <div class="text-center py-5">
+                    <div class="spinner-border text-primary"></div>
+                    <p class="mt-2">Analyzing resume for ${currentCompany}...</p>
+                </div>
+            `;
+            
+            // Analyze resume
+            try {
+                const response = await fetch('/analyze_company_resume', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({company: currentCompany})
+                });
+                
+                const data = await response.json();
+                
+                if (data.error) {
+                    document.getElementById('analysisResults').innerHTML = `
+                        <div class="alert alert-danger">${data.error}</div>
+                    `;
+                    return;
+                }
+                
+                currentAnalysis = data;
+                
+                // Update score badge
+                const scoreSpan = document.getElementById(`score-${currentCompany}`);
+                if (scoreSpan) {
+                    scoreSpan.textContent = `${data.ats_score}%`;
+                    scoreSpan.className = `badge float-end ${data.ats_score >= 60 ? 'bg-success' : 'bg-warning'}`;
+                }
+                
+                // Display analysis results
+                displayAnalysisResults(data);
+                
+                // Enable optimize button
+                document.getElementById('optimizeBtn').disabled = false;
+            } catch (error) {
+                document.getElementById('analysisResults').innerHTML = `
+                    <div class="alert alert-danger">Error analyzing resume. Please try again.</div>
+                `;
+            }
+        });
+    });
+    
+    function displayAnalysisResults(data) {
+        const atsColor = data.ats_score >= 70 ? 'success' : (data.ats_score >= 50 ? 'warning' : 'danger');
+        const readinessColor = data.readiness_score >= 70 ? 'success' : (data.readiness_score >= 50 ? 'warning' : 'danger');
+        
+        const html = `
+            <div class="text-center mb-4">
+                <div class="display-4 text-${atsColor}">${data.ats_score}%</div>
+                <strong>ATS Score</strong>
+                <div class="progress mt-2">
+                    <div class="progress-bar bg-${atsColor}" style="width: ${data.ats_score}%"></div>
+                </div>
+            </div>
+            
+            <div class="text-center mb-4">
+                <div class="display-4 text-${readinessColor}">${data.readiness_score}%</div>
+                <strong>Readiness Score</strong>
+                <div class="progress mt-2">
+                    <div class="progress-bar bg-${readinessColor}" style="width: ${data.readiness_score}%"></div>
+                </div>
+            </div>
+            
+            <hr>
+            
+            <div class="mb-3">
+                <strong><i class="fas fa-check-circle text-success"></i> Found Keywords:</strong>
+                <div class="mt-1">
+                    ${data.found_keywords && data.found_keywords.length > 0 ? 
+                        data.found_keywords.map(k => `<span class="badge bg-success m-1">${k}</span>`).join('') : 
+                        'None found'}
+                </div>
+            </div>
+            
+            <div class="mb-3">
+                <strong><i class="fas fa-exclamation-triangle text-warning"></i> Missing Keywords:</strong>
+                <div class="mt-1">
+                    ${data.missing_keywords && data.missing_keywords.length > 0 ? 
+                        data.missing_keywords.map(k => `<span class="badge bg-warning m-1">${k}</span>`).join('') : 
+                        'None missing!'}
+                </div>
+            </div>
+            
+            <div class="alert alert-${data.meets_threshold ? 'success' : 'danger'} mt-3">
+                <i class="fas fa-${data.meets_threshold ? 'check-circle' : 'exclamation-circle'}"></i>
+                ${data.meets_threshold ? '✅ Your resume meets the minimum ATS requirement!' : '❌ Your resume needs improvement to meet ATS requirements.'}
+            </div>
+        `;
+        
+        document.getElementById('analysisResults').innerHTML = html;
+        
+        // Display suggestions
+        if (data.suggestions && data.suggestions.length > 0) {
+            const suggestionsHtml = `
+                <ul class="list-group list-group-flush">
+                    ${data.suggestions.map(s => `<li class="list-group-item bg-transparent"><i class="fas fa-arrow-right text-warning me-2"></i> ${s}</li>`).join('')}
+                </ul>
+            `;
+            document.getElementById('suggestionsList').innerHTML = suggestionsHtml;
+        } else {
+            document.getElementById('suggestionsList').innerHTML = '<div class="text-muted text-center">No suggestions available</div>';
+        }
+    }
+    
+    // Optimize resume
+    document.getElementById('optimizeBtn').addEventListener('click', async () => {
+        if (!currentCompany) {
+            alert('Please select a company first');
+            return;
+        }
+        
+        document.getElementById('optimizedResume').innerHTML = `
+            <div class="text-center py-5">
+                <div class="spinner-border text-danger"></div>
+                <p class="mt-2">Generating optimized resume for ${currentCompany}...</p>
+            </div>
+        `;
+        
+        try {
+            const response = await fetch('/optimize_company_resume', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({company: currentCompany})
+            });
+            
+            const data = await response.json();
+            
+            if (data.error) {
+                document.getElementById('optimizedResume').innerHTML = `
+                    <div class="alert alert-danger">${data.error}</div>
+                `;
+                return;
+            }
+            
+            currentOptimized = data.optimized;
+            
+            const optimizedHtml = `
+                <div class="alert alert-success mb-3">
+                    <i class="fas fa-check-circle"></i> ${data.message}
+                </div>
+                
+                <h6><i class="fas fa-align-left"></i> Professional Summary</h6>
+                <div class="border rounded p-3 mb-3 bg-dark">
+                    ${currentOptimized.summary}
+                </div>
+                
+                <h6><i class="fas fa-code"></i> Optimized Skills</h6>
+                <div class="mb-3">
+                    ${currentOptimized.skills && currentOptimized.skills.length > 0 ?
+                        currentOptimized.skills.map(s => `<span class="badge bg-primary m-1">${s}</span>`).join('') :
+                        'No skills listed'}
+                </div>
+                
+                ${currentOptimized.recommended_skills && currentOptimized.recommended_skills.length > 0 ? `
+                <h6><i class="fas fa-plus-circle text-warning"></i> Recommended Skills to Add</h6>
+                <div class="mb-3">
+                    ${currentOptimized.recommended_skills.map(s => `<span class="badge bg-warning m-1">${s}</span>`).join('')}
+                </div>
+                ` : ''}
+                
+                <h6><i class="fas fa-project-diagram"></i> Projects</h6>
+                ${currentOptimized.projects && currentOptimized.projects.length > 0 ? 
+                    currentOptimized.projects.map(p => `
+                        <div class="border rounded p-2 mb-2">
+                            <strong>${p.title || 'Project'}</strong>
+                            <p class="mb-0 small">${p.description || 'No description'}</p>
+                        </div>
+                    `).join('') : 
+                    '<p class="text-muted">No projects listed</p>'
+                }
+                
+                ${currentOptimized.recommended_projects && currentOptimized.recommended_projects.length > 0 ? `
+                <h6><i class="fas fa-lightbulb text-warning"></i> Recommended Projects</h6>
+                <ul class="mb-3">
+                    ${currentOptimized.recommended_projects.map(p => `<li>${p}</li>`).join('')}
+                </ul>
+                ` : ''}
+                
+                ${currentOptimized.recommended_certifications && currentOptimized.recommended_certifications.length > 0 ? `
+                <h6><i class="fas fa-certificate text-info"></i> Recommended Certifications</h6>
+                <ul class="mb-3">
+                    ${currentOptimized.recommended_certifications.map(c => `<li>${c}</li>`).join('')}
+                </ul>
+                ` : ''}
+                
+                <h6><i class="fas fa-lightbulb text-warning"></i> Resume Tips</h6>
+                <ul class="mb-3">
+                    ${currentOptimized.resume_tips && currentOptimized.resume_tips.length > 0 ?
+                        currentOptimized.resume_tips.map(t => `<li>${t}</li>`).join('') :
+                        '<li>No tips available</li>'
+                    }
+                </ul>
+                
+                <h6><i class="fas fa-bolt text-success"></i> Action Verbs to Use</h6>
+                <div class="mb-3">
+                    ${currentOptimized.action_verbs_to_use && currentOptimized.action_verbs_to_use.length > 0 ?
+                        currentOptimized.action_verbs_to_use.map(v => `<span class="badge bg-success m-1">${v}</span>`).join('') :
+                        'Use strong action verbs'
+                    }
+                </div>
+            `;
+            
+            document.getElementById('optimizedResume').innerHTML = optimizedHtml;
+        } catch (error) {
+            document.getElementById('optimizedResume').innerHTML = `
+                <div class="alert alert-danger">Error generating optimized resume. Please try again.</div>
+            `;
+        }
+    });
+    
+    // Compare companies
+    document.getElementById('compareBtn').addEventListener('click', async () => {
+        document.getElementById('comparisonChart').innerHTML = `
+            <div class="text-center py-3">
+                <div class="spinner-border text-primary"></div>
+                <p>Comparing companies...</p>
+            </div>
+        `;
+        
+        try {
+            const response = await fetch('/compare_resume_companies');
+            const data = await response.json();
+            
+            if (data.error) {
+                document.getElementById('comparisonChart').innerHTML = `
+                    <div class="alert alert-danger">${data.error}</div>
+                `;
+                return;
+            }
+            
+            let comparisonHtml = '<div class="list-group">';
+            data.comparisons.forEach(comp => {
+                const color = comp.meets_threshold ? 'success' : 'warning';
+                comparisonHtml += `
+                    <div class="list-group-item">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <strong>${comp.company}</strong>
+                            <span class="badge bg-${color}">${comp.ats_score}%</span>
+                        </div>
+                        <div class="progress mt-2">
+                            <div class="progress-bar bg-${color}" style="width: ${comp.readiness_score}%"></div>
+                        </div>
+                        <small class="text-muted">Readiness: ${comp.readiness_score}%</small>
+                    </div>
+                `;
+            });
+            comparisonHtml += '</div>';
+            
+            document.getElementById('comparisonChart').innerHTML = comparisonHtml;
+        } catch (error) {
+            document.getElementById('comparisonChart').innerHTML = `
+                <div class="alert alert-danger">Error comparing companies</div>
+            `;
+        }
+    });
+    
+    // Save version
+    document.getElementById('saveVersionBtn').addEventListener('click', async () => {
+        const versionName = document.getElementById('versionName').value.trim();
+        if (!versionName) {
+            alert('Please enter a version name');
+            return;
+        }
+        
+        const resumeData = {
+            summary: document.querySelector('#optimizedResume .border.rounded.p-3')?.innerText || '',
+            skills: currentOptimized?.skills || [],
+            projects: currentOptimized?.projects || []
+        };
+        
+        try {
+            const response = await fetch('/save_resume_version', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({version_name: versionName, resume_data: resumeData})
+            });
+            
+            const data = await response.json();
+            if (data.status === 'success') {
+                alert('Version saved successfully!');
+                loadVersions();
+                document.getElementById('versionName').value = '';
+            }
+        } catch (error) {
+            alert('Error saving version');
+        }
+    });
+    
+    async function loadVersions() {
+        try {
+            const response = await fetch('/get_resume_versions');
+            const data = await response.json();
+            
+            if (data.versions && data.versions.length > 0) {
+                const versionsHtml = `
+                    <div class="list-group">
+                        ${data.versions.map(v => `
+                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                <div>
+                                    <strong>${v.name}</strong>
+                                    <br>
+                                    <small class="text-muted">${v.date}</small>
+                                </div>
+                                <button class="btn btn-sm btn-primary load-version" data-id="${v.id}">Load</button>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                document.getElementById('versionHistory').innerHTML = versionsHtml;
+                
+                // Add load event listeners
+                document.querySelectorAll('.load-version').forEach(btn => {
+                    btn.addEventListener('click', async () => {
+                        const versionId = btn.dataset.id;
+                        const response = await fetch(`/load_resume_version/${versionId}`);
+                        const data = await response.json();
+                        alert('Version loaded! You can now edit it.');
+                    });
+                });
+            } else {
+                document.getElementById('versionHistory').innerHTML = '<div class="text-muted text-center">No versions saved yet</div>';
+            }
+        } catch (error) {
+            document.getElementById('versionHistory').innerHTML = '<div class="text-muted text-center">Error loading versions</div>';
+        }
+    }
+    
+    // Load versions on page load
+    loadVersions();
+</script>
+
+<style>
+    .company-item.active {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+    }
+    .company-item.active:hover {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+    }
+    #optimizedResume {
+        font-size: 14px;
+    }
+    .list-group-item {
+        background: rgba(30, 41, 59, 0.5);
+        color: #e2e8f0;
+        border-color: #334155;
+    }
+    .list-group-item:hover {
+        background: rgba(30, 41, 59, 0.8);
+    }
+    #comparisonChart .list-group-item {
+        background: rgba(30, 41, 59, 0.5);
+        border-color: #334155;
+    }
+</style>
+{% endblock %}

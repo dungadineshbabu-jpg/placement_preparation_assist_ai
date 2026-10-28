@@ -1,0 +1,79 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="card shadow">
+            <div class="card-header" style="background: linear-gradient(135deg, #6366f1, #8b5cf6); color: white;">
+                <h4><i class="fas fa-chalkboard-user"></i> AI Mentor</h4>
+                <small>Ask me anything about placements, resume, or interview prep</small>
+            </div>
+            <div class="card-body" style="background: #1e293b;">
+                <div id="chatBox" style="height:400px; overflow-y:auto; border:1px solid #334155; padding:15px; border-radius:10px; background:#0f172a;">
+                    <div class="alert alert-secondary" style="background: #1e293b; border: none;">
+                        <i class="fas fa-robot"></i> Mentor: Hello! I'm your AI mentor. Ask me about resume, interview questions, company culture, or weak areas.
+                    </div>
+                </div>
+                <div class="input-group mt-3">
+                    <input type="text" id="userQuestion" class="form-control" placeholder="Ask your mentor..." onkeypress="if(event.key==='Enter') askMentor();">
+                    <button id="askBtn" class="btn btn-primary" onclick="askMentor();">
+                        <i class="fas fa-paper-plane"></i> Ask
+                    </button>
+                </div>
+                <div class="mt-3">
+                    <small class="text-muted">Try asking: 
+                        <span class="badge bg-secondary suggestion" onclick="setQuestion('What skills do I need for TCS?')">Skills for TCS</span> 
+                        <span class="badge bg-secondary suggestion" onclick="setQuestion('How to improve my resume?')">Resume Tips</span> 
+                        <span class="badge bg-secondary suggestion" onclick="setQuestion('Tell me about Google culture')">Google Culture</span>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function askMentor() {
+        const q = document.getElementById('userQuestion').value.trim();
+        if (!q) return;
+        const chat = document.getElementById('chatBox');
+        chat.innerHTML += `<div class="alert alert-info" style="text-align: right;">You: ${q}</div>`;
+        document.getElementById('userQuestion').value = '';
+        chat.scrollTop = chat.scrollHeight;
+        fetch('/ask_mentor', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({question: q})
+        })
+        .then(r => r.json())
+        .then(data => {
+            chat.innerHTML += `<div class="alert alert-secondary" style="background: #1e293b; border: none;"><i class="fas fa-robot"></i> Mentor: ${data.reply.replace(/\n/g, '<br>')}</div>`;
+            chat.scrollTop = chat.scrollHeight;
+        });
+    }
+
+    function setQuestion(text) {
+        document.getElementById('userQuestion').value = text;
+        document.getElementById('userQuestion').focus();
+    }
+</script>
+
+<style>
+    .suggestion {
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+    .suggestion:hover {
+        background: #4f46e5 !important;
+        color: white !important;
+    }
+    .alert-info {
+        background: rgba(99, 102, 241, 0.2);
+        border: none;
+        color: #c7d2fe;
+    }
+    .alert-secondary {
+        background: rgba(30, 41, 59, 0.8);
+        color: #e2e8f0;
+    }
+</style>
+{% endblock %}

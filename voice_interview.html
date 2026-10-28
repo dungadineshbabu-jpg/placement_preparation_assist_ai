@@ -1,0 +1,276 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+.vi-shell{max-width:1180px;margin:0 auto}.vi-card{border:1px solid #334155;border-radius:16px;overflow:hidden}
+.vi-panel{background: #ffffff; color: #1e293b; border:1px solid #334155;border-radius:14px;padding:18px;height:100%}
+.vi-question{font-size:1.15rem;line-height:1.65;white-space:pre-wrap; color: #000000; font-weight: 500;}
+.vi-muted{color:#475569}
+.vi-panel h5 { color: #1e293b; font-weight: bold; }
+.vi-status{min-height:24px}.vi-score{font-size:2rem;font-weight:800}.vi-field{margin-bottom:14px}
+@media(max-width:767px){.vi-panel{padding:13px}}
+</style>
+<div class="container vi-shell py-3">
+  <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+    <div><h2 class="mb-1">🎙️ AI Voice Interview</h2><div class="vi-muted">Personalized placement practice · English</div></div>
+  </div>
+
+  <section class="card vi-card mb-4" id="setupCard">
+    <div class="card-header"><h5 class="mb-0">Configure your interview</h5></div>
+    <div class="card-body">
+      <form id="setupForm">
+        <div class="row">
+          <div class="col-md-6 vi-field"><label class="form-label" for="interviewType">Interview type</label>
+            <select id="interviewType" class="form-select">
+              <option>HR</option><option>Technical</option><option>Company-specific</option><option>Coding</option><option>Resume-based</option><option>Project-based</option>
+            </select>
+          </div>
+          <div class="col-md-6 vi-field"><label class="form-label" for="company">Company</label>
+            <input id="company" class="form-control" maxlength="120" value="{{ company or 'General' }}" placeholder="e.g. TCS, Infosys, Amazon">
+          </div>
+          <div class="col-md-6 vi-field"><label class="form-label" for="jobRole">Job role</label>
+            <input id="jobRole" class="form-control" maxlength="120" value="{{ role or 'Software Engineer' }}" placeholder="e.g. Python Developer">
+          </div>
+          <div class="col-md-6 vi-field"><label class="form-label" for="difficulty">Difficulty</label>
+            <select id="difficulty" class="form-select"><option>Adaptive</option><option>Easy</option><option>Medium</option><option>Hard</option></select>
+          </div>
+          <div class="col-md-4 vi-field"><label class="form-label" for="questionCount">Number of questions</label>
+            <select id="questionCount" class="form-select"><option>5</option><option>8</option><option>10</option><option>15</option><option>20</option></select>
+          </div>
+          <div class="col-md-4 vi-field"><label class="form-label" for="voiceGender">AI voice</label>
+            <select id="voiceGender" class="form-select"><option value="female">Female voice</option><option value="male">Male voice</option></select>
+          </div>
+          <div class="col-md-4 vi-field"><label class="form-label" for="timerSeconds">Timer per question</label>
+            <select id="timerSeconds" class="form-select"><option value="60">1 minute</option><option value="90" selected>90 seconds</option><option value="120">2 minutes</option><option value="180">3 minutes</option><option value="0">No timer</option></select>
+          </div>
+          <div class="col-12 vi-field"><label class="form-label" for="customQuestions">Custom questions (optional)</label>
+            <textarea id="customQuestions" class="form-control" rows="3" placeholder="One question per line. If entered, these questions will be used."></textarea>
+          </div>
+          <div class="col-12">
+            <div class="form-check mb-3"><input class="form-check-input" type="checkbox" id="useResume" {% if has_resume %}checked{% else %}disabled{% endif %}>
+              <label class="form-check-label" for="useResume">Personalize using my saved resume and project details {% if not has_resume %}(upload a resume first to enable){% endif %}</label>
+            </div>
+            <button class="btn btn-primary btn-lg" id="startBtn" type="submit">Start interview</button>
+            <span class="vi-muted ms-2">Allow microphone access when your browser asks.</span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <div id="interviewWorkspace" style="display:none">
+    <div class="d-flex justify-content-between align-items-center gap-3 mb-3 flex-wrap">
+      <div><span class="badge bg-primary" id="typeBadge">HR</span> <span class="vi-muted" id="questionMeta"></span><div class="vi-muted small" id="difficultyLabel"></div></div>
+      <div class="text-end"><strong id="timerLabel">90s</strong><div class="progress" style="width:180px;height:8px"><div id="timerBar" class="progress-bar" style="width:100%"></div></div></div>
+    </div>
+    <div class="progress mb-3" style="height:9px"><div id="progressBar" class="progress-bar bg-info" style="width:0%"></div></div>
+    <div class="row g-3">
+      <div class="col-lg-5">
+        <div class="vi-panel">
+          <div class="d-flex justify-content-between align-items-center mb-3"><h5 class="mb-0">AI interviewer</h5><span>🔊</span></div>
+          <div class="vi-question" id="questionText">Your question will appear here.</div>
+          <div class="d-flex gap-2 flex-wrap mt-3">
+            <button id="replayBtn" class="btn btn-outline-primary" type="button">▶ Replay question</button>
+            <button id="stopVoiceBtn" class="btn btn-outline-secondary" type="button">Stop voice</button>
+          </div>
+          <hr>
+          <div class="vi-muted small">AI reads the question first. Your answer is captured after you press “Speak answer”.</div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="vi-panel">
+          <h5>Your answer</h5>
+          <textarea id="answerText" class="form-control mb-2" rows="8" placeholder="Your speech transcript will appear here. You can edit it before submitting."></textarea>
+          <div class="d-flex gap-2 flex-wrap mb-3">
+            <button id="speakBtn" class="btn btn-warning" type="button">🎙️ Speak answer</button>
+            <button id="stopMicBtn" class="btn btn-outline-secondary" type="button" disabled>Stop microphone</button>
+            <button id="clearBtn" class="btn btn-outline-secondary" type="button">Clear</button>
+          </div>
+          <div id="liveStatus" class="vi-status vi-muted" role="status" aria-live="polite"></div>
+          <button id="submitBtn" class="btn btn-success btn-lg w-100" type="button">Submit answer</button>
+        </div>
+      </div>
+    </div>
+    <div class="card vi-card mt-3" id="feedbackCard" style="display:none">
+      <div class="card-body">
+        <div class="d-flex align-items-center gap-3 flex-wrap"><div class="vi-score" id="scoreValue">0</div><div><h5 class="mb-0">Question evaluation <small class="vi-muted">/100</small></h5><div id="subScores" class="vi-muted small"></div></div></div>
+        <hr><p><strong>Feedback:</strong> <span id="feedbackText"></span></p>
+        <p><strong>Ideal answer:</strong><br><span id="idealAnswer"></span></p>
+        <div class="row"><div class="col-md-6"><strong>Strengths</strong><ul id="strengthList"></ul></div><div class="col-md-6"><strong>Areas to improve</strong><ul id="weaknessList"></ul></div></div>
+        <button id="nextBtn" class="btn btn-primary w-100" type="button">Next question →</button>
+      </div>
+    </div>
+    <div class="d-flex justify-content-end mt-3"><button id="resetBtn" class="btn btn-outline-danger" type="button">End / reset interview</button></div>
+  </div>
+
+  <section id="completeCard" class="card vi-card mt-3" style="display:none">
+    <div class="card-body text-center py-5">
+      <div style="font-size:3rem">🏆</div><h3>Interview complete!</h3>
+      <div class="vi-score my-2"><span id="overallScore">0</span><small class="fs-5 vi-muted"> /100</small></div>
+      <p id="completionText" class="vi-muted">Your interview has been saved.</p>
+      <div class="d-flex justify-content-center gap-2 flex-wrap">
+        <button id="againBtn" class="btn btn-primary" type="button">New interview</button>
+      </div>
+    </div>
+  </section>
+</div>
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  let recognition = null, listening = false, currentQuestion = '', currentVoiceGender = 'female';
+  let totalQuestions = 5, currentIndex = 0, timerId = null, secondsLeft = 90, timerLimit = 90, interviewId = null;
+  const supportsSpeech = ('SpeechRecognition' in window) || ('webkitSpeechRecognition' in window);
+  function status(msg, kind='secondary') { $('liveStatus').textContent = msg; $('liveStatus').className = `vi-status text-${kind}`; }
+  function loadVoices() { return window.speechSynthesis ? speechSynthesis.getVoices() : []; }
+  
+  // --- FIXED SPEAK FUNCTION ---
+  function speak(text) {
+    if (!('speechSynthesis' in window)) { status('Text-to-speech is not supported in this browser.', 'warning'); return; }
+    speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'en-US'; utterance.rate = 0.95;
+    
+    const available = loadVoices().filter(v => /^en(-|_)/i.test(v.lang));
+    
+    // Try to find a voice matching the selected gender
+    let selectedVoice = null;
+    if (currentVoiceGender === 'female') {
+        selectedVoice = available.find(v => /female|woman|samantha|victoria|zira|aria|jenny|google us english/i.test(v.name));
+    } else {
+        selectedVoice = available.find(v => /male|man|david|mark|guy|eric|roger/i.test(v.name));
+    }
+    
+    // Fallback: If no gender-specific voice is found, pick any English voice
+    if (!selectedVoice && available.length > 0) {
+        selectedVoice = available.find(v => v.lang.toLowerCase().startsWith('en-us')) || available[0];
+    }
+    
+    if (selectedVoice) {
+        utterance.voice = selectedVoice;
+    }
+    
+    utterance.onend = () => { if ($('submitBtn').disabled) return; status('Your turn — speak or type your answer.', 'success'); };
+    utterance.onerror = () => status('Voice playback failed. You can still read the question.', 'warning');
+    speechSynthesis.speak(utterance);
+  }
+  
+  function stopTimer() { if (timerId) clearInterval(timerId); timerId = null; }
+  function startTimer() {
+    stopTimer(); timerLimit = parseInt($('timerSeconds').value, 10) || 0; secondsLeft = timerLimit;
+    $('timerLabel').textContent = timerLimit ? `${secondsLeft}s` : 'No timer';
+    $('timerBar').style.width = '100%';
+    if (!timerLimit) return;
+    timerId = setInterval(() => {
+      secondsLeft--; $('timerLabel').textContent = `${Math.max(0,secondsLeft)}s`;
+      $('timerBar').style.width = `${Math.max(0, secondsLeft / timerLimit * 100)}%`;
+      if (secondsLeft <= 0) { stopTimer(); status('Time is up. Submit your current answer to continue.', 'warning'); }
+    }, 1000);
+  }
+  function setBusy(busy) { $('submitBtn').disabled = busy; $('nextBtn').disabled = busy; $('startBtn').disabled = busy; }
+  async function postJSON(url, body) {
+    const response = await fetch(url, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(body)});
+    const data = await response.json().catch(() => ({}));
+    if (!response.ok) throw new Error(data.error || 'Request failed. Please try again.');
+    return data;
+  }
+  async function loadQuestion() {
+    stopTimer();
+    $('feedbackCard').style.display = 'none';
+    const response = await fetch('/voice_interview_next');
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.error || 'Could not load question.');
+    if (data.finished) {
+      $('interviewWorkspace').style.display = 'none'; $('completeCard').style.display = 'block';
+      $('overallScore').textContent = Number(data.overall_score || 0).toFixed(1);
+      $('completionText').textContent = `Completed ${totalQuestions} questions. Your results are saved in interview history.`;
+      return;
+    }
+    currentQuestion = data.question; currentVoiceGender = data.voice_gender || currentVoiceGender;
+    currentIndex = data.question_index; totalQuestions = data.total_in_round || totalQuestions;
+    $('questionText').textContent = currentQuestion;
+    $('questionMeta').textContent = `Question ${currentIndex} of ${totalQuestions}`;
+    $('typeBadge').textContent = data.round_name || 'Interview';
+    $('difficultyLabel').textContent = `Difficulty: ${data.difficulty || 'Adaptive'}`;
+    $('progressBar').style.width = `${((currentIndex - 1) / totalQuestions) * 100}%`;
+    $('answerText').value = ''; $('answerText').disabled = false; $('submitBtn').disabled = false;
+    status('AI interviewer is speaking…', 'info'); startTimer(); speak(currentQuestion);
+  }
+  $('setupForm').addEventListener('submit', async e => {
+    e.preventDefault(); setBusy(true);
+    try {
+      const settings = {
+        interview_type: $('interviewType').value, company: $('company').value, job_role: $('jobRole').value,
+        difficulty: $('difficulty').value, question_count: $('questionCount').value, voice_gender: $('voiceGender').value,
+        custom_questions: $('customQuestions').value, use_resume: $('useResume').checked
+      };
+      const data = await postJSON('/voice_interview/start', settings);
+      interviewId = data.interview_id; totalQuestions = data.total; 
+      
+      // --- CAPTURE GENDER HERE ---
+      currentVoiceGender = settings.voice_gender; 
+      
+      $('setupCard').style.display = 'none'; $('completeCard').style.display = 'none'; $('interviewWorkspace').style.display = 'block';
+      await loadQuestion();
+    } catch (err) { alert(err.message); }
+    finally { setBusy(false); }
+  });
+  $('replayBtn').addEventListener('click', () => speak(currentQuestion));
+  $('stopVoiceBtn').addEventListener('click', () => { if (window.speechSynthesis) speechSynthesis.cancel(); });
+  $('clearBtn').addEventListener('click', () => { $('answerText').value = ''; $('answerText').focus(); });
+  $('speakBtn').addEventListener('click', async () => {
+    if (!supportsSpeech) { status('Speech recognition is not supported here. Type your answer instead, or try Chrome/Edge over HTTPS or localhost.', 'warning'); return; }
+    if (listening) return;
+    try {
+      const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+      recognition = new SR(); recognition.lang = 'en-IN'; recognition.continuous = true; recognition.interimResults = true;
+      let finalTranscript = $('answerText').value.trim();
+      recognition.onresult = event => {
+        let interim = '';
+        for (let i = event.resultIndex; i < event.results.length; i++) {
+          const transcript = event.results[i][0].transcript;
+          if (event.results[i].isFinal) finalTranscript += (finalTranscript ? ' ' : '') + transcript;
+          else interim += transcript;
+        }
+        $('answerText').value = [finalTranscript, interim].filter(Boolean).join(' ').trim();
+      };
+      recognition.onerror = event => status(`Microphone error: ${event.error}. You can type your answer.`, 'danger');
+      recognition.onend = () => { listening = false; $('stopMicBtn').disabled = true; $('speakBtn').disabled = false; status('Speech capture stopped. Review/edit your transcript before submitting.', 'success'); };
+      recognition.start(); listening = true; $('stopMicBtn').disabled = false; $('speakBtn').disabled = true;
+      status('Listening… speak clearly. Press Stop microphone when finished.', 'primary');
+    } catch (err) { status('Could not start the microphone. Check browser permission and try again.', 'danger'); }
+  });
+  $('stopMicBtn').addEventListener('click', () => { if (recognition && listening) recognition.stop(); });
+  $('submitBtn').addEventListener('click', async () => {
+    const answer = $('answerText').value.trim();
+    if (!answer) { status('Please speak or type an answer first.', 'danger'); return; }
+    if (listening && recognition) recognition.stop();
+    setBusy(true); stopTimer(); status('Evaluating your answer…', 'info');
+    try {
+      const data = await postJSON('/voice_interview_submit', {answer});
+      $('scoreValue').textContent = Number(data.score || 0).toFixed(1);
+      $('subScores').textContent = `Correctness ${data.correctness_score}/100 · Clarity ${data.clarity_score}/100 · Communication ${data.communication_score}/100`;
+      $('feedbackText').textContent = data.feedback || '';
+      $('idealAnswer').textContent = data.ideal_answer || 'Not available';
+      const fillList = (id, values) => { $(id).replaceChildren(); (values || []).forEach(value => { const li = document.createElement('li'); li.textContent = value; $(id).appendChild(li); }); };
+      fillList('strengthList', data.strengths); fillList('weaknessList', data.weaknesses);
+      $('feedbackCard').style.display = 'block'; $('answerText').disabled = true; $('submitBtn').disabled = true;
+      $('progressBar').style.width = `${(currentIndex / totalQuestions) * 100}%`;
+      status('Answer saved. Review the feedback, then continue.', 'success');
+      if (data.finished_after_this) $('nextBtn').textContent = 'Finish interview →'; else $('nextBtn').textContent = 'Next question →';
+    } catch (err) { status(err.message, 'danger'); startTimer(); }
+    finally { setBusy(false); $('submitBtn').disabled = true; }
+  });
+  $('nextBtn').addEventListener('click', async () => { setBusy(true); try { await loadQuestion(); } catch (err) { status(err.message, 'danger'); } finally { setBusy(false); } });
+  $('resetBtn').addEventListener('click', async () => {
+    if (!confirm('End this interview? Answers already submitted will remain in history.')) return;
+    if (window.speechSynthesis) speechSynthesis.cancel(); stopTimer();
+    if (recognition && listening) recognition.stop();
+    await fetch('/voice_interview_reset', {method:'POST'});
+    $('interviewWorkspace').style.display = 'none'; $('setupCard').style.display = 'block';
+  });
+  $('againBtn').addEventListener('click', async () => {
+    await fetch('/voice_interview_reset', {method:'POST'});
+    $('completeCard').style.display = 'none'; $('setupCard').style.display = 'block';
+  });
+})();
+</script>
+{% endblock %}

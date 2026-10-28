@@ -1,0 +1,30 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div class="row"><div class="col-md-8 mx-auto"><div class="card shadow"><div class="card-header bg-primary text-white"><h4>🎤 Text Mock Interview</h4></div><div class="card-body">
+<p>Answer each question. Get instant AI evaluation.</p>
+{% for q in questions %}
+<div class="border rounded p-3 mb-4">
+    <p><strong>Question {{ loop.index }}:</strong> {{ q.text }}</p>
+    <textarea class="form-control mb-2" id="ans-{{ q.id }}" rows="3" placeholder="Type your answer..."></textarea>
+    <button class="btn btn-sm btn-success evaluate-mock" data-qid="{{ q.id }}">Submit Answer</button>
+    <div id="mockResult-{{ q.id }}" class="mt-2"></div>
+</div>
+{% endfor %}
+</div></div></div></div>
+<script>
+document.querySelectorAll('.evaluate-mock').forEach(btn=>{
+    btn.addEventListener('click',function(){
+        let qid=this.dataset.qid;
+        let answer=document.getElementById(`ans-${qid}`).value;
+        let resDiv=document.getElementById(`mockResult-${qid}`);
+        if(!answer.trim()){resDiv.innerHTML='<div class="alert alert-warning">Please write an answer.</div>';return;}
+        resDiv.innerHTML='<div class="spinner-border spinner-border-sm"></div> Evaluating...';
+        fetch('/evaluate_mock',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question_id:qid,answer:answer})})
+        .then(r=>r.json()).then(data=>{
+            if(data.error)resDiv.innerHTML=`<div class="alert alert-danger">${data.error}</div>`;
+            else resDiv.innerHTML=`<div class="alert alert-success"><strong>Score: ${data.score}/10</strong><br><strong>Feedback:</strong> ${data.feedback}<br><strong>Improved Answer:</strong> ${data.improved_answer}</div>`;
+        }).catch(()=>resDiv.innerHTML='<div class="alert alert-danger">Error.</div>');
+    });
+});
+</script>
+{% endblock %}

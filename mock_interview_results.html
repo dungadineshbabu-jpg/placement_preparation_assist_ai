@@ -1,0 +1,111 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+            <div class="card shadow">
+                <div class="card-header" style="background: linear-gradient(135deg, #10b981, #059669); color: white;">
+                    <h4 class="mb-0"><i class="fas fa-trophy"></i> Mock Interview Results</h4>
+                </div>
+                <div class="card-body">
+                    <!-- Summary Stats -->
+                    <div class="row mb-4">
+                        <div class="col-md-3">
+                            <div class="card bg-primary text-white text-center">
+                                <div class="card-body">
+                                    <h3>{{ avg_score }}</h3>
+                                    <small>Average Score</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card bg-success text-white text-center">
+                                <div class="card-body">
+                                    <h3>{{ total_questions }}</h3>
+                                    <small>Questions Answered</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card bg-info text-white text-center">
+                                <div class="card-body">
+                                    <h3>{{ total_time }}s</h3>
+                                    <small>Total Time</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card bg-warning text-dark text-center">
+                                <div class="card-body">
+                                    <h3>
+                                        {% if avg_score >= 8 %}🌟 Excellent{% elif avg_score >= 6 %}👍 Good{% else %}📚 Practice More{% endif %}
+                                    </h3>
+                                    <small>Performance Level</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Detailed Answers -->
+                    <h5 class="mb-3"><i class="fas fa-list"></i> Detailed Review</h5>
+                    <div class="accordion" id="resultsAccordion">
+                        {% for answer in answers %}
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button {% if not loop.first %}collapsed{% endif %}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ loop.index }}">
+                                    <span class="badge {% if answer.score >= 8 %}bg-success{% elif answer.score >= 5 %}bg-warning{% else %}bg-danger{% endif %} me-2">
+                                        {{ answer.score }}/10
+                                    </span>
+                                    Question {{ loop.index }}: {{ answer.question[:80] }}{% if answer.question|length > 80 %}...{% endif %}
+                                </button>
+                            </h2>
+                            <div id="collapse{{ loop.index }}" class="accordion-collapse collapse {% if loop.first %}show{% endif %}" data-bs-parent="#resultsAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Type:</strong> {{ answer.type }}</p>
+                                    <p><strong>Your Answer:</strong></p>
+                                    <div class="border rounded p-2 bg-dark mb-2">{{ answer.answer }}</div>
+                                    <p><strong>Feedback:</strong> {{ answer.feedback }}</p>
+                                    <p><strong>Improved Answer:</strong></p>
+                                    <div class="border rounded p-2 bg-success bg-opacity-25">{{ answer.improved_answer }}</div>
+                                    {% if answer.face_to_face_score %}
+                                    <hr>
+                                    <p><strong>Face-to-Face Metrics:</strong></p>
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <small>Communication: {{ answer.face_to_face_score.communication }}%</small>
+                                            <div class="progress"><div class="progress-bar bg-info" style="width: {{ answer.face_to_face_score.communication }}%"></div></div>
+                                        </div>
+                                        <div class="col-4">
+                                            <small>Confidence: {{ answer.face_to_face_score.confidence }}%</small>
+                                            <div class="progress"><div class="progress-bar bg-success" style="width: {{ answer.face_to_face_score.confidence }}%"></div></div>
+                                        </div>
+                                        <div class="col-4">
+                                            <small>Structure: {{ answer.face_to_face_score.structure }}%</small>
+                                            <div class="progress"><div class="progress-bar bg-warning" style="width: {{ answer.face_to_face_score.structure }}%"></div></div>
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="mt-4 text-center">
+                        <a href="{{ url_for('mock_interview_start') }}" class="btn btn-primary">
+                            <i class="fas fa-redo"></i> Start New Mock Interview
+                        </a>
+                        <a href="{{ url_for('dashboard') }}" class="btn btn-secondary">
+                            <i class="fas fa-home"></i> Back to Dashboard
+                        </a>
+                        <a href="{{ url_for('analytics_dashboard') }}" class="btn btn-info">
+                            <i class="fas fa-chart-line"></i> View Analytics
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

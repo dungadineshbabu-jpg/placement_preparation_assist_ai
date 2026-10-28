@@ -1,0 +1,59 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2 class="mb-4"><i class="fas fa-building"></i> Company Placement Dashboard</h2>
+    <p class="text-muted">Track your preparation progress for different companies</p>
+    
+    <div class="row">
+        {% for company in companies %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <h4 class="mb-0">{{ company.company_name }}</h4>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label>Aptitude Score</label>
+                        <div class="progress">
+                            <div class="progress-bar bg-info" style="width: {{ company.aptitude_score }}%">{{ company.aptitude_score }}%</div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label>Coding Score</label>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" style="width: {{ company.coding_score }}%">{{ company.coding_score }}%</div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label>Interview Score</label>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" style="width: {{ company.interview_score }}%">{{ company.interview_score }}%</div>
+                        </div>
+                    </div>
+                    <div class="mt-3 text-center">
+                        <strong>Overall: {{ "%.1f"|format(company.overall_score) }}%</strong>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-primary btn-sm w-100" onclick="startCompanyPrep('{{ company.company_name }}')">
+                        <i class="fas fa-play"></i> Start Preparation
+                    </button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+function startCompanyPrep(company) {
+    fetch('/set_company_session', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({company: company})
+    }).then(() => {
+        window.location.href = "/preparation";
+    });
+}
+</script>
+{% endblock %}

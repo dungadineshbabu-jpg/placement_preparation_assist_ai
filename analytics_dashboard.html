@@ -1,0 +1,93 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid">
+    <h2 class="mb-4"><i class="fas fa-chart-line"></i> Placement Analytics Dashboard</h2>
+    
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card bg-primary text-white mb-4">
+                <div class="card-body">
+                    <h5>Average Score</h5>
+                    <div class="display-4">{{ "%.1f"|format(avg_score) }}/10</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-success text-white mb-4">
+                <div class="card-body">
+                    <h5>Questions Answered</h5>
+                    <div class="display-4">{{ total_answers }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-info text-white mb-4">
+                <div class="card-body">
+                    <h5>Weak Areas</h5>
+                    <div class="display-4">{{ weak_areas|length }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-warning text-dark mb-4">
+                <div class="card-body">
+                    <h5>Improvement</h5>
+                    <div class="display-4">+{{ "%.1f"|format(avg_score * 10) }}%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card mb-4">
+                <div class="card-header"><h5>Score Trend</h5></div>
+                <div class="card-body"><canvas id="scoreChart" height="300"></canvas></div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header"><h5>Performance by Type</h5></div>
+                <div class="card-body"><canvas id="typeChart" height="300"></canvas></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-danger text-white"><h5>Areas for Improvement</h5></div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        {% for area in weak_areas %}
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            {{ area.topic }} <span class="badge bg-danger rounded-pill">Priority</span>
+                        </li>
+                        {% else %}
+                        <li class="list-group-item text-success">No weak areas detected! Great job!</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const scores = {{ scores|tojson }};
+    const dates = {{ dates|tojson }};
+    new Chart(document.getElementById('scoreChart'), {
+        type: 'line',
+        data: { labels: dates, datasets: [{ label: 'Interview Scores', data: scores, borderColor: 'blue', backgroundColor: 'rgba(0,0,255,0.1)', tension: 0.4, fill: true }] },
+        options: { responsive: true, scales: { y: { beginAtZero: true, max: 10 } } }
+    });
+    
+    const typeLabels = {{ type_scores.keys()|list|tojson }};
+    const typeData = {{ type_scores.values()|list|tojson }};
+    new Chart(document.getElementById('typeChart'), {
+        type: 'doughnut',
+        data: { labels: typeLabels, datasets: [{ data: typeData, backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF'] }] }
+    });
+</script>
+{% endblock %} 

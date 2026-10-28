@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2><i class="fas fa-chart-bar"></i> Aptitude Performance Dashboard</h2>
+        <a href="{{ url_for('aptitude') }}" class="btn btn-primary">
+            <i class="fas fa-play"></i> Take New Test
+        </a>
+    </div>
+
+    {% if not dashboard_data %}
+        <div class="alert alert-info text-center">
+            <h4>No tests taken yet!</h4>
+            <p>Start your first aptitude test to see your detailed performance here.</p>
+        </div>
+    {% else %}
+        <!-- FIXED: Convert dict to list of tuples, then sort -->
+        {% for day, sections in dashboard_data.items()|list|sort(reverse=True) %}
+        <div class="card shadow mb-4">
+            <div class="card-header bg-dark text-white">
+                <h4 class="mb-0">Day {{ day }} Performance</h4>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    {% for section_name, results in sections.items() %}
+                        {% if results %}
+                        <div class="col-md-4 mb-3">
+                            <div class="card h-100 border-secondary">
+                                <div class="card-header bg-secondary text-white text-capitalize">
+                                    {{ section_name }} 
+                                    {% set correct = results|selectattr('is_correct')|list|length %}
+                                    <span class="badge bg-light text-dark float-end">{{ correct }}/{{ results|length }}</span>
+                                </div>
+                                <div class="card-body" style="max-height: 300px; overflow-y: auto;">
+                                    {% for r in results %}
+                                    <div class="mb-3 pb-2 border-bottom border-secondary">
+                                        <p class="mb-1 fw-bold" style="font-size: 0.9rem;">{{ r.question_text }}</p>
+                                        <div class="d-flex justify-content-between">
+                                            <small class="{% if r.is_correct %}text-success{% else %}text-danger{% endif %}">
+                                                <i class="fas {% if r.is_correct %}fa-check-circle{% else %}fa-times-circle{% endif %}"></i>
+                                                Your Ans: {{ r.user_option }}
+                                            </small>
+                                            {% if not r.is_correct %}
+                                            <small class="text-info">Correct: {{ r.correct_option }}</small>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}

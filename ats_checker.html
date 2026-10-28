@@ -1,0 +1,81 @@
+﻿ 
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2 class="mb-4"><i class="fas fa-robot"></i> ATS Resume Checker</h2>
+    
+    {% if result %}
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5>ATS Score</h5>
+                </div>
+                <div class="card-body text-center">
+                    <div class="display-1 mb-3" style="color: {% if result.ats_score >= 70 %}#10b981{% elif result.ats_score >= 50 %}#f59e0b{% else %}#ef4444{% endif %};">
+                        {{ result.ats_score }}%
+                    </div>
+                    <div class="progress mb-3">
+                        <div class="progress-bar {% if result.ats_score >= 70 %}bg-success{% elif result.ats_score >= 50 %}bg-warning{% else %}bg-danger{% endif %}" 
+                             style="width: {{ result.ats_score }}%"></div>
+                    </div>
+                    <p>Your resume is ATS-optimized at {{ result.ats_score }}%</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header bg-info text-white">
+                    <h5>Detailed Scores</h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-2">
+                        <strong>Action Verbs:</strong> {{ result.action_verbs_score }}%
+                        <div class="progress"><div class="progress-bar" style="width: {{ result.action_verbs_score }}%"></div></div>
+                    </div>
+                    <div class="mb-2">
+                        <strong>Metrics/Numbers:</strong> {{ result.metrics_score }}%
+                        <div class="progress"><div class="progress-bar" style="width: {{ result.metrics_score }}%"></div></div>
+                    </div>
+                    <div class="mb-2">
+                        <strong>Technical Keywords:</strong> {{ result.technical_score }}%
+                        <div class="progress"><div class="progress-bar" style="width: {{ result.technical_score }}%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-warning text-dark">
+                    <h5><i class="fas fa-lightbulb"></i> Suggestions for Improvement</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        {% for suggestion in result.suggestions %}
+                        <li class="list-group-item list-group-item-warning">{{ suggestion }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% if result.missing_keywords %}
+                    <div class="mt-3">
+                        <strong>Missing Keywords:</strong>
+                        <div class="mt-2">
+                            {% for keyword in result.missing_keywords %}
+                            <span class="badge bg-danger me-1">{{ keyword }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="alert alert-info">
+        <i class="fas fa-info-circle"></i> Upload your resume first to get ATS analysis.
+        <a href="{{ url_for('dashboard') }}" class="btn btn-primary btn-sm ms-3">Upload Resume</a>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

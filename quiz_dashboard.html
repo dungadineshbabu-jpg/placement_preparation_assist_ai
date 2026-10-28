@@ -1,0 +1,241 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2 class="mb-4"><i class="fas fa-question-circle"></i> Quiz Dashboard</h2>
+    <p class="text-muted">Complete daily quizzes to test your knowledge</p>
+
+    <!-- Stats Cards -->
+    <div class="row mb-4">
+        <div class="col-md-2 col-6">
+            <div class="card bg-primary text-white text-center">
+                <div class="card-body">
+                    <h3>{{ stats.total_attempts }}</h3>
+                    <small>Total Attempts</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 col-6">
+            <div class="card bg-success text-white text-center">
+                <div class="card-body">
+                    <h3>{{ stats.completed }}</h3>
+                    <small>Completed</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 col-6">
+            <div class="card bg-info text-white text-center">
+                <div class="card-body">
+                    <h3>{{ stats.total_correct }}</h3>
+                    <small>Correct Answers</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 col-6">
+            <div class="card bg-warning text-dark text-center">
+                <div class="card-body">
+                    <h3>{{ stats.total_questions }}</h3>
+                    <small>Total Questions</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 col-6">
+            <div class="card bg-danger text-white text-center">
+                <div class="card-body">
+                    <h3>{{ stats.avg_score }}%</h3>
+                    <small>Average Score</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 col-6">
+            <a href="{{ url_for('quiz_leaderboard') }}" class="btn btn-warning w-100 h-100" style="border-radius: 12px; min-height: 80px;">
+                <i class="fas fa-trophy"></i> Leaderboard
+            </a>
+        </div>
+    </div>
+
+    <!-- Day-wise Progress -->
+    <div class="card">
+        <div class="card-header bg-secondary text-white d-flex justify-content-between align-items-center">
+            <h5 class="mb-0"><i class="fas fa-calendar-alt"></i> Day-wise Progress (28 Days)</h5>
+            <span class="badge bg-light text-dark">Next Up: Day {{ stats.current_day }}</span>
+        </div>
+        <div class="card-body" style="background: #1e293b;">
+            <div class="table-responsive">
+                <table class="table table-striped table-hover" style="color: #f1f5f9;">
+                    <thead style="background: #0f172a; color: #f8fafc;">
+                        <tr>
+                            <th>Day</th>
+                            <th>Status</th>
+                            <th>Score</th>
+                            <th>Correct/Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for day in range(1, 29) %}
+                        {% set attempt = attempts|selectattr('day_number', 'equalto', day)|first %}
+                        <tr style="color: #e2e8f0;">
+                            <td>Day {{ day }}</td>
+                            <td>
+                                {% if attempt and attempt.completed %}
+                                    <span class="badge bg-success">Completed ✅</span>
+                                {% elif day == stats.current_day %}
+                                    <span class="badge bg-primary">Current</span>
+                                {% else %}
+                                    <span class="badge bg-secondary">Locked</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if attempt and attempt.completed %}
+                                    <span class="badge {% if attempt.score >= 80 %}bg-success{% elif attempt.score >= 50 %}bg-warning{% else %}bg-danger{% endif %}">
+                                        {{ attempt.score }}%
+                                    </span>
+                                {% else %}
+                                    <span class="text-muted">-</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if attempt and attempt.completed %}
+                                    {{ attempt.correct_answers }}/{{ attempt.total_questions }}
+                                {% else %}
+                                    <span class="text-muted">-</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if attempt and attempt.completed %}
+                                    <!-- Changed to open Modal instead of navigating -->
+                                    <button class="btn btn-sm btn-outline-info view-answers-btn" 
+                                            data-attempt-id="{{ attempt.id }}" 
+                                            data-day="{{ day }}">
+                                        <i class="fas fa-eye"></i> View Answers
+                                    </button>
+                                {% elif day == stats.current_day %}
+                                    <a href="{{ url_for('start_quiz', day_number=stats.current_day) }}" class="btn btn-sm btn-success">
+                                        <i class="fas fa-play"></i> Start Day {{ stats.current_day }}
+                                    </a>
+                                {% else %}
+                                    <button class="btn btn-sm btn-outline-secondary" disabled>
+                                        <i class="fas fa-lock"></i> Locked
+                                    </button>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ========== QUIZ RESULTS MODAL ========== -->
+<div class="modal fade" id="quizResultModal" tabindex="-1" aria-labelledby="quizResultModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content bg-dark text-light">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="quizResultModalLabel">Quiz Results</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="quizResultBody">
+                <div class="text-center py-4">
+                    <div class="spinner-border text-primary"></div>
+                    <p class="mt-2">Loading results...</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Ensure the Bootstrap modal exists in the DOM
+    document.addEventListener('DOMContentLoaded', function () {
+        // Attach click handlers to all "View Answers" buttons
+        document.querySelectorAll('.view-answers-btn').forEach(function (btn) {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                const attemptId = this.dataset.attemptId;
+                openQuizResults(attemptId);
+            });
+        });
+    });
+
+    async function openQuizResults(attemptId) {
+        const modalEl = document.getElementById('quizResultModal');
+        const bodyEl = document.getElementById('quizResultBody');
+        const titleEl = document.getElementById('quizResultModalLabel');
+
+        bodyEl.innerHTML = `
+            <div class="text-center py-4">
+                <div class="spinner-border text-primary"></div>
+                <p class="mt-2">Loading results...</p>
+            </div>`;
+
+        // Show the modal
+        const modal = new bootstrap.Modal(modalEl);
+        modal.show();
+
+        try {
+            const response = await fetch(`/api/quiz_result_details/${attemptId}`);
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+            const data = await response.json();
+
+            if (!data.details || data.details.length === 0) {
+                bodyEl.innerHTML = '<div class="alert alert-warning">No details available for this attempt.</div>';
+                return;
+            }
+
+            titleEl.textContent = `Quiz Results — Attempt #${attemptId}`;
+
+            let html = '';
+            data.details.forEach((item, idx) => {
+                const isCorrect = item.is_correct;
+                const badge = isCorrect
+                    ? '<span class="badge bg-success ms-2">✓ Correct</span>'
+                    : '<span class="badge bg-danger ms-2">✗ Wrong</span>';
+
+                html += `
+                    <div class="mb-4 pb-3 border-bottom border-secondary">
+                        <h6 class="mb-2">Q${idx + 1}. ${item.question} ${badge}</h6>
+                        <ul class="list-unstyled ms-3 mb-2">`;
+
+                item.options.forEach((opt, i) => {
+                    const letter = String.fromCharCode(65 + i); // A, B, C, D
+                    const isCorrectOption = (letter === item.correct_answer);
+                    const isUserOption = (letter === item.user_answer);
+
+                    let cls = 'text-muted';
+                    if (isCorrectOption) cls = 'text-success fw-bold';
+                    else if (isUserOption && !isCorrectOption) cls = 'text-danger';
+
+                    html += `<li class="${cls}">${letter}. ${opt}
+                                ${isCorrectOption ? ' ✅' : ''}
+                                ${(isUserOption && !isCorrectOption) ? ' ❌ (your answer)' : ''}
+                             </li>`;
+                });
+
+                html += `
+                        </ul>
+                        <p class="mb-0 small">
+                            <strong>Correct Answer:</strong> ${item.correct_answer}
+                            ${!isCorrect ? ` &nbsp;|&nbsp; <strong class="text-danger">Your Answer:</strong> ${item.user_answer}` : ''}
+                        </p>
+                    </div>`;
+            });
+
+            bodyEl.innerHTML = html;
+
+        } catch (err) {
+            console.error('Failed to load quiz results:', err);
+            bodyEl.innerHTML = `
+                <div class="alert alert-danger">
+                    <strong>Error:</strong> Could not load quiz results.
+                    <br><small>${err.message}</small>
+                </div>`;
+        }
+    }
+</script>
+{% endblock %}

@@ -1,0 +1,33 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div class="card">
+    <div class="card-header bg-info text-white">💻 Daily Coding Challenge</div>
+    <div class="card-body">
+        <h5>{{ question.title }} ({{ question.difficulty }})</h5>
+        <p>{{ question.description }}</p>
+        <p><strong>Sample Input:</strong> {{ question.sample_input }}<br><strong>Sample Output:</strong> {{ question.sample_output }}</p>
+        <textarea id="code" class="form-control font-monospace" rows="8" placeholder="Write your solution here..."></textarea>
+        <button id="submitCode" class="btn btn-primary mt-2">Run & Submit</button>
+        <div id="result" class="mt-3"></div>
+        <hr>
+        <button id="showSolution" class="btn btn-secondary">Show Solution</button>
+        <pre id="solution" style="display:none;" class="mt-2 bg-light p-2">{{ question.solution_code }}</pre>
+    </div>
+</div>
+<script>
+document.getElementById('submitCode').onclick = () => {
+    let code = document.getElementById('code').value;
+    fetch('/coding/submit', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({question_id: {{ question.id }}, code: code})
+    }).then(r=>r.json()).then(d=>{
+        document.getElementById('result').innerHTML = `<div class="alert alert-${d.passed ? 'success' : 'danger'}">${d.passed ? 'Passed!' : 'Failed'} Score: ${d.score}/10</div>`;
+    });
+};
+document.getElementById('showSolution').onclick = () => {
+    let sol = document.getElementById('solution');
+    sol.style.display = sol.style.display === 'none' ? 'block' : 'none';
+};
+</script>
+{% endblock %}

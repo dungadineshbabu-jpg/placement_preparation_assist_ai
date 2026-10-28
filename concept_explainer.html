@@ -1,0 +1,94 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="card shadow">
+            <div class="card-header" style="background: linear-gradient(135deg, #6366f1, #8b5cf6); color: white;">
+                <h4 class="mb-0"><i class="fas fa-graduation-cap"></i> AI Concept Explainer</h4>
+            </div>
+            <div class="card-body">
+                <div class="text-center mb-4">
+                    <i class="fas fa-brain fa-4x text-primary mb-3"></i>
+                    <p class="lead">Get instant explanations for technical concepts</p>
+                </div>
+                
+                <div class="input-group mb-3">
+                    <input type="text" id="topic" class="form-control form-control-lg" placeholder="e.g., DBMS normalization, binary search, array, linked list, recursion, OOP">
+                    <button id="explainBtn" class="btn btn-primary btn-lg">
+                        <i class="fas fa-magic"></i> Explain
+                    </button>
+                </div>
+                
+                <div id="explanation" class="mt-4" style="display: none;">
+                    <div class="alert alert-info">
+                        <div class="d-flex">
+                            <div class="me-3">
+                                <i class="fas fa-lightbulb fa-2x text-warning"></i>
+                            </div>
+                            <div>
+                                <strong>Explanation:</strong>
+                                <p id="explanationText" class="mb-0 mt-2"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <h6><i class="fas fa-list"></i> Popular Topics:</h6>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="badge bg-secondary p-2 topic-suggestion" data-topic="normalization">Normalization</span>
+                        <span class="badge bg-secondary p-2 topic-suggestion" data-topic="binary search">Binary Search</span>
+                        <span class="badge bg-secondary p-2 topic-suggestion" data-topic="array">Array</span>
+                        <span class="badge bg-secondary p-2 topic-suggestion" data-topic="linked list">Linked List</span>
+                        <span class="badge bg-secondary p-2 topic-suggestion" data-topic="stack">Stack</span>
+                        <span class="badge bg-secondary p-2 topic-suggestion" data-topic="queue">Queue</span>
+                        <span class="badge bg-secondary p-2 topic-suggestion" data-topic="recursion">Recursion</span>
+                        <span class="badge bg-secondary p-2 topic-suggestion" data-topic="oop">Object-Oriented Programming</span>
+                        <span class="badge bg-secondary p-2 topic-suggestion" data-topic="dynamic programming">Dynamic Programming</span>
+                    </div>
+                </div>
+                
+                <hr>
+                
+                <div class="text-center">
+                    <small class="text-muted">
+                        <i class="fas fa-info-circle"></i> Powered by AI - Get instant explanations for any technical concept
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('explainBtn').addEventListener('click', async () => {
+        let topic = document.getElementById('topic').value.trim();
+        if (!topic) {
+            alert('Please enter a topic to explain');
+            return;
+        }
+        
+        document.getElementById('explanation').style.display = 'block';
+        document.getElementById('explanationText').innerHTML = '<div class="spinner-border spinner-border-sm"></div> Generating explanation...';
+        
+        const response = await fetch('/explain', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({topic: topic})
+        });
+        const data = await response.json();
+        document.getElementById('explanationText').innerHTML = data.explanation;
+    });
+    
+    document.querySelectorAll('.topic-suggestion').forEach(el => {
+        el.addEventListener('click', () => {
+            document.getElementById('topic').value = el.dataset.topic;
+            document.getElementById('explainBtn').click();
+        });
+    });
+    
+    document.getElementById('topic').addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') document.getElementById('explainBtn').click();
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h3><i class="fas fa-history"></i> My Daily Submissions</h3>
+    {% if submissions %}
+        {% for s in submissions %}
+        <div class="card mb-3 shadow">
+            <div class="card-header d-flex justify-content-between">
+                <span><strong>{{ s.date }}</strong> — {{ s.title }} ({{ s.difficulty }})</span>
+                <span class="badge bg-success">{{ s.score }}% — {{ s.passed }}/{{ s.total }} passed</span>
+            </div>
+            <div class="card-body">
+                <p><strong>Language:</strong> {{ s.language }}</p>
+                <pre style="background:#0f172a;color:#a5f3fc;padding:10px;border-radius:8px;white-space:pre-wrap;">{{ s.code }}</pre>
+            </div>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p class="text-muted">You haven't submitted any challenges yet.</p>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,110 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="card shadow">
+            <div class="card-header" style="background: linear-gradient(135deg, #ec4899, #db2777); color: white;">
+                <h4 class="mb-0"><i class="fas fa-handshake"></i> HR Answer Generator</h4>
+            </div>
+            <div class="card-body">
+                <div class="text-center mb-4">
+                    <i class="fas fa-comments fa-4x text-pink mb-3"></i>
+                    <p class="lead">Get AI-powered answers for common HR interview questions</p>
+                </div>
+                
+                <div class="alert alert-info">
+                    <i class="fas fa-lightbulb"></i> <strong>Pro Tip:</strong> Use the STAR method (Situation, Task, Action, Result) for behavioral questions.
+                </div>
+                
+                <div class="input-group mb-3">
+                    <input type="text" id="hrQuestion" class="form-control form-control-lg" placeholder="e.g., Tell me about yourself, What are your strengths, Why should we hire you?">
+                    <button id="genBtn" class="btn btn-pink btn-lg">
+                        <i class="fas fa-magic"></i> Generate Answer
+                    </button>
+                </div>
+                
+                <div id="hrAnswer" class="mt-4" style="display: none;">
+                    <div class="alert alert-success">
+                        <div class="d-flex">
+                            <div class="me-3">
+                                <i class="fas fa-star fa-2x text-warning"></i>
+                            </div>
+                            <div>
+                                <strong>Suggested Answer:</strong>
+                                <p id="answerText" class="mb-0 mt-2"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <hr>
+                
+                <h6><i class="fas fa-list"></i> Common HR Questions:</h6>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="badge bg-secondary p-2 hr-suggestion" data-question="Tell me about yourself">Tell me about yourself</span>
+                    <span class="badge bg-secondary p-2 hr-suggestion" data-question="What are your greatest strengths">What are your greatest strengths</span>
+                    <span class="badge bg-secondary p-2 hr-suggestion" data-question="What is your biggest weakness">What is your biggest weakness</span>
+                    <span class="badge bg-secondary p-2 hr-suggestion" data-question="Why should we hire you">Why should we hire you</span>
+                    <span class="badge bg-secondary p-2 hr-suggestion" data-question="Where do you see yourself in 5 years">Where do you see yourself in 5 years</span>
+                    <span class="badge bg-secondary p-2 hr-suggestion" data-question="Why do you want to work here">Why do you want to work here</span>
+                </div>
+                
+                <div class="mt-4">
+                    <div class="alert alert-warning">
+                        <i class="fas fa-info-circle"></i> <strong>STAR Method Template:</strong>
+                        <ul class="mt-2 mb-0">
+                            <li><strong>Situation:</strong> Set the context</li>
+                            <li><strong>Task:</strong> Describe your responsibility</li>
+                            <li><strong>Action:</strong> Explain the steps you took</li>
+                            <li><strong>Result:</strong> Share the outcome with metrics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .btn-pink {
+        background: linear-gradient(135deg, #ec4899, #db2777);
+        color: white;
+    }
+    .btn-pink:hover {
+        background: linear-gradient(135deg, #db2777, #be185d);
+        color: white;
+    }
+</style>
+
+<script>
+    document.getElementById('genBtn').addEventListener('click', async () => {
+        let q = document.getElementById('hrQuestion').value.trim();
+        if (!q) {
+            alert('Please enter an HR question');
+            return;
+        }
+        
+        document.getElementById('hrAnswer').style.display = 'block';
+        document.getElementById('answerText').innerHTML = '<div class="spinner-border spinner-border-sm"></div> Generating answer...';
+        
+        const response = await fetch('/hr_generator', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({question: q})
+        });
+        const data = await response.json();
+        document.getElementById('answerText').innerHTML = data.answer;
+    });
+    
+    document.querySelectorAll('.hr-suggestion').forEach(el => {
+        el.addEventListener('click', () => {
+            document.getElementById('hrQuestion').value = el.dataset.question;
+            document.getElementById('genBtn').click();
+        });
+    });
+    
+    document.getElementById('hrQuestion').addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') document.getElementById('genBtn').click();
+    });
+</script>
+{% endblock %}

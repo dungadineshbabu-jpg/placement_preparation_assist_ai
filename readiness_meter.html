@@ -1,0 +1,63 @@
+﻿ 
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2 class="mb-4"><i class="fas fa-chart-simple"></i> Placement Readiness Meter</h2>
+    
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="card">
+                <div class="card-header bg-primary text-white text-center"><h3>Overall Readiness</h3></div>
+                <div class="card-body text-center">
+                    <div class="display-1">{{ readiness.overall }}%</div>
+                    <div class="progress mb-4" style="height: 30px;">
+                        <div class="progress-bar {% if readiness.overall >= 80 %}bg-success{% elif readiness.overall >= 60 %}bg-warning{% else %}bg-danger{% endif %}" 
+                             style="width: {{ readiness.overall }}%; font-size: 1rem;">{{ readiness.overall }}%</div>
+                    </div>
+                    <p class="lead">Status: <strong>{{ readiness.level }}</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-4">
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-header bg-info text-white">Coding</div>
+                <div class="card-body"><div class="display-6">{{ readiness.coding }}%</div><div class="progress mt-2"><div class="progress-bar bg-info" style="width: {{ readiness.coding }}%"></div></div></div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-header bg-success text-white">Interview</div>
+                <div class="card-body"><div class="display-6">{{ readiness.interview }}%</div><div class="progress mt-2"><div class="progress-bar bg-success" style="width: {{ readiness.interview }}%"></div></div></div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-header bg-warning text-dark">Aptitude</div>
+                <div class="card-body"><div class="display-6">{{ readiness.aptitude }}%</div><div class="progress mt-2"><div class="progress-bar bg-warning" style="width: {{ readiness.aptitude }}%"></div></div></div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-header bg-danger text-white">Resume</div>
+                <div class="card-body"><div class="display-6">{{ readiness.resume }}%</div><div class="progress mt-2"><div class="progress-bar bg-danger" style="width: {{ readiness.resume }}%"></div></div></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card mt-4">
+        <div class="card-header bg-secondary text-white"><h5>Recommendations</h5></div>
+        <div class="card-body">
+            <ul>
+                {% if readiness.coding < 70 %}<li>Practice more coding problems on LeetCode (aim for 50+ problems).</li>{% endif %}
+                {% if readiness.interview < 70 %}<li>Take more mock interviews – at least 5 full sessions.</li>{% endif %}
+                {% if readiness.aptitude < 70 %}<li>Solve 2 aptitude questions daily.</li>{% endif %}
+                {% if readiness.resume < 70 %}<li>Improve your resume – use the Resume Optimizer module.</li>{% endif %}
+                <li>Keep track of your progress in the Analytics Dashboard.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

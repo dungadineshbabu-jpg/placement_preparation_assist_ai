@@ -1,0 +1,323 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <!-- Prevent card animations from breaking the UI -->
+        <div class="card shadow no-animation">
+            
+            <!-- HEADER -->
+            <div class="card-header bg-success text-white d-flex justify-content-between align-items-center">
+                <h4 class="mb-0">🧠 Aptitude Practice</h4>
+                <button id="dashboardBtn" class="btn btn-sm btn-light" style="display: none;" onclick="showDashboard()">View Dashboard</button>
+                <span id="headerInfo" class="badge bg-light text-dark fs-6">Dashboard</span>
+            </div>
+            
+            <div class="card-body">
+                
+                <!-- ================= DASHBOARD VIEW ================= -->
+                <div id="dashboardView">
+                    <h5 class="mb-4">Your Daily Progress</h5>
+                    <div class="table-responsive">
+                        <table class="table table-dark table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Day</th>
+                                    <th>Quantitative</th>
+                                    <th>Reasoning</th>
+                                    <th>Verbal</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dashboardTableBody">
+                                <!-- Populated via JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="text-center mt-4">
+                        <button class="btn btn-primary btn-lg" onclick="startNewDay()">Start Today's Test (Day <span id="nextDayNum">1</span>)</button>
+                    </div>
+                </div>
+
+                <!-- ================= TEST VIEW ================= -->
+                <div id="testView" style="display: none;">
+                    
+                    <!-- TABS -->
+                    <ul class="nav nav-tabs mb-4">
+                        <li class="nav-item"><a class="nav-link active disabled" id="tab-quant">📊 Quantitative</a></li>
+                        <li class="nav-item"><a class="nav-link disabled" id="tab-reasoning">🧩 Reasoning</a></li>
+                        <li class="nav-item"><a class="nav-link disabled" id="tab-verbal">📖 Verbal</a></li>
+                    </ul>
+
+                    <!-- QUESTION AREA -->
+                    <div id="questionContainer">
+                        <h6 class="text-muted mb-3" id="progressText">Question 1 of 10</h6>
+                        
+                        <!-- THIS is the container that will be wiped and rebuilt -->
+                        <div id="questionBox"></div>
+
+                        <!-- Options -->
+                        <div id="optionsContainer"></div>
+
+                        <!-- Feedback Area -->
+                        <div id="feedbackArea" class="mt-4" style="display: none;">
+                            <div id="feedbackMessage" class="alert"></div>
+                            <button id="nextBtn" class="btn btn-primary w-100" onclick="nextQuestion()">→ Next Question</button>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div id="submitArea" class="mt-4">
+                            <button id="submitBtn" class="btn btn-success w-100" onclick="submitAnswer()">Submit Answer</button>
+                        </div>
+                    </div>
+
+                    <!-- COMPLETION SCREEN -->
+                    <div id="completionView" class="text-center py-5" style="display: none;">
+                        <i class="fas fa-trophy fa-4x text-warning mb-3"></i>
+                        <h3 id="completionTitle">Quantitative Complete!</h3>
+                        <p id="completionScore" class="fs-4"></p>
+                        <div id="completionActions">
+                            <!-- Action buttons injected via JS -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Force the card to not glitch */
+    .no-animation {
+        animation: none !important;
+        transform: none !important;
+    }
+    .form-check-input {
+        background-color: #1e293b;
+        border-color: #475569;
+    }
+    .form-check-input:checked {
+        background-color: #10b981;
+        border-color: #10b981;
+    }
+    .form-check-label {
+        color: #f1f5f9;
+        cursor: pointer;
+        width: 100%;
+    }
+</style>
+
+<script>
+// ==========================================
+// DATA & STATE MANAGEMENT
+// ==========================================
+let currentSection = '';
+let currentQuestions = [];
+let currentIndex = 0;
+let userAnswers = {};
+let currentDay = 1;
+
+// Load progress from localStorage (persists across page reloads)
+let progressData = JSON.parse(localStorage.getItem('aptitudeProgress')) || {
+    currentDay: 1,
+    history: {} 
+};
+
+// ==========================================
+// DASHBOARD LOGIC
+// ==========================================
+function renderDashboard() {
+    const tbody = document.getElementById('dashboardTableBody');
+    tbody.innerHTML = '';
+    
+    for (let day = 1; day <= progressData.currentDay; day++) {
+        const dayKey = `Day ${day}`;
+        const data = progressData.history[dayKey] || {};
+        
+        const qScore = data.quantitative !== undefined ? `${data.quantitative}/10` : '-';
+        const rScore = data.reasoning !== undefined ? `${data.reasoning}/10` : '-';
+        const vScore = data.verbal !== undefined ? `${data.verbal}/10` : '-';
+        const status = data.completed ? '<span class="badge bg-success">Completed</span>' : '<span class="badge bg-warning">In Progress</span>';
+        
+        tbody.innerHTML += `
+            <tr>
+                <td><strong>${dayKey}</strong></td>
+                <td>${qScore}</td>
+                <td>${rScore}</td>
+                <td>${vScore}</td>
+                <td>${status}</td>
+            </tr>
+        `;
+    }
+    
+    document.getElementById('nextDayNum').innerText = progressData.currentDay;
+    
+    const todayData = progressData.history[`Day ${progressData.currentDay}`];
+    if (todayData && todayData.completed) {
+        document.getElementById('nextDayNum').innerText = progressData.currentDay + 1;
+        document.querySelector('#dashboardView .btn-primary').innerText = `Start Next Test (Day ${progressData.currentDay + 1})`;
+    }
+}
+
+function startNewDay() {
+    if (progressData.history[`Day ${progressData.currentDay}`]?.completed) {
+        progressData.currentDay++;
+    }
+    currentDay = progressData.currentDay;
+    
+    if (!progressData.history[`Day ${currentDay}`]) {
+        progressData.history[`Day ${currentDay}`] = {};
+    }
+    
+    document.getElementById('dashboardView').style.display = 'none';
+    document.getElementById('testView').style.display = 'block';
+    document.getElementById('dashboardBtn').style.display = 'block';
+    document.getElementById('headerInfo').innerText = `Day ${currentDay} Test`;
+    
+    startSection('quantitative');
+}
+
+function showDashboard() {
+    document.getElementById('testView').style.display = 'none';
+    document.getElementById('dashboardView').style.display = 'block';
+    document.getElementById('dashboardBtn').style.display = 'none';
+    document.getElementById('headerInfo').innerText = 'Dashboard';
+    renderDashboard();
+}
+
+// ==========================================
+// TEST LOGIC
+// ==========================================
+function startSection(section) {
+    currentSection = section;
+    currentIndex = 0;
+    userAnswers = {};
+    
+    document.getElementById('completionView').style.display = 'none';
+    document.getElementById('questionContainer').style.display = 'block';
+    document.getElementById('headerInfo').innerText = `Day ${currentDay} - ${section.toUpperCase()}`;
+    
+    ['quant','reasoning','verbal'].forEach(t => document.getElementById('tab-'+t).classList.remove('active'));
+    if(section === 'quantitative') document.getElementById('tab-quant').classList.add('active');
+    if(section === 'reasoning') document.getElementById('tab-reasoning').classList.add('active');
+    if(section === 'verbal') document.getElementById('tab-verbal').classList.add('active');
+    
+    fetch(`/api/aptitude/load?section=${section}&day=${currentDay}`)
+        .then(res => res.json())
+        .then(data => {
+            if(data.error) { alert(data.error); return; }
+            currentQuestions = data.questions;
+            renderQuestion();
+        });
+}
+
+// ==========================================
+// THE FIX IS HERE
+// ==========================================
+function renderQuestion() {
+    if (currentIndex >= currentQuestions.length) {
+        finishSection();
+        return;
+    }
+    
+    const q = currentQuestions[currentIndex];
+    
+    // 1. Update Progress
+    document.getElementById('progressText').innerText = `Question ${currentIndex + 1} of 10`;
+    
+    // 2. FORCE REBUILD THE QUESTION BOX
+    // Instead of just changing text, we destroy and recreate the HTML block.
+    const questionBox = document.getElementById('questionBox');
+    questionBox.innerHTML = `
+        <div class="alert alert-secondary border p-4 mb-4" style="display: block !important; visibility: visible !important; opacity: 1 !important;">
+            <strong>Q:</strong> <span class="fs-5" style="color: #f1f5f9 !important;">${q.question}</span>
+        </div>
+    `;
+    
+    // 3. FORCE REBUILD THE OPTIONS
+    const optionsDiv = document.getElementById('optionsContainer');
+    optionsDiv.innerHTML = ''; // Clear completely
+    
+    // Create a new document fragment to inject all options at once
+    let htmlStr = '';
+    q.options.forEach((opt, i) => {
+        htmlStr += `
+            <div class="form-check mb-2 p-3 border rounded" style="background: rgba(30, 41, 59, 0.5);">
+                <input class="form-check-input option-radio" type="radio" name="q_option" id="opt_${i}" value="${opt}">
+                <label class="form-check-label" for="opt_${i}">
+                    ${i+1}. ${opt}
+                </label>
+            </div>
+        `;
+    });
+    optionsDiv.innerHTML = htmlStr;
+    
+    // 4. Reset UI states
+    document.getElementById('feedbackArea').style.display = 'none';
+    document.getElementById('submitArea').style.display = 'block';
+}
+
+function submitAnswer() {
+    const selected = document.querySelector('input[name="q_option"]:checked');
+    if (!selected) {
+        alert("Please select an option!");
+        return;
+    }
+    
+    userAnswers[currentIndex] = selected.value;
+    
+    document.getElementById('submitArea').style.display = 'none';
+    document.getElementById('feedbackArea').style.display = 'block';
+    
+    const feedbackMsg = document.getElementById('feedbackMessage');
+    feedbackMsg.className = 'alert alert-info';
+    feedbackMsg.innerHTML = '✅ Answer submitted. Click Next to continue.';
+    
+    document.querySelectorAll('input[name="q_option"]').forEach(r => r.disabled = true);
+}
+
+function nextQuestion() {
+    currentIndex++;
+    renderQuestion();
+}
+
+function finishSection() {
+    fetch('/api/aptitude/submit_section', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ section: currentSection, answers: userAnswers, day: currentDay })
+    })
+    .then(res => res.json())
+    .then(data => {
+        progressData.history[`Day ${currentDay}`][currentSection] = data.score;
+        localStorage.setItem('aptitudeProgress', JSON.stringify(progressData));
+        
+        document.getElementById('questionContainer').style.display = 'none';
+        document.getElementById('completionView').style.display = 'block';
+        document.getElementById('completionTitle').innerText = `${currentSection.toUpperCase()} Complete!`;
+        document.getElementById('completionScore').innerText = `You scored ${data.score}/10`;
+        
+        const actionsDiv = document.getElementById('completionActions');
+        
+        if (currentSection === 'quantitative') {
+            actionsDiv.innerHTML = `<button class="btn btn-primary btn-lg" onclick="startSection('reasoning')">Start Reasoning Section →</button>`;
+        } else if (currentSection === 'reasoning') {
+            actionsDiv.innerHTML = `<button class="btn btn-primary btn-lg" onclick="startSection('verbal')">Start Verbal Section →</button>`;
+        } else if (currentSection === 'verbal') {
+            progressData.history[`Day ${currentDay}`].completed = true;
+            localStorage.setItem('aptitudeProgress', JSON.stringify(progressData));
+            
+            actionsDiv.innerHTML = `
+                <div class="alert alert-success">Test Completed!</div>
+                <button class="btn btn-success btn-lg" onclick="showDashboard()">Go to Dashboard</button>
+            `;
+        }
+    });
+}
+
+// Initialize Dashboard on Load
+document.addEventListener('DOMContentLoaded', () => {
+    renderDashboard();
+});
+</script>
+{% endblock %}

@@ -1,0 +1,221 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="card shadow">
+                <div class="card-header" style="background: linear-gradient(135deg, #6366f1, #8b5cf6); color: white;">
+                    <h4 class="mb-0"><i class="fas fa-question-circle"></i> Day {{ day_number }} Quiz</h4>
+                    <small>Answer all 10 questions. No time limit.</small>
+                </div>
+                <div class="card-body" style="background: #1e293b;">
+                    <form id="quizForm">
+                        <div id="questionsContainer">
+                            {% for question in questions %}
+                            <div class="question-block mb-4 p-3 border rounded" style="border-color: #334155 !important;">
+                                <h6><strong>Q{{ loop.index }}.</strong> {{ question.question_text }}</h6>
+                                <div class="options mt-2">
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="radio" name="q{{ question.id }}" value="A" id="q{{ question.id }}_A">
+                                        <label class="form-check-label" for="q{{ question.id }}_A">A) {{ question.option_a }}</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="radio" name="q{{ question.id }}" value="B" id="q{{ question.id }}_B">
+                                        <label class="form-check-label" for="q{{ question.id }}_B">B) {{ question.option_b }}</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="radio" name="q{{ question.id }}" value="C" id="q{{ question.id }}_C">
+                                        <label class="form-check-label" for="q{{ question.id }}_C">C) {{ question.option_c }}</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="radio" name="q{{ question.id }}" value="D" id="q{{ question.id }}_D">
+                                        <label class="form-check-label" for="q{{ question.id }}_D">D) {{ question.option_d }}</label>
+                                    </div>
+                                </div>
+
+                                <!-- ===== HINT & EXPLAIN BUTTONS ===== -->
+                                <div class="mt-3">
+                                    <button class="btn btn-sm btn-outline-info hint-btn"
+                                            data-qid="{{ question.id }}"
+                                            data-question="{{ question.question_text|e }}">
+                                        <i class="fas fa-lightbulb"></i> Get Hint
+                                    </button>
+
+                                    <button class="btn btn-sm btn-outline-secondary explain-btn"
+                                            data-qid="{{ question.id }}"
+                                            data-question="{{ question.question_text|e }}"
+                                            data-correct="{{ question.correct_answer }}">
+                                        <i class="fas fa-book"></i> Explain Answer
+                                    </button>
+                                </div>
+
+                                <div id="hint-{{ question.id }}" class="alert alert-info mt-2" style="display:none;"></div>
+                                <div id="explain-{{ question.id }}" class="alert alert-secondary mt-2" style="display:none;"></div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        
+                        <div class="text-center mt-3">
+                            <button type="button" id="submitQuizBtn" class="btn btn-success btn-lg">
+                                <i class="fas fa-paper-plane"></i> Submit Quiz
+                            </button>
+                            <a href="{{ url_for('quiz_dashboard') }}" class="btn btn-secondary btn-lg">
+                                <i class="fas fa-arrow-left"></i> Back
+                            </a>
+                        </div>
+                    </form>
+                    
+                    <div id="resultArea" style="display: none;" class="mt-4">
+                        <div class="alert" id="resultMessage"></div>
+                        <div id="wrongAnswersList"></div>
+                        <a href="{{ url_for('quiz_dashboard') }}" class="btn btn-primary mt-3">
+                            <i class="fas fa-arrow-left"></i> Back to Dashboard
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // ===== HINT BUTTON =====
+    document.querySelectorAll('.hint-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            const qid = this.dataset.qid;
+            const question = this.dataset.question;
+            const hintBox = document.getElementById('hint-' + qid);
+            
+            if (!hintBox) return;
+
+            const firstWord = question.trim().split(' ')[0].toLowerCase();
+            const hintText = "Think about the core concept related to \"" + firstWord + "\". Eliminate obviously wrong options first, then compare the remaining ones.";
+            
+            hintBox.style.display = 'block';
+            hintBox.innerHTML = '<i class="fas fa-lightbulb"></i> <strong>Hint:</strong> ' + hintText;
+        });
+    });
+
+    // ===== EXPLAIN BUTTON =====
+    document.querySelectorAll('.explain-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            const qid = this.dataset.qid;
+            const correct = this.dataset.correct;
+            const explainBox = document.getElementById('explain-' + qid);
+            
+            if (!explainBox) return;
+
+            const explainText = "The correct answer is <strong>" + correct + "</strong>. This option best matches the concept being tested in the question. Review the related topic in your notes and try a similar question to reinforce your understanding.";
+            
+            explainBox.style.display = 'block';
+            explainBox.innerHTML = '<i class="fas fa-book"></i> <strong>Explanation:</strong> ' + explainText;
+        });
+    });
+
+    // ===== SUBMIT QUIZ =====
+    const submitBtn = document.getElementById('submitQuizBtn');
+    submitBtn.addEventListener('click', function() {
+        const questions = document.querySelectorAll('.question-block');
+        let allAnswered = true;
+        let answers = [];
+        
+        questions.forEach(function(q) {
+            const selected = q.querySelector('input[type="radio"]:checked');
+            if (selected) {
+                answers.push(selected.value);
+            } else {
+                allAnswered = false;
+                q.style.borderColor = '#ef4444'; // Highlight missing
+            }
+        });
+        
+        if (!allAnswered) {
+            alert('Please answer all questions before submitting!');
+            return;
+        }
+        
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+        
+        fetch('/submit_quiz', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({answers: answers})
+        })
+        .then(async response => {
+            const data = await response.json();
+            if (!response.ok) {
+                throw new Error(data.error || 'Server error');
+            }
+            return data;
+        })
+        .then(data => {
+            // Safely hide questions and show results
+            const qContainer = document.getElementById('questionsContainer');
+            if (qContainer) qContainer.style.display = 'none';
+            
+            submitBtn.style.display = 'none';
+            
+            const resultArea = document.getElementById('resultArea');
+            if (resultArea) resultArea.style.display = 'block';
+            
+            const msg = document.getElementById('resultMessage');
+            if (msg) {
+                if (data.score >= 80) {
+                    msg.className = 'alert alert-success';
+                    msg.innerHTML = `<h4>🎉 Excellent! Score: ${data.score}% (${data.correct}/${data.total})</h4>`;
+                } else if (data.score >= 50) {
+                    msg.className = 'alert alert-warning';
+                    msg.innerHTML = `<h4>📚 Good effort! Score: ${data.score}% (${data.correct}/${data.total})</h4>`;
+                } else {
+                    msg.className = 'alert alert-danger';
+                    msg.innerHTML = `<h4>📖 Need more practice. Score: ${data.score}% (${data.correct}/${data.total})</h4>`;
+                }
+            }
+            
+            const wrongList = document.getElementById('wrongAnswersList');
+            if (wrongList && data.wrong_answers && data.wrong_answers.length > 0) {
+                let wrongHtml = '<h6 class="mt-3">❌ Wrong Answers:</h6><ul class="list-group">';
+                data.wrong_answers.forEach(function(w) {
+                    const optionsText = w.options.map((opt, i) => `${['A) ','B) ','C) ','D) '][i]}${opt}`).join('<br>');
+                    
+                    // Display explanation if available from backend
+                    const explanationHtml = w.explanation ? `<br><span class="text-info"><i class="fas fa-info-circle"></i> <strong>Explanation:</strong> ${w.explanation}</span>` : '';
+
+                    wrongHtml += `
+                        <li class="list-group-item bg-dark text-white" style="border-color: #334155;">
+                            <strong>${w.question}</strong><br>
+                            <span class="text-danger">Your answer: ${w.your_answer || 'Not answered'}</span><br>
+                            <span class="text-success">Correct answer: ${w.correct_answer}</span><br>
+                            <small class="text-muted">Options:<br>${optionsText}</small>
+                            ${explanationHtml}
+                        </li>
+                    `;
+                });
+                wrongHtml += '</ul>';
+                wrongList.innerHTML = wrongHtml;
+            }
+        })
+        .catch(error => {
+            console.error("Submit Error:", error);
+            alert(`Error submitting quiz: ${error.message}`);
+            submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Submit Quiz';
+            submitBtn.disabled = false;
+        });
+    }); 
+</script>
+
+<style>
+    .question-block {
+        background: rgba(15, 23, 42, 0.6);
+        border-radius: 10px;
+        transition: border-color 0.3s ease;
+    }
+    .question-block:hover {
+        border-color: #6366f1 !important;
+    }
+    .form-check-input:checked + .form-check-label {
+        color: #a5b4fc;
+    }
+</style>
+{% endblock %}

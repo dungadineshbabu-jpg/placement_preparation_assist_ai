@@ -1,0 +1,11 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2 class="mb-4">📄 Choose a Resume Template</h2>
+    <div class="row">
+        <div class="col-md-4 mb-4"><div class="card h-100"><div class="card-body text-center"><i class="fas fa-briefcase fa-3x text-primary mb-3"></i><h5>Professional</h5><p>Clean, traditional layout ideal for corporate roles.</p><a href="{{ url_for('resume_builder') }}?template=professional" class="btn btn-outline-primary">Select</a></div></div></div>
+        <div class="col-md-4 mb-4"><div class="card h-100"><div class="card-body text-center"><i class="fas fa-code fa-3x text-success mb-3"></i><h5>Modern Tech</h5><p>Sidebar layout, perfect for IT and developer roles.</p><a href="{{ url_for('resume_builder') }}?template=modern" class="btn btn-outline-success">Select</a></div></div></div>
+        <div class="col-md-4 mb-4"><div class="card h-100"><div class="card-body text-center"><i class="fas fa-pen-fancy fa-3x text-warning mb-3"></i><h5>Minimal</h5><p>Simple, elegant, focuses on content.</p><a href="{{ url_for('resume_builder') }}?template=minimal" class="btn btn-outline-warning">Select</a></div></div></div>
+    </div>
+</div>
+{% endblock %}

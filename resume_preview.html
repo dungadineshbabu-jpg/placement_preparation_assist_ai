@@ -1,0 +1,208 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Preview</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background: #e2e8f0;
+            font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+            padding: 20px;
+        }
+        
+        /* --- ON SCREEN STYLES --- */
+        .resume-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .action-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .resume {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            color: #2d3748;
+        }
+        .header {
+            background: #1e3a5f;
+            color: white;
+            padding: 30px 35px;
+            text-align: center;
+        }
+        .header h1 { font-size: 32px; font-weight: 600; letter-spacing: 1px; margin-bottom: 10px; }
+        .header .title { font-size: 18px; opacity: 0.9; margin-bottom: 15px; }
+        .contact-info { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; font-size: 14px; margin-top: 10px; }
+        .contact-info a, .contact-info span { color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+        .body { padding: 30px 35px; }
+        .section { margin-bottom: 25px; }
+        .section-title { font-size: 20px; font-weight: 600; color: #1e3a5f; border-bottom: 2px solid #1e3a5f; padding-bottom: 6px; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        .section-title i { font-size: 18px; }
+        .summary-text { line-height: 1.5; color: #2d3748; margin-bottom: 10px; }
+        .skills-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+        .skill-badge { background: #e6f0fa; color: #1e3a5f; padding: 5px 14px; border-radius: 30px; font-size: 14px; font-weight: 500; }
+        .project-item, .edu-item, .exp-item { margin-bottom: 18px; }
+        .item-title { font-weight: 600; font-size: 16px; color: #0f2b3d; display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 5px; }
+        .item-sub { font-size: 14px; color: #4a5568; margin-bottom: 6px; font-style: italic; }
+        .item-desc { font-size: 14px; color: #2d3748; line-height: 1.4; }
+        .links-section { background: #f7fafc; padding: 15px 35px; text-align: center; border-top: 1px solid #e2e8f0; display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; }
+        .links-section a { color: #1e3a5f; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 6px; }
+        .links-section a:hover { text-decoration: underline; color: #2b6cb0; }
+
+        /* --- PRINT STYLES (CRUCIAL FOR PDF) --- */
+        @media print {
+            /* Hide navigation, buttons, and page background */
+            .navbar, footer, .action-buttons { display: none !important; }
+            body { background: white !important; padding: 0 !important; }
+            .container { width: 100% !important; max-width: 100% !important; padding: 0 !important; margin: 0 !important; }
+            .resume { 
+                box-shadow: none !important; 
+                border-radius: 0 !important;
+                margin: 0 !important;
+            }
+            .header { 
+                -webkit-print-color-adjust: exact; 
+                print-color-adjust: exact; 
+            }
+            .skill-badge {
+                -webkit-print-color-adjust: exact; 
+                print-color-adjust: exact;
+                border: 1px solid #cbd5e0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="resume-wrapper">
+        
+        <!-- ACTION BUTTONS (Hidden when printing) -->
+        <div class="action-buttons">
+            <a href="{{ url_for('resume_builder') }}" class="btn btn-outline-primary">
+                <i class="fas fa-arrow-left"></i> Back to Editor
+            </a>
+            <button onclick="window.print()" class="btn btn-success">
+                <i class="fas fa-download"></i> Download / Save as PDF
+            </button>
+        </div>
+
+        <!-- RESUME CONTENT -->
+        <div class="resume">
+            <div class="header">
+                <h1>Dunga Dinesh Babu</h1>
+                <div class="title">Aspiring Software Developer | AI Enthusiast</div>
+                <div class="contact-info">
+                    <span><i class="fas fa-envelope"></i> dunga.dinesh@example.com</span>
+                    <span><i class="fas fa-phone"></i> +91 883411029</span>
+                    <span><i class="fas fa-map-marker-alt"></i> India</span>
+                </div>
+            </div>
+
+            <div class="body">
+                <!-- Professional Summary -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-user"></i> Professional Summary
+                    </div>
+                    <div class="summary-text">
+                        Passionate and motivated computer science student with hands-on experience in machine learning projects. 
+                        Strong foundation in Python, Java, and data analysis. Eager to apply technical skills in real-world 
+                        problem-solving and contribute to innovative teams. Quick learner with excellent communication and teamwork abilities.
+                    </div>
+                </div>
+
+                <!-- Technical Skills -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-code"></i> Technical Skills
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">Java</span>
+                        <span class="skill-badge">Machine Learning</span>
+                        <span class="skill-badge">Data Analysis</span>
+                        <span class="skill-badge">Pandas / NumPy</span>
+                        <span class="skill-badge">Flask</span>
+                        <span class="skill-badge">SQL</span>
+                        <span class="skill-badge">Git & GitHub</span>
+                    </div>
+                </div>
+
+                <!-- Projects -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-project-diagram"></i> Projects
+                    </div>
+                    <div class="project-item">
+                        <div class="item-title">Heart Disease Prediction System</div>
+                        <div class="item-sub">Mini Project | Python, Machine Learning</div>
+                        <div class="item-desc">
+                            Developed a predictive model to assess risk levels of heart disease using patient data. 
+                            Achieved 85% accuracy with Random Forest classifier. Implemented data preprocessing, feature selection, and model evaluation.
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <div class="item-title">Sachavahyam – Community Project</div>
+                        <div class="item-sub">Web-based platform | 2024</div>
+                        <div class="item-desc">
+                            Built a community engagement platform to connect volunteers with local social initiatives. 
+                            Focused on user-friendly interface and real-time event updates.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-graduation-cap"></i> Education
+                    </div>
+                    <div class="edu-item">
+                        <div class="item-title">Bachelor of Technology (Computer Science)</div>
+                        <div class="item-sub">Expected Graduation: 2027 | CGPA: 8.2/10 (pursuing)</div>
+                        <div class="item-desc">Relevant coursework: Data Structures, Algorithms, DBMS, Machine Learning.</div>
+                    </div>
+                </div>
+
+                <!-- Experience / Term Paper -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-briefcase"></i> Experience & Academic Contributions
+                    </div>
+                    <div class="exp-item">
+                        <div class="item-title">Term Paper – AI in Healthcare</div>
+                        <div class="item-sub">2024</div>
+                        <div class="item-desc">Researched and presented a comprehensive review of AI applications in medical diagnostics, highlighting ethical considerations and future trends.</div>
+                    </div>
+                    <div class="exp-item">
+                        <div class="item-title">Community Project (Sachavahyam)</div>
+                        <div class="item-sub">2024 | Team Lead</div>
+                        <div class="item-desc">Coordinated a team of 5 to design and deploy a community service portal, increasing local volunteer participation by 30%.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LinkedIn & GitHub Links -->
+            <div class="links-section">
+                <a href="#" target="_blank"><i class="fab fa-linkedin fa-lg"></i> linkedin.com/in/dungadinesh</a>
+                <a href="#" target="_blank"><i class="fab fa-github fa-lg"></i> github.com/dungadinesh</a>
+                <a href="#" target="_blank"><i class="fas fa-globe"></i> Portfolio (Coming Soon)</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
+</body>
+</html>
